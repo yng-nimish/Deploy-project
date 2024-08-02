@@ -17,6 +17,12 @@
   padding-left: 3rem;
   padding-right: 3rem;
 }
+.form-wrapper{
+  background-color: white;
+}
+.tab {
+  background: white ;
+}
 .technical-search {
   align-items: right;
   justify-content: space-between;
@@ -33,6 +39,12 @@ table {
   table-layout:fixed;
     width:80%;
 
+}
+form {
+  background-color:  white;
+}
+.tab-wrapper {
+  background-color: white;
 }
 .frame {
   table-layout:fixed;
@@ -476,25 +488,7 @@ nav {
   margin-top: 2rem;
   display: flex;
 }
-.watch-video-button {
-  margin-left: 2rem;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  color: #484848;
-  transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.watch-video-button svg {
-  font-size: 3rem;
-  margin-right: 1rem;
-}
+
 .contact-page-wrapper h1 {
   max-width: 900px !important;
 }
@@ -737,6 +731,7 @@ form button:hover{
   align-items: center;
   padding-left: 7rem;
   width: 600px;
+  color: white;
  
 }
 .table tr a:hover {
