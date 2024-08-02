@@ -1,6 +1,6 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
-import BannerImage from "file:///Users/nimishs/Documents/todo-front-end/src/logo2.svg";
+import BannerImage from "../../Assets/logo2.svg";
 import { Link, NavLink } from "react-router-dom";
 
 const about = () => {
