@@ -1,0 +1,172 @@
+.active {
+    background-color: #1d4ed8;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #363abf;
+    min-width: fit-content;
+    max-width: auto;
+    top: 0;
+   
+}
+
+.App {
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    max-width: 1900px;
+    margin: 0rem auto;
+  }
+body {
+    max-width: 100%;
+    
+  }
+nav.title{
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    
+
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    
+}
+
+nav ul li a {
+    display:block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    
+}
+nav ul li button {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+nav ul li a:not(.active):hover {
+    background-color: #172554;
+
+}
+nav .menu {
+    display: none;
+    
+    top: 0.75rem;
+    right:0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+.navbar-links-container a {
+    margin-right: 3rem;
+    text-decoration: none;
+    color: rgb(250, 242, 242);
+    font-size: 1.1rem;
+    font-weight: 600;
+    
+  }
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.2rem;
+
+}
+.primary-button {
+    padding: 0.9rem 1.75rem;
+    
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+  }
+
+
+@media (max-width: 1000px) {
+    .navbar-links-container a {
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+}
+@media (max-width: 800px) {
+    .nav-logo-container {
+      max-width: 140px;
+    }
+    .navbar-links-container {
+      display: flex;
+    }
+    .navbar-menu-container {
+      display: flex;
+    }
+    nav ul li{
+        overflow: wrap;
+    }
+}
+@media (max-width: 360px) {
+    .nav-logo-container {
+      max-width: 140px;
+    }
+    .navbar-links-container {
+      display: none;
+    }
+    .navbar-menu-container {
+      display: flex;
+    }
+    nav {
+        flex-direction: column;
+        align-items: right;
+    }
+    nav ul li{
+        overflow: wrap;
+    }
+}
+@media(max-width:600px) {
+    nav .menu {
+        display: flex;
+        align-items: right;
+    }
+    nav {
+        flex-direction: column;
+        align-items: start;
+        max-width: 100Vw;
+
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    nav ul.open{
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a{
+        margin: 0.2rem 0.5rem;
+    }
+}

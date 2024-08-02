@@ -1,0 +1,92 @@
+.footer-wrapper {
+    top: -532px;
+    margin: 0rem;
+    display: flex;
+    margin-top: 10rem;
+    background-color: #363ABF;
+    color: #f2ecec;
+  }
+  .footer-copyright{
+    background-color: #363ABF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 160px;
+  }
+  .footer-logo-container {
+    max-width: 110px;
+  }
+  .footer-icons {
+    margin-top: 2.5rem;
+    margin-right: auto;
+    
+  }
+  .footer-icons svg {
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    color: #f9f8f8;
+  }
+  /* .footer-section-one {
+    border: 2px solid blue;
+  } */
+  .footer-section-two {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer-section-columns {
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+    color: #f2ecec;
+    
+  }
+  .footer-section-columns-2 {
+    color: #f2ecec;
+    margin-right: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+    margin: 0.25rem 0rem;
+    font-weight: 600;
+   
+    cursor: pointer;
+  }
+  .footer-section-columns span {
+    margin: 0.25rem 0rem;
+    font-weight: 600;
+    color: #f2ecec;
+    cursor: pointer;
+  }
+  .footer-section-columns ul li {
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #f2ecec;
+    text-decoration: none;
+    
+  }
+  .footer-section-columns ul li a{
+    list-style: none;
+    font-size: 1.1rem;
+    color: rgb(250, 242, 242);
+    font-weight: 400;
+    color: #f2ecec;
+    text-decoration: none;
+    
+  }
+
+  @media (max-width: 800px) {
+    .footer-wrapper {
+    flex-direction: column;
+    }
+    .footer-section-two {
+    flex-direction: column;
+    margin-top: 2rem;
+    }
+  
+  
+     .footer-section-columns {
+    margin: 1rem 0rem;
+    }
+}
