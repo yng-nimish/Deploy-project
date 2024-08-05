@@ -49,7 +49,7 @@ form {
 .frame {
   table-layout:fixed;
   width:80%;
-  height: 80%;
+  height: 500px;
 }
 .career-text{
   padding-left: 50 rem;
@@ -365,6 +365,13 @@ nav {
   padding-right: 150px;
   min-width: fit-content;
   
+}
+.guarantee-card {
+  width: 80%;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  min-width: fit-content;
 }
 .partner-card-2 {
   display: flex;
@@ -763,7 +770,7 @@ form button:hover{
 }
 .book-links-text-2 {
   text-align: center;
-  width: 800px;
+  width: 760px;
 
   
 }
@@ -776,7 +783,7 @@ form button:hover{
   margin-right: auto;
 
 }
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .navbar-links-container a {
     margin-right: 1rem;
     font-size: 1rem;
@@ -795,7 +802,7 @@ form button:hover{
     padding-right: 180px;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .nav-logo-container {
     max-width: 140px;
   }
@@ -805,6 +812,15 @@ form button:hover{
     max-width: auto;
     overflow: auto;
   }
+  .purchase-text {
+    align-items: center;
+    width: 80%;
+  }
+  .career-text{
+    padding-left: 5rem;
+    align-items: center;
+    width: 80%;
+  }
   .about-section-top{
     display: flex;
     flex-direction: column;
@@ -812,6 +828,32 @@ form button:hover{
   }
   .about-card {
     width: 80%;
+  }
+  .primary-about-heading {
+    align-items: center;
+  }
+  .partner-card {
+    width: 80%;
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+    min-width: fit-content;
+    
+  }
+  .guarantee-card {
+    width: 140%;
+    align-items: center;
+  }
+  .frame {
+    
+    height: 500px;
+  }
+  .form {
+    align-items: center;
+    padding-left: auto;
+    width: 500px;
+    color: white;
+   
   }
 
 
@@ -951,7 +993,7 @@ form button:hover{
 
   
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;
@@ -961,6 +1003,14 @@ form button:hover{
     flex-direction: column;
     max-width: auto;
     overflow: auto;
+  }
+  .purchase-text {
+    align-items: center;
+    width: 80%;
+  }
+  .guarantee-card {
+    width: 120%;
+    align-items: center;
   }
   .partner-card-2 {
     width: 80%;
@@ -975,6 +1025,13 @@ form button:hover{
   .book-links-text-2{
     word-wrap: break-word;
     width: 100%;
+  }
+  .form {
+    align-items: center;
+    padding-left: auto;
+    width: 400px;
+    color: white;
+   
   }
   .career-text{
     

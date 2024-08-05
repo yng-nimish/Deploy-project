@@ -36,7 +36,7 @@ const Technical_papers = () => {
             </p>
           </div>
           <div>
-            <p>Your Number Guaranteed Inc. Â© 2024</p>
+            <p>Your Number Guaranteed Inc. © 2024</p>
             <br /> <br /> <br />
             <br /> <br /> <br />
             <br /> <br /> <br />

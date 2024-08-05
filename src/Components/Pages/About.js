@@ -59,7 +59,7 @@ const about = () => {
         <div className="about-part-2-text">
           <h1 className="primary-about-heading"> Our Goal</h1>
           <div className="about-section-text-container">
-            <p className="primary-text-2">
+            <p className="primary-text">
               Our Goal is to provide educational, cognitive enhancement,
               research & quality control, gaming, entertaining fun games,
               competitions, and User Interface Security Applications. <br />

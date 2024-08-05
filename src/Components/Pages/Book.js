@@ -113,7 +113,7 @@ const Book = () => {
                   </CCardTitle>
                   <CCardText>
                     Kevin Maloney is a veteran of the construction industry
-                    whoâ€™s love of mathematics led him to develop an absolutely
+                    who's love of mathematics led him to develop an absolutely
                     unique numerical product which is being used by individual
                     applications of education, entertainment, research,
                     cognitive health, and as a user interface security product.

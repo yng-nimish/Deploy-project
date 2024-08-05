@@ -18,7 +18,7 @@ const Guarantee = () => {
     <div className="about-wrapper">
       <div className="about-us-container">
         <div className="home-banner-container">
-          <div className="partner-card">
+          <div className="guarantee-card">
             <CCard color="white" className="mb-3 justify-content-md-centre">
               <br />
               <br />

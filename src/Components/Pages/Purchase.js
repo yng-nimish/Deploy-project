@@ -99,7 +99,7 @@ const Purchase = () => {
       <div className="about-us-container">
         <div className="home-banner-container">
           <div className="rowC">
-            <div>
+            <div className="purchase-text">
               <p>
                 <h7 className="primary-heading-welcome"> READY TO BUY </h7>
                 <h1 className="primary-heading">Reach out to us</h1> <br />
