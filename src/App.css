@@ -770,7 +770,7 @@ form button:hover{
 }
 .book-links-text-2 {
   text-align: center;
-  width: 760px;
+  width: 750px;
 
   
 }
@@ -815,6 +815,7 @@ form button:hover{
   .purchase-text {
     align-items: center;
     width: 80%;
+    padding-left: 2.5rem;
   }
   .career-text{
     padding-left: 5rem;
@@ -986,7 +987,7 @@ form button:hover{
     width: 80%;
   }
   .book-links-text-2{
-    width: 100%;
+    width: 90%;
     
     
   }
@@ -1018,6 +1019,14 @@ form button:hover{
     flex-direction: column;
     margin-left: auto;
 
+  }
+  .partner-card {
+    width: 80%;
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+
+    
   }
   .pre-rectangle-2{
     width: 80%;
