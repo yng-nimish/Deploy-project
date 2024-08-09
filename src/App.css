@@ -23,6 +23,17 @@
 .tab {
   background: white ;
 }
+.Purchase-section-2 {
+  align-items: center;
+  justify-content: center;
+  padding-left: auto;
+  padding-right: auto;
+}
+.Purchase-Container {
+  align-items: center;
+  padding-left: 2.5rem;
+
+}
 .technical-search {
   align-items: right;
   justify-content: space-between;
