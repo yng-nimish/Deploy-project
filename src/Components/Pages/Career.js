@@ -105,7 +105,7 @@ const Career = () => {
                 Submit your profile along with your resume.
               </p>
             </div>
-            <div className="form">
+            <div className="contact-form">
               <form onSubmit={onSubmit}>
                 <div className="input-box">
                   <label> Full Name</label>

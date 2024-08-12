@@ -100,7 +100,7 @@ const Contact = () => {
                 <h1 className="primary-heading">Reach out to us</h1>
               </p>
             </div>
-            <div className="form">
+            <div className="contact-form">
               <form onSubmit={onSubmit}>
                 <div className="input-box">
                   <label> Full Name</label>

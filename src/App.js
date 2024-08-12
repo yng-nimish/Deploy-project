@@ -13,6 +13,7 @@ import Career from "./Components/Pages/Career";
 import Login from "./Components/Pages/Login";
 import Purchase from "./Components/Pages/Purchase";
 import Guarantee from "./Components/Pages/Guarantee";
+import Account from "./Components/Pages/Account";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
         <Route path="/book" element={<Book />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Account />} />
         <Route path="/purchase" element={<Purchase />} />
         <Route path="/guarantee" element={<Guarantee />} />
       </Routes>

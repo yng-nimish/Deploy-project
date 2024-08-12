@@ -1,29 +1,15 @@
 import React from "react";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { CCard } from "@coreui/react";
-import { FiArrowRight } from "react-icons/fi";
-import Flag1 from "../../Assets/Great Britain.svg";
-import Flag2 from "../../Assets/USA.svg";
-import Flag3 from "../../Assets/Canada.svg";
-import { CListGroup } from "@coreui/react";
+
 import comingSoon from "../../Assets/Group 62.svg";
 import { data } from "./purchase_data";
-import { CCardBody } from "@coreui/react";
-import { CCardTitle } from "@coreui/react";
-import { CForm } from "@coreui/react";
-import { CCardText } from "@coreui/react";
-import { CCardLink } from "@coreui/react";
-import { CRow } from "@coreui/react";
-import { CCol } from "@coreui/react";
-import { CCardImage } from "@coreui/react";
-import { CFormInput } from "@coreui/react";
+
 import Swal from "sweetalert2";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
-const Purchase = () => {
+const PurchaseTP = () => {
   const [showIframe, setShowIframe] = useState(false);
   const handleItemClick = (pdfUrl) => {
     setPdfUrl(pdfUrl);
@@ -62,29 +48,9 @@ const Purchase = () => {
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
-        <div className="home-banner-container">
-          <div className="rowC">
-            <div className="purchase-text">
-              <p>
-                <h7 className="primary-heading-welcome"> READY TO BUY </h7>
-                <h1 className="primary-heading">Purchase a SUN</h1> <br />
-                Are you ready to pre-purchase our first Launch. The Founder
-                Series!!. <br />
-              </p>
-            </div>
-            <div className="coming-soon-container">
-              <div className="balloon">
-                <img src={comingSoon} className="ballon-image" />
-              </div>
-            </div>
-
-            <br />
-            <br />
-          </div>
-        </div>
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
-            <h1 className="primary-heading-2"> Published Technical Papers </h1>
+            <h1 className="primary-heading-2"> Purchase Technical Papers </h1>
 
             <div className="table">
               <table>
@@ -115,31 +81,9 @@ const Purchase = () => {
             </div>
           </div>
         </div>
-        <div className="home-banner-container">
-          <div className="rowC">
-            <div className="purchase-text">
-              <p>
-                <h7 className="primary-heading-welcome"> READY TO BUY </h7>
-                <h1 className="primary-heading">
-                  Purchase Partnership I.P.
-                </h1>{" "}
-                <br />
-                You can purchase our membership/ Partnership here...
-              </p>
-            </div>
-            <div className="coming-soon-container">
-              <div className="balloon">
-                <img src={comingSoon} className="ballon-image" />
-              </div>
-            </div>
-
-            <br />
-            <br />
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Purchase;
+export default PurchaseTP;

@@ -17,6 +17,19 @@
   padding-left: 3rem;
   padding-right: 3rem;
 }
+.account-wrapper {
+  margin: 0;
+  background-image: linear-gradient( #d2d4ee, white);
+
+  display: flex;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
 .form-wrapper{
   background-color: white;
 }
@@ -33,6 +46,14 @@
   align-items: center;
   padding-left: 2.5rem;
 
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.account-header {
+  background-image: linear-gradient( #d2d4ee, white);
 }
 .technical-search {
   align-items: right;
@@ -51,7 +72,10 @@ table {
     width:80%;
 
 }
-form {
+label {
+  color: #020101;
+}
+.contact-form {
   background-color:  white;
 }
 .tab-wrapper {
@@ -519,7 +543,7 @@ nav {
 }
 .contact-form-container {
   background-color: white;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
   margin-top: 3rem;
   display: flex;
@@ -683,7 +707,7 @@ nav {
   text-align: center;
   justify-content: space-between;
 }
-form {
+.contact-form {
   max-width: 600px;
   width: 100%;
   background: white;
@@ -693,7 +717,7 @@ form {
   color: #333;
   margin: 25px;
 }
-form .input-box {
+.contact-form .input-box {
   margin-top: 20px;
   background-color: white;
 }
@@ -716,13 +740,15 @@ form .input-box {
   margin-top: 8px;
 
 }
-
+.logged-in {
+  width: auto;
+}
 .input-box .field.mess {
   height: 200px;
   resize: none;
 
 }
-form button {
+.contact-form button {
   width: 100%;
   height: 55px;
   background: #363ABF;
@@ -738,17 +764,18 @@ form button {
 }
 
 .rowC{display:flex; flex-direction:row;}
-form button:hover{
+.contact-form button:hover{
   background: #363ABF;
 
 }
 .two p { display: inline-block; max-width: 50%; }
 .two p:nth-child(1) { float:left; }
 .two p:nth-child(2) { float:right; }
-.form {
+
+.contact-form {
   align-items: center;
-  padding-left: 7rem;
-  width: 600px;
+  
+  width: 500px;
   color: white;
  
 }
@@ -860,7 +887,7 @@ form button:hover{
     
     height: 500px;
   }
-  .form {
+  .contact-form {
     align-items: center;
     padding-left: auto;
     width: 500px;
@@ -1002,6 +1029,16 @@ form button:hover{
     
     
   }
+  .Auth-wrapper {
+    padding-left: 1rem;
+    padding-top: -800px;
+    margin-left: 50px;
+    margin-top: -150px;
+  }
+  .Auth-wrapper Authenticator {
+    padding-left: 1rem;
+    margin-left: 50px;
+  }
 
   
 }
@@ -1015,6 +1052,11 @@ form button:hover{
     flex-direction: column;
     max-width: auto;
     overflow: auto;
+  }
+  .Auth-wrapper {
+    padding-left: 1rem;
+    padding-top: 2rem;
+    margin-left: 50px;
   }
   .purchase-text {
     align-items: center;
@@ -1046,7 +1088,7 @@ form button:hover{
     word-wrap: break-word;
     width: 100%;
   }
-  .form {
+  .contact-form {
     align-items: center;
     padding-left: auto;
     width: 400px;
@@ -1067,7 +1109,7 @@ form button:hover{
     justify-content: space-between;
     padding-right: 180px;
   }
-  form {
+  .contact-form {
     width: auto;
     margin-left: auto;
     margin-right: auto;
