@@ -16,7 +16,7 @@ export default function Subscribe() {
       ],
       mode: "payment",
       successUrl: "https://yournumberguaranteed.com/career",
-      cancelUrl: "https://localhost:3000/cancel",
+      cancelUrl: "https://www.yournumberguaranteed.com/login",
     });
   };
   return (
