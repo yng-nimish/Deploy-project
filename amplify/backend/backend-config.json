@@ -1,4 +1,48 @@
 {
+  "api": {
+    "api47cceb23": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "lambda2"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "apida2d6043": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "websitec6750c14"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "apif48d1043": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "lambda1"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "website332cbef7": {
       "customAuth": false,
@@ -25,6 +69,131 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "lambda1": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "lambda2": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "website332cbef7"
+        },
+        {
+          "attributes": [
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "lambda1"
+        },
+        {
+          "attributes": [
+            "ApiName",
+            "ApiId"
+          ],
+          "category": "api",
+          "resourceName": "apif48d1043"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "websitec6750c14": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "website332cbef7"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_lambda1_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda1"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambda1_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda1"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambda1_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda1"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambda2_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda2"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambda2_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda2"
+        }
+      ]
+    },
+    "AMPLIFY_function_lambda2_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lambda2"
+        }
+      ]
+    },
+    "AMPLIFY_function_websitec6750c14_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "websitec6750c14"
+        }
+      ]
+    },
+    "AMPLIFY_function_websitec6750c14_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "websitec6750c14"
+        }
+      ]
+    },
+    "AMPLIFY_function_websitec6750c14_secretsPathAmplifyAppId": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "websitec6750c14"
+        }
+      ]
     }
   }
 }

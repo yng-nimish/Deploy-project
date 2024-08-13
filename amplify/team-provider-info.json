@@ -14,6 +14,28 @@
     "categories": {
       "auth": {
         "website332cbef7": {}
+      },
+      "function": {
+        "lambda1": {
+          "secretsPathAmplifyAppId": "d2mn977rujyr2p",
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/lambda1-67413169427865663758-build.zip"
+        },
+        "lambda2": {
+          "secretsPathAmplifyAppId": "d2mn977rujyr2p",
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/lambda2-3259696c786666634443-build.zip"
+        },
+        "websitec6750c14": {
+          "secretsPathAmplifyAppId": "d2mn977rujyr2p",
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/websitec6750c14-745263577a527a4b2f6e-build.zip"
+        }
+      },
+      "api": {
+        "apif48d1043": {},
+        "api47cceb23": {},
+        "apida2d6043": {}
       }
     }
   }
