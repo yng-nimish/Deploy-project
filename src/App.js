@@ -14,26 +14,30 @@ import Login from "./Components/Pages/Login";
 import Purchase from "./Components/Pages/Purchase";
 import Guarantee from "./Components/Pages/Guarantee";
 import Account from "./Components/Pages/Account";
+import Store from "./Components/Pages/Store";
+import CartProvider from "./Components/Pages/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/partners" element={<Partners />} />
-        <Route path="/applications" element={<Applications />} />
-        <Route path="/technical_papers" element={<Technical_papers />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/login" element={<Account />} />
-        <Route path="/purchase" element={<Purchase />} />
-        <Route path="/guarantee" element={<Guarantee />} />
-      </Routes>
-      <Footer />
+      <CartProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/applications" element={<Applications />} />
+          <Route path="/technical_papers" element={<Technical_papers />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/login" element={<Account />} />
+          <Route path="/purchase" element={<Store />} />
+          <Route path="/guarantee" element={<Guarantee />} />
+        </Routes>
+        <Footer />
+      </CartProvider>
     </div>
   );
 }
