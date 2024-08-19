@@ -20,6 +20,26 @@ function Store() {
     (sum, product) => sum + product.quantity,
     0
   );
+
+  const checkout = async () => {
+    await fetch("http://localhost:4000/checkout", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ items: cart.items }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((response) => {
+        if (response.url) {
+          window.location.assign(response.url); // Forwarding user to Stripe
+        }
+      });
+  };
+
+  /*
   const handleClick = async (e) => {
     const stripe = await loadStripe(
       "REDACTED"
@@ -39,6 +59,7 @@ function Store() {
       console.error("Stripe Checkout error: ", error);
     }
   };
+  */
 
   return (
     <div className="about-wrapper">
@@ -57,7 +78,7 @@ function Store() {
               </Row>
             </div>
             <Button onClick={handleShow}>Cart ({productsCount} items )</Button>
-            <Button variant="success" onClick={handleClick}>
+            <Button variant="success" onClick={checkout}>
               {" "}
               Purchase Items!!
             </Button>
@@ -79,7 +100,9 @@ function Store() {
                   ))}
                   <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
-                  <Button variant="success">Purchase Items!</Button>
+                  <Button variant="success" onClick={checkout}>
+                    Purchase Items!
+                  </Button>
                 </>
               ) : (
                 <h1>There are no items in your cart! </h1>

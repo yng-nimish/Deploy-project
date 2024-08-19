@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useState } from "react";
-
+import { Button } from "react-bootstrap";
 import comingSoon from "../../Assets/Group 62.svg";
 import { data } from "./purchase_data";
 
@@ -51,7 +51,10 @@ const PurchaseTP = () => {
       <div className="about-us-container">
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
-            <h1 className="primary-heading-2"> Purchase Technical Papers </h1>
+            <h1 className="primary-heading-2">
+              {" "}
+              Your Purchased Technical Papers{" "}
+            </h1>
 
             <div className="table">
               <table>
@@ -63,9 +66,9 @@ const PurchaseTP = () => {
                     </button>
               */}
                 <tr>
-                  <th>Title - Click to Purchase</th>
-                  <th>Author</th>
-                  <th>Date</th>
+                  <th>Title</th>
+
+                  <th>Download</th>
                 </tr>
                 {data.map((item, index) => (
                   <tr key={index}>
@@ -74,12 +77,18 @@ const PurchaseTP = () => {
                         {item.title}
                       </a>
                     </td>
-                    <td>{item.author}</td>
-                    <td>{item.Date}</td>
+
+                    <td>
+                      <Button
+                        variant="success"
+                        onClick={() => handleItemClick(item.pdfUrl)}
+                      >
+                        Download PDF
+                      </Button>
+                    </td>
                   </tr>
                 ))}
               </table>
-              <Subscribe />
             </div>
           </div>
         </div>
