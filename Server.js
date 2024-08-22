@@ -7,9 +7,7 @@ const stripe = require("stripe")(
 );
 
 const app = express();
-app.use(cors({
-  origin: 'https://yournumberguaranteed.com',
-}));
+app.use(cors());
 app.use(express.static("public"));
 app.use(express.json());
 
