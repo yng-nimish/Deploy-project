@@ -26,7 +26,7 @@ const Home = () => {
     {
       image: FounderSeriesTokens,
       title: "The Founder Series!",
-      text: "On SALE AUGUST 30th: Only 10,000 available!",
+      text: "On SALE September 6th: Only 10,000 available!",
     },
     {
       image: TokensUnleashed,
