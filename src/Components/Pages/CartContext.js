@@ -8,10 +8,18 @@ export const CartContext = createContext({
   removeOneFromCart: () => {},
   deleteFromCart: () => {},
   getTotalCost: () => {},
+  getCartItems: () => {},
 });
 
 export function CartProvider({ children }) {
   const [cartProducts, setCartProducts] = useState([]);
+
+  function getCartItems() {
+    // Filter out the payment processing fee from cartProducts
+    return cartProducts.filter(
+      (item) => item.id !== "price_1PsOzV013t2ai8cxE9vkbeSw"
+    );
+  }
 
   function getProductQuantity(id) {
     const quantity = cartProducts.find(
@@ -83,6 +91,10 @@ export function CartProvider({ children }) {
       const productData = getProductData(cartItem.id);
       totalCost += productData.price * cartItem.quantity;
     });
+    // Add payment processing fee if total cost is less than $50
+    if (totalCost < 50) {
+      totalCost += 0.79; // The fixed payment processing fee in CAD
+    }
     return totalCost;
   }
 

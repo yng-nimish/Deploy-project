@@ -16,6 +16,7 @@ import Guarantee from "./Components/Pages/Guarantee";
 import Account from "./Components/Pages/Account";
 import Store from "./Components/Pages/Store";
 import CartProvider from "./Components/Pages/CartContext";
+import PurchaseTP from "./Components/Pages/PurchaseTP";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/login" element={<Account />} />
           <Route path="/purchase" element={<Store />} />
           <Route path="/guarantee" element={<Guarantee />} />
+          <Route path="/purchaseTP" element={<PurchaseTP />} />
         </Routes>
         <Footer />
       </CartProvider>
