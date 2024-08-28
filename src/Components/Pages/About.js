@@ -14,7 +14,7 @@ const about = () => {
               Catalyzing Innovation Through Mathematics
             </h1>
             <p className="primary-text">
-              The Set of Unique Number (SUN) is purchased, and the owner will
+              The Set of Unique Numbers (SUN) is purchased, and the owner will
               receive a lifetime of free useful Applications
               <br /> <br /> <br />
               <br /> <br /> <br />
@@ -38,7 +38,7 @@ const about = () => {
               Every SUN comes with a $1,000,000 Guarantee that it is Unique (see
               terms).
               <br />
-              This Provides unique experiences for every Member with our free
+              This Provides a unique experiences for every Member with our free
               applications.
               <br />
               Your Number Guaranteed will licence our IP to partners where they

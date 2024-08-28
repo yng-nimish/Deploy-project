@@ -49,8 +49,8 @@ const Guarantee = () => {
                         SUN is 100% Guaranteed that their SUN is unique. There
                         is a verification process if anyone ever wants to
                         challenge us on the authenticity of our Guarantee. There
-                        is a process to the challenge and itâ€™s not free, but
-                        if you win the challenge, then you get the challenge fee
+                        is a process to the challenge and it's not free, but if
+                        you win the challenge, then you get the challenge fee
                         back along with $1,000,000.
                       </p>
                       <br />
