@@ -181,8 +181,16 @@ const Contact = () => {
             </h1>
             <div className="email-Container">
               <p>
-                CEO: ceo@yournumberguaranteed.com <br />
-                Editor: editor@yournumberguaranteed.com
+                {" "}
+                CEO :
+                <a href="mailto:ceo@yournumberguaranteed.com">
+                  ceo@yournumberguaranteed.com
+                </a>
+                <br />
+                Editor:
+                <a href="mailto:editor@yournumberguaranteed.com">
+                  editor@yournumberguaranteed.com
+                </a>
               </p>
             </div>
           </div>
