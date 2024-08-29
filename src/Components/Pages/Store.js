@@ -21,6 +21,16 @@ function Store() {
     0
   );
 
+  // Filtering the payment processing fee from the products array
+  const filteredProductsArray = productsArray.filter(
+    (product) => product.id !== "price_1PsOzV013t2ai8cxE9vkbeSw"
+  );
+  const totalCost = cart.getTotalCost();
+  const isFeeApplicable = totalCost < 50.49;
+  const feeMessage = isFeeApplicable
+    ? "Note : A Payment processing fee of $0.79 has been added because the total order amount is less than $50."
+    : "";
+
   const checkout = async () => {
     await fetch(
       "https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/checkout",
@@ -73,12 +83,15 @@ function Store() {
 
             <div className="table">
               <Row xs={1} md={3} className="g-4">
-                {productsArray.map((product, idx) => (
+                {filteredProductsArray.map((product, idx) => (
                   <Col align="center" key={idx}>
                     <ProductCard product={product} />
                   </Col>
                 ))}
               </Row>
+            </div>
+            <div>
+              <p>All prices in $US</p>
             </div>
             <Button onClick={handleShow}>Cart ({productsCount} items )</Button>
             <Button variant="success" onClick={checkout}>
@@ -101,8 +114,9 @@ function Store() {
                       quantity={currentProduct.quantity}
                     ></CartProduct>
                   ))}
-                  <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-
+                  <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
+                  {isFeeApplicable && <p>{feeMessage}</p>}{" "}
+                  {/* Display the fee message */}
                   <Button variant="success" onClick={checkout}>
                     Purchase Items!
                   </Button>
