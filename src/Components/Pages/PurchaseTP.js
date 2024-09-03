@@ -1,100 +1,151 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { useState } from "react";
-import { Button } from "react-bootstrap";
-import comingSoon from "../../Assets/Group 62.svg";
-import { data } from "./purchase_data";
+const PurchaseForm = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    streetAddress: "",
+    city: "",
+    state: "",
+    zipCode: "",
+    country: "",
+    email: "",
+    emailList: false,
+    sameAsOwner: false,
+    owner: {
+      firstName: "",
+      lastName: "",
+      streetAddress: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      country: "",
+    },
+  });
 
-import Swal from "sweetalert2";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import Subscribe from "./Subscribe";
-
-const PurchaseTP = () => {
-  const [showIframe, setShowIframe] = useState(false);
-  const handleItemClick = (pdfUrl) => {
-    setPdfUrl(pdfUrl);
-    console.log("Url Updated" + pdfUrl);
-    setShowIframe(!showIframe);
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
-  const [pdfUrl, setPdfUrl] = useState(null);
+  const handleOwnerChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      owner: {
+        ...prev.owner,
+        [name]: value,
+      },
+    }));
+  };
 
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    const formData = new FormData(event.target);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    formData.append("access_key", "c02d1701-ba2d-4c4f-a4ec-39d29ba377c5");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
+    // Send data to API
+    const response = await fetch("https://your-api-endpoint/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
       },
-      body: json,
-    }).then((res) => res.json());
+      body: JSON.stringify(formData),
+    });
 
-    if (res.success) {
-      Swal.fire({
-        title: "Success!",
-        text: "Message sent Successfully!",
-        icon: "success",
-      });
+    const data = await response.json();
+
+    if (data.sessionId) {
+      window.location.href = `https://checkout.stripe.com/pay/${data.sessionId}`;
     }
   };
+
+  const handleCheckboxChange = () => {
+    setFormData((prev) => ({
+      ...prev,
+      sameAsOwner: !prev.sameAsOwner,
+      owner: prev.sameAsOwner
+        ? {
+            firstName: "",
+            lastName: "",
+            streetAddress: "",
+            city: "",
+            state: "",
+            zipCode: "",
+            country: "",
+          }
+        : {
+            firstName: prev.firstName,
+            lastName: prev.lastName,
+            streetAddress: prev.streetAddress,
+            city: prev.city,
+            state: prev.state,
+            zipCode: prev.zipCode,
+            country: prev.country,
+          },
+    }));
+  };
+
   return (
-    <div className="about-wrapper">
-      <div className="about-us-container">
-        <div className="Purchase-section-2">
-          <div className="Purchase-Container">
-            <h1 className="primary-heading-2">
-              {" "}
-              Your Purchased Technical Papers{" "}
-            </h1>
+    <form onSubmit={handleSubmit}>
+      <h2>Buyer Information</h2>
+      {/* Buyer Information Fields */}
+      <label>First Name:</label>
+      <input
+        type="text"
+        name="firstName"
+        value={formData.firstName}
+        onChange={handleChange}
+        required
+      />
 
-            <div className="table">
-              <table>
-                {" "}
-                {/* The Table is not spanning correctly when going into mobile mode  
-              
-                    <button onClick={() => handleItemClick(item.pdfUrl)}>
-                      {item.title}
-                    </button>
-              */}
-                <tr>
-                  <th>Title</th>
+      <label>Last Name:</label>
+      <input
+        type="text"
+        name="lastName"
+        value={formData.lastName}
+        onChange={handleChange}
+        required
+      />
 
-                  <th>Download</th>
-                </tr>
-                {data.map((item, index) => (
-                  <tr key={index}>
-                    <td>
-                      <a onClick={() => handleItemClick(item.pdfUrl)}>
-                        {item.title}
-                      </a>
-                    </td>
+      {/* Other Fields Similar to the Above */}
 
-                    <td>
-                      <Button
-                        variant="success"
-                        onClick={() => handleItemClick(item.pdfUrl)}
-                      >
-                        Download PDF
-                      </Button>
-                    </td>
-                  </tr>
-                ))}
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <label>Email:</label>
+      <input
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+
+      <label>Subscribe to email list:</label>
+      <input
+        type="checkbox"
+        name="emailList"
+        checked={formData.emailList}
+        onChange={handleChange}
+      />
+
+      <label>Buyer information same as owner:</label>
+      <input
+        type="checkbox"
+        name="sameAsOwner"
+        checked={formData.sameAsOwner}
+        onChange={handleCheckboxChange}
+      />
+
+      {!formData.sameAsOwner && (
+        <>
+          <h2>Owner Information</h2>
+          {/* Owner Information Fields Similar to Buyer */}
+        </>
+      )}
+
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 
-export default PurchaseTP;
+export default PurchaseForm;

@@ -7,13 +7,13 @@ import { useContext } from "react";
 import CartProduct from "./CartProduct";
 import ProductCard from "./ProductCard";
 import { Row, Col } from "react-bootstrap";
-import { loadStripe } from "@stripe/stripe-js";
+import PurchaseForm from "./PurchaseForm"; // Import your PurchaseForm component
+import { useNavigate } from "react-router-dom";
 
 function Store() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+  const [showCart, setShowCart] = useState(false);
+  const [showForm, setShowForm] = useState(false); // State for showing form
+  const navigate = useNavigate();
   const cart = useContext(CartContext);
 
   const productsCount = cart.items.reduce(
@@ -21,58 +21,23 @@ function Store() {
     0
   );
 
-  // Filtering the payment processing fee from the products array
+  const handlePurchase = () => {
+    navigate("/purchaseform", { state: { cartItems: cart.items } });
+  };
+
   const filteredProductsArray = productsArray.filter(
-    (product) => product.id !== "price_1PsOzV013t2ai8cxE9vkbeSw"
+    (product) => product.id !== "price_1PtTgV013t2ai8cxcqb7PFfy"
   );
   const totalCost = cart.getTotalCost();
   const isFeeApplicable = totalCost < 50.49;
   const feeMessage = isFeeApplicable
-    ? "Note : A Payment processing fee of $0.79 has been added because the total order amount is less than $50."
+    ? "Note : A Processing Fee of $0.79 is added to all orders less than $50.00."
     : "";
 
-  const checkout = async () => {
-    await fetch(
-      "https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/checkout",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ items: cart.items }),
-      }
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((response) => {
-        if (response.url) {
-          window.location.assign(response.url); // Forwarding user to Stripe
-        }
-      });
-  };
-
-  /*
-  const handleClick = async (e) => {
-    const stripe = await loadStripe(
-      "pk_test_51PYCXa013t2ai8cxvKCOTJ6mbQ87pUgdtruBKEyM1uwvStTOBKbkMt1cbMHw6QbQlWS40jpKp9fpVY1IqU030UYv00YNLjPSTi"
-    );
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [
-        {
-          price: "price_1Pn40F013t2ai8cxwVWKX4So",
-          quantity: 1,
-        },
-      ],
-      mode: "payment",
-      successUrl: "https://yournumberguaranteed.com/career",
-      cancelUrl: "https://www.yournumberguaranteed.com/login",
-    });
-    if (error) {
-      console.error("Stripe Checkout error: ", error);
-    }
-  };
-  */
+  const handleShowCart = () => setShowCart(true);
+  const handleCloseCart = () => setShowCart(false);
+  const handleShowForm = () => setShowForm(true);
+  const handleCloseForm = () => setShowForm(false);
 
   return (
     <div className="about-wrapper">
@@ -93,13 +58,18 @@ function Store() {
             <div>
               <p>All prices in $US</p>
             </div>
-            <Button onClick={handleShow}>Cart ({productsCount} items )</Button>
-            <Button variant="success" onClick={checkout}>
+            <Button onClick={handleShowCart}>
+              Cart ({productsCount} items )
+            </Button>
+            <Button variant="success" onClick={handlePurchase}>
               {" "}
+              {/* Show form on click */}
               Purchase Items!!
             </Button>
           </div>
-          <Modal show={show} onHide={handleClose}>
+
+          {/* Cart Modal */}
+          <Modal show={showCart} onHide={handleCloseCart}>
             <Modal.Header closeButton>
               <Modal.Title>Shopping Cart </Modal.Title>
             </Modal.Header>
@@ -115,10 +85,11 @@ function Store() {
                     ></CartProduct>
                   ))}
                   <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
-                  {isFeeApplicable && <p>{feeMessage}</p>}{" "}
-                  {/* Display the fee message */}
-                  <Button variant="success" onClick={checkout}>
-                    Purchase Items!
+                  {isFeeApplicable && <p>{feeMessage}</p>}
+                  <Button variant="success" onClick={handlePurchase}>
+                    {" "}
+                    {/* Show form on click */}
+                    Proceed to Checkout
                   </Button>
                 </>
               ) : (
