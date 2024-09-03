@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
   function getCartItems() {
     // Filter out the payment processing fee from cartProducts
     return cartProducts.filter(
-      (item) => item.id !== "price_1PsOzV013t2ai8cxE9vkbeSw"
+      (item) => item.id !== "price_1PtTgV013t2ai8cxcqb7PFfy"
     );
   }
 
