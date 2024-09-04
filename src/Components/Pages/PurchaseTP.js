@@ -77,7 +77,7 @@ const PurchaseTP = () => {
                   <thead>
                     <tr>
                       <th>Title</th>
-                      <th>Download</th>
+                      <th>GET IT </th>
                     </tr>
                   </thead>
                   <tbody>
