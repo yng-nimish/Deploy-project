@@ -1,151 +1,111 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
+import Swal from "sweetalert2";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import axios from "axios";
+import { useSearchParams } from "react-router-dom";
+import { productsArray, getProductData } from "./ProductsStore";
 
-const PurchaseForm = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    streetAddress: "",
-    city: "",
-    state: "",
-    zipCode: "",
-    country: "",
-    email: "",
-    emailList: false,
-    sameAsOwner: false,
-    owner: {
-      firstName: "",
-      lastName: "",
-      streetAddress: "",
-      city: "",
-      state: "",
-      zipCode: "",
-      country: "",
-    },
-  });
+const PurchaseTP = () => {
+  const [searchParams] = useSearchParams();
+  const [purchasedItems, setPurchasedItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const sessionId = searchParams.get("session_id");
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  useEffect(() => {
+    if (sessionId) {
+      axios
+        .get(`/download/${sessionId}`)
+        .then((response) => {
+          const purchasedProductIds = response.data.items.map(
+            (item) => item.id
+          );
+          // Filter the productsArray to only include purchased items
+          const purchasedProducts = productsArray.filter((product) =>
+            purchasedProductIds.includes(product.id)
+          );
+          setPurchasedItems(purchasedProducts);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error fetching purchased items:", error);
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
+          setLoading(false);
+        });
+    } else {
+      Swal.fire({
+        icon: "warning",
+        title: "No session ID",
+        text: "Could not find the session ID in the URL.",
+      });
+      setLoading(false);
+    }
+  }, [sessionId]);
 
-  const handleOwnerChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      owner: {
-        ...prev.owner,
-        [name]: value,
-      },
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Send data to API
-    const response = await fetch("https://your-api-endpoint/checkout", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const data = await response.json();
-
-    if (data.sessionId) {
-      window.location.href = `https://checkout.stripe.com/pay/${data.sessionId}`;
+  const handleDownload = (itemId) => {
+    // Use the pdfUrl from the product data
+    const product = getProductData(itemId);
+    if (product && product.pdfUrl) {
+      window.location.href = product.pdfUrl;
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Download Error",
+        text: "Download URL not available for this item.",
+      });
     }
   };
 
-  const handleCheckboxChange = () => {
-    setFormData((prev) => ({
-      ...prev,
-      sameAsOwner: !prev.sameAsOwner,
-      owner: prev.sameAsOwner
-        ? {
-            firstName: "",
-            lastName: "",
-            streetAddress: "",
-            city: "",
-            state: "",
-            zipCode: "",
-            country: "",
-          }
-        : {
-            firstName: prev.firstName,
-            lastName: prev.lastName,
-            streetAddress: prev.streetAddress,
-            city: prev.city,
-            state: prev.state,
-            zipCode: prev.zipCode,
-            country: prev.country,
-          },
-    }));
-  };
+  if (loading) {
+    return <p>Loading your purchase data...</p>;
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Buyer Information</h2>
-      {/* Buyer Information Fields */}
-      <label>First Name:</label>
-      <input
-        type="text"
-        name="firstName"
-        value={formData.firstName}
-        onChange={handleChange}
-        required
-      />
-
-      <label>Last Name:</label>
-      <input
-        type="text"
-        name="lastName"
-        value={formData.lastName}
-        onChange={handleChange}
-        required
-      />
-
-      {/* Other Fields Similar to the Above */}
-
-      <label>Email:</label>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
-
-      <label>Subscribe to email list:</label>
-      <input
-        type="checkbox"
-        name="emailList"
-        checked={formData.emailList}
-        onChange={handleChange}
-      />
-
-      <label>Buyer information same as owner:</label>
-      <input
-        type="checkbox"
-        name="sameAsOwner"
-        checked={formData.sameAsOwner}
-        onChange={handleCheckboxChange}
-      />
-
-      {!formData.sameAsOwner && (
-        <>
-          <h2>Owner Information</h2>
-          {/* Owner Information Fields Similar to Buyer */}
-        </>
-      )}
-
-      <button type="submit">Submit</button>
-    </form>
+    <div className="about-wrapper">
+      <div className="about-us-container">
+        <Navbar />
+        <div className="Purchase-section-2">
+          <div className="Purchase-Container">
+            {purchasedItems.length > 0 ? (
+              <div className="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Download</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {purchasedItems.map((item) => (
+                      <tr key={item.id}>
+                        <td>{item.title}</td>
+                        <td>
+                          <Button
+                            variant="success"
+                            onClick={() => handleDownload(item.id)}
+                          >
+                            Download
+                          </Button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <p>No items purchased or items not found.</p>
+            )}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 };
 
-export default PurchaseForm;
+export default PurchaseTP;

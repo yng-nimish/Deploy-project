@@ -74,7 +74,9 @@ const Footer = () => {
               <BsTwitter />
 
               <BsYoutube />
-              <SiLinkedin />
+              <NavLink to="https://ca.linkedin.com/in/yournumber-guaranteed-1089432b8">
+                <SiLinkedin />
+              </NavLink>
             </span>
           </div>
         </div>

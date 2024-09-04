@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { loadStripe } from "@stripe/stripe-js";
+const stripePromise = loadStripe(
+  "REDACTED"
+);
 
 const PurchaseForm = () => {
   const location = useLocation();
@@ -78,13 +82,32 @@ const PurchaseForm = () => {
       );
 
       const data = await response.json();
+      console.log("API Response:", data);
+      console.log("Response Status:", response.status);
+      if (response.ok && data.sessionId) {
+        const stripe = await stripePromise;
+        const { error } = await stripe.redirectToCheckout({
+          sessionId: data.sessionId,
+        });
 
-      if (data.url) {
+        if (error) {
+          console.error("Error redirecting to Stripe Checkout:", error);
+          navigate("/error");
+        }
+      } else {
+        console.error("Invalid response or sessionId:", data);
+        navigate("/error");
+      }
+      /*
+      if (response.ok && data.url) {
         window.location.href = data.url; // forwarding customer to stripe. now
       } else {
         console.error("Error redirecting to Stripe Checkout");
+        console.error("Error response data:", data);
+        console.error("Error response status:", response.status);
         navigate("/error"); // Redirect to an error page or handle error
       }
+        */
     } catch (error) {
       console.error("Submit error:", error); // Debug statement
       navigate("/error"); // Redirect to an error page or handle error
