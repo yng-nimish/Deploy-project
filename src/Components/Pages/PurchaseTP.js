@@ -71,7 +71,6 @@ const PurchaseTP = () => {
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
-        <Navbar />
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
@@ -117,7 +116,6 @@ const PurchaseTP = () => {
             )}
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
