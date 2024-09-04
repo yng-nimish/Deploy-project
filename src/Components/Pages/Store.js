@@ -22,7 +22,7 @@ function Store() {
   );
 
   const handlePurchase = () => {
-    navigate("/purchaseform", { state: { cartItems: cart.items } }); //navigate
+    navigate("/purchaseform", { state: { cartItems: cart.items } });
   };
 
   const filteredProductsArray = productsArray.filter(
