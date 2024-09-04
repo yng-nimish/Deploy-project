@@ -675,7 +675,8 @@ nav {
 }
 .balloon {
   z-index: 2;
-  align-items: flex-end;
+  align-items: center;
+  margin: auto;
   max-width: 25%;
   max-height: 25%;
 }

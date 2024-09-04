@@ -3,6 +3,7 @@ import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 import SnipetImage from "../../Assets/snippet.svg";
 import comingSoon from "../../Assets/Group 62.svg";
+import { Link, NavLink } from "react-router-dom";
 
 import { CCard } from "@coreui/react";
 import { CCardImage } from "@coreui/react";
@@ -92,9 +93,11 @@ const Applications = () => {
                 <CCardText>
                   The Snippet can be a Point, a Line, a Plane, or a
                   MiniCube.&nbsp;&nbsp;&nbsp;&nbsp;
-                  <CButton color="primary" href="#">
-                    Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-                  </CButton>
+                  <Link to="/applicationDownload">
+                    <CButton color="primary" href="#">
+                      Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                    </CButton>
+                  </Link>
                 </CCardText>
               </CCardBody>
             </CCol>
@@ -112,9 +115,11 @@ const Applications = () => {
               </CCardBody>
             </CCol>
             <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+              <Link to="/applicationDownload">
+                <CButton color="primary" href="#">
+                  Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
             </CCol>
           </CRow>
         </CCard>
@@ -133,12 +138,47 @@ const Applications = () => {
           <CRow>
             <CCol md={4}>
               <div className="d-grid gap-5 d-md-flex col-6 mx-auto btn text-nowrap">
-                <CButton color="primary">Level 1</CButton>
-                <CButton color="primary">Level 2</CButton>
-                <CButton color="primary">Level 3</CButton>
-                <CButton color="primary">Level 4</CButton>
-                <CButton color="primary">Level 5</CButton>
-                <CButton color="primary">Level 6</CButton>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Learning to Count</CButton>{" "}
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Addition</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Subtraction</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Multiplication</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Division</CButton>
+                </Link>
+
+                <br />
+              </div>
+            </CCol>
+          </CRow>
+          <CRow>
+            <CCol md={4}>
+              <div className="d-grid gap-5 d-md-flex col-6 mx-auto btn text-nowrap">
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 1</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 2</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 3</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 4</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 5</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 6</CButton>
+                </Link>
                 <br />
               </div>
             </CCol>
@@ -157,12 +197,47 @@ const Applications = () => {
           <CRow>
             <CCol md={4}>
               <div className="d-grid gap-5 d-md-flex col-6 mx-auto btn text-nowrap">
-                <CButton color="primary">Level 1</CButton>
-                <CButton color="primary">Level 2</CButton>
-                <CButton color="primary">Level 3</CButton>
-                <CButton color="primary">Level 4</CButton>
-                <CButton color="primary">Level 5</CButton>
-                <CButton color="primary">Level 6</CButton>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Higher/Lower</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Lower/Higher</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Even/Odd</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Number search</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Ups & Down</CButton>
+                </Link>
+
+                <br />
+              </div>
+            </CCol>
+          </CRow>
+          <CRow>
+            <CCol md={4}>
+              <div className="d-grid gap-5 d-md-flex col-6 mx-auto btn text-nowrap">
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 1</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 2</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 3</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 4</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 5</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Level 6</CButton>
+                </Link>
                 <br />
               </div>
             </CCol>
@@ -182,9 +257,11 @@ const Applications = () => {
               </CCardBody>
             </CCol>
             <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+              <Link to="/applicationDownload">
+                <CButton color="primary" href="#">
+                  Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
             </CCol>
           </CRow>
         </CCard>
@@ -200,9 +277,11 @@ const Applications = () => {
               </CCardBody>
             </CCol>
             <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+              <Link to="/applicationDownload">
+                <CButton color="primary" href="#">
+                  Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
             </CCol>
           </CRow>
         </CCard>
@@ -216,13 +295,28 @@ const Applications = () => {
                 </CCardText>
               </CCardBody>
             </CCol>
-            <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+          </CRow>
+          <CRow>
+            <CCol md={4}>
+              <div className="d-grid gap-5 d-md-flex col-6 mx-auto btn text-nowrap">
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Bluffer's Poker</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Bingo</CButton>
+                </Link>
+                <Link to="/applicationDownload">
+                  <CButton color="primary">Higher or Lower</CButton>
+                </Link>
+
+                <br />
+              </div>
             </CCol>
           </CRow>
+
+          <br />
         </CCard>
+
         <CCard color="white" className="mb-3">
           <CRow className="g-0">
             <CCol md={8}>
@@ -235,9 +329,11 @@ const Applications = () => {
               </CCardBody>
             </CCol>
             <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+              <Link to="/applicationDownload">
+                <CButton color="primary" href="#">
+                  Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
             </CCol>
           </CRow>
         </CCard>
@@ -255,9 +351,11 @@ const Applications = () => {
               </CCardBody>
             </CCol>
             <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
-              <CButton color="primary" href="#">
-                Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
-              </CButton>
+              <Link to="/applicationDownload">
+                <CButton color="primary" href="#">
+                  Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
             </CCol>
           </CRow>
         </CCard>
