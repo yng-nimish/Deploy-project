@@ -2,6 +2,8 @@ import { useState } from "react";
 import { productsArray } from "./ProductsStore";
 import { Button, Modal } from "react-bootstrap";
 import CartProvider from "./CartContext";
+import { Link, NavLink } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import CartProduct from "./CartProduct";
@@ -9,6 +11,7 @@ import ProductCard from "./ProductCard";
 import { Row, Col } from "react-bootstrap";
 import PurchaseForm from "./PurchaseForm"; // Import your PurchaseForm component
 import { useNavigate } from "react-router-dom";
+import comingSoon from "../../Assets/Group 62.svg";
 
 function Store() {
   const [showCart, setShowCart] = useState(false);
@@ -54,6 +57,20 @@ function Store() {
                   </Col>
                 ))}
               </Row>
+            </div>
+            <h1 className="primary-heading-2"> Purchase The SUN </h1>
+
+            <div className="coming-soon-container">
+              <div className="balloon">
+                <img src={comingSoon} className="ballon-image" />
+              </div>
+            </div>
+            <h1 className="primary-heading-2"> Purchase IP </h1>
+
+            <div className="coming-soon-container">
+              <div className="balloon">
+                <img src={comingSoon} className="ballon-image" />
+              </div>
             </div>
             <div>
               <p>All prices in $US</p>
