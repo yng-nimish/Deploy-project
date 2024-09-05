@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
+import { Link, NavLink } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 const stripePromise = loadStripe(
   "pk_test_51PYCXa013t2ai8cxvKCOTJ6mbQ87pUgdtruBKEyM1uwvStTOBKbkMt1cbMHw6QbQlWS40jpKp9fpVY1IqU030UYv00YNLjPSTi"
 );
@@ -390,6 +392,12 @@ const PurchaseForm = () => {
                   </>
                 )}
                 <button type="submit">Continue to Checkout...</button>
+                <Link to="/purchase">
+                  <button color="primary" href="#">
+                    <FiArrowLeft />
+                    &nbsp;&nbsp;&nbsp; Go Back &nbsp;&nbsp;&nbsp;
+                  </button>
+                </Link>
               </form>
             </div>
           </div>
