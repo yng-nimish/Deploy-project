@@ -15,7 +15,7 @@ import { CCardImage } from "@coreui/react";
 
 const Guarantee = () => {
   return (
-    <div className="about-wrapper">
+   <div className="about-wrapper">
       <div className="about-us-container">
         <div className="home-banner-container">
           <div className="guarantee-card">
@@ -26,7 +26,7 @@ const Guarantee = () => {
               <CRow className="g-0">
                 <CCol md={8}>
                   <CCardBody className="pre-rectangle">
-                    <CCardText>OUR GUARANTEE</CCardText>
+                    <CCardText >OUR GUARANTEE</CCardText>
                     <CCardTitle>
                       <h1>The $1,000,000 Guarantee</h1>
                     </CCardTitle>

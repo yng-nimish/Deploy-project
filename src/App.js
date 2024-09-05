@@ -19,6 +19,7 @@ import CartProvider from "./Components/Pages/CartContext";
 import PurchaseTP from "./Components/Pages/PurchaseTP";
 import PurchaseForm from "./Components/Pages/PurchaseForm";
 import Application_download from "./Components/Pages/Application_download";
+import Terms from "./Components/Pages/Terms";
 
 function App() {
   return (
@@ -37,6 +38,8 @@ function App() {
           <Route path="/career" element={<Career />} />
           <Route path="/login" element={<Account />} />
           <Route path="/purchase" element={<Store />} />
+          <Route path="/terms" element={<Terms />} />
+
           <Route path="/guarantee" element={<Guarantee />} />
           <Route path="/purchaseTP" element={<PurchaseTP />} />
           <Route path="/purchaseform" element={<PurchaseForm />} />
