@@ -61,6 +61,9 @@ const Footer = () => {
               <li>
                 <NavLink to="/purchase">Get your SUN </NavLink>
               </li>
+              <li>
+                <NavLink to="/terms">Terms </NavLink>
+              </li>
             </ul>
             {/*         <span>PURCHASE ORDERS</span>
             <span>Buy a Token</span>   */}
