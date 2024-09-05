@@ -13,6 +13,7 @@ const PurchaseForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    business: "",
     streetAddress: "",
     city: "",
     state: "",
@@ -24,6 +25,7 @@ const PurchaseForm = () => {
     owner: {
       firstName: "",
       lastName: "",
+      business: "",
       streetAddress: "",
       city: "",
       state: "",
@@ -68,6 +70,7 @@ const PurchaseForm = () => {
             buyerData: {
               firstName: formData.firstName,
               lastName: formData.lastName,
+              business: formData.business,
               streetAddress: formData.streetAddress,
               city: formData.city,
               state: formData.state,
@@ -122,6 +125,7 @@ const PurchaseForm = () => {
         ? {
             firstName: "",
             lastName: "",
+            business: "",
             streetAddress: "",
             city: "",
             state: "",
@@ -132,6 +136,7 @@ const PurchaseForm = () => {
         : {
             firstName: prev.firstName,
             lastName: prev.lastName,
+            business: prev.business,
             streetAddress: prev.streetAddress,
             city: prev.city,
             state: prev.state,
@@ -187,6 +192,17 @@ const PurchaseForm = () => {
                     onChange={handleChange}
                     required
                   />
+                  <div className="input-box">
+                    <label>Business/organization </label> &nbsp;
+                    <input
+                      type="text"
+                      name="business"
+                      className="field"
+                      placeholder="Business/Organization Name"
+                      value={formData.business}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
                 <div className="input-box">
                   <label>Street Address:</label> &nbsp;
@@ -313,6 +329,17 @@ const PurchaseForm = () => {
                         value={formData.owner.lastName}
                         onChange={handleOwnerChange}
                         required
+                      />
+                    </div>
+                    <div className="input-box">
+                      <label>Business/Organization:</label> &nbsp;
+                      <input
+                        type="text"
+                        name="business"
+                        className="field"
+                        placeholder="Business/Organization Name"
+                        value={formData.owner.business}
+                        onChange={handleOwnerChange}
                       />
                     </div>
                     <div className="input-box">

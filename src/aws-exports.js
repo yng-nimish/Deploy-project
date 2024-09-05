@@ -3,6 +3,32 @@
 
 const awsmobile = {
     "aws_project_region": "ca-central-1",
+    "aws_cloud_logic_custom": [
+        {
+            "name": "api47cceb23",
+            "endpoint": "https://gutq6ep7a7.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
+            "name": "apida2d6043",
+            "endpoint": "https://cwpj9kkfpf.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
+            "name": "apif48d1043",
+            "endpoint": "https://sx902ped8k.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
+            "name": "apiwebstripe",
+            "endpoint": "https://hoopkcbge5.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        }
+    ],
+    "aws_appsync_graphqlEndpoint": "https://uqrzipi7cnafzpzxhm6rne6lnq.appsync-api.ca-central-1.amazonaws.com/graphql",
+    "aws_appsync_region": "ca-central-1",
+    "aws_appsync_authenticationType": "API_KEY",
+    "aws_appsync_apiKey": "da2-wizeehbxpjbhrkkqzj6yexlhxq",
     "aws_cognito_identity_pool_id": "ca-central-1:1661c70e-d327-4731-826c-251bfec9c5e8",
     "aws_cognito_region": "ca-central-1",
     "aws_user_pools_id": "ca-central-1_t16FgiWYZ",
@@ -25,23 +51,6 @@ const awsmobile = {
     },
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
-    ],
-    "aws_cloud_logic_custom": [
-        {
-            "name": "apif48d1043",
-            "endpoint": "https://sx902ped8k.execute-api.ca-central-1.amazonaws.com/dev",
-            "region": "ca-central-1"
-        },
-        {
-            "name": "api47cceb23",
-            "endpoint": "https://gutq6ep7a7.execute-api.ca-central-1.amazonaws.com/dev",
-            "region": "ca-central-1"
-        },
-        {
-            "name": "apida2d6043",
-            "endpoint": "https://cwpj9kkfpf.execute-api.ca-central-1.amazonaws.com/dev",
-            "region": "ca-central-1"
-        }
     ]
 };
 
