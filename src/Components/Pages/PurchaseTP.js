@@ -66,49 +66,43 @@ const PurchaseTP = () => {
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
-            {customerData && (
-              <div>
-                <h2 className="primary-heading-welcome">
-                  Customer Information
-                </h2>
-                <p>
-                  Name: {customerData.firstName} {customerData.lastName}
-                </p>
-                <p>Email: {customerData.email}</p>
-              </div>
-            )}
-            {purchasedItems.length > 0 ? (
-              <div className="table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Download</th>
+            <h2 className="primary-heading">
+              Welcome, {userData.firstName} {userData.lastName}!
+            </h2>
+            <div className="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {products.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.title}</td>
+                      <td>
+                        <Button
+                          variant="success"
+                          onClick={() =>
+                            handleDownload(item.pdfUrl, item.title)
+                          }
+                          disabled={
+                            !userData.items.some(
+                              (purchasedItem) => purchasedItem.id === item.id
+                            )
+                          }
+                        >
+                          Download
+                        </Button>
+                      </td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {purchasedItems.map((item) => (
-                      <tr key={item.id}>
-                        <td>{item.title}</td>
-                        <td>
-                          <Button
-                            variant="success"
-                            onClick={() => handleDownload(item.id)}
-                          >
-                            Download
-                          </Button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            ) : (
-              <p>No items purchased or items not found.</p>
-            )}
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
