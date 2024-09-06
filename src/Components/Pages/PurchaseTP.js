@@ -1,123 +1,108 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import axios from "axios";
-import { useSearchParams } from "react-router-dom";
-import { productsArray, getProductData } from "./ProductsStore";
+import { productsArray } from "./ProductsStore"; // Ensure this import is correct
 
 const PurchaseTP = () => {
-  const [searchParams] = useSearchParams();
-  const [purchasedItems, setPurchasedItems] = useState([]);
-  const [customerData, setCustomerData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const sessionId = searchParams.get("session_id");
+  const [userData, setUserData] = useState({
+    firstName: "",
+    lastName: "",
+    items: [], // Initialize as an empty array
+  });
+
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    if (sessionId) {
-      axios
-        .get(`/customer-data?session_id=${sessionId}`)
-        .then((response) => {
-          const { items, buyerData } = response.data;
-
-          // Filter the productsArray to only include purchased items
-          const purchasedProductIds = items.map((item) => item.id);
-          const purchasedProducts = productsArray.filter((product) =>
-            purchasedProductIds.includes(product.id)
-          );
-
-          setPurchasedItems(purchasedProducts);
-          setCustomerData(buyerData);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error("Error fetching customer data:", error);
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Something went wrong!",
-          });
-          setLoading(false);
-        });
+    // Initialize products state
+    if (productsArray && productsArray.length) {
+      setProducts(productsArray);
     } else {
-      Swal.fire({
-        icon: "warning",
-        title: "No session ID",
-        text: "Could not find the session ID in the URL.",
-      });
-      setLoading(false);
+      console.error("Products data is not available.");
     }
-  }, [sessionId]);
 
-  const handleDownload = (itemId) => {
-    // Use the pdfUrl from the product data
-    const product = getProductData(itemId);
-    if (product && product.pdfUrl) {
-      window.location.href = product.pdfUrl;
-    } else {
-      Swal.fire({
-        icon: "error",
-        title: "Download Error",
-        text: "Download URL not available for this item.",
+    // Load user data and items from URL on page load
+    window.onload = () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const firstName = urlParams.get("first_name");
+      const lastName = urlParams.get("last_name");
+      const itemsParam = urlParams.get("items");
+
+      // Default items to an empty array if undefined
+      let items = [];
+      try {
+        items = JSON.parse(decodeURIComponent(itemsParam)) || [];
+      } catch (e) {
+        console.error("Failed to parse items from URL:", e);
+      }
+
+      // Set user data
+      setUserData({
+        firstName: firstName || "",
+        lastName: lastName || "",
+        items: items,
       });
-    }
+    };
+  }, []);
+
+  // Handle download with user feedback
+  const handleDownload = (pdfUrl, title) => {
+    Swal.fire({
+      title: "Download",
+      text: `Downloading ${title}`,
+      icon: "success",
+    }).then(() => {
+      window.open(pdfUrl, "_blank");
+    });
   };
 
-  if (loading) {
-    return <p>Loading your purchase data...</p>;
+  // Return loading message if products is not available
+  if (!products.length) {
+    return <div>Loading products...</div>;
   }
 
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
-        <Navbar />
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
-            {customerData && (
-              <div>
-                <h2 className="primary-heading-welcome">
-                  Customer Information
-                </h2>
-                <p>
-                  Name: {customerData.firstName} {customerData.lastName}
-                </p>
-                <p>Email: {customerData.email}</p>
-              </div>
-            )}
-            {purchasedItems.length > 0 ? (
-              <div className="table">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Title</th>
-                      <th>Download</th>
+            <h2 className="primary-heading">
+              Welcome, {userData.firstName} {userData.lastName}!
+            </h2>
+            <div className="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {products.map((item) => (
+                    <tr key={item.id}>
+                      <td>{item.title}</td>
+                      <td>
+                        <Button
+                          variant="success"
+                          onClick={() =>
+                            handleDownload(item.pdfUrl, item.title)
+                          }
+                          disabled={
+                            !userData.items.some(
+                              (purchasedItem) => purchasedItem.id === item.id
+                            )
+                          }
+                        >
+                          Download
+                        </Button>
+                      </td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    {purchasedItems.map((item) => (
-                      <tr key={item.id}>
-                        <td>{item.title}</td>
-                        <td>
-                          <Button
-                            variant="success"
-                            onClick={() => handleDownload(item.id)}
-                          >
-                            Download
-                          </Button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            ) : (
-              <p>No items purchased or items not found.</p>
-            )}
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-        <Footer />
       </div>
     </div>
   );
