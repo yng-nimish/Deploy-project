@@ -29,7 +29,7 @@ function Store() {
   };
 
   const filteredProductsArray = productsArray.filter(
-    (product) => product.id !== "price_1PtTgV013t2ai8cxcqb7PFfy"
+    (product) => product.id !== "price_1Px8XL013t2ai8cxAOSkYTjB"
   );
   const totalCost = cart.getTotalCost();
   const isFeeApplicable = totalCost < 50.49;
