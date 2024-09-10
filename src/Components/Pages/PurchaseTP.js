@@ -8,6 +8,7 @@ const PurchaseTP = () => {
     firstName: "",
     lastName: "",
     items: [], // Initialize as an empty array
+    serialKey: "", // Add serialKey to state
   });
 
   const [products, setProducts] = useState([]);
@@ -26,6 +27,7 @@ const PurchaseTP = () => {
       const firstName = urlParams.get("first_name");
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
+      const serialKey = urlParams.get("serial_key"); // Get serial key from URL
 
       // Default items to an empty array if undefined
       let items = [];
@@ -67,8 +69,16 @@ const PurchaseTP = () => {
           <div className="Purchase-Container">
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
             <h2 className="primary-heading">
-              Welcome, {userData.firstName} {userData.lastName}!
+              Welcome, {userData.firstName} {userData.lastName}!{" "}
+              <h3>Your Serial Key:</h3>
+              <p>{userData.serialKey}</p>
             </h2>
+            {userData.serialKey && (
+              <div className="serial-key">
+                <h3>Your Serial Key:</h3>
+                <p>{userData.serialKey}</p>
+              </div>
+            )}
             <div className="table">
               <table>
                 <thead>
