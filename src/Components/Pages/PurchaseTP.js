@@ -42,6 +42,7 @@ const PurchaseTP = () => {
         firstName: firstName || "",
         lastName: lastName || "",
         items: items,
+        serialKey: serialKey || "",
       });
     };
   }, []);
@@ -70,13 +71,12 @@ const PurchaseTP = () => {
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
             <h2 className="primary-heading">
               Welcome, {userData.firstName} {userData.lastName}!{" "}
-              <h3>Your Serial Key:</h3>
-              <p>{userData.serialKey}</p>
             </h2>
             {userData.serialKey && (
               <div className="serial-key">
                 <h3>Your Serial Key:</h3>
-                <p>{userData.serialKey}</p>
+                <pre>{userData.serialKey}</pre>{" "}
+                {/* Preserve formatting with <pre> */}
               </div>
             )}
             <div className="table">
