@@ -80,8 +80,23 @@ const PurchaseForm = () => {
               country: formData.country,
               email: formData.email,
             },
-            ownerData: formData.sameAsOwner ? null : formData.owner,
+            ownerData: formData.sameAsOwner
+              ? {
+                  firstName: formData.firstName,
+                  lastName: formData.lastName,
+                  business: formData.business,
+                  streetAddress: formData.streetAddress,
+                  city: formData.city,
+                  state: formData.state,
+                  zipCode: formData.zipCode,
+                  country: formData.country,
+                  email: formData.email,
+                }
+              : formData.owner,
             emailList: formData.emailList,
+            purchaseDate: new Date().toISOString().split("T")[0], // Assuming current date
+
+            country: formData.country,
           }),
         }
       );
