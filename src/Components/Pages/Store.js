@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { productsArray } from "./ProductsStore";
+import { productsArraySun } from "./ProductsArraySun";
 import { Button, Modal } from "react-bootstrap";
 import CartProvider from "./CartContext";
 import { Link, NavLink } from "react-router-dom";
@@ -9,7 +10,7 @@ import { useContext } from "react";
 import CartProduct from "./CartProduct";
 import ProductCard from "./ProductCard";
 import { Row, Col } from "react-bootstrap";
-import PurchaseForm from "./PurchaseForm"; // Import your PurchaseForm component
+import PurchaseForm from "./PurchaseForm";
 import { useNavigate } from "react-router-dom";
 import comingSoon from "../../Assets/Group 62.svg";
 
@@ -58,14 +59,26 @@ function Store() {
                 ))}
               </Row>
             </div>
-            <h1 className="primary-heading-2"> Purchase The SUN </h1>
+            <h1 className="primary-heading-2">
+              {" "}
+              <br />
+              Purchase The SUN <br />
+            </h1>
 
-            <div className="coming-soon-container">
-              <div className="balloon">
-                <img src={comingSoon} className="ballon-image" />
-              </div>
+            <div className="table">
+              <Row xs={1} md={3} className="g-4">
+                {productsArraySun.map((product, idx) => (
+                  <Col align="center" key={idx}>
+                    <ProductCard product={product} />
+                  </Col>
+                ))}
+              </Row>
             </div>
-            <h1 className="primary-heading-2"> Purchase IP </h1>
+            <h1 className="primary-heading-2">
+              {" "}
+              <br />
+              Purchase IP <br />{" "}
+            </h1>
 
             <div className="coming-soon-container">
               <div className="balloon">
