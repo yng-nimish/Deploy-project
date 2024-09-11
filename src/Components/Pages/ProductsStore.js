@@ -29,8 +29,9 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
+
   /*{
-    id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Px8XL013t2ai8cxAOSkYTjB
+    id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Px8XL013t2ai8cxAOSkYTjB price_1PxoiI013t2ai8cxpSKPhDJl
     title: "Payment Processing Fee",
     price: 0.79,
     pdfUrl: "",
