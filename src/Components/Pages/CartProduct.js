@@ -2,12 +2,18 @@ import { Button } from "react-bootstrap";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import { getProductData } from "./ProductsStore";
+import { getProductSunData } from "./ProductsArraySun";
 
 function CartProduct(props) {
   const cart = useContext(CartContext);
   const id = props.id;
   const quantity = props.quantity;
-  const productData = getProductData(id);
+  // Check both arrays for the product
+  const productData = getProductData(id) || getProductSunData(id);
+  // Handle case where product data might not be found
+  if (!productData) {
+    return <p>Product data not found for ID: {id}</p>;
+  }
 
   return (
     <>

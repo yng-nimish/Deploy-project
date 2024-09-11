@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./ProductsStore";
+import { productsArraySun, getProductSunData } from "./ProductsArraySun";
 
 export const CartContext = createContext({
   items: [],
@@ -88,7 +89,8 @@ export function CartProvider({ children }) {
   function getTotalCost() {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
-      const productData = getProductData(cartItem.id);
+      const productData =
+        getProductData(cartItem.id) || getProductSunData(cartItem.id);
       totalCost += productData.price * cartItem.quantity;
     });
     // Add payment processing fee if total cost is less than $50
