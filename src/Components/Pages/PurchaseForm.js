@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
+import { productsArraySun } from "./ProductsArraySun";
+/* Test Mode
 const stripePromise = loadStripe(
   "REDACTED"
+);
+*/
+// Live Mode
+const stripePromise = loadStripe(
+  "pk_live_51PYCXa013t2ai8cx8TMVzR5XyFKBg1or1U8kZpBudEMObvxQETCZxkiqL3JNFiGdNLeFe9NhuCz58yZto5KIO4Xr00JwUxiYsc"
 );
 
 const PurchaseForm = () => {
@@ -24,7 +31,12 @@ const PurchaseForm = () => {
     email: "",
     emailList: false,
     sameAsOwner: false,
-    owner: {
+    owners: [], // Array to hold owner information
+  });
+
+  {
+    /*
+    owners: Array.from({ length: sunProductCount }, () => ({
       firstName: "",
       lastName: "",
       business: "",
@@ -34,8 +46,38 @@ const PurchaseForm = () => {
       zipCode: "",
       country: "",
       email: "",
-    },
-  });
+    })), */
+  }
+
+  // Calculate the number of SUN products in the cart
+  const calculateSunProductQuantity = () => {
+    return cartItems.reduce((count, item) => {
+      const product = productsArraySun.find(
+        (product) => product.id === item.id
+      );
+      return product ? count + item.quantity : count;
+    }, 0);
+  };
+
+  const numSunProducts = calculateSunProductQuantity();
+
+  useEffect(() => {
+    // Initialize owner fields based on the number of SUN products
+    setFormData((prev) => ({
+      ...prev,
+      owners: Array.from({ length: numSunProducts }, () => ({
+        firstName: "",
+        lastName: "",
+        business: "",
+        streetAddress: "",
+        city: "",
+        state: "",
+        zipCode: "",
+        country: "",
+        email: "",
+      })),
+    }));
+  }, [numSunProducts]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -45,19 +87,23 @@ const PurchaseForm = () => {
     }));
   };
 
-  const handleOwnerChange = (e) => {
+  const handleOwnerChange = (index, e) => {
     const { name, value } = e.target;
+    const updatedOwners = [...formData.owners];
+    updatedOwners[index] = {
+      ...updatedOwners[index],
+      [name]: value,
+    };
     setFormData((prev) => ({
       ...prev,
-      owner: {
-        ...prev.owner,
-        [name]: value,
-      },
+      owners: updatedOwners,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    // Assume `cartItems` may contain `productsArray` and `productsArraySun`
+    console.log("Cart Items:", cartItems);
 
     try {
       const response = await fetch(
@@ -92,7 +138,7 @@ const PurchaseForm = () => {
                   country: formData.country,
                   email: formData.email,
                 }
-              : formData.owner,
+              : formData.owners,
             emailList: formData.emailList,
             purchaseDate: new Date().toISOString().split("T")[0], // Assuming current date
 
@@ -138,8 +184,27 @@ const PurchaseForm = () => {
     setFormData((prev) => ({
       ...prev,
       sameAsOwner: !prev.sameAsOwner,
-      owner: prev.sameAsOwner
-        ? {
+      owners: prev.sameAsOwner
+        ? [
+            {
+              firstName: "",
+              lastName: "",
+              business: "",
+              streetAddress: "",
+              city: "",
+              state: "",
+              zipCode: "",
+              country: "",
+              email: "",
+            },
+          ]
+        : prev.owners,
+    }));
+  };
+
+  {
+    /*
+        ? Array.from({ length: sunProductCount }, () => ({
             firstName: "",
             lastName: "",
             business: "",
@@ -149,20 +214,12 @@ const PurchaseForm = () => {
             zipCode: "",
             country: "",
             email: "",
-          }
-        : {
-            firstName: prev.firstName,
-            lastName: prev.lastName,
-            business: prev.business,
-            streetAddress: prev.streetAddress,
-            city: prev.city,
-            state: prev.state,
-            zipCode: prev.zipCode,
-            country: prev.country,
-            email: prev.email,
-          },
+          }))
+        : prev.owners,
     }));
-  };
+    };
+    */
+  }
 
   return (
     <div className="about-wrapper">
@@ -185,7 +242,7 @@ const PurchaseForm = () => {
                     Buyer's information{" "}
                   </h2>
                 </div>
-
+                {/* Buyer's Information Fields */}
                 <div className="input-box">
                   <label>First Name: </label> &nbsp;
                   <input
@@ -315,124 +372,124 @@ const PurchaseForm = () => {
                   <br />
                   <br />
                 </div>
-                {!formData.sameAsOwner && (
-                  <>
-                    <div>
+                {/* Render Owner Fields Dynamically */}
+                {/* Render Owner Fields Dynamically */}
+                {!formData.sameAsOwner &&
+                  formData.owners.map((owner, index) => (
+                    <div key={index}>
                       <h2 className="primary-heading-welcome">
                         {" "}
-                        Owner's Information{" "}
+                        Owner {index + 1}{" "}
                       </h2>
+                      <div className="input-box">
+                        <label>First Name:</label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          className="field"
+                          placeholder="Enter Owner's First Name"
+                          value={owner.firstName}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Last Name:</label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          className="field"
+                          placeholder="Enter Owner's Last Name"
+                          value={owner.lastName}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Business/Organization:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="business"
+                          className="field"
+                          placeholder="Business/Organization Name"
+                          value={owner.business}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Street Address:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="streetAddress"
+                          className="field"
+                          placeholder="Enter your Street Address"
+                          value={owner.streetAddress}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>City/Town:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="city"
+                          className="field"
+                          placeholder="Enter your City/Town"
+                          value={owner.city}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>State/Province:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="state"
+                          className="field"
+                          placeholder="Enter your State/Province"
+                          value={owner.state}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Zip Code:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="zipCode"
+                          className="field"
+                          placeholder="Enter Zipcode"
+                          value={owner.zipCode}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Country:</label> &nbsp;
+                        <input
+                          type="text"
+                          name="country"
+                          className="field"
+                          placeholder="Enter Country"
+                          value={owner.country}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Email:</label> &nbsp;
+                        <input
+                          type="email"
+                          name="email"
+                          className="field"
+                          placeholder="Enter your Email"
+                          value={owner.email}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
                     </div>
-
-                    <div className="input-box">
-                      <label>First Name:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="firstName"
-                        className="field"
-                        placeholder="Enter your First Name"
-                        value={formData.owner.firstName}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Last Name:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="lastName"
-                        className="field"
-                        placeholder="Enter your Last Name"
-                        value={formData.owner.lastName}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Business/Organization:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="business"
-                        className="field"
-                        placeholder="Business/Organization Name"
-                        value={formData.owner.business}
-                        onChange={handleOwnerChange}
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Street Address:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="streetAddress"
-                        className="field"
-                        placeholder="Enter your Street Address"
-                        value={formData.owner.streetAddress}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>City/Town:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="city"
-                        className="field"
-                        placeholder="Enter your City/Town"
-                        value={formData.owner.city}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>State/Province:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="state"
-                        className="field"
-                        placeholder="Enter your State/Province"
-                        value={formData.owner.state}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Zip Code:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="zipCode"
-                        className="field"
-                        placeholder="Enter Zipcode"
-                        value={formData.owner.zipCode}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Country:</label> &nbsp;
-                      <input
-                        type="text"
-                        name="country"
-                        className="field"
-                        placeholder="Enter Country"
-                        value={formData.owner.country}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Email:</label> &nbsp;
-                      <input
-                        type="email"
-                        name="email"
-                        className="field"
-                        placeholder="Enter your Email"
-                        value={formData.owner.email}
-                        onChange={handleOwnerChange}
-                        required
-                      />
-                    </div>
-                  </>
-                )}
+                  ))}
                 <button type="submit">Continue to Checkout...</button>
                 <Link to="/purchase">
                   <button color="primary" href="#">

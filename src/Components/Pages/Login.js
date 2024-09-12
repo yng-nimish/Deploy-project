@@ -7,7 +7,7 @@ import Tabs from "react-bootstrap/Tabs";
 import comingSoon from "../../Assets/Group 62.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
+//this page is not working
 const Login = () => {
   const onSubmit = () => {};
 
