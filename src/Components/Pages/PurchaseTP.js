@@ -9,6 +9,7 @@ const PurchaseTP = () => {
     lastName: "",
     items: [], // Initialize as an empty array
     serialKey: "", // Add serialKey to state
+    priceId: "", // Add priceId to state
   });
 
   const [products, setProducts] = useState([]);
@@ -28,6 +29,12 @@ const PurchaseTP = () => {
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
       const serialKey = urlParams.get("serial_key"); // Get serial key from URL
+      const priceId = urlParams.get("price_id"); // Get price_id from URL
+
+      // Debug logs
+      console.log("URL Parameters:");
+      console.log("Serial Key:", serialKey);
+      console.log("Price ID:", priceId);
 
       // Default items to an empty array if undefined
       let items = [];
@@ -43,6 +50,7 @@ const PurchaseTP = () => {
         lastName: lastName || "",
         items: items,
         serialKey: serialKey || "",
+        priceId: priceId || "",
       });
     };
   }, []);
@@ -62,6 +70,12 @@ const PurchaseTP = () => {
   if (!products.length) {
     return <div>Loading products...</div>;
   }
+  // Conditional rendering based on priceId and serialKey
+  const shouldShowSerialKey =
+    userData.priceId === "price_1PxoiI013t2ai8cxpSKPhDJl" &&
+    userData.serialKey &&
+    userData.serialKey.trim() !== "" &&
+    userData.serialKey !== null;
 
   return (
     <div className="about-wrapper">
@@ -72,9 +86,9 @@ const PurchaseTP = () => {
             <h2 className="primary-heading">
               Welcome, {userData.firstName} {userData.lastName}!{" "}
             </h2>
-            {userData.serialKey && (
+            {shouldShowSerialKey && (
               <div className="serial-key">
-                <h3>Your Serial Key:</h3>
+                <h2>Your Serial Key:</h2>
                 <pre>{userData.serialKey}</pre>{" "}
                 {/* Preserve formatting with <pre> */}
               </div>
