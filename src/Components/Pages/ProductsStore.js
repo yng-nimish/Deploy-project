@@ -2,6 +2,36 @@
 
 const productsArray = [
   {
+    // Live Mode
+    id: "price_1Py2vY013t2ai8cxQdrdWxM0",
+    title: "You Gotta Do The Work",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1tkuUOcWRZ1ZjfRHNYgfQHoRaN8gUWiNonyaLDIfTdWA/export?format=pdf",
+  },
+  {
+    id: "price_1Py2va013t2ai8cxEnos9q5z",
+    title: "Randomness",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1LSCcaw06NQxgqB2GkxeHVbm1pXagYxG84gFAQ6pXJRk/export?format=pdf",
+  },
+  {
+    id: "price_1Py2vW013t2ai8cxFKmc6Jf6",
+    title: "Why it is Right to Admire The Wright Brothers",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/11HbycLTA4_Qd5VdtzMoN6EcwaW0fWLH2_CC8fYr5goA/export?format=pdf",
+  },
+  {
+    id: "price_1Py2vT013t2ai8cx2I8yb7Ek",
+    title: "Footwork",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
+  },
+  /*
+  { Test Mode
     id: "price_1PoBHG013t2ai8cxq5RtiI4j",
     title: "You Gotta Do The Work",
     price: 0.99,
@@ -31,7 +61,7 @@ const productsArray = [
   },
 
   /*{
-    id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Px8XL013t2ai8cxAOSkYTjB price_1PxoiI013t2ai8cxpSKPhDJl
+    id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Py2vR013t2ai8cxsp6eOczL
     title: "Payment Processing Fee",
     price: 0.79,
     pdfUrl: "",
