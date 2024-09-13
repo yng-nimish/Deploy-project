@@ -29,7 +29,7 @@ const PurchaseTP = () => {
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
       const serialKey = urlParams.get("serial_key"); // Get serial key from URL
-      const priceIdsParam = urlParams.get("price_ids"); // Get price_ids from URL
+      const priceIdsParam = urlParams.get("price_id"); // Get price_id from URL (updated from price_ids)
 
       // Debug logs
       console.log("URL:", window.location.href);
@@ -47,6 +47,7 @@ const PurchaseTP = () => {
       } catch (e) {
         console.error("Failed to parse items from URL:", e);
       }
+
       // Default priceIds to an empty array if undefined
       let priceIds = [];
       if (priceIdsParam) {
