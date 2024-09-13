@@ -52,7 +52,7 @@ const PurchaseTP = () => {
       let serialKeys = [];
       try {
         serialKeys = decodeURIComponent(serialKeysParam)
-          .split(/\n|,/)
+          .split(",")
           .filter(Boolean) // Remove empty strings
           .map((key) => ({ serialKey: key, owner: {} })); // Assuming each key needs an owner object
       } catch (e) {
@@ -100,6 +100,41 @@ const PurchaseTP = () => {
     userData.serialKeys.length > 0 &&
     userData.serialKeys !== null;
 
+  const J1 = " ";
+
+  const formatGrid = (serialKey) => {
+    // Define the layout for the 3x3 matrix
+    const rows = [
+      ["A1", "A2", "A3", "J1", "B1", "B2", "B3", "J1", "C1", "C2", "C3"],
+      ["D1", "D2", "D3", "J1", "E1", "E2", "E3", "J1", "F1", "F2", "F3"],
+      ["G1", "G2", "G3", "J1", "H1", "H2", "H3", "J1", "I1", "I2", "I3"],
+    ];
+
+    // Function to format each cell value
+    const formatCell = (value) => {
+      if (value === undefined || value === null) {
+        return ""; // Handle undefined or null values gracefully
+      }
+      const stringValue = String(value);
+      // Ensure each cell is exactly 3 characters wide, pad with spaces on the left if needed
+      return stringValue;
+    };
+
+    // Function to format each block into a single line
+    const formatRow = (row) => {
+      return row.map((cell) => formatCell(serialKey[cell])).join(""); // Join cells with a space
+    };
+
+    // Create formatted output
+    const formattedOutput = rows.map((row) => {
+      // Format each row with proper spacing
+      const formattedRow = formatRow(row);
+      return formattedRow.trim(); // Trim any trailing spaces
+    });
+
+    return formattedOutput.join("\n");
+  };
+
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
@@ -122,7 +157,7 @@ const PurchaseTP = () => {
                 {userData.serialKeys.map((key, index) => (
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
-                    <pre>{key.serialKey}</pre>
+                    <pre>{formatGrid(key)}</pre>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
                     <p>
