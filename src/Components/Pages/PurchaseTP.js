@@ -39,7 +39,7 @@ const PurchaseTP = () => {
       console.log("Items Param:", itemsParam);
       console.log("Serial Key:", serialKey);
       console.log("Price IDs:", priceIdsParam);
-
+      //
       // Default items to an empty array if undefined
       let items = [];
       try {
