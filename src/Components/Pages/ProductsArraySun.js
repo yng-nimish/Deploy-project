@@ -1,6 +1,7 @@
 // price id for you gotta do the work : price_1PoBHG013t2ai8cxq5RtiI4j
 
 const productsArraySun = [
+  /*
   {
     // Live Mode
     id: "price_1Py2vL013t2ai8cxo0WMZZHi",
@@ -8,13 +9,14 @@ const productsArraySun = [
     price: 99.99,
     pdfUrl: "",
   },
-  /* Test Mode 
+  */
+  // Test Mode
   {
     id: "price_1PxoiI013t2ai8cxpSKPhDJl",
     title: "The Founder Series SUN",
     price: 99.99,
     pdfUrl: "",
-  },*/
+  },
 ];
 
 function getProductSunData(id) {

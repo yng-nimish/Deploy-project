@@ -4,16 +4,16 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
-/* Test Mode
+//Test Mode
 const stripePromise = loadStripe(
   "REDACTED"
 );
-*/
+/* 
 // Live Mode
 const stripePromise = loadStripe(
   "pk_live_51PYCXa013t2ai8cx8TMVzR5XyFKBg1or1U8kZpBudEMObvxQETCZxkiqL3JNFiGdNLeFe9NhuCz58yZto5KIO4Xr00JwUxiYsc"
 );
-
+*/
 const PurchaseForm = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -102,6 +102,8 @@ const PurchaseForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form Data:", formData); // Log form data
+
     // Assume `cartItems` may contain `productsArray` and `productsArraySun`
     console.log("Cart Items:", cartItems);
 
@@ -153,6 +155,7 @@ const PurchaseForm = () => {
       const data = await response.json();
       console.log("API Response:", data);
       console.log("Response Status:", response.status);
+
       if (response.ok && data.sessionId) {
         const stripe = await stripePromise;
         const { error } = await stripe.redirectToCheckout({
