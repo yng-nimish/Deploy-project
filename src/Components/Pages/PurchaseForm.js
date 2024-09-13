@@ -127,17 +127,20 @@ const PurchaseForm = () => {
               email: formData.email,
             },
             ownerData: formData.sameAsOwner
-              ? {
-                  firstName: formData.firstName,
-                  lastName: formData.lastName,
-                  business: formData.business,
-                  streetAddress: formData.streetAddress,
-                  city: formData.city,
-                  state: formData.state,
-                  zipCode: formData.zipCode,
-                  country: formData.country,
-                  email: formData.email,
-                }
+              ? [
+                  // Have to wrap as an Array for same as owner button
+                  {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    business: formData.business,
+                    streetAddress: formData.streetAddress,
+                    city: formData.city,
+                    state: formData.state,
+                    zipCode: formData.zipCode,
+                    country: formData.country,
+                    email: formData.email,
+                  },
+                ]
               : formData.owners,
             emailList: formData.emailList,
             purchaseDate: new Date().toISOString().split("T")[0], // Assuming current date
@@ -486,8 +489,10 @@ const PurchaseForm = () => {
                           value={owner.email}
                           onChange={(e) => handleOwnerChange(index, e)}
                           required
-                        />
+                        />{" "}
+                        <br />
                       </div>
+                      <br />
                     </div>
                   ))}
                 <button type="submit">Continue to Checkout...</button>
