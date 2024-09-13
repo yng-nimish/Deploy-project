@@ -52,12 +52,15 @@ const PurchaseTP = () => {
       let serialKeys = [];
       try {
         serialKeys = decodeURIComponent(serialKeysParam)
-          .split(",")
+          .split("\n")
           .filter(Boolean) // Remove empty strings
-          .map((key) => ({ serialKey: key, owner: {} })); // Assuming each key needs an owner object
+          .map((key) => key.trim())
+          .filter(Boolean); // Remove any leftover empty strings
       } catch (e) {
         console.error("Failed to parse serial keys from URL:", e);
       }
+      // Ensure serialKeys is an array of objects
+      serialKeys = serialKeys.map((key) => ({ serialKey: key, owner: {} }));
 
       // Default priceIds to an empty array if undefined
       let priceIds = [];
@@ -157,7 +160,7 @@ const PurchaseTP = () => {
                 {userData.serialKeys.map((key, index) => (
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
-                    <pre>{formatGrid(key)}</pre>
+                    <pre>{formatGrid(key.serialKey)}</pre>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
                     <p>
