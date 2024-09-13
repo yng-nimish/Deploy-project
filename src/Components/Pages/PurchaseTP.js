@@ -8,7 +8,7 @@ const PurchaseTP = () => {
     firstName: "",
     lastName: "",
     items: [], // Initialize as an empty array
-    serialKey: "", // Add serialKey to state
+    serialKeys: [], // Update to hold an array of serial key objects
     priceIds: [], // Add priceIds to state
   });
 
@@ -28,7 +28,7 @@ const PurchaseTP = () => {
       const firstName = urlParams.get("first_name");
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
-      const serialKey = urlParams.get("serial_key"); // Get serial key from URL
+      const serialKeysParam = urlParams.get("serial_keys"); // Updated from serial_key
       const priceIdsParam = urlParams.get("price_id"); // Get price_id from URL (updated from price_ids)
 
       // Debug logs
@@ -37,7 +37,7 @@ const PurchaseTP = () => {
       console.log("First Name:", firstName);
       console.log("Last Name:", lastName);
       console.log("Items Param:", itemsParam);
-      console.log("Serial Key:", serialKey);
+      console.log("Serial Keys:", serialKeys); // Update from serialKey
       console.log("Price IDs:", priceIdsParam);
       //
       // Default items to an empty array if undefined
@@ -46,6 +46,13 @@ const PurchaseTP = () => {
         items = JSON.parse(decodeURIComponent(itemsParam)) || [];
       } catch (e) {
         console.error("Failed to parse items from URL:", e);
+      }
+
+      let serialKeys = [];
+      try {
+        serialKeys = JSON.parse(decodeURIComponent(serialKeysParam)) || [];
+      } catch (e) {
+        console.error("Failed to parse serial keys from URL:", e);
       }
 
       // Default priceIds to an empty array if undefined
@@ -59,7 +66,7 @@ const PurchaseTP = () => {
         firstName: firstName || "",
         lastName: lastName || "",
         items: items,
-        serialKey: serialKey || "",
+        serialKeys: serialKeys,
         priceIds: priceIds,
       });
     };
@@ -84,9 +91,9 @@ const PurchaseTP = () => {
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
     userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
-    userData.serialKey &&
-    userData.serialKey.trim() !== "" &&
-    userData.serialKey !== null;
+    userData.serialKeys &&
+    userData.serialKeys.trim() !== "" &&
+    userData.serialKeys !== null;
 
   return (
     <div className="about-wrapper">
@@ -97,11 +104,28 @@ const PurchaseTP = () => {
             <h2 className="primary-heading">
               Welcome, {userData.firstName} {userData.lastName}!{" "}
             </h2>
+            {/* Display Serial Keys and Owners */}
+
             {shouldShowSerialKey && (
-              <div className="serial-key">
-                <h2>Your Serial Key:</h2>
-                <pre>{userData.serialKey}</pre>{" "}
-                {/* Preserve formatting with <pre> */}
+              <div className="serial-keys">
+                <h2>
+                  Your Serial Key: Your Serial Key is Important, Save it , you
+                  will need it to download The SUN
+                </h2>
+                {/* If you have owner details associated with each serial key, you need to ensure it's included in your serialKeys data */}
+
+                {userData.serialKeys.map((key, index) => (
+                  <div key={index} className="serial-key">
+                    <h2>Serial Key {index + 1}:</h2>
+                    <pre>{key.serialKey}</pre>
+                    {/* Add owner details here if available */}
+                    <h3>Owner Details:</h3>
+                    <p>
+                      Name: {key.owner.firstName} {key.owner.lastName}
+                    </p>
+                    <p>Email: {key.owner.email}</p>
+                  </div>
+                ))}
               </div>
             )}
             <div className="table">
