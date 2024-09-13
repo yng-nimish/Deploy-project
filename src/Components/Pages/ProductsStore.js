@@ -1,6 +1,7 @@
 // price id for you gotta do the work : price_1PoBHG013t2ai8cxq5RtiI4j
 
 const productsArray = [
+  /*
   {
     // Live Mode
     id: "price_1Py2vY013t2ai8cxQdrdWxM0",
@@ -30,8 +31,9 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
-  /*
-  { Test Mode
+  */
+  {
+    //Test Mode
     id: "price_1PoBHG013t2ai8cxq5RtiI4j",
     title: "You Gotta Do The Work",
     price: 0.99,
