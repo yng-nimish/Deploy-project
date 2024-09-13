@@ -52,7 +52,7 @@ const PurchaseTP = () => {
       let serialKeys = [];
       try {
         serialKeys = decodeURIComponent(serialKeysParam)
-          .split("\n") // Split by new line
+          .split(/\n|,/)
           .filter(Boolean) // Remove empty strings
           .map((key) => ({ serialKey: key, owner: {} })); // Assuming each key needs an owner object
       } catch (e) {
