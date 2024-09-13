@@ -23,13 +23,13 @@ const PurchaseTP = () => {
     }
 
     // Load user data and items from URL on page load
-    window.onload = () => {
+    const handleLoad = () => {
       const urlParams = new URLSearchParams(window.location.search);
       const firstName = urlParams.get("first_name");
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
-      const serialKeysParam = urlParams.get("serial_keys"); // Updated from serial_key
-      const priceIdsParam = urlParams.get("price_id"); // Get price_id from URL (updated from price_ids)
+      const serialKeysParam = urlParams.get("serial_key"); // Corrected parameter name
+      const priceIdsParam = urlParams.get("price_id"); // Corrected parameter name
 
       // Debug logs
       console.log("URL:", window.location.href);
@@ -37,9 +37,10 @@ const PurchaseTP = () => {
       console.log("First Name:", firstName);
       console.log("Last Name:", lastName);
       console.log("Items Param:", itemsParam);
-      console.log("Serial Keys:", serialKeys); // Update from serialKey
+      console.log("Serial Keys:", serialKeysParam); // Corrected parameter name
       console.log("Price IDs:", priceIdsParam);
       //
+
       // Default items to an empty array if undefined
       let items = [];
       try {
@@ -50,7 +51,10 @@ const PurchaseTP = () => {
 
       let serialKeys = [];
       try {
-        serialKeys = JSON.parse(decodeURIComponent(serialKeysParam)) || [];
+        serialKeys = decodeURIComponent(serialKeysParam)
+          .split("\n") // Split by new line
+          .filter(Boolean) // Remove empty strings
+          .map((key) => ({ serialKey: key, owner: {} })); // Assuming each key needs an owner object
       } catch (e) {
         console.error("Failed to parse serial keys from URL:", e);
       }
@@ -70,6 +74,7 @@ const PurchaseTP = () => {
         priceIds: priceIds,
       });
     };
+    handleLoad();
   }, []);
 
   // Handle download with user feedback
@@ -112,7 +117,7 @@ const PurchaseTP = () => {
                   Your Serial Key: Your Serial Key is Important, Save it , you
                   will need it to download The SUN
                 </h2>
-                {/* If you have owner details associated with each serial key, you need to ensure it's included in your serialKeys data */}
+                {/* Map through the serial keys to display them */}
 
                 {userData.serialKeys.map((key, index) => (
                   <div key={index} className="serial-key">
@@ -121,9 +126,10 @@ const PurchaseTP = () => {
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
                     <p>
-                      Name: {key.owner.firstName} {key.owner.lastName}
+                      Name: {key.owner?.firstName || "N/A"}{" "}
+                      {key.owner?.lastName || "N/A"}
                     </p>
-                    <p>Email: {key.owner.email}</p>
+                    <p>Email: {key.owner?.email || "N/A"}</p>
                   </div>
                 ))}
               </div>
