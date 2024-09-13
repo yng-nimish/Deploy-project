@@ -32,7 +32,11 @@ const PurchaseTP = () => {
       const priceId = urlParams.get("price_id"); // Get price_id from URL
 
       // Debug logs
+      console.log("URL:", window.location.href);
       console.log("URL Parameters:");
+      console.log("First Name:", firstName);
+      console.log("Last Name:", lastName);
+      console.log("Items Param:", itemsParam);
       console.log("Serial Key:", serialKey);
       console.log("Price ID:", priceId);
 
@@ -70,6 +74,7 @@ const PurchaseTP = () => {
   if (!products.length) {
     return <div>Loading products...</div>;
   }
+
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
     userData.priceId === "price_1PxoiI013t2ai8cxpSKPhDJl" &&
