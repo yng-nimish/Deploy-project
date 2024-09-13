@@ -97,7 +97,7 @@ const PurchaseTP = () => {
   const shouldShowSerialKey =
     userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
     userData.serialKeys &&
-    userData.serialKeys.trim() !== "" &&
+    userData.serialKeys.length > 0 &&
     userData.serialKeys !== null;
 
   return (
