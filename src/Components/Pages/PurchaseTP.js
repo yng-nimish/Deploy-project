@@ -9,7 +9,7 @@ const PurchaseTP = () => {
     lastName: "",
     items: [], // Initialize as an empty array
     serialKey: "", // Add serialKey to state
-    priceId: "", // Add priceId to state
+    priceIds: [], // Add priceIds to state
   });
 
   const [products, setProducts] = useState([]);
@@ -29,7 +29,7 @@ const PurchaseTP = () => {
       const lastName = urlParams.get("last_name");
       const itemsParam = urlParams.get("items");
       const serialKey = urlParams.get("serial_key"); // Get serial key from URL
-      const priceId = urlParams.get("price_id"); // Get price_id from URL
+      const priceIdsParam = urlParams.get("price_ids"); // Get price_ids from URL
 
       // Debug logs
       console.log("URL:", window.location.href);
@@ -38,7 +38,7 @@ const PurchaseTP = () => {
       console.log("Last Name:", lastName);
       console.log("Items Param:", itemsParam);
       console.log("Serial Key:", serialKey);
-      console.log("Price ID:", priceId);
+      console.log("Price IDs:", priceIdsParam);
 
       // Default items to an empty array if undefined
       let items = [];
@@ -47,6 +47,11 @@ const PurchaseTP = () => {
       } catch (e) {
         console.error("Failed to parse items from URL:", e);
       }
+      // Default priceIds to an empty array if undefined
+      let priceIds = [];
+      if (priceIdsParam) {
+        priceIds = decodeURIComponent(priceIdsParam).split(","); // Split price_ids into an array
+      }
 
       // Set user data
       setUserData({
@@ -54,7 +59,7 @@ const PurchaseTP = () => {
         lastName: lastName || "",
         items: items,
         serialKey: serialKey || "",
-        priceId: priceId || "",
+        priceIds: priceIds,
       });
     };
   }, []);
@@ -77,7 +82,7 @@ const PurchaseTP = () => {
 
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
-    userData.priceId === "price_1PxoiI013t2ai8cxpSKPhDJl" &&
+    userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
     userData.serialKey &&
     userData.serialKey.trim() !== "" &&
     userData.serialKey !== null;
