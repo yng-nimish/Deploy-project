@@ -10,6 +10,7 @@ const PurchaseTP = () => {
     items: [], // Initialize as an empty array
     serialKeys: [], // Update to hold an array of serial key objects
     priceIds: [], // Add priceIds to state
+    ownerData: [], //get owner data
   });
 
   const [products, setProducts] = useState([]);
@@ -30,6 +31,7 @@ const PurchaseTP = () => {
       const itemsParam = urlParams.get("items");
       const serialKeysParam = urlParams.get("serial_key"); // Corrected parameter name
       const priceIdsParam = urlParams.get("price_id"); // Corrected parameter name
+      const ownerDataParam = urlParams.get("owner_data"); // New parameter for owner data
 
       // Debug logs
       console.log("URL:", window.location.href);
@@ -39,6 +41,8 @@ const PurchaseTP = () => {
       console.log("Items Param:", itemsParam);
       console.log("Serial Keys:", serialKeysParam); // Corrected parameter name
       console.log("Price IDs:", priceIdsParam);
+      console.log("Owner Data:", ownerDataParam); // New debug log for owner data
+
       //
 
       // Default items to an empty array if undefined
@@ -52,7 +56,7 @@ const PurchaseTP = () => {
       let serialKeys = [];
       try {
         serialKeys = decodeURIComponent(serialKeysParam)
-          .split("\n\n")
+          .split("\n\n,")
           .filter(Boolean) // Remove empty strings
           .map((key) => key.trim())
           .filter(Boolean); // Remove any leftover empty strings
@@ -69,6 +73,22 @@ const PurchaseTP = () => {
       serialKeys = serialKeys
         .slice(0, quantity)
         .map((key) => ({ serialKey: key, owner: {} }));
+
+      // Parse owner data if available
+      let ownerData = [];
+      if (ownerDataParam) {
+        try {
+          ownerData = JSON.parse(decodeURIComponent(ownerDataParam)) || [];
+        } catch (e) {
+          console.error("Failed to parse owner data from URL:", e);
+        }
+
+        // Assign owners to serial keys
+        serialKeys = serialKeys.map((key, index) => ({
+          ...key,
+          owner: ownerData[index] || {},
+        }));
+      }
 
       // Default priceIds to an empty array if undefined
       let priceIds = [];
