@@ -166,7 +166,7 @@ const PurchaseTP = () => {
     const finalOutput = formattedOutput.join("<br>");
 
     // Replace newlines with <br> for HTML rendering
-    return finalOutput.replace(/\n/g, "<br>");
+    return finalOutput;
   };
 
   return (
