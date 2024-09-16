@@ -209,7 +209,9 @@ const PurchaseTP = () => {
                     <div>
                       {console.log(
                         "Formatting using userData.serialKeys" +
-                          formatGrid(key.serialKey)
+                          formatGrid(
+                            userData.serialKeys.map((k) => k.serialKey)
+                          )
                       )}
                       <pre>
                         {userData.serialKeys.length > 0 &&
@@ -217,6 +219,13 @@ const PurchaseTP = () => {
                             userData.serialKeys.map((k) => k.serialKey)
                           )}
                       </pre>
+                      <div>
+                        {console.log(
+                          "Formatting using userData.serialKeys" +
+                            formatGrid(key.serialKey)
+                        )}
+                        <pre>{formatGrid(key.serialKey)}</pre>
+                      </div>
                     </div>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
