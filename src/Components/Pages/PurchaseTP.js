@@ -203,11 +203,9 @@ const PurchaseTP = () => {
                 {userData.serialKeys.map((key, index) => (
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
-                    <p>
-                      {" "}
-                      <pre>{formatGrid(key.serialKey)}</pre>
+                    <div style={{ whiteSpace: "pre-wrap" }}>
                       {formatGrid(key.serialKey)}
-                    </p>
+                    </div>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
                     <p>
