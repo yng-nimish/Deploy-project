@@ -84,7 +84,7 @@ const PurchaseTP = () => {
 
         // Assign owners to serial keys
         serialKeys = serialKeys.map((key, index) => ({
-          ...key,
+          serialKey: key,
           owner: ownerData[index] || {},
         }));
       }
@@ -192,11 +192,16 @@ const PurchaseTP = () => {
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
-                      {console.log("Formatted Serial Key Output:\n", {
+                      {console.log("Formatted Serial Key Output:", {
                         finalOutput: formatGrid(key.serialKey),
                       })}
 
-                      <pre>{formatGrid(key.serialKey)}</pre>
+                      <pre>
+                        {formatGrid(
+                          userData.serialKeys.map((k) => k.serialKey)
+                        )}
+                      </pre>
+
                       <p>{formatGrid(key.serialKey)}</p>
                     </div>
                     {/* Add owner details here if available */}
