@@ -207,21 +207,9 @@ const PurchaseTP = () => {
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
-                      {console.log(
-                        "Formatting using userData.serialKeys" +
-                          formatGrid(
-                            userData.serialKeys.map((k) => k.serialKey)
-                          )
-                      )}
-                      <pre>
-                        {userData.serialKeys.length > 0 &&
-                          formatGrid(
-                            userData.serialKeys.map((k) => k.serialKey)
-                          )}
-                      </pre>
                       <div>
                         {console.log(
-                          "Formatting using userData.serialKeys" +
+                          "Formatting using key.serialKey" +
                             formatGrid(key.serialKey)
                         )}
                         <pre>{formatGrid(key.serialKey)}</pre>
