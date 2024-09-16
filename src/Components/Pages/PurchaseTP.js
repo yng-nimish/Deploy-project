@@ -140,20 +140,6 @@ const PurchaseTP = () => {
       ["D1", "D2", "D3", "J1", "E1", "E2", "E3", "J1", "F1", "F2", "F3"],
       ["G1", "G2", "G3", "J1", "H1", "H2", "H3", "J1", "I1", "I2", "I3"],
     ];
-    // Create an object to map serial key values to the grid positions
-    const grid = rows.flat().reduce((acc, cell) => {
-      acc[cell] = "";
-      return acc;
-    }, {});
-
-    // Fill the grid with serial key values
-    let keyIndex = 0;
-    for (const cell of Object.keys(grid)) {
-      if (keyIndex < serialKey.length) {
-        grid[cell] = serialKey[keyIndex];
-        keyIndex += 1;
-      }
-    }
 
     // Function to format each cell value
     const formatCell = (value) => {
@@ -177,8 +163,9 @@ const PurchaseTP = () => {
       return formattedRow.trim(); // Trim any trailing spaces
     });
     console.log("Formatting Serial Key:\n" + serialKey);
+    const finalOutput = formattedOutput.join("\n");
 
-    return formattedOutput.join("\n");
+    return finalOutput;
   };
 
   return (
