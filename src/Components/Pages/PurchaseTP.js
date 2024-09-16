@@ -181,6 +181,7 @@ const PurchaseTP = () => {
 
     // Replace newlines with <br> for HTML rendering
     return finalOutput;
+    x``;
   };
 
   return (
@@ -207,9 +208,10 @@ const PurchaseTP = () => {
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
                       <pre>
-                        {formatGrid(
-                          userData.serialKeys.map((k) => k.serialKey)
-                        )}
+                        {userData.serialKeys.length > 0 &&
+                          formatGrid(
+                            userData.serialKeys.map((k) => k.serialKey)
+                          )}
                       </pre>
                     </div>
                     {/* Add owner details here if available */}
