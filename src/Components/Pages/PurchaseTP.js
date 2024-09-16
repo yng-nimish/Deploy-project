@@ -192,11 +192,12 @@ const PurchaseTP = () => {
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
-                      {console.log("Formatted Serial Key Output:", {
-                        finalOutput,
+                      {console.log("Formatted Serial Key Output:\n", {
+                        finalOutput: formatGrid(key.serialKey),
                       })}
 
-                      <pre>{finalOutput}</pre>
+                      <pre>{formatGrid(key.serialKey)}</pre>
+                      <p>{formatGrid(key.serialKey)}</p>
                     </div>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
