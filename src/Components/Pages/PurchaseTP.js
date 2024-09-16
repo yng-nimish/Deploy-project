@@ -85,7 +85,7 @@ const PurchaseTP = () => {
 
         // Assign owners to serial keys
         serialKeys = serialKeys.map((key, index) => ({
-          serialKey: key,
+          ...key,
           owner: ownerData[index] || {},
         }));
       }
