@@ -215,10 +215,9 @@ const PurchaseTP = () => {
                           }}
                         >
                           {console.log(
-                            "Formatting using key.serialKey" +
-                              formatGrid(key.serialKey)
+                            "Formatting using p tag serialKey" + key.serialKey
                           )}
-                          {formatGrid(key.serialKey)}
+                          {key.serialKey || "Generating Serial Key"}
                         </pre>
                       </div>
                     </div>
