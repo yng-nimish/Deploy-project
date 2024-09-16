@@ -215,7 +215,7 @@ const PurchaseTP = () => {
                           }}
                         >
                           {console.log(
-                            "Formatting using p tag serialKey" + key.serialKey
+                            "Formatting using p tag serialKey\n" + key.serialKey
                           )}
                           {key.serialKey || "Generating Serial Key"}
                         </pre>
