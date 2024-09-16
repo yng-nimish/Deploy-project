@@ -59,8 +59,13 @@ const PurchaseTP = () => {
       } catch (e) {
         console.error("Failed to parse serial keys from URL:", e);
       }
-      // Map serial keys to objects with owners
-      const quantity = items.length; // Assuming quantity is related to items
+
+      // Determine the quantity of the specific priceId
+      const specificPriceId = "price_1PxoiI013t2ai8cxpSKPhDJl";
+      const priceIdItem = items.find((item) => item.id === specificPriceId);
+      const quantity = priceIdItem ? priceIdItem.quantity : 0;
+
+      // Map serial keys to objects with owners based on the quantity
       serialKeys = serialKeys
         .slice(0, quantity)
         .map((key) => ({ serialKey: key, owner: {} }));
@@ -152,9 +157,9 @@ const PurchaseTP = () => {
       const formattedRow = formatRow(row);
       return formattedRow.trim(); // Trim any trailing spaces
     });
+    console.log("Formatting Serial Key:", serialKey);
 
     return formattedOutput.join("\n");
-    console.log("Formatting Serial Key:", serialKey);
   };
 
   return (
