@@ -208,16 +208,16 @@ const PurchaseTP = () => {
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
                       <div>
-                        {console.log(
-                          "Formatting using key.serialKey" +
-                            formatGrid(key.serialKey)
-                        )}
                         <div
                           style={{
                             whiteSpace: "pre-wrap",
                             fontFamily: "Courier New, monospace",
                           }}
                         >
+                          {console.log(
+                            "Formatting using key.serialKey" +
+                              formatGrid(key.serialKey)
+                          )}
                           {formatGrid(key.serialKey)}
                         </div>
                       </div>
