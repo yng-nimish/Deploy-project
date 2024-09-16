@@ -59,8 +59,7 @@ const PurchaseTP = () => {
           .split("\n\n,")
           .filter(Boolean) // Remove empty strings
           .map((key) => key.trim())
-          .filter(Boolean) // Remove any leftover empty strings
-          .map((key) => ({ serialKey: key, owner: {} })); // Ensure each key is an object
+          .filter(Boolean); // Remove any leftover empty strings
       } catch (e) {
         console.error("Failed to parse serial keys from URL:", e);
       }
@@ -71,7 +70,9 @@ const PurchaseTP = () => {
       const quantity = priceIdItem ? priceIdItem.quantity : 0;
 
       // Map serial keys to objects with owners based on the quantity
-      serialKeys = serialKeys.slice(0, quantity);
+      serialKeys = serialKeys
+        .slice(0, quantity)
+        .map((key) => ({ serialKey: key, owner: {} }));
 
       // Parse owner data if available
       let ownerData = [];
@@ -181,7 +182,6 @@ const PurchaseTP = () => {
 
     // Replace newlines with <br> for HTML rendering
     return finalOutput;
-    x``;
   };
 
   return (
