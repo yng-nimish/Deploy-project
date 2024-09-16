@@ -59,7 +59,8 @@ const PurchaseTP = () => {
           .split("\n\n,")
           .filter(Boolean) // Remove empty strings
           .map((key) => key.trim())
-          .filter(Boolean); // Remove any leftover empty strings
+          .filter(Boolean) // Remove any leftover empty strings
+          .map((key) => ({ serialKey: key, owner: {} })); // Ensure each key is an object
       } catch (e) {
         console.error("Failed to parse serial keys from URL:", e);
       }
@@ -70,9 +71,7 @@ const PurchaseTP = () => {
       const quantity = priceIdItem ? priceIdItem.quantity : 0;
 
       // Map serial keys to objects with owners based on the quantity
-      serialKeys = serialKeys
-        .slice(0, quantity)
-        .map((key) => ({ serialKey: key, owner: {} }));
+      serialKeys = serialKeys.slice(0, quantity);
 
       // Parse owner data if available
       let ownerData = [];
@@ -107,7 +106,7 @@ const PurchaseTP = () => {
     };
     handleLoad();
   }, []);
-  console.log("Serial Keys:", userData.serialKeys);
+  console.log("Serial Keys are:", userData.serialKeys);
 
   // Handle download with user feedback
   const handleDownload = (pdfUrl, title) => {
