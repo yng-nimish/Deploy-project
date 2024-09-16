@@ -165,7 +165,8 @@ const PurchaseTP = () => {
     console.log("Formatting Serial Key:\n" + serialKey);
     const finalOutput = formattedOutput.join("<br>");
 
-    return finalOutput;
+    // Replace newlines with <br> for HTML rendering
+    return finalOutput.replace(/\n/g, "<br>");
   };
 
   return (
@@ -191,7 +192,10 @@ const PurchaseTP = () => {
                   <div key={index} className="serial-key">
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
-                      {console.log("Serial Key for Format:\n", key.serialKey)}
+                      {console.log(
+                        "Formatted Serial Key Output:",
+                        formatGrid(key.serialKey)
+                      )}
                       <div
                         dangerouslySetInnerHTML={{
                           __html: formatGrid(key.serialKey),
