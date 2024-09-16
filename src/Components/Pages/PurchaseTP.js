@@ -192,7 +192,11 @@ const PurchaseTP = () => {
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
                       {console.log("Serial Key for Format:\n", key.serialKey)}
-                      {formatGrid(key.serialKey)}
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: formatGrid(key.serialKey),
+                        }}
+                      />
                     </div>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
