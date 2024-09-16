@@ -65,7 +65,10 @@ const PurchaseTP = () => {
       }
 
       // Determine the quantity of the specific priceId
-      const specificPriceId = "price_1PxoiI013t2ai8cxpSKPhDJl";
+      //Test Mode
+      //const specificPriceId = "price_1PxoiI013t2ai8cxpSKPhDJl";
+      //Live Mode
+      const specificPriceId = "price_1Py2vL013t2ai8cxo0WMZZHi";
       const priceIdItem = items.find((item) => item.id === specificPriceId);
       const quantity = priceIdItem ? priceIdItem.quantity : 0;
 
@@ -127,7 +130,10 @@ const PurchaseTP = () => {
 
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
-    userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
+    //Test Mode
+    //  userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
+    // Live Mode
+    userData.priceIds.includes("price_1Py2vL013t2ai8cxo0WMZZHi") &&
     userData.serialKeys &&
     userData.serialKeys.length > 0 &&
     userData.serialKeys !== null;

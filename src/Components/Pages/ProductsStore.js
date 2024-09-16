@@ -1,7 +1,6 @@
 // price id for you gotta do the work : price_1PoBHG013t2ai8cxq5RtiI4j
 
 const productsArray = [
-  /*
   {
     // Live Mode
     id: "price_1Py2vY013t2ai8cxQdrdWxM0",
@@ -31,7 +30,8 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
-  */
+  /*
+
   {
     //Test Mode
     id: "price_1PoBHG013t2ai8cxq5RtiI4j",
@@ -61,6 +61,7 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
+  */
 
   /*{
     id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Py2vR013t2ai8cxsp6eOczL
