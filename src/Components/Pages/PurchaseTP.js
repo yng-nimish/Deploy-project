@@ -206,6 +206,7 @@ const PurchaseTP = () => {
                     <p>
                       {" "}
                       <pre>{formatGrid(key.serialKey)}</pre>
+                      {formatGrid(key.serialKey)}
                     </p>
                     {/* Add owner details here if available */}
                     <h3>Owner Details:</h3>
