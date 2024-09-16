@@ -208,7 +208,7 @@ const PurchaseTP = () => {
                     <h2>Serial Key {index + 1}:</h2>
                     <div>
                       <div>
-                        <div
+                        <pre
                           style={{
                             whiteSpace: "pre-wrap",
                             fontFamily: "Courier New, monospace",
@@ -219,7 +219,7 @@ const PurchaseTP = () => {
                               formatGrid(key.serialKey)
                           )}
                           {formatGrid(key.serialKey)}
-                        </div>
+                        </pre>
                       </div>
                     </div>
                     {/* Add owner details here if available */}
