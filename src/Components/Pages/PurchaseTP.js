@@ -163,7 +163,7 @@ const PurchaseTP = () => {
       return formattedRow.trim(); // Trim any trailing spaces
     });
     console.log("Formatting Serial Key:\n" + serialKey);
-    const finalOutput = formattedOutput.join("\n");
+    const finalOutput = formattedOutput.join("<br>");
 
     return finalOutput;
   };
