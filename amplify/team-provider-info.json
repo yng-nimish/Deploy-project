@@ -20,6 +20,21 @@
           "secretsPathAmplifyAppId": "d2mn977rujyr2p",
           "deploymentBucketName": "amplify-website-dev-da497-deployment",
           "s3Key": "amplify-builds/websitec6750c14-745263577a527a4b2f6e-build.zip"
+        },
+        "lambda1": {
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/lambda1-6a7841477737714b6878-build.zip",
+          "secretsPathAmplifyAppId": "d2mn977rujyr2p"
+        },
+        "lambda2": {
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/lambda2-3259696c786666634443-build.zip",
+          "secretsPathAmplifyAppId": "d2mn977rujyr2p"
+        },
+        "webapistripe": {
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/webapistripe-6c536752456466774446-build.zip",
+          "stripeKey": "sk_test_51PYCXa013t2ai8cxhZPVeKHWpcHRqSvQvfpaIU0FzcOTbNbPfQF0DADtcSm6lHlAVFDSqc0EBS8sS3wHPE4hNuME00QHI48Bcu"
         }
       },
       "api": {

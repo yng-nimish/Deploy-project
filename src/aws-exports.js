@@ -5,8 +5,23 @@ const awsmobile = {
     "aws_project_region": "ca-central-1",
     "aws_cloud_logic_custom": [
         {
+            "name": "api47cceb23",
+            "endpoint": "https://gutq6ep7a7.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
             "name": "apida2d6043",
             "endpoint": "https://cwpj9kkfpf.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
+            "name": "apif48d1043",
+            "endpoint": "https://sx902ped8k.execute-api.ca-central-1.amazonaws.com/dev",
+            "region": "ca-central-1"
+        },
+        {
+            "name": "apiwebstripe",
+            "endpoint": "https://hoopkcbge5.execute-api.ca-central-1.amazonaws.com/dev",
             "region": "ca-central-1"
         }
     ],

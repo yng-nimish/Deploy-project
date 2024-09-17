@@ -1,6 +1,21 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
+    "api47cceb23": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
     "apida2d6043": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
+    "apif48d1043": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
+    "apiwebstripe": {
       "ApiId": "string",
       "ApiName": "string",
       "RootUrl": "string"
@@ -12,9 +27,6 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "auth": {
-    "userPoolGroups": {
-      "Backend1GroupRole": "string"
-    },
     "website332cbef7": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
@@ -26,6 +38,27 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
+    "lambda1": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "lambda2": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
+    "webapistripe": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "websitec6750c14": {
       "Arn": "string",
       "LambdaExecutionRole": "string",
