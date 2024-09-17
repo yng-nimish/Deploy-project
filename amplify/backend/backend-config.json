@@ -32,6 +32,22 @@
     }
   },
   "auth": {
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "website332cbef7"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    },
     "website332cbef7": {
       "customAuth": false,
       "dependsOn": [],
@@ -73,32 +89,6 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_websitec6750c14_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "websitec6750c14"
-        }
-      ]
-    },
-    "AMPLIFY_function_websitec6750c14_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "websitec6750c14"
-        }
-      ]
-    },
-    "AMPLIFY_function_websitec6750c14_secretsPathAmplifyAppId": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "websitec6750c14"
-        }
-      ]
     }
   }
 }
