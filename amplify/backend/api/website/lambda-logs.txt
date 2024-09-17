@@ -1,0 +1,466 @@
+INIT_START Runtime Version: nodejs:18.v33	Runtime Version ARN: arn:aws:lambda:ca-central-1::runtime:b7500cbab7a13e2ee74c533d5f8cf7ca697047a4f35fad455d19cc4fa6ff8b84
+
+2024-08-21T19:16:00.263Z	undefined	INFO	App started
+
+START RequestId: df78d01e-6766-4dd5-9e98-3376d5bc9f6c Version: $LATEST
+
+2024-08-21T19:16:00.269Z	df78d01e-6766-4dd5-9e98-3376d5bc9f6c	INFO	EVENT: {
+    "resource": "/webhook",
+    "path": "/webhook",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-CA,en-US;q=0.9,en;q=0.8",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-ASN": "577",
+        "CloudFront-Viewer-Country": "CA",
+        "content-type": "application/json",
+        "Host": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "origin": "http://localhost:3000",
+        "Referer": "http://localhost:3000/",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15",
+        "Via": "2.0 141b2a0bfdcf3225afbe04affb901120.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "qfgz8ueHJPE62QENIMaVB2onl8ecqbtGcPign0pkWE4JbNXSUEnWkw==",
+        "X-Amzn-Trace-Id": "Root=1-66c63cee-582cfd0312ff73947f80fa6f",
+        "X-Forwarded-For": "70.30.107.231, 18.68.39.109",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+            "en-CA,en-US;q=0.9,en;q=0.8"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-ASN": [
+            "577"
+        ],
+        "CloudFront-Viewer-Country": [
+            "CA"
+        ],
+        "content-type": [
+            "application/json"
+        ],
+        "Host": [
+            "57mbw933kc.execute-api.ca-central-1.amazonaws.com"
+        ],
+        "origin": [
+            "http://localhost:3000"
+        ],
+        "Referer": [
+            "http://localhost:3000/"
+        ],
+        "sec-fetch-dest": [
+            "empty"
+        ],
+        "sec-fetch-mode": [
+            "cors"
+        ],
+        "sec-fetch-site": [
+            "cross-site"
+        ],
+        "User-Agent": [
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+        ],
+        "Via": [
+            "2.0 141b2a0bfdcf3225afbe04affb901120.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "qfgz8ueHJPE62QENIMaVB2onl8ecqbtGcPign0pkWE4JbNXSUEnWkw=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-66c63cee-582cfd0312ff73947f80fa6f"
+        ],
+        "X-Forwarded-For": [
+            "70.30.107.231, 18.68.39.109"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "eosh8i",
+        "resourcePath": "/webhook",
+        "httpMethod": "POST",
+        "extendedRequestId": "c351WFR2YosEofw=",
+        "requestTime": "21/Aug/2024:19:15:58 +0000",
+        "path": "/backweb/webhook",
+        "accountId": "851725381788",
+        "protocol": "HTTP/1.1",
+        "stage": "backweb",
+        "domainPrefix": "57mbw933kc",
+        "requestTimeEpoch": 1724267758789,
+        "requestId": "55867464-82fb-4eab-94bb-43d949ff04f1",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "70.30.107.231",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15",
+            "user": null
+        },
+        "domainName": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "deploymentId": "q7qk4g",
+        "apiId": "57mbw933kc"
+    },
+    "body": "{\"items\":[{\"id\":\"price_1PoBZJ013t2ai8cxl49DO4VB\",\"quantity\":1}]}",
+    "isBase64Encoded": false
+}
+
+END RequestId: df78d01e-6766-4dd5-9e98-3376d5bc9f6c
+
+REPORT RequestId: df78d01e-6766-4dd5-9e98-3376d5bc9f6c	Duration: 456.67 ms	Billed Duration: 457 ms	Memory Size: 128 MB	Max Memory Used: 103 MB	Init Duration: 931.24 ms	
+
+2024-08-21T19:16:01.317Z	042ff8ae-2b0e-46a2-8769-426f0a42a4ae	INFO	EVENT: {
+    "resource": "/webhook",
+    "path": "/webhook",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Accept-Language": "en-CA,en-US;q=0.9,en;q=0.8",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-ASN": "577",
+        "CloudFront-Viewer-Country": "CA",
+        "content-type": "application/json",
+        "Host": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "origin": "http://localhost:3000",
+        "Referer": "http://localhost:3000/",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15",
+        "Via": "2.0 141b2a0bfdcf3225afbe04affb901120.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "fbKgf6E9ZiSxl-Uw3idN59zUKAS59OG6M7PwP8i8t6zYtbnT__Q1Zg==",
+        "X-Amzn-Trace-Id": "Root=1-66c63cf1-65d172c07bf9c2c577ef5f01",
+        "X-Forwarded-For": "70.30.107.231, 18.68.39.68",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Accept-Language": [
+            "en-CA,en-US;q=0.9,en;q=0.8"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-ASN": [
+            "577"
+        ],
+        "CloudFront-Viewer-Country": [
+            "CA"
+        ],
+        "content-type": [
+            "application/json"
+        ],
+        "Host": [
+            "57mbw933kc.execute-api.ca-central-1.amazonaws.com"
+        ],
+        "origin": [
+            "http://localhost:3000"
+        ],
+        "Referer": [
+            "http://localhost:3000/"
+        ],
+        "sec-fetch-dest": [
+            "empty"
+        ],
+        "sec-fetch-mode": [
+            "cors"
+        ],
+        "sec-fetch-site": [
+            "cross-site"
+        ],
+        "User-Agent": [
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15"
+        ],
+        "Via": [
+            "2.0 141b2a0bfdcf3225afbe04affb901120.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "fbKgf6E9ZiSxl-Uw3idN59zUKAS59OG6M7PwP8i8t6zYtbnT__Q1Zg=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-66c63cf1-65d172c07bf9c2c577ef5f01"
+        ],
+        "X-Forwarded-For": [
+            "70.30.107.231, 18.68.39.68"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "eosh8i",
+        "resourcePath": "/webhook",
+        "httpMethod": "POST",
+        "extendedRequestId": "c351wGkTYosEWIA=",
+        "requestTime": "21/Aug/2024:19:16:01 +0000",
+        "path": "/backweb/webhook",
+        "accountId": "851725381788",
+        "protocol": "HTTP/1.1",
+        "stage": "backweb",
+        "domainPrefix": "57mbw933kc",
+        "requestTimeEpoch": 1724267761305,
+        "requestId": "1f33578d-ed5e-4870-8e5b-59a6598e4ba8",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "70.30.107.231",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15",
+            "user": null
+        },
+        "domainName": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "deploymentId": "q7qk4g",
+        "apiId": "57mbw933kc"
+    },
+    "body": "{\"items\":[{\"id\":\"price_1PoBZJ013t2ai8cxl49DO4VB\",\"quantity\":1}]}",
+    "isBase64Encoded": false
+}
+
+START RequestId: 042ff8ae-2b0e-46a2-8769-426f0a42a4ae Version: $LATEST
+
+END RequestId: 042ff8ae-2b0e-46a2-8769-426f0a42a4ae
+
+REPORT RequestId: 042ff8ae-2b0e-46a2-8769-426f0a42a4ae	Duration: 65.21 ms	Billed Duration: 66 ms	Memory Size: 128 MB	Max Memory Used: 103 MB	
+
+START RequestId: d33ae4f0-8489-483e-9cf3-7233ee9c6520 Version: $LATEST
+
+2024-08-21T19:16:28.182Z	d33ae4f0-8489-483e-9cf3-7233ee9c6520	INFO	EVENT: {
+    "resource": "/webhook",
+    "path": "/webhook",
+    "httpMethod": "POST",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br, zstd",
+        "Accept-Language": "en-US,en;q=0.9",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "false",
+        "CloudFront-Is-Mobile-Viewer": "true",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-ASN": "577",
+        "CloudFront-Viewer-Country": "CA",
+        "content-type": "application/json",
+        "Host": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "origin": "http://localhost:3000",
+        "priority": "u=1, i",
+        "Referer": "http://localhost:3000/",
+        "sec-ch-ua": "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\"",
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": "\"Android\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "cross-site",
+        "User-Agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36",
+        "Via": "2.0 24c2a7b3c7e677d544aa5e2a7eb85b4e.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "N_oBZD95vYepckJiAfrY8JyBCZodtgiYOvR6MFYD81Jxi06ie_09hQ==",
+        "X-Amzn-Trace-Id": "Root=1-66c63d0c-19fd54f62d14bb19330ad390",
+        "X-Forwarded-For": "70.30.107.231, 18.68.39.68",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br, zstd"
+        ],
+        "Accept-Language": [
+            "en-US,en;q=0.9"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-ASN": [
+            "577"
+        ],
+        "CloudFront-Viewer-Country": [
+            "CA"
+        ],
+        "content-type": [
+            "application/json"
+        ],
+        "Host": [
+            "57mbw933kc.execute-api.ca-central-1.amazonaws.com"
+        ],
+        "origin": [
+            "http://localhost:3000"
+        ],
+        "priority": [
+            "u=1, i"
+        ],
+        "Referer": [
+            "http://localhost:3000/"
+        ],
+        "sec-ch-ua": [
+            "\"Not)A;Brand\";v=\"99\", \"Google Chrome\";v=\"127\", \"Chromium\";v=\"127\""
+        ],
+        "sec-ch-ua-mobile": [
+            "?1"
+        ],
+        "sec-ch-ua-platform": [
+            "\"Android\""
+        ],
+        "sec-fetch-dest": [
+            "empty"
+        ],
+        "sec-fetch-mode": [
+            "cors"
+        ],
+        "sec-fetch-site": [
+            "cross-site"
+        ],
+        "User-Agent": [
+            "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36"
+        ],
+        "Via": [
+            "2.0 24c2a7b3c7e677d544aa5e2a7eb85b4e.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "N_oBZD95vYepckJiAfrY8JyBCZodtgiYOvR6MFYD81Jxi06ie_09hQ=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-66c63d0c-19fd54f62d14bb19330ad390"
+        ],
+        "X-Forwarded-For": [
+            "70.30.107.231, 18.68.39.68"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": null,
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "eosh8i",
+        "resourcePath": "/webhook",
+        "httpMethod": "POST",
+        "extendedRequestId": "c3558EO1YosESBA=",
+        "requestTime": "21/Aug/2024:19:16:28 +0000",
+        "path": "/backweb/webhook",
+        "accountId": "851725381788",
+        "protocol": "HTTP/1.1",
+        "stage": "backweb",
+        "domainPrefix": "57mbw933kc",
+        "requestTimeEpoch": 1724267788165,
+        "requestId": "4b4c944d-3792-4463-832a-f152846f5a51",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "70.30.107.231",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Mobile Safari/537.36",
+            "user": null
+        },
+        "domainName": "57mbw933kc.execute-api.ca-central-1.amazonaws.com",
+        "deploymentId": "q7qk4g",
+        "apiId": "57mbw933kc"
+    },
+    "body": "{\"items\":[{\"id\":\"price_1PoBHG013t2ai8cxq5RtiI4j\",\"quantity\":3},{\"id\":\"price_1PnmqU013t2ai8cxLSkG7hP4\",\"quantity\":1}]}",
+    "isBase64Encoded": false
+}
+
+END RequestId: d33ae4f0-8489-483e-9cf3-7233ee9c6520
+
+REPORT RequestId: d33ae4f0-8489-483e-9cf3-7233ee9c6520	Duration: 344.71 ms	Billed Duration: 345 ms	Memory Size: 128 MB	Max Memory Used: 104 MB	

@@ -19,7 +19,7 @@
         "lambda1": {
           "secretsPathAmplifyAppId": "d2mn977rujyr2p",
           "deploymentBucketName": "amplify-website-dev-da497-deployment",
-          "s3Key": "amplify-builds/lambda1-67413169427865663758-build.zip"
+          "s3Key": "amplify-builds/lambda1-6a7841477737714b6878-build.zip"
         },
         "lambda2": {
           "secretsPathAmplifyAppId": "d2mn977rujyr2p",
@@ -30,6 +30,10 @@
           "secretsPathAmplifyAppId": "d2mn977rujyr2p",
           "deploymentBucketName": "amplify-website-dev-da497-deployment",
           "s3Key": "amplify-builds/websitec6750c14-745263577a527a4b2f6e-build.zip"
+        },
+        "webapistripe": {
+          "deploymentBucketName": "amplify-website-dev-da497-deployment",
+          "s3Key": "amplify-builds/webapistripe-6c536752456466774446-build.zip"
         }
       },
       "api": {
