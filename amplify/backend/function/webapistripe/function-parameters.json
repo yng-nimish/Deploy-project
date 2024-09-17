@@ -1,0 +1,59 @@
+{
+  "permissions": {
+    "api": {
+      "api47cceb23": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "apida2d6043": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "apif48d1043": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "auth": {
+      "website332cbef7": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "function": {
+      "lambda1": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "lambda2": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "websitec6750c14": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "stripeKey",
+      "environmentVariableName": "stripe_key"
+    }
+  ]
+}
