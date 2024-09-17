@@ -12,6 +12,9 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "auth": {
+    "userPoolGroups": {
+      "Backend1GroupRole": "string"
+    },
     "website332cbef7": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
