@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { productsArray } from "./ProductsStore";
-import { productsArraySun } from "./ProductsArraySun";
+import { productsArraySun, getProductSunData } from "./ProductsArraySun";
 import { Button, Modal } from "react-bootstrap";
 import CartProvider from "./CartContext";
 import { Link, NavLink } from "react-router-dom";
