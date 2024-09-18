@@ -111,7 +111,11 @@ const PurchaseForm = () => {
 
     try {
       const response = await fetch(
-        "https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/checkout",
+        // Live Mode
+        //    "https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/checkout",
+        // Test Mode
+        "https://l92dg4hu1i.execute-api.ca-central-1.amazonaws.com/test/checkout",
+
         {
           method: "POST",
           headers: {
