@@ -131,7 +131,7 @@ const PurchaseTP = () => {
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
     //Test Mode
-    userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
+    // userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
     // Live Mode
     // userData.priceIds.includes("price_1Py2vL013t2ai8cxo0WMZZHi") &&
     userData.serialKeys &&
