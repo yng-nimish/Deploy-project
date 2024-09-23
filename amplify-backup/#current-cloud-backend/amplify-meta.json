@@ -1,5 +1,5 @@
 {
-  "test": {
+  "providers": {
     "awscloudformation": {
       "AuthRoleName": "amplify-website-test-924d4-authRole",
       "UnauthRoleArn": "arn:aws:iam::851725381788:role/amplify-website-test-924d4-unauthRole",
@@ -10,20 +10,6 @@
       "StackName": "amplify-website-test-924d4",
       "StackId": "arn:aws:cloudformation:ca-central-1:851725381788:stack/amplify-website-test-924d4/ddd3b340-7698-11ef-97a1-0e3a4696a499",
       "AmplifyAppId": "d2mn977rujyr2p"
-    },
-    "categories": {
-      "auth": {
-        "website332cbef7": {}
-      },
-      "function": {
-        "website332cbef7": {},
-        "apif48d1043": {},
-        "api47cceb23": {},
-        "apida2d6043": {},
-        "lambda2": {},
-        "lambda1": {},
-        "websitec6750c14": {}
-      }
     }
   }
 }
