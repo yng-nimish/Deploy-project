@@ -21,15 +21,17 @@ See the License for the specific language governing permissions and limitations 
 */
 
 /* Amplify Params - DO NOT EDIT
+	AUTH_WEBSITE332CBEF7_USERPOOLID
 	ENV
 	REGION
 Amplify Params - DO NOT EDIT */
+const aws = require("aws-sdk");
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
-const aws = require("aws-sdk");
-// declare a new express app
+
+// declare a new express app here
 const app = express();
 app.use(
   bodyParser.json({
@@ -38,6 +40,7 @@ app.use(
     },
   })
 );
+
 app.use(awsServerlessExpressMiddleware.eventContext());
 const getStripeKey = async () => {
   const { Parameters } = await new aws.SSM()
@@ -55,7 +58,6 @@ app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "*");
   next();
 });
-
 app.post("/webhook/*", async function (req, res) {
   // Add your code here
   const stripeKey = await getStripeKey();
@@ -64,16 +66,26 @@ app.post("/webhook/*", async function (req, res) {
     req.body.data.object.customer
   );
   const userEmail = customer.email;
-  console.log("Try it");
 
   const cognito = new aws.CognitoIdentityServiceProvider({
     apiVersion: "2016-04-18",
   });
-  cognito.adminCreateUser({
-    UserPoolId: process.env.AUTH,
-  });
-
-  res.json({ success: "post call succeed!", url: req.url, body: req.body });
+  cognito.adminCreateUser(
+    {
+      UserPoolId: process.env.AUTH_WEBSITE332CBEF7_USERPOOLID,
+      Username: userEmail,
+      DesiredDeliveryMediums: ["EMAIL"],
+      UserAttributes: [{ Name: "email", Value: userEmail }],
+      ValidationData: [{ Name: "email", Value: userEmail }],
+    },
+    function (err, data) {
+      if (err) console.log(err, err.stack);
+      else {
+        console.log(data);
+        res.sendStatus(200);
+      }
+    }
+  );
 });
 
 app.listen(3000, function () {
