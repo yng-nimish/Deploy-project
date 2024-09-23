@@ -74,8 +74,8 @@ const Home = () => {
             <h7 className="primary-heading-welcome"> WELCOME TO</h7>
             <h1 className="primary-heading">Your Number Guaranteed</h1>
             <p className="primary-text">
-              Every SUN comes with a $1,000,000 Guarantee that it is Unique{" "}
-              <NavLink to="/terms">(see terms) </NavLink>
+              Every SUN comes with a One Million Dollars Guarantee that it is
+              Unique <NavLink to="/guarantee">(see Guarantee) </NavLink>
             </p>
             <Link to="/purchase">
               <button className="secondary-button">

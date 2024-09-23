@@ -167,7 +167,7 @@ const Book = () => {
       </div>
       <div className="Book-section">
         <div className="Book-Container">
-          <h1 className="primary-heading-2"> Book links </h1>
+          <h1 className="primary-heading-2"> Book links to Amazon</h1>
           <p className="book-links-text">
             Each year we publish a book on Black Friday. This is a collection of
             our work in the past year, and a look forward to where we want to go
