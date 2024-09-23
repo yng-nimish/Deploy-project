@@ -1,0 +1,8 @@
+{
+  
+  "test": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/nimishs/.amplify/awscloudformation/3n8eVeXEv9"
+  }
+}
