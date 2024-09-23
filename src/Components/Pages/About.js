@@ -35,8 +35,9 @@ const about = () => {
               A lifetime membership is obtained with the purchase of a Unique
               Your Number Guaranteed SUN.
               <br />
-              Every SUN comes with a $1,000,000 Guarantee that it is Unique.
-              <NavLink to="/terms">(see terms) </NavLink>
+              Every SUN comes with a One Million Dollars Guarantee that it is
+              Unique.
+              <NavLink to="/guarantee">(see Guarantee) </NavLink>
               <br />
               This Provides a unique experiences for every Member with our free
               applications.
@@ -93,8 +94,8 @@ const about = () => {
               </ul>{" "}
               <br />
               Members with a SUN can use the applications for FREE! READ THE
-              BOOK for more information on the YNG SUN! $1,000,000 GUARANTEE
-              that your SUN is UNIQUE <br />
+              BOOK for more information on the YNG SUN! <br />
+              One Million Dollars GUARANTEE that your SUN is UNIQUE <br />
               <br />
             </p>
             <div className="button">
