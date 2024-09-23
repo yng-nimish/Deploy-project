@@ -1,7 +1,0 @@
-{
-  "permissions": {},
-  "lambdaLayers": [],
-  "secretNames": [
-    "stripe_key"
-  ]
-}
