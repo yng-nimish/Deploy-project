@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { productsArray } from "./ProductsStore";
 import { productsArraySun } from "./ProductsArraySun";
+import { productsArrayIp } from "./ProductsArrayIp";
 import { Button, Modal } from "react-bootstrap";
 import CartProvider from "./CartContext";
 import { Link, NavLink } from "react-router-dom";
@@ -91,12 +92,16 @@ function Store() {
               <br />
               Purchase IP <br />{" "}
             </h1>
-
-            <div className="coming-soon-container">
-              <div className="balloon">
-                <img src={comingSoon} className="ballon-image" />
-              </div>
+            <div className="table">
+              <Row xs={1} md={3} className="g-4">
+                {productsArrayIp.map((product, idx) => (
+                  <Col align="center" key={idx}>
+                    <ProductCard product={product} />
+                  </Col>
+                ))}
+              </Row>
             </div>
+
             <div>
               <p>All prices in $US</p>
             </div>
