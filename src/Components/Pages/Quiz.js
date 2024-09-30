@@ -17,7 +17,7 @@ function Quiz() {
     } else {
       setIsCorrect(false);
     }
-
+    //
     // Delay moving to the next question to allow the user to see feedback
     setTimeout(() => {
       const nextQuestion = currentQuestion + 1;
