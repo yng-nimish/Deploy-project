@@ -20,6 +20,7 @@ import PurchaseTP from "./Components/Pages/PurchaseTP";
 import PurchaseForm from "./Components/Pages/PurchaseForm";
 import Application_download from "./Components/Pages/Application_download";
 import Terms from "./Components/Pages/Terms";
+import CubeDisplay from "./Components/Pages/CubeDisplay";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route path="/login" element={<Account />} />
           <Route path="/purchase" element={<Store />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cube" element={<CubeDisplay />} />
 
           <Route path="/guarantee" element={<Guarantee />} />
           <Route path="/purchaseTP" element={<PurchaseTP />} />
