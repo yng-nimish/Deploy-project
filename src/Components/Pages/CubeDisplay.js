@@ -14,7 +14,9 @@ const CubeDisplay = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch("/random3digit.csv");
+        const response = await fetch(
+          "https://raw.githubusercontent.com/yng-nimish/Deploy-project/refs/heads/main/public/random3digit.csv"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
