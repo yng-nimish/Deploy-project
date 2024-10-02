@@ -1,8 +1,15 @@
 // price id for you gotta do the work : price_1PoBHG013t2ai8cxq5RtiI4j
 
 const productsArray = [
+  // Live Mode
   {
-    // Live Mode
+    id: "price_1Q5UmO013t2ai8cxX1H3r2IG",
+    title: "The One Million Metre Apple Watch Swim Challenge",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1Wtmfk0LYkJLXMjGOJcXtKr99cT54g9FSshmSm9UByN8/export?format=pdf",
+  },
+  {
     id: "price_1Py2vY013t2ai8cxQdrdWxM0",
     title: "You Gotta Do The Work",
     price: 0.99,
@@ -32,8 +39,16 @@ const productsArray = [
   },
   /*
 
+  //Test Mode
   {
-    //Test Mode
+    id: "price_1Q5UlK013t2ai8cxjVmKuYBs",
+    title: "The One Million Metre Apple Watch Swim Challenge",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1Wtmfk0LYkJLXMjGOJcXtKr99cT54g9FSshmSm9UByN8/export?format=pdf",
+  },
+  {
+    
     id: "price_1PoBHG013t2ai8cxq5RtiI4j",
     title: "You Gotta Do The Work",
     price: 0.99,
