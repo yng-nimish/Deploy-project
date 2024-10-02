@@ -6,17 +6,19 @@ const size = 100; // Size for the cube (100x100x100)
 
 const CubeDisplay = () => {
   const [cube, setCube] = useState([]);
-  const [zLayer, setZLayer] = useState(0); // Default z-layer
+  const [zLayer, setZLayer] = useState(0);
+  const [xLayer, setXLayer] = useState(0);
+  const [yLayer, setYLayer] = useState(0);
+  const [plane, setPlane] = useState("XY"); // Default plane
 
   useEffect(() => {
     const loadData = async () => {
       try {
-        const response = await fetch("/random3digit.csv"); // Adjust the path if needed
+        const response = await fetch("/random3digit.csv");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const csvData = await response.text();
-        console.log(csvData); // Log the raw CSV data
 
         // Parse CSV data
         Papa.parse(csvData, {
@@ -25,8 +27,6 @@ const CubeDisplay = () => {
               const num = parseInt(value.trim(), 10);
               return isNaN(num) ? 0 : num; // Default to 0 if not a number
             });
-
-            console.log("Number of values:", flatData.length); // Log the length of flatData
 
             if (flatData.length !== size * size * size) {
               console.error(
@@ -51,7 +51,6 @@ const CubeDisplay = () => {
             }
 
             setCube(cubeData);
-            console.log("Cube data:", cubeData); // Log the cube data
           },
           error: (error) => {
             console.error("Error parsing CSV:", error);
@@ -65,34 +64,103 @@ const CubeDisplay = () => {
     loadData();
   }, []);
 
-  const handleLayerChange = (e) => {
-    setZLayer(Number(e.target.value));
+  const handlePlaneChange = (e) => {
+    setPlane(e.target.value);
   };
 
-  const Cell = ({ columnIndex, rowIndex, style }) => {
-    const value = cube[zLayer]?.[rowIndex]?.[columnIndex];
+  const Cell = ({ value, style }) => (
+    <div
+      style={{
+        ...style,
+        border: "1px solid black",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#f0f0f0",
+        fontSize: "16px",
+        padding: "10px",
+        boxSizing: "border-box",
+      }}
+    >
+      {value !== undefined ? String(value).padStart(3, "0") : null}
+    </div>
+  );
+
+  const renderGrid = () => {
+    let rowCount, columnCount, data;
+
+    switch (plane) {
+      case "XY":
+        rowCount = size;
+        columnCount = size;
+        data = Array.from({ length: size }, (_, y) =>
+          Array.from({ length: size }, (_, x) => cube[zLayer]?.[y]?.[x])
+        );
+        break;
+      case "YZ":
+        rowCount = size;
+        columnCount = size;
+        data = Array.from({ length: size }, (_, y) =>
+          Array.from({ length: size }, (_, z) => cube[z]?.[y]?.[xLayer])
+        );
+        break;
+      case "XZ":
+        rowCount = size;
+        columnCount = size;
+        data = Array.from({ length: size }, (_, z) =>
+          Array.from({ length: size }, (_, x) => cube[z]?.[yLayer]?.[x])
+        );
+        break;
+      default:
+        return null; // Just in case
+    }
+
     return (
-      <div
-        style={{
-          ...style,
-          border: "1px solid black",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#f0f0f0",
-          fontSize: "16px", // Increased font size
-          padding: "10px", // Added padding for spacing
-          boxSizing: "border-box", // Ensures padding does not affect size
-        }}
+      <Grid
+        columnCount={columnCount}
+        columnWidth={50}
+        height={400}
+        rowCount={rowCount}
+        rowHeight={50}
+        width={400}
       >
-        {value !== undefined ? String(value).padStart(3, "0") : null}
-      </div>
+        {({ columnIndex, rowIndex, style }) => (
+          <Cell value={data[rowIndex]?.[columnIndex]} style={style} />
+        )}
+      </Grid>
     );
   };
 
   return (
     <div>
       <h1>3D Cube of Numbers from CSV</h1>
+      <label htmlFor="plane-select">Select Plane:</label>
+      <select id="plane-select" value={plane} onChange={handlePlaneChange}>
+        <option value="XY">XY Plane</option>
+        <option value="YZ">YZ Plane</option>
+        <option value="XZ">XZ Plane</option>
+      </select>
+      <br />
+      <label htmlFor="x-layer">Select X Layer:</label>
+      <input
+        type="number"
+        id="x-layer"
+        value={xLayer}
+        min="0"
+        max="99"
+        onChange={(e) => setXLayer(Number(e.target.value))}
+      />
+      <br />
+      <label htmlFor="y-layer">Select Y Layer:</label>
+      <input
+        type="number"
+        id="y-layer"
+        value={yLayer}
+        min="0"
+        max="99"
+        onChange={(e) => setYLayer(Number(e.target.value))}
+      />
+      <br />
       <label htmlFor="z-layer">Select Z Layer:</label>
       <input
         type="number"
@@ -100,19 +168,13 @@ const CubeDisplay = () => {
         value={zLayer}
         min="0"
         max="99"
-        onChange={handleLayerChange}
+        onChange={(e) => setZLayer(Number(e.target.value))}
       />
-      <h2>Layer at Z = {zLayer}</h2>
-      <Grid
-        columnCount={size}
-        columnWidth={50} // Increased column width
-        height={400} // Increased height for better visibility
-        rowCount={size}
-        rowHeight={50} // Increased row height
-        width={400} // Increased width for better visibility
-      >
-        {Cell}
-      </Grid>
+      <h2>
+        Viewing {plane} Plane with Layers: X = {xLayer}, Y = {yLayer}, Z ={" "}
+        {zLayer}
+      </h2>
+      {renderGrid()}
     </div>
   );
 };
