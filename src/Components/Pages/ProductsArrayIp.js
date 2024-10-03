@@ -4,7 +4,8 @@ const productsArrayIp = [
     id: "price_1Q2JFt013t2ai8cxvwjxNO6w",
     title: "Use our Logo",
     price: 0.99,
-    pdfUrl: "",
+    pdfUrl:
+      "https://docs.google.com/document/d/1X37ok4ruS7-3Xjr2MJ_IfR8LxE5MYZ4d/export?format=pdf",
   },
   {
     id: "price_1Q2JFq013t2ai8cxoDupAfhT",
