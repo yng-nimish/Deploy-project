@@ -9,13 +9,14 @@ const CubeDisplay = () => {
   const [zLayer, setZLayer] = useState(0);
   const [xLayer, setXLayer] = useState(0);
   const [yLayer, setYLayer] = useState(0);
-  const [plane, setPlane] = useState("XY"); // Default plane
+  const [plane, setPlane] = useState("XY"); // Default plane  // this plane is what will be shown initially when the person comes to the page
 
   useEffect(() => {
     const loadData = async () => {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/yng-nimish/Deploy-project/refs/heads/main/public/random3digit.csv"
+          "https://raw.githubusercontent.com/yng-nimish/Deploy-project/refs/heads/main/public/random3digit.csv" //This is for Github
+          // create a new way of fetching it from amazon s3 bucket
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
