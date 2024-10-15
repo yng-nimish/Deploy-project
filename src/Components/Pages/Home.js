@@ -136,6 +136,45 @@ const Home = () => {
               </CCol>
             </CRow>
           </CCard>
+          <CCard
+            color="white"
+            className="mb-3 about-card"
+            style={{ maxWidth: "1200px" }}
+          >
+            <CRow className="g-0">
+              <CCol md={8}>
+                <CCardBody className="pre-rectangle">
+                  <CCardTitle className="text-center">
+                    <h1>How it works</h1>
+                  </CCardTitle>
+                  <CCardText>
+                    To become a member, you purchase a SUN (Set of Unique
+                    Numbers) for US$99.99 and then get lifetime access to a
+                    suite of free applications. The SUN is a set of random
+                    numbers consisting of one billion three digit numbers.{" "}
+                    <br /> Free apps include a variety of domains including
+                    Education, Cognitive Enhancement, Fun Games and more{" "}
+                    <NavLink to="/applications">(see Applications) </NavLink>
+                    <br /> Also, we are creating partnerships with businesses,
+                    institutions and governments for User Interface Security
+                    Applications, and custom engagements. Every experience is
+                    driven from the SUN, so every member’s experience will
+                    always be unique, Guaranteed. <br /> <br /> <br />
+                  </CCardText>
+                  <CCardText>
+                    <Link to="/applications">
+                      <button className="about-read-more-button">
+                        READ MORE
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        {"         "}
+                        <EastIcon />
+                      </button>
+                    </Link>
+                  </CCardText>
+                </CCardBody>
+              </CCol>
+            </CRow>
+          </CCard>
         </div>
       </div>
       <div className="work-section-wrapper">

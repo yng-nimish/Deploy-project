@@ -47,7 +47,7 @@ const Account = () => {
                       <header className="account-header">
                         <div className="logged-in">
                           {/* Quiz Component */}
-                          <h1>Welcome {user?.signInDetails?.loginId}</h1>
+                          <h1> Welcome {user?.signInDetails?.loginId}</h1>
                           <PurchaseTP />
 
                           {/* Sign Out Button */}

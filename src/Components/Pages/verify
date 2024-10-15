@@ -1,0 +1,29 @@
+// Verify Serial Key Endpoint
+app.post("/verify", async (req, res) => {
+  const { serialKey } = req.body;
+
+  if (!serialKey) {
+    return res.status(400).json({ error: "Serial key is required." });
+  }
+
+  try {
+    const getParams = {
+      TableName: "YourDynamoDBTableName", // Replace with your table name
+      Key: {
+        serialKey: serialKey, // Assuming your table has serialKey as the primary key
+      },
+    };
+
+    const data = await docClient.send(new GetCommand(getParams));
+
+    if (!data.Item) {
+      return res.status(404).json({ error: "Serial key not found." });
+    }
+
+    // Return the data associated with the serial key
+    return res.status(200).json({ valid: true, data: data.Item });
+  } catch (error) {
+    console.error("Error fetching serial key:", error);
+    return res.status(500).json({ error: "Internal server error." });
+  }
+});
