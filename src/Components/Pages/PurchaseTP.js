@@ -2,7 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { productsArray } from "./ProductsStore"; // Ensure this import is correct
+import { Link, NavLink } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
 
+import { CCard } from "@coreui/react";
+import { CCardImage } from "@coreui/react";
+import { CCardBody } from "@coreui/react";
+import { CCardTitle } from "@coreui/react";
+import { CCardText } from "@coreui/react";
+import { CButton } from "@coreui/react";
+import { CRow } from "@coreui/react";
+import { CCol } from "@coreui/react";
 const PurchaseTP = () => {
   const [userData, setUserData] = useState({
     firstName: "",
@@ -272,6 +282,23 @@ const PurchaseTP = () => {
             </div>
           </div>
         </div>
+        <CCard color="white" className="mb-3">
+          <CRow className="g-0">
+            <CCol md={8}>
+              <CCardBody className="pre-rectangle">
+                <CCardTitle>Verify</CCardTitle>
+                <CCardText>Verify your Serial Key</CCardText>
+              </CCardBody>
+            </CCol>
+            <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
+              <Link to="/verify">
+                <CButton color="primary" href="#">
+                  Verify &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
+            </CCol>
+          </CRow>
+        </CCard>
       </div>
     </div>
   );
