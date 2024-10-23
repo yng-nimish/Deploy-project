@@ -15,15 +15,8 @@ import "@aws-amplify/ui-react/styles.css";
 import awsExports from "../../aws-exports";
 
 // Imports the Quiz component from Quiz.js for use in this file.
-import Quiz from "./Quiz";
-import BannerImage from "../../Assets/logo2.svg";
-
-import Tab from "react-bootstrap/Tab";
-import Tabs from "react-bootstrap/Tabs";
-import comingSoon from "../../Assets/Group 62.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Purchase from "./Purchase";
 import PurchaseTP from "./PurchaseTP";
 // Configures the Amplify library with the settings from aws-exports.js, which includes all the AWS service configurations for this project.
 Amplify.configure(awsExports);
@@ -46,7 +39,7 @@ const Account = () => {
                     <main>
                       <header className="account-header">
                         <div className="logged-in">
-                          {/* Quiz Component */}
+                          {/* Display user's email */}
                           <h1> Welcome {user?.signInDetails?.loginId}</h1>
                           <PurchaseTP />
 
