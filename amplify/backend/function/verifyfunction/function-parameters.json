@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "auth": {
+      "website332cbef7": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
