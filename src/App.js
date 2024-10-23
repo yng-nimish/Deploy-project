@@ -22,6 +22,7 @@ import Application_download from "./Components/Pages/Application_download";
 import Terms from "./Components/Pages/Terms";
 import CubeDisplay from "./Components/Pages/CubeDisplay";
 import SerialKeyVerification from "./Components/Pages/SerialKeyVerification";
+import CubeComponent from "./Components/Pages/CubeComponent";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cube" element={<CubeDisplay />} />
           <Route path="/verify" element={<SerialKeyVerification />} />
+          <Route path="/cube2" element={<CubeComponent />} />
 
           <Route path="/guarantee" element={<Guarantee />} />
           <Route path="/purchaseTP" element={<PurchaseTP />} />

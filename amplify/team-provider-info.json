@@ -22,7 +22,11 @@
         "apida2d6043": {},
         "lambda2": {},
         "lambda1": {},
-        "websitec6750c14": {}
+        "websitec6750c14": {},
+        "verifyfunction": {
+          "deploymentBucketName": "amplify-website-test-924d4-deployment",
+          "s3Key": "amplify-builds/verifyfunction-6d746c6b365744313332-build.zip"
+        }
       }
     }
   }
