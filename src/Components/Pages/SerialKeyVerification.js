@@ -17,14 +17,17 @@ const SerialKeyVerification = () => {
     }
 
     try {
-      const response = await fetch("https://your-api-endpoint/verify", {
-        // Replace with your actual endpoint
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ serialKey }),
-      });
+      const response = await fetch(
+        "https://h82ubm8vz1.execute-api.ca-central-1.amazonaws.com/verify",
+        {
+          // Replace with your actual endpoint
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ serialKey }),
+        }
+      );
 
       const data = await response.json();
 
