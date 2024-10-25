@@ -9,7 +9,7 @@ console.log("Step 1 complete");
 const connectionString =
   "wss:db-neptune-1-instance-1.czcyiua0ag5g.ca-central-1.neptune.amazonaws.com:8182/gremlin"; // Use wss for WebSocket
 
-const connection = new DriverRemoteConnection(connectionString);
+const connection = new DriverRemoteConnection(connectionString); // The connection is timing out .
 const graph = new Graph();
 const g = graph.traversal().withRemote(connection);
 console.log("Step 2 complete");
