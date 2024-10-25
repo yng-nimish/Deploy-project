@@ -18,7 +18,7 @@ const batchWriteItems = async (items) => {
     await dynamoDBClient.send(command);
   } catch (error) {
     console.error("Error during batch write:", error);
-    throw error; // Re-throw to handle it in the caller function
+    throw error; // Re-throw to handle it in the caller function.
   }
 };
 
