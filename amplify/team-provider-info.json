@@ -25,7 +25,7 @@
         "websitec6750c14": {},
         "verifyfunction": {
           "deploymentBucketName": "amplify-website-test-924d4-deployment",
-          "s3Key": "amplify-builds/verifyfunction-5938756c63436d423261-build.zip"
+          "s3Key": "amplify-builds/verifyfunction-4a772f4469713653662b-build.zip"
         }
       }
     }
