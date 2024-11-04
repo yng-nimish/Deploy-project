@@ -19,8 +19,8 @@ export function CartProvider({ children }) {
   function getCartItems() {
     // Filter out the payment processing fee from cartProducts
     return cartProducts.filter(
-      (item) => item.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live mode
-      // (item) => item.id !== "price_1PtTgV013t2ai8cxcqb7PFfy" // Test mode
+      //(item) => item.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live mode
+      (item) => item.id !== "price_1PtTgV013t2ai8cxcqb7PFfy" // Test mode
     );
   }
 
