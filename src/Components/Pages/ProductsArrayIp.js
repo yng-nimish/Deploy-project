@@ -1,6 +1,5 @@
 const productsArrayIp = [
   {
-    /*
     // Live Mode
     id: "price_1Q2JFt013t2ai8cxvwjxNO6w",
     title: "Use our Logo",
@@ -13,9 +12,8 @@ const productsArrayIp = [
     title: "Use our IP",
     price: 0.99,
     pdfUrl: "",
-    */
   },
-
+  /*
   {
     // Test Mode
     id: "price_1Q2JAh013t2ai8cxysic35Zn",
@@ -29,6 +27,7 @@ const productsArrayIp = [
     price: 0.99,
     pdfUrl: "",
   },
+   */
 ];
 
 function getProductIpData(id) {
