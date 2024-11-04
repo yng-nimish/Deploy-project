@@ -2,6 +2,7 @@
 
 const productsArray = [
   // Live Mode
+  /*
   {
     id: "price_1Q5UmO013t2ai8cxX1H3r2IG",
     title: "The One Million Metre Apple Watch Swim Challenge",
@@ -37,7 +38,7 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
-  /*
+ */
 
   //Test Mode
   {
@@ -48,7 +49,6 @@ const productsArray = [
       "https://docs.google.com/document/d/1Wtmfk0LYkJLXMjGOJcXtKr99cT54g9FSshmSm9UByN8/export?format=pdf",
   },
   {
-    
     id: "price_1PoBHG013t2ai8cxq5RtiI4j",
     title: "You Gotta Do The Work",
     price: 0.99,
@@ -76,7 +76,6 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
-  */
 
   /*{
     id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Py2vR013t2ai8cxsp6eOczL

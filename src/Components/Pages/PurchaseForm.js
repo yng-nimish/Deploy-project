@@ -5,16 +5,16 @@ import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
 //Test Mode
-/* 
+
 const stripePromise = loadStripe(
   "pk_test_51PYCXa013t2ai8cxvKCOTJ6mbQ87pUgdtruBKEyM1uwvStTOBKbkMt1cbMHw6QbQlWS40jpKp9fpVY1IqU030UYv00YNLjPSTi"
 );
-*/
+/* 
 // Live Mode
 const stripePromise = loadStripe(
   "pk_live_51PYCXa013t2ai8cx8TMVzR5XyFKBg1or1U8kZpBudEMObvxQETCZxkiqL3JNFiGdNLeFe9NhuCz58yZto5KIO4Xr00JwUxiYsc"
 );
-
+*/
 const PurchaseForm = () => {
   const location = useLocation();
   const navigate = useNavigate();

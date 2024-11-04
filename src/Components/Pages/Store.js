@@ -41,9 +41,9 @@ function Store() {
   };
 
   const filteredProductsArray = productsArray.filter(
-    (product) => product.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live Mode
+    // (product) => product.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live Mode
 
-    // (product) => product.id !== "price_1Px8XL013t2ai8cxAOSkYTjB" // Test Mode
+    (product) => product.id !== "price_1Px8XL013t2ai8cxAOSkYTjB" // Test Mode
   );
   const totalCost = cart.getTotalCost();
   const isFeeApplicable = totalCost < 50.49;
