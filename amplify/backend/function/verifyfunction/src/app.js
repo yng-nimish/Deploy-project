@@ -20,11 +20,12 @@ const {
 const express = require("express");
 const bodyParser = require("body-parser");
 const awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
-//const cors = require("cors");
+const cors = require("cors");
 
 // declare a new express app
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 app.use(awsServerlessExpressMiddleware.eventContext());
 
 // Initialize DynamoDB client and document client
