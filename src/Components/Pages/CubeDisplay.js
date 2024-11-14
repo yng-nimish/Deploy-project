@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FixedSizeGrid as Grid } from "react-window";
 import Papa from "papaparse";
 
-const size = 10; // Size for the cube (100x100x100)
+const size = 100; // Size for the cube (100x100x100)
 
 const CubeDisplay = () => {
   const [cube, setCube] = useState([]);
@@ -54,6 +54,7 @@ const CubeDisplay = () => {
             }
 
             setCube(cubeData);
+            console.log(cubeData);
           },
           error: (error) => {
             console.error("Error parsing CSV:", error);
