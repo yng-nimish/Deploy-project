@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FixedSizeGrid as Grid } from "react-window";
 import Papa from "papaparse";
 
-const size = 100; // Size for the cube (100x100x100)
+const size = 10; // Size for the cube (100x100x100)
 
 const CubeDisplay = () => {
   const [cube, setCube] = useState([]);
@@ -122,10 +122,10 @@ const CubeDisplay = () => {
       <Grid
         columnCount={columnCount}
         columnWidth={50}
-        height={400}
+        height={500}
         rowCount={rowCount}
         rowHeight={50}
-        width={400}
+        width={500}
       >
         {({ columnIndex, rowIndex, style }) => (
           <Cell value={data[rowIndex]?.[columnIndex]} style={style} />
