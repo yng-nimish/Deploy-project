@@ -717,6 +717,12 @@ nav {
   align-items: center;
   flex-wrap: wrap;
 }
+.book-section-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .email-Container {
   text-align: center;
   justify-content: space-between;
