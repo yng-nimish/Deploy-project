@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./ProductsStore";
 import { productsArraySun, getProductSunData } from "./ProductsArraySun";
+import { productsArrayIp, getProductIpData } from "./ProductsArrayIp";
 
 export const CartContext = createContext({
   items: [],
@@ -18,8 +19,13 @@ export function CartProvider({ children }) {
   function getCartItems() {
     // Filter out the payment processing fee from cartProducts
     return cartProducts.filter(
+<<<<<<< HEAD
       // (item) => item.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live mode
       (item) => item.id !== "price_1PtTgV013t2ai8cxcqb7PFfy" // Test mode
+=======
+      (item) => item.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live mode
+      //(item) => item.id !== "price_1PtTgV013t2ai8cxcqb7PFfy" // Test mode
+>>>>>>> main
     );
   }
 
@@ -34,15 +40,17 @@ export function CartProvider({ children }) {
     return quantity;
   }
 
-  function addOneToCart(id) {
-    const quantity = getProductQuantity(id);
+  function addOneToCart(id, quantity) {
+    if (quantity <= 0) return; // Prevent adding 0 or negative quantities
 
-    if (quantity === 0) {
+    const currentQuantity = getProductQuantity(id);
+
+    if (currentQuantity === 0) {
       setCartProducts([
         ...cartProducts,
         {
           id: id,
-          quantity: 1,
+          quantity: quantity,
         },
       ]);
     } else {
@@ -52,7 +60,7 @@ export function CartProvider({ children }) {
         cartProducts.map(
           (product) =>
             product.id === id // if condition
-              ? { ...product, quantity: product.quantity + 1 } // if statement is true
+              ? { ...product, quantity: product.quantity + quantity } // if statement is true
               : product // if statement is false
         )
       );
@@ -91,7 +99,9 @@ export function CartProvider({ children }) {
     let totalCost = 0;
     cartProducts.map((cartItem) => {
       const productData =
-        getProductData(cartItem.id) || getProductSunData(cartItem.id);
+        getProductData(cartItem.id) ||
+        getProductSunData(cartItem.id) ||
+        getProductIpData(cartItem.id);
       totalCost += productData.price * cartItem.quantity;
     });
     // Add payment processing fee if total cost is less than $50

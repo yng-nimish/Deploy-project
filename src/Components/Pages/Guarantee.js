@@ -15,7 +15,7 @@ import { CCardImage } from "@coreui/react";
 
 const Guarantee = () => {
   return (
-   <div className="about-wrapper">
+    <div className="about-wrapper">
       <div className="about-us-container">
         <div className="home-banner-container">
           <div className="guarantee-card">
@@ -26,9 +26,9 @@ const Guarantee = () => {
               <CRow className="g-0">
                 <CCol md={8}>
                   <CCardBody className="pre-rectangle">
-                    <CCardText >OUR GUARANTEE</CCardText>
+                    <CCardText>OUR GUARANTEE</CCardText>
                     <CCardTitle>
-                      <h1>The $1,000,000 Guarantee</h1>
+                      <h1>The One Million Dollars Guarantee</h1>
                     </CCardTitle>
                     <CCardText>
                       <p>
@@ -51,7 +51,7 @@ const Guarantee = () => {
                         challenge us on the authenticity of our Guarantee. There
                         is a process to the challenge and it's not free, but if
                         you win the challenge, then you get the challenge fee
-                        back along with $1,000,000.
+                        back along with One Million Dollars.
                       </p>
                       <br />
                       <p>
@@ -74,7 +74,7 @@ const Guarantee = () => {
                         solid, so we offer this peace of mind, and we offer our
                       </p>
                       <br />
-                      <h3>$1,000,000 Guarantee!!!!</h3>
+                      <h3>One Million Dollars Guarantee!!!!</h3>
                       <br />
                       <div className="button">
                         <Link to="/purchase">

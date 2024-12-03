@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "api": {
     "website": {
       "dependsOn": [],
@@ -17,6 +18,9 @@
       "service": "AppSync"
     }
   },
+=======
+  "api": {},
+>>>>>>> main
   "auth": {
     "website332cbef7": {
       "customAuth": false,
@@ -45,5 +49,42 @@
       "service": "Cognito"
     }
   },
+<<<<<<< HEAD
   "function": {}
+=======
+  "function": {
+    "verifyfunction": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "website332cbef7"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_verifyfunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "verifyfunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_verifyfunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "verifyfunction"
+        }
+      ]
+    }
+  }
+>>>>>>> main
 }

@@ -2,7 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
 import { productsArray } from "./ProductsStore"; // Ensure this import is correct
+import { Link, NavLink } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
 
+import { CCard } from "@coreui/react";
+import { CCardImage } from "@coreui/react";
+import { CCardBody } from "@coreui/react";
+import { CCardTitle } from "@coreui/react";
+import { CCardText } from "@coreui/react";
+import { CButton } from "@coreui/react";
+import { CRow } from "@coreui/react";
+import { CCol } from "@coreui/react";
 const PurchaseTP = () => {
   const [userData, setUserData] = useState({
     firstName: "",
@@ -68,7 +78,12 @@ const PurchaseTP = () => {
       //Test Mode
       const specificPriceId = "price_1PxoiI013t2ai8cxpSKPhDJl";
       //Live Mode
+<<<<<<< HEAD
       // const specificPriceId = "price_1Py2vL013t2ai8cxo0WMZZHi";
+=======
+      const specificPriceId = "price_1Py2vL013t2ai8cxo0WMZZHi";
+
+>>>>>>> main
       const priceIdItem = items.find((item) => item.id === specificPriceId);
       const quantity = priceIdItem ? priceIdItem.quantity : 0;
 
@@ -131,7 +146,11 @@ const PurchaseTP = () => {
   // Conditional rendering based on priceId and serialKey
   const shouldShowSerialKey =
     //Test Mode
+<<<<<<< HEAD
     // userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
+=======
+    //userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
+>>>>>>> main
     // Live Mode
     // userData.priceIds.includes("price_1Py2vL013t2ai8cxo0WMZZHi") &&
     userData.serialKeys &&
@@ -272,6 +291,23 @@ const PurchaseTP = () => {
             </div>
           </div>
         </div>
+        <CCard color="white" className="mb-3">
+          <CRow className="g-0">
+            <CCol md={8}>
+              <CCardBody className="pre-rectangle">
+                <CCardTitle>Verify</CCardTitle>
+                <CCardText>Verify your Serial Key</CCardText>
+              </CCardBody>
+            </CCol>
+            <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
+              <Link to="/verify">
+                <CButton color="primary" href="#">
+                  Verify &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                </CButton>
+              </Link>
+            </CCol>
+          </CRow>
+        </CCard>
       </div>
     </div>
   );

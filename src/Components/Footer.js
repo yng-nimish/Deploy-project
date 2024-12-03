@@ -73,7 +73,9 @@ const Footer = () => {
           <div className="footer-section-columns-2">
             <span>Follow Us on</span>
             <span className="footer-icons">
-              <FaFacebookF />
+              <NavLink to="https://www.facebook.com/people/YourNumber-Guaranteed/pfbid0wT2HAx2JqwiexswrinRUEdY21hcyyhfMsBNzizHeXKjgMW2YQQkBbgGtjEbjEpjol/">
+                <FaFacebookF />
+              </NavLink>
               <BsTwitter />
 
               <BsYoutube />

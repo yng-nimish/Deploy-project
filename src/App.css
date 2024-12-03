@@ -673,6 +673,19 @@ nav {
 .app-card-section{
   background-color: white;
 }
+.cube-container {
+  perspective: 800px;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cube:hover {
+  transform: rotateY(180deg);
+}
+
 .balloon {
   z-index: 2;
   align-items: center;
@@ -699,6 +712,12 @@ nav {
 }
 .work-section-bottom {
   margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.book-section-top {
   display: flex;
   justify-content: center;
   align-items: center;
