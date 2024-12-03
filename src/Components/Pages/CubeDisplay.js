@@ -95,8 +95,8 @@ const CubeDisplay = () => {
 
     switch (plane) {
       case "XY":
-        rowCount = size;
-        columnCount = size;
+        rowCount = size * 10;
+        columnCount = size * 10;
         data = Array.from({ length: size }, (_, y) =>
           Array.from({ length: size }, (_, x) => cube[zLayer]?.[y]?.[x])
         );
@@ -123,10 +123,10 @@ const CubeDisplay = () => {
       <Grid
         columnCount={columnCount}
         columnWidth={50}
-        height={500}
+        height={2000}
         rowCount={rowCount}
         rowHeight={50}
-        width={500}
+        width={10000}
       >
         {({ columnIndex, rowIndex, style }) => (
           <Cell value={data[rowIndex]?.[columnIndex]} style={style} />
