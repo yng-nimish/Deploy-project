@@ -718,6 +718,8 @@ nav {
   flex-wrap: wrap;
 }
 .book-section-top {
+  width: 1472px;
+  
   display: flex;
   justify-content: center;
   align-items: center;

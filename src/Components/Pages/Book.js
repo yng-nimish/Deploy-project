@@ -7,8 +7,8 @@ import AurhorImage from "../../Assets/image 4.svg";
 import Flag1 from "../../Assets/Great Britain.svg";
 import Flag2 from "../../Assets/USA.svg";
 import Flag3 from "../../Assets/Canada.svg";
-import Book2024Back from "../../Assets/Book2024Back.svg";
-import Book2024Front from "../../Assets/Book2024Front 1.svg";
+import Book2024Back from "../../Assets/Book2024Backcover.svg";
+import Book2024Front from "../../Assets/Book2024Front 1-2.svg";
 
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -132,13 +132,10 @@ const Book = () => {
     <div className="about-wrapper">
       <div className="about-us-container">
         <div className="book-section-top">
-          {BookData.map((data) => (
-            <div className="work-section-info">
-              <img src={data.image} alt="" />
-            </div>
-          ))}
+          <img src={Book2024Front} alt="" width="500" height="450" />{" "}
+          <p> &nbsp; </p>
+          <img src={Book2024Back} alt="" width="500" height="450" />
         </div>
-
         <div className="home-banner-container">
           <div></div>
           <div className="home-text-section">
