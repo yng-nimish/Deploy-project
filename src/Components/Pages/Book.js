@@ -7,11 +7,13 @@ import AurhorImage from "../../Assets/image 4.svg";
 import Flag1 from "../../Assets/Great Britain.svg";
 import Flag2 from "../../Assets/USA.svg";
 import Flag3 from "../../Assets/Canada.svg";
+import Book2024Back from "../../Assets/Book2024Back.svg";
+import Book2024Front from "../../Assets/Book2024Front 1.svg";
+
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { CCard } from "@coreui/react";
-import { CListGroup } from "@coreui/react";
-import { CListGroupItem } from "@coreui/react";
+
 import { CCardBody } from "@coreui/react";
 import { CCardTitle } from "@coreui/react";
 import { CCardSubtitle } from "@coreui/react";
@@ -22,7 +24,62 @@ import { CCol } from "@coreui/react";
 import { CCardImage } from "@coreui/react";
 import { Link, NavLink } from "react-router-dom";
 
+const BookData2024 = [
+  {
+    image: Flag1,
+    text: (
+      <div>
+        <a href="https://www.amazon.co.uk/dp/1738172848/ref=sr_1_2?crid=2IM1FY8YUD18E&dib=eyJ2IjoiMSJ9._yYAiUyh6fHrR6_a5iujWi3Szv-cwgeSlD7VyRUjrRG0fJp5a00DTUCsQZ1DFNiRTzRVNibmo3zULDnzVItSaoQdLzn9e5d0WUZ3hC3xB2F-LF9UDQ2KfGYBTf5HCuqyDqAY2YKG_cSdkp43RWsRFzDnyvz32fpepxqgie54L7fOduSGiaIzRSpBmBWKw8S9QwtlwMgHs19nk9-GNNagoGMIZIJKscoQMN_gVNArmNk.MHafV3pwt5POQtexS8eR0oZuGeAYzIRj0xrlQqbrSVE&dib_tag=se&keywords=your+number+guaranteed&nsdOptOutParam=true&qid=1733147935&sprefix=your+number+guaranteed%2Caps%2C265&sr=8-2">
+          <button className="primary-button">
+            {"  "}Buy Now{"  "}
+            {"  "}
+            {"  "}
+            <FiArrowRight />
+          </button>
+        </a>
+      </div>
+    ),
+  },
+  {
+    image: Flag2,
+    text: (
+      <div>
+        <a href="https://www.amazon.com/Your-Number-Guaranteed-Birth-Infancy/dp/1738172848/ref=sr_1_1?crid=JQ1Y0RDCLZMK&dib=eyJ2IjoiMSJ9.A9RTI8H-dJNIBvtaHremdA.Od-LgSGZslhEMvYZDqWUCNzaoZQiT2yQDjV3YHKwU9s&dib_tag=se&keywords=your+number+guaranteed+birth+and+infancy+in+the+year+2024&qid=1733147832&sprefix=your+number+guaranteed+birth+and+infancy+in+the+year+2024%2Caps%2C296&sr=8-1">
+          <button className="primary-button">
+            {"  "}Buy Now{"  "}
+            {"  "}
+            {"  "}
+            <FiArrowRight />
+          </button>
+        </a>
+      </div>
+    ),
+  },
+  {
+    image: Flag3,
+    text: (
+      <div>
+        <a href="https://www.amazon.ca/Your-Number-Guaranteed-Birth-Infancy/dp/1738172848/ref=sr_1_1?crid=2K1VA5949MKI5&dib=eyJ2IjoiMSJ9.NB6UzjFayFBaxq5kdbAVSWLwjU2zZERptfoy2XgTNyQ9LXmMr2tGTmB-m1bLPbcp_8eNX51BpHPUBcAHrC48xESTy1USDgJjH4zAl5sFO8Gwdf6xUBfqLCTItHHDTbtvuRci81pLGhAHtMsBqWSsxmM4uz03W3aciQ4N1Gef4LgLqZMWEPZ2HtwAqnxblFP0jvMCPc9PFl3claatEyUE9otmd_70lJqSMRgS22oCfP-3PfMDUVXrimVxMYfU5IzTKOM_arSddAzDIDpYxiCSBxMzgxix7_t1VWgPY7Q2fSY.rKsv8LaTiqGBoe28BdSqHOECC-5H4R91DTbE2bQB19Q&dib_tag=se&keywords=your+number+guaranteed&qid=1733147623&sprefix=%2Caps%2C281&sr=8-1">
+          <button className="primary-button">
+            {"  "}Buy Now{"  "}
+            {"  "}
+            {"  "}
+            <FiArrowRight />
+          </button>
+        </a>
+      </div>
+    ),
+  },
+];
 const BookData = [
+  {
+    image: Book2024Front,
+  },
+  {
+    image: Book2024Back,
+  },
+];
+const BookData2023 = [
   {
     image: Flag1,
     text: (
@@ -69,11 +126,21 @@ const BookData = [
     ),
   },
 ];
+
 const Book = () => {
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
+        <div className="book-section-top">
+          {BookData.map((data) => (
+            <div className="work-section-info">
+              <img src={data.image} alt="" />
+            </div>
+          ))}
+        </div>
+
         <div className="home-banner-container">
+          <div></div>
           <div className="home-text-section">
             <h7 className="primary-heading-welcome"> BUY AND READ OUR BOOK </h7>
             <h1 className="primary-heading">You Are Cordially Invited.</h1>
@@ -174,9 +241,24 @@ const Book = () => {
             in the next year. We will always encourage and include feedback from
             our members and partners.
           </p>
+          <h1>2024</h1>
         </div>
         <div className="work-section-bottom">
-          {BookData.map((data) => (
+          {BookData2024.map((data) => (
+            <div className="work-section-info">
+              <div className="info-boxes-img-container">
+                <img src={data.image} alt="" />
+              </div>
+              <p>{data.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="Book-Container">
+          <h1>2023</h1>
+        </div>
+
+        <div className="work-section-bottom">
+          {BookData2023.map((data) => (
             <div className="work-section-info">
               <div className="info-boxes-img-container">
                 <img src={data.image} alt="" />

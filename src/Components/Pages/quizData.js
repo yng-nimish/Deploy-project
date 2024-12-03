@@ -43,7 +43,7 @@ const quizData = [
   },
   {
     question: "What was Google's original name?",
-    options: ["BackRub", "Googol", "SearchMaster", "WebSearch"],
+    options: ["BackRub", "Goog", "SearchMaster", "WebSearch"],
     answer: "BackRub",
   },
   {
