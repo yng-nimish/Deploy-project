@@ -131,6 +131,7 @@ const Book = () => {
   return (
     <div className="about-wrapper">
       <div className="about-us-container">
+        /*
         <div className="book-section-top">
           {BookData.map((data) => (
             <div className="work-section-info">
@@ -138,7 +139,7 @@ const Book = () => {
             </div>
           ))}
         </div>
-
+        */
         <div className="home-banner-container">
           <div></div>
           <div className="home-text-section">
