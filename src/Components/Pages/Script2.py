@@ -4,6 +4,8 @@ from io import BytesIO
 
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
+from awsglue.dynamicframe import DynamicFrame
+
 sc = SparkContext()
 glueContext = GlueContext(sc)
 
@@ -44,7 +46,8 @@ with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
             break
 
 # Uploading the Final Excel file to S3
-s3_client = boto3.client('s3')
+
+s3_client = boto3.client('s3') 
 s3_client.put_object(Body=excel_buffer.getvalue(), Bucket="My-s3-bucket", Key="F0000.xlsx")
 
 print("Excel file uploaded to S3.")
