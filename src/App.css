@@ -721,6 +721,7 @@ nav {
   width: 1472px;
   
   display: flex;
+ 
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -871,6 +872,15 @@ nav {
     flex-direction: column;
     max-width: auto;
     overflow: auto;
+  }
+  .book-section-top {
+    max-width: 450px;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .purchase-text {
     align-items: center;
@@ -1068,6 +1078,16 @@ nav {
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;
+  }
+  .book-section-top {
+    width: 100%;
+    max-width: 400px;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
   .table {
     display: flex;
