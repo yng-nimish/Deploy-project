@@ -5,21 +5,24 @@ from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.dynamicframe import DynamicFrame
 
-# Initialize SparkContext and GlueContext
-sc = SparkContext()
+# Initialize SparkContext and GlueContext using the existing SparkContext
+sc = SparkContext.getOrCreate()
 glueContext = GlueContext(sc)
 
-# Reading data from Kinesis stream (as dynamic frame)
-kinesis_dynamic_frame = glueContext.create_dynamic_frame.from_options(
+
+kinesis_data_frame = glueContext.create_data_frame.from_options(
     connection_type="kinesis",
-    connection_options={"stream_name": "My_kinesis_stream_name", "starting_position": "TRIM_HORIZON"},
-    format="json"
+    connection_options={
+        "stream_name":"bobisyouruncle",
+        "starting_position": "TRIM_HORIZON"
+    }
 )
 
-# Converting DynamicFrame to Spark DataFrame for processing  it
-df = kinesis_dynamic_frame.toDF()
+# Converting DynamicFrame to Spark DataFrame for processing it
+df = kinesis_data_frame.toDF()
 
-# Transforming data and appending zeroes if needed
+
+# Transforming data and appending zeroes if needed 
 df = df.applymap(lambda x: f"{int(x):03d}" if isinstance(x, (int, float)) else x)
 
 # Collecting transformed data into Pandas DataFrame
@@ -46,10 +49,10 @@ with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
         if sheet_index >= 1000:
             break
 
-# Uploading the Final Excel file to S3
+# Uploading the Final Excel file to S3 
 s3_client = boto3.client('s3')
 try:
-    s3_client.put_object(Body=excel_buffer.getvalue(), Bucket="My-s3-bucket", Key="F0000.xlsx")
+    s3_client.put_object(Body=excel_buffer.getvalue(), Bucket="My-sun-test-bucket", Key="F0000.xlsx")
     print("Excel file uploaded to S3.")
 except Exception as e:
     print(f"Error uploading Excel file to S3: {str(e)}")

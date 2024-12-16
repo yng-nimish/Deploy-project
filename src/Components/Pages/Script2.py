@@ -1,53 +1,58 @@
+import sys
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from pyspark.sql import functions as F
+from pyspark.sql.types import StringType
+from pyspark.sql import Row
 import pandas as pd
 import boto3
 from io import BytesIO
 
-from pyspark.context import SparkContext
-from awsglue.context import GlueContext
-from awsglue.dynamicframe import DynamicFrame
+## @params: [JOB_NAME]
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
 
-sc = SparkContext()
+# Initialize SparkContext and GlueContext using the existing SparkContext
+sc = SparkContext.getOrCreate()
 glueContext = GlueContext(sc)
 
-# Reading data from Kinesis stream (as dynamic frame)
-kinesis_dynamic_frame = glueContext.create_dynamic_frame.from_options(
+# Kinesis streaming data frame reading
+kinesis_stream_df = glueContext.create_data_frame.from_options(
     connection_type="kinesis",
-    connection_options={"stream_name": "My_kinesis_stream_name", "starting_position": "TRIM_HORIZON"},
-    format="json" 
+    connection_options={
+        "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/bobisyouruncle",
+        "starting_position": "TRIM_HORIZON"
+    }
 )
 
-# Converting DynamicFrame to Spark DataFrame for processing
-df = kinesis_dynamic_frame.toDF()
+# Define a UDF to add leading zeroes to numerical values
+def add_zeroes(value):
+    try:
+        return f"{int(value):03d}" if value is not None else None
+    except Exception as e:
+        return value  # Return the original value in case of non-numeric values
 
+# Register the UDF to be used in Spark transformations
+add_zeroes_udf = F.udf(add_zeroes, StringType())
 
-df = df.fillna(0)  # Replace missing values with zero
+# Process the stream: Apply transformations to the incoming stream
+processed_df = kinesis_stream_df.select(
+    [add_zeroes_udf(F.col(column)).alias(column) for column in kinesis_stream_df.columns]
+)
 
-# Converting the DataFrame back to DynamicFrame for processing
-transformed_dynamic_frame = DynamicFrame.fromDF(df, glueContext, "transformed_dynamic_frame")
+# Now write the processed stream to S3 (or another output)
+output_path = "s3://My-sun-test-bucket/"
 
-# Collecting transformed data into Pandas DataFrame
-pandas_df = df.toPandas()
+# Write the output to S3 in micro-batches
+query = processed_df.writeStream \
+    .outputMode("append") \
+    .format("parquet") \
+    .option("checkpointLocation", "s3://My-sun-test-bucket/") \
+    .option("path", output_path) \
+    .start()
 
-# Generating Excel file in-memory
-excel_buffer = BytesIO()
-with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
-    sheet_index = 0
-    rows_per_sheet = 1000
-    cols_per_sheet = 1000
+# Wait for the streaming query to terminate
+query.awaitTermination()
 
-    # Processing the data and writing it in chunks of 1000x1000 grid per sheet 
-    for start_row in range(0, len(pandas_df), rows_per_sheet):
-        end_row = min(start_row + rows_per_sheet, len(pandas_df))
-        chunk = pandas_df.iloc[start_row:end_row, :cols_per_sheet]
-        sheet_name = f"Z{sheet_index + 1}"  # Sheet is labelled as Z for index
-        chunk.to_excel(writer, sheet_name=sheet_name, index=False)
-        sheet_index += 1
-        if sheet_index >= 1000:
-            break
-
-# Uploading the Final Excel file to S3
-
-s3_client = boto3.client('s3') 
-s3_client.put_object(Body=excel_buffer.getvalue(), Bucket="My-s3-bucket", Key="F0000.xlsx")
-
-print("Excel file uploaded to S3.")
+# Stop the SparkContext
+sc.stop()

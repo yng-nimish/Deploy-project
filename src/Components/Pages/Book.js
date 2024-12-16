@@ -9,6 +9,8 @@ import Flag2 from "../../Assets/USA.svg";
 import Flag3 from "../../Assets/Canada.svg";
 import Book2024Back from "../../Assets/Book2024Backcover.svg";
 import Book2024Front from "../../Assets/Book2024Front 1-2.svg";
+import Book2024Back2 from "../../Assets/bookbackpage2.jpg";
+import Book2024Front2 from "../../Assets/Bookfront2.jpg";
 
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -73,10 +75,10 @@ const BookData2024 = [
 ];
 const BookData = [
   {
-    image: Book2024Front,
+    image: Book2024Front2,
   },
   {
-    image: Book2024Back,
+    image: Book2024Back2,
   },
 ];
 const BookData2023 = [
@@ -132,9 +134,9 @@ const Book = () => {
     <div className="about-wrapper">
       <div className="about-us-container">
         <div className="book-section-top">
-          <img src={Book2024Front} alt="" width="500" height="450" />{" "}
+          <img src={Book2024Front2} alt="" width="500" height="450" />{" "}
           <p> &nbsp; </p>
-          <img src={Book2024Back} alt="" width="500" height="450" />
+          <img src={Book2024Back2} alt="" width="500" height="450" />
         </div>
         <div className="home-banner-container">
           <div></div>
