@@ -1,58 +1,36 @@
 import sys
+from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
-from pyspark.sql import functions as F
-from pyspark.sql.types import StringType
-from pyspark.sql import Row
-import pandas as pd
-import boto3
-from io import BytesIO
+from awsglue.job import Job
 
-## @params: [JOB_NAME]
+from pyspark.sql import DataFrame, Row
+import datetime
+from awsglue import DynamicFrame
+
 args = getResolvedOptions(sys.argv, ['JOB_NAME'])
-
-# Initialize SparkContext and GlueContext using the existing SparkContext
-sc = SparkContext.getOrCreate()
+sc = SparkContext()
 glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
 
-# Kinesis streaming data frame reading
-kinesis_stream_df = glueContext.create_data_frame.from_options(
-    connection_type="kinesis",
-    connection_options={
-        "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/bobisyouruncle",
-        "starting_position": "TRIM_HORIZON"
-    }
-)
+# Script generated for node Amazon Kinesis
+dataframe_AmazonKinesis_node1736267829891 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/sayhellostream", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1736267829891")
 
-# Define a UDF to add leading zeroes to numerical values
-def add_zeroes(value):
-    try:
-        return f"{int(value):03d}" if value is not None else None
-    except Exception as e:
-        return value  # Return the original value in case of non-numeric values
+def processBatch(data_frame, batchId):
+    if (data_frame.count() > 0):
+        AmazonKinesis_node1736267829891 = DynamicFrame.fromDF(data_frame, glueContext, "from_data_frame")
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        hour = now.hour
 
-# Register the UDF to be used in Spark transformations
-add_zeroes_udf = F.udf(add_zeroes, StringType())
+        # Script generated for node Amazon S3
+        AmazonS3_node1736267833922_path = "s3://my-bucket-sun-test/Output" + "/ingest_year=" + "{:0>4}".format(str(year)) + "/ingest_month=" + "{:0>2}".format(str(month)) + "/ingest_day=" + "{:0>2}".format(str(day)) + "/ingest_hour=" + "{:0>2}".format(str(hour))  + "/"
+        AmazonS3_node1736267833922 = glueContext.write_dynamic_frame.from_options(frame=AmazonKinesis_node1736267829891, connection_type="s3", format="json", connection_options={"path": AmazonS3_node1736267833922_path, "partitionKeys": []}, transformation_ctx="AmazonS3_node1736267833922")
 
-# Process the stream: Apply transformations to the incoming stream
-processed_df = kinesis_stream_df.select(
-    [add_zeroes_udf(F.col(column)).alias(column) for column in kinesis_stream_df.columns]
-)
-
-# Now write the processed stream to S3 (or another output)
-output_path = "s3://My-sun-test-bucket/"
-
-# Write the output to S3 in micro-batches
-query = processed_df.writeStream \
-    .outputMode("append") \
-    .format("parquet") \
-    .option("checkpointLocation", "s3://My-sun-test-bucket/") \
-    .option("path", output_path) \
-    .start()
-
-# Wait for the streaming query to terminate
-query.awaitTermination()
-
-# Stop the SparkContext
-sc.stop()
+glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1736267829891, batch_function = processBatch, options = {"windowSize": "10 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
+job.commit()

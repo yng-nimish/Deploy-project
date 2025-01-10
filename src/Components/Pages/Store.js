@@ -1,19 +1,19 @@
+/**
+ * E - commerce Store Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
 import { useState } from "react";
 import { productsArray } from "./ProductsStore";
 import { productsArraySun } from "./ProductsArraySun";
 import { productsArrayIp } from "./ProductsArrayIp";
 import { Button, Modal } from "react-bootstrap";
-import CartProvider from "./CartContext";
-import { Link, NavLink } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
+
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import CartProduct from "./CartProduct";
 import ProductCard from "./ProductCard";
 import { Row, Col } from "react-bootstrap";
-import PurchaseForm from "./PurchaseForm";
 import { useNavigate } from "react-router-dom";
-import comingSoon from "../../Assets/Group 62.svg";
 
 function Store() {
   const [showCart, setShowCart] = useState(false);
