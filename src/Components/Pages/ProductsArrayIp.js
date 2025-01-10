@@ -1,3 +1,7 @@
+/**
+ * E - commerce Products for Purchase IP section of Purchase Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
 const productsArrayIp = [
   {
     // Live Mode
