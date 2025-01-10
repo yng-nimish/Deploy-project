@@ -1,3 +1,8 @@
+/**
+ * E - commerce Cart Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
+
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./ProductsStore";
 import { productsArraySun, getProductSunData } from "./ProductsArraySun";

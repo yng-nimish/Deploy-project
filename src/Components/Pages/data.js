@@ -1,3 +1,8 @@
+/**
+ * Data Page - Website code
+ * Data for Technical Papers. Append this to add more technical Papers.
+ */
+
 export const data = [
   {
     id: 1,

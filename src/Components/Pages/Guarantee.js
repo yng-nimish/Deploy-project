@@ -1,3 +1,6 @@
+/**
+ *  Guarantee Page - Website code
+ */
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 import "@coreui/coreui/dist/css/coreui.min.css";

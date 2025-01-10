@@ -1,22 +1,10 @@
+/**
+ * Contact Cart Page - Website code
+ */
 import React from "react";
-
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { CCard } from "@coreui/react";
-import { FiArrowRight } from "react-icons/fi";
 import Flag2 from "../../Assets/USA.svg";
 import Flag3 from "../../Assets/Canada.svg";
-import { CListGroup } from "@coreui/react";
-import { CListGroupItem } from "@coreui/react";
-import { CCardBody } from "@coreui/react";
-import { CCardTitle } from "@coreui/react";
-import { CForm } from "@coreui/react";
-import { CCardText } from "@coreui/react";
-import { CCardLink } from "@coreui/react";
-import { CRow } from "@coreui/react";
-import { CCol } from "@coreui/react";
-import { CCardImage } from "@coreui/react";
-import { CFormInput } from "@coreui/react";
+
 import Swal from "sweetalert2";
 const EmailData = [
   {

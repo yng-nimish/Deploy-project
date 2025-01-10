@@ -1,3 +1,8 @@
+/**
+ * E - commerce PurchaseTP Page - Website code - Used as landing page post payment to be able to download Technical Papers.
+ * We have Live mode and test mode for stripe here.
+ */
+
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";

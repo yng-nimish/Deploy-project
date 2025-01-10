@@ -1,3 +1,8 @@
+/**
+ * E - commerce Purchase Form Page - Website code - used to get customer Information.
+ * We have Live mode and test mode for stripe here.
+ */
+
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
