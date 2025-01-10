@@ -26,12 +26,12 @@ const quizData = [
     answer: "HyperText Transfer Protocol",
   },
   {
-    answer: "HTML",
-  },
-  {
     question:
       "Which programming language is known as the backbone of the World Wide Web?",
     options: ["Java", "C#", "Python", "HTML"],
+    answer: "HTML",
+  },
+  {
     question: "What is the name of the world's first computer programmer?",
     options: ["Charles Babbage", "Ada Lovelace", "Alan Turing", "Grace Hopper"],
     answer: "Ada Lovelace",
