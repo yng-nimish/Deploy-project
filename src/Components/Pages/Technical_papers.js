@@ -1,3 +1,6 @@
+/**
+ * Technical Papers Page - Website code
+ */
 import React from "react";
 import { useEffect, useState } from "react";
 

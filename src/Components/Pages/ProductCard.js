@@ -1,3 +1,6 @@
+/**
+ * E - commerce Product Card Page - Website code
+ */
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
 import { CartContext } from "./CartContext";
 import { useContext, useState, useEffect } from "react";

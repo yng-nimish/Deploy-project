@@ -1,3 +1,5 @@
+// This is the code for testing our CCube
+
 const numbersString = require("./Cubenumbers"); // Ensure this path is correct
 const {
   DynamoDBClient,

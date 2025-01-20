@@ -1,3 +1,6 @@
+/**
+ * Home Page - Website code
+ */
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";

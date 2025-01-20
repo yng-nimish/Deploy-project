@@ -76,10 +76,12 @@ const Footer = () => {
               <NavLink to="https://www.facebook.com/people/YourNumber-Guaranteed/pfbid0wT2HAx2JqwiexswrinRUEdY21hcyyhfMsBNzizHeXKjgMW2YQQkBbgGtjEbjEpjol/">
                 <FaFacebookF />
               </NavLink>
-              <BsTwitter />
+              <NavLink to="https://x.com/number_you96846">
+                <BsTwitter />
+              </NavLink>
 
               <BsYoutube />
-              <NavLink to="https://ca.linkedin.com/in/yournumber-guaranteed-1089432b8">
+              <NavLink to="https://www.linkedin.com/company/your-number-guaranteed-ceo/?viewAsMember=true">
                 <SiLinkedin />
               </NavLink>
             </span>
