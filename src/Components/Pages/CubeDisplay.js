@@ -1,3 +1,6 @@
+/**
+ * Ccube display Page - Website code
+ */
 import React, { useState, useEffect } from "react";
 import { FixedSizeGrid as Grid } from "react-window";
 import Papa from "papaparse";

@@ -1,5 +1,8 @@
 // price id for you gotta do the work : price_1PoBHG013t2ai8cxq5RtiI4j
-
+/**
+ * E - commerce Products for Purchase The SUN section of Purchase Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
 const productsArraySun = [
   {
     // Live Mode

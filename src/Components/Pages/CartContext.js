@@ -1,3 +1,8 @@
+/**
+ * E - commerce Cart Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
+
 import { createContext, useState } from "react";
 import { productsArray, getProductData } from "./ProductsStore";
 import { productsArraySun, getProductSunData } from "./ProductsArraySun";
@@ -80,9 +85,6 @@ export function CartProvider({ children }) {
   }
 
   function deleteFromCart(id) {
-    // [] if an object meeta a condition, add the object to array
-    // [product1, product2, product3]
-    // [product1, product3]
     setCartProducts((cartProducts) =>
       cartProducts.filter((currentProduct) => {
         return currentProduct.id != id;

@@ -1,3 +1,6 @@
+/**
+ * Terms Page - Website code
+ */
 import React from "react";
 import { CCard } from "@coreui/react";
 import { Link, NavLink } from "react-router-dom";

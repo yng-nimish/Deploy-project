@@ -1,3 +1,6 @@
+/**
+ * E - commerce Product Page - Website code
+ */
 import { Button } from "react-bootstrap";
 import { CartContext } from "./CartContext";
 import { useContext } from "react";

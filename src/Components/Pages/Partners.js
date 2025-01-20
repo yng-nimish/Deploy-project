@@ -1,3 +1,6 @@
+/**
+ * Partners Page - Website code
+ */
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 import BannerImage from "../../Assets/logo2.svg";

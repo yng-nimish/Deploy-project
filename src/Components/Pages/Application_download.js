@@ -1,3 +1,7 @@
+/**
+ * Application Download section - Website code _ extension from application page
+ */
+
 import React from "react";
 import comingSoon from "../../Assets/Group 62.svg";
 import { Link, NavLink } from "react-router-dom";
@@ -10,7 +14,7 @@ const Application_download = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "14e7a7cf-3ae8-4c8c-b522-2590c31e5686"); // Acces keys to ceo@yournumberguaranteed.com
+    formData.append("access_key", "14e7a7cf-3ae8-4c8c-b522-2590c31e5686"); // Access keys to ceo@yournumberguaranteed.com
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

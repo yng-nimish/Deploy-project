@@ -1,3 +1,7 @@
+/**
+ * Serial Key Verification Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";

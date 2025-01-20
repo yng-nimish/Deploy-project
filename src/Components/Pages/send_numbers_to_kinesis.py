@@ -2,7 +2,7 @@ import boto3
 import time
 
 kinesis_client = boto3.client('kinesis', region_name='us-east-1')  
-stream_name = 'bobisyouruncle'  
+stream_name = 'whitesnow'  
 
 file_path = "numbers.txt"  #the file with our random numbers
 
@@ -59,6 +59,7 @@ def send_batch_to_kinesis(batch):
             print(f"Failed to send {failed_record_count} records in this batch.")
         
         # Print successful sequence numbers
+        
         for record in response['Records']:
             print(f"Sent data to Kinesis with SequenceNumber: {record['SequenceNumber']}")
     
