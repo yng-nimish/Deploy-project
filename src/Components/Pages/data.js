@@ -1,3 +1,8 @@
+/**
+ * Data Page - Website code
+ * Data for Technical Papers. Append this to add more technical Papers.
+ */
+
 export const data = [
   {
     id: 1,
@@ -5,7 +10,7 @@ export const data = [
     author: "Kevin Patrick Maloney",
     Date: "02-10-2024 (Updated Weekly)",
     pdfUrl:
-      "https://docs.google.com/document/d/1Wtmfk0LYkJLXMjGOJcXtKr99cT54g9FSshmSm9UByN8/preview",
+      "https://docs.google.com/document/d/1bA0PwY9M0Jn3WN89zP-fQSq5iVXHlME0nYU7Z3LlhT4/preview",
   },
   {
     id: 2,

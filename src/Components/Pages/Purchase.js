@@ -1,27 +1,15 @@
+/**
+ * E - commerce Purchase Page - Website code
+ * We have Live mode and test mode for stripe here.
+ */
 import React from "react";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { CCard } from "@coreui/react";
-import { FiArrowRight } from "react-icons/fi";
-import Flag1 from "../../Assets/Great Britain.svg";
-import Flag2 from "../../Assets/USA.svg";
-import Flag3 from "../../Assets/Canada.svg";
-import { CListGroup } from "@coreui/react";
+
 import comingSoon from "../../Assets/Group 62.svg";
 import { data } from "./purchase_data";
-import { CCardBody } from "@coreui/react";
-import { CCardTitle } from "@coreui/react";
-import { CForm } from "@coreui/react";
-import { CCardText } from "@coreui/react";
-import { CCardLink } from "@coreui/react";
-import { CRow } from "@coreui/react";
-import { CCol } from "@coreui/react";
-import { CCardImage } from "@coreui/react";
-import { CFormInput } from "@coreui/react";
+
 import Swal from "sweetalert2";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 
 const Purchase = () => {
   const [showIframe, setShowIframe] = useState(false);
