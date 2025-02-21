@@ -2,7 +2,7 @@ import boto3
 import time
 
 kinesis_client = boto3.client('kinesis', region_name='us-east-1')  
-stream_name = 'hellostream'  
+stream_name = 'whitesnow'  
 
 file_path = "numbers.txt"  #the file with our random numbers
 
