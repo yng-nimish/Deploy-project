@@ -1,61 +1,117 @@
+import sys
+import os
 import pandas as pd
+from awsglue.transforms import *
+from pyspark.sql import DataFrame, Row
+import datetime
+from awsglue import DynamicFrame
+from awsglue.dynamicframe import DynamicFrameCollection
+from awsglue.dynamicframe import DynamicFrame
+import openpyxl  # Ensure openpyxl is imported
 import boto3
 from io import BytesIO
-from pyspark.context import SparkContext
-from awsglue.context import GlueContext
-from awsglue.dynamicframe import DynamicFrame
+# List all available modules (for debugging)
+print("Available Python modules: ", sys.modules)
 
-# Initialize SparkContext and GlueContext using the existing SparkContext
-sc = SparkContext.getOrCreate()
+# Script generated for node Custom Transform
+def MyTransform(glueContext, dfc) -> DynamicFrameCollection:
+    dynamic_frame = dfc["AmazonKinesis_node1736967491930"]
+    
+    # Convert to DataFrame
+    df = dynamic_frame.toDF()
+
+    # Check if DataFrame is empty
+    if df.count() == 0:
+        print("No data to process in this batch.")
+        return DynamicFrameCollection({}, glueContext)
+    
+    # Check if the 'number' column exists
+    if "number" not in df.columns:
+        print("Column 'number' not found. Skipping transformation.")
+        return DynamicFrameCollection({}, glueContext)
+
+    # Perform the transformation: Pad 'number' column to 3 digits
+    df_transformed = df.withColumn(
+        "number",
+        lpad(col("number").cast("string"), 3, "0")
+    )
+    
+    # Convert back to DynamicFrame
+    dynamic_frame_transformed = DynamicFrame.fromDF(df_transformed, glueContext, "dynamic_frame_transformed")
+
+    # Return the transformed DynamicFrameCollection
+    return DynamicFrameCollection({"transformed_number": dynamic_frame_transformed}, glueContext)
+
+
+# Getting the job arguments
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'TempDir'])
+
+# Initialize Glue context
+sc = SparkContext()
 glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
 
+# Script generated for node Amazon Kinesis
+dataframe_AmazonKinesis_node1736967491930 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/River", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1736967491930")
 
-kinesis_data_frame = glueContext.create_data_frame.from_options(
-    connection_type="kinesis",
-    connection_options={
-        "stream_name":"bobisyouruncle",
-        "starting_position": "TRIM_HORIZON"
-    }
-)
+# Function to create Excel file and save to S3
+def save_to_excel_and_upload_to_s3(df, s3_path):
+    # Create a new Excel workbook and set up sheet parameters
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    sheet.title = "Sheet1"
+    
+    # Iterate through the DataFrame and write data to Excel
+    row = 1
+    col = 1
+    for idx, row_data in df.iterrows():
+        for value in row_data:
+            sheet.cell(row=row, column=col, value=value)
+            col += 1
+            if col > 100:
+                col = 1
+                row += 1
+        if row > 100:
+            sheet = workbook.create_sheet(title=f"Sheet{workbook.sheetnames[-1][-1]}")
+            row = 1
+            col = 1
+    
+    # Save the workbook to a BytesIO object to avoid file I/O
+    file_stream = BytesIO()
+    workbook.save(file_stream)
+    file_stream.seek(0)
+    
+    # Upload the file to S3
+    s3_client = boto3.client('s3')
+    s3_client.put_object(
+        Body=file_stream,
+        Bucket="my-bucket-sun-test",
+        Key=s3_path
+    )
 
-# Converting DynamicFrame to Spark DataFrame for processing it
-df = kinesis_data_frame.toDF()
+def processBatch(data_frame, batchId):
+    if (data_frame.count() > 0):
+        AmazonKinesis_node1736967491930 = DynamicFrame.fromDF(data_frame, glueContext, "from_data_frame")
+        
+        # Script generated for node Custom Transform
+        CustomTransform_node1736967498329 = MyTransform(glueContext, {"AmazonKinesis_node1736967491930": AmazonKinesis_node1736967491930})
+        
+        # Convert the transformed DynamicFrame to a Pandas DataFrame for Excel export
+        transformed_df = CustomTransform_node1736967498329.toDF().toPandas()
 
+        # Generate current date and time for partitioning
+        now = datetime.datetime.now()
+        year = now.year
+        month = now.month
+        day = now.day
+        hour = now.hour
+        # S3 Path for saving Excel
+        s3_path = f"s3://my-bucket-sun-test/temp/ingest_year={year:0>4}/ingest_month={month:0>2}/ingest_day={day:0>2}/ingest_hour={hour:0>2}/output.xlsx"
+        
+        # Save the transformed DataFrame to Excel and upload to S3
+        save_to_excel_and_upload_to_s3(transformed_df, s3_path)
 
-# Transforming data and appending zeroes if needed 
-df = df.applymap(lambda x: f"{int(x):03d}" if isinstance(x, (int, float)) else x)
-
-# Collecting transformed data into Pandas DataFrame
-pandas_df = df.toPandas()
-
-# Check the number of columns in the DataFrame
-num_columns = df.shape[1]
-print("Number of columns in the DataFrame: {num_columns}")
-
-# Generating Excel file in-memory
-excel_buffer = BytesIO()
-with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
-    sheet_index = 0
-    rows_per_sheet = 1000
-    cols_per_sheet = 1000
-
-    # Processing the data and writing it in chunks of 1000x1000 grid per sheet 
-    for start_row in range(0, len(pandas_df), rows_per_sheet):
-        end_row = min(start_row + rows_per_sheet, len(pandas_df))
-        chunk = pandas_df.iloc[start_row:end_row, :min(cols_per_sheet, pandas_df.shape[1])]
-        sheet_name = f"Z{sheet_index + 1}"  # Sheet is labelled as Z for index
-        chunk.to_excel(writer, sheet_name=sheet_name, index=False)
-        sheet_index += 1
-        if sheet_index >= 1000:
-            break
-
-# Uploading the Final Excel file to S3 
-s3_client = boto3.client('s3')
-try:
-    s3_client.put_object(Body=excel_buffer.getvalue(), Bucket="My-sun-test-bucket", Key="F0000.xlsx")
-    print("Excel file uploaded to S3.")
-except Exception as e:
-    print(f"Error uploading Excel file to S3: {str(e)}")
-
-# Stopping SparkContext 
-sc.stop()
+glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1736967491930, batch_function = processBatch, options = {"windowSize": "10 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
+job.commit()

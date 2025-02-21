@@ -1,5 +1,5 @@
 /**
- * Contact Cart Page - Website code
+ * Contact us Page - Website code
  */
 import React from "react";
 import Flag2 from "../../Assets/USA.svg";
