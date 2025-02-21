@@ -7,7 +7,7 @@ const quizData = [
   {
     question:
       "Which company developed the first commercial antivirus software?",
-    options: ["Symantec", "McAfee", "Norton", "Kaspersky Lab"],
+    options: ["Symantec", "McAfee", "Norton", " Kaspersky Lab"],
     answer: "McAfee",
   },
   {
