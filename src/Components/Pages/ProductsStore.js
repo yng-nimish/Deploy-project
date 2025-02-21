@@ -40,6 +40,13 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
   },
+  {
+    id: "price_1Qv4Tn013t2ai8cxGNFh6ZcD",
+    title: "Do Smart Things",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1C2Cv6Y9vbmeMyh14ayPkzlAK4uI2wPuBWroxlbHuG-8/export?format=pdf",
+  },
 
   /*
 
@@ -78,6 +85,13 @@ const productsArray = [
     price: 0.99,
     pdfUrl:
       "https://docs.google.com/document/d/1Vt-YD15lB6lZrKsfXsSdNj0WI4DjYt-GfYPxVYrYVNY/export?format=pdf",
+  },
+  {
+    id: "price_1Qv4Wi013t2ai8cxuFdV1BfR",
+    title: "Do Smart Things",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1C2Cv6Y9vbmeMyh14ayPkzlAK4uI2wPuBWroxlbHuG-8/export?format=pdf",
   },
 */
 
