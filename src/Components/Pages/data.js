@@ -46,10 +46,11 @@ export const data = [
   },
   {
     id: 6,
-    title: "Title",
-    author: "Name",
-    Date: "Date",
-    pdfUrl: "",
+    title: "Do Smart Things",
+    author: "Kevin Patrick Maloney",
+    Date: "21-02-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/1C2Cv6Y9vbmeMyh14ayPkzlAK4uI2wPuBWroxlbHuG-8/preview",
   },
 
   {

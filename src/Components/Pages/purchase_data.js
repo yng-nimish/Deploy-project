@@ -1,9 +1,5 @@
 export const data = [
   {
-    /* The code snippet is a JavaScript array of objects named `data`. Each object in the
-  array represents a piece of data related to a Technical Paper, including its ID, title, author, publication
-  date, and a URL to a PDF preview of the book.
-  The important thing to note here is that the PDF is set up to be only previewed and not to be downloaded. */
     id: 1,
     title: "You Gotta Do The Work",
     author: "Kevin Patrick Maloney",
