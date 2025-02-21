@@ -3,7 +3,7 @@ import time
 import json  # To handle JSON serialization
 
 kinesis_client = boto3.client('kinesis', region_name='us-east-1')  
-stream_name = 'mystream'  
+stream_name = 'point'  
 
 file_path = "numbers.txt"  # Path to the file with random numbers
 
