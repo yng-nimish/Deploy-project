@@ -47,6 +47,13 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1C2Cv6Y9vbmeMyh14ayPkzlAK4uI2wPuBWroxlbHuG-8/export?format=pdf",
   },
+  {
+    id: "price_1R03Zn013t2ai8cxd27UCEVk",
+    title: "Are You Nimble",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/export?format=pdf",
+  },
 
   /*
 
@@ -92,6 +99,13 @@ const productsArray = [
     price: 0.99,
     pdfUrl:
       "https://docs.google.com/document/d/1C2Cv6Y9vbmeMyh14ayPkzlAK4uI2wPuBWroxlbHuG-8/export?format=pdf",
+  },
+  {
+    id: "price_1R03hw013t2ai8cxT6AQpyZL",
+    title: "Are You Nimble",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/export?format=pdf",
   },
 */
 
