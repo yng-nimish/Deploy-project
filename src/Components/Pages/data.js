@@ -55,6 +55,15 @@ export const data = [
 
   {
     id: 7,
+    title: "Are you Nimble",
+    author: "Kevin Patrick Maloney",
+    Date: "06-03-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/preview",
+  },
+
+  {
+    id: 8,
     title: "Click to Close",
     author: "Name",
     Date: "Date",
