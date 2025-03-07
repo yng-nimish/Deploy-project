@@ -18,7 +18,7 @@ const quizData = [
   {
     question: "What does 'HTTP' stand for?",
     options: [
-      "HyperText Transfer Protocol",
+      "HyperText Transfer Protocol ",
       "Hyperlink Transfer Technology Protocol",
       "Hyperlink Text Transfer Protocol",
       "HyperText Technology Protocol",
