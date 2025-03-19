@@ -65,9 +65,12 @@ const Technical_papers = () => {
               {data.map((item, index) => (
                 <tr key={index}>
                   <td>
-                    <a onClick={() => handleItemClick(item.pdfUrl)}>
+                    <button
+                      className="tech-button-2"
+                      onClick={() => handleItemClick(item.pdfUrl)}
+                    >
                       {item.title}
-                    </a>
+                    </button>
                   </td>
                   <td>{item.author}</td>
                   <td>{item.Date}</td>
