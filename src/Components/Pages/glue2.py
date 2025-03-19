@@ -97,10 +97,11 @@ def save_to_excel_and_upload_to_s3(df, s3_base_path):
                     sheet.title = f"Z{sheet_count}"
                     row = 1
                     col = 1
-                sheet_count += 1
-                row = 1
-                col = 1
-                sheet = workbook.create_sheet(title=f"Z{sheet_count}")
+                else:
+                    sheet_count += 1
+                    row = 1
+                    col = 1
+                    sheet = workbook.create_sheet(title=f"Z{sheet_count}")
 
         if row > 1 or col > 1:
             file_stream = BytesIO()

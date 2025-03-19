@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "coffeeStream"
+KINESIS_STREAM_NAME = "NaturalStream"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,10 +16,10 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "54.237.6.147"
+TCP_HOST = "54.89.108.70"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
-NUMBERS_PER_REQUEST = 2_000_000
+NUMBERS_PER_REQUEST = 4_000_000
 NUMBERS_PER_RECORD = 2000
 
 # Logging Setup
@@ -31,11 +31,11 @@ logging.basicConfig(
 logger = logging.getLogger()
 
 # Constants
-FETCH_WORKERS = 12
-SEND_WORKERS = 24
+FETCH_WORKERS = 24
+SEND_WORKERS = 48
 TARGET_COUNT = 10_000_000_000  # 10B numbers, effectively uncapped for 24 minutes
 BATCH_SIZE = 500
-QUEUE_SIZE = 50_000
+QUEUE_SIZE = 100_000
 RUN_DURATION = 1440  # 24 minutes in seconds (24 * 60)
 
 # Metrics
@@ -48,57 +48,62 @@ fetch_calls = 0
 send_calls = 0
 start_time = time.time()
 
-async def fetch_data_tcp():
+async def fetch_data_tcp(reader_writer_pair=None):
     global fetch_time_total, fetch_calls
     fetch_start = time.time()
     try:
-        reader, writer = await asyncio.open_connection(TCP_HOST, TCP_PORT)
+        if reader_writer_pair is None:
+            reader, writer = await asyncio.open_connection(TCP_HOST, TCP_PORT)
+        else:
+            reader, writer = reader_writer_pair
         bytes_requested = int(NUMBERS_PER_REQUEST * BYTES_PER_NUMBER * 1.01)
         writer.write(struct.pack('<I', bytes_requested))
         await writer.drain()
 
         data = await reader.readexactly(bytes_requested)
-        numbers = []
-        i = 0
         max_val = 2**32 - 1
         range_size = 1000
         threshold = max_val - (max_val % range_size)
+        
+        # Bulk unpack instead of manual loop
+        numbers = struct.unpack(f'<{NUMBERS_PER_REQUEST}I', data[:NUMBERS_PER_REQUEST * 4])
+        numbers = [n % range_size for n in numbers if n <= threshold]
 
-        while len(numbers) < NUMBERS_PER_REQUEST and i < len(data) - 3:
-            num = int.from_bytes(data[i:i+4], 'little')
-            i += 4
-            if num <= threshold:
-                numbers.append(num % range_size)
-
-        writer.close()
-        await writer.wait_closed()
         fetch_time_total += time.time() - fetch_start
         fetch_calls += 1
-        logger.info(f"Fetched {len(numbers)} numbers from TCP")
-        return numbers
+        return numbers, (reader, writer)  # Return pair for reuse
     except Exception as e:
         logger.error(f"TCP fetch failed in fetch_data_tcp: {repr(e)}")
-        return []
+        if reader_writer_pair is None and 'writer' in locals():
+            writer.close()
+            await writer.wait_closed()
+        return [], None
 
 async def fetch_continuously(queue):
     global total_numbers_fetched
+    connections = [None] * FETCH_WORKERS
+    last_log = time.time()
     while total_numbers_fetched < TARGET_COUNT and time.time() - start_time < RUN_DURATION:
         try:
-            tasks = [fetch_data_tcp() for _ in range(FETCH_WORKERS)]
-            batches = await asyncio.gather(*tasks)
-            for batch in batches:
-                if batch:
-                    total_numbers_fetched += len(batch)
-                    for i in range(0, len(batch), NUMBERS_PER_RECORD):
-                        chunk = batch[i:i + NUMBERS_PER_RECORD]
+            tasks = [fetch_data_tcp(connections[i]) for i in range(FETCH_WORKERS)]
+            results = await asyncio.gather(*tasks)
+            for numbers, conn in results:
+                if numbers:
+                    total_numbers_fetched += len(numbers)
+                    for i in range(0, len(numbers), NUMBERS_PER_RECORD):
+                        chunk = numbers[i:i + NUMBERS_PER_RECORD]
                         await queue.put(chunk)
-                    logger.info(f"Total fetched: {total_numbers_fetched}")
+            connections = [r[1] for r in results]  # Update connections for reuse
+            if time.time() - last_log >= 10:  # Log every 10 seconds
+                logger.info(f"Fetched {len(numbers)} numbers from TCP, Total fetched: {total_numbers_fetched}")
+                last_log = time.time()
         except Exception as e:
             logger.error(f"TCP fetch failed in fetch_continuously: {repr(e)}")
             await asyncio.sleep(1)
 
 async def send_to_kinesis(queue):
     global total_numbers_sent, total_bytes_sent, send_time_total, send_calls
+    last_log = time.time()
     while total_numbers_sent < TARGET_COUNT and time.time() - start_time < RUN_DURATION:
         batch = []
         for _ in range(BATCH_SIZE):
@@ -135,7 +140,9 @@ async def send_to_kinesis(queue):
                     total_bytes_sent += sum(len(r["Data"]) for r in batch)
                     send_time_total += time.time() - send_start
                     send_calls += 1
-                    logger.info(f"Sent {sum(len(json.loads(r['Data'].decode('utf-8'))['numbers']) for r in batch)} numbers")
+                    if time.time() - last_log >= 10:  # Log every 10 seconds
+                        logger.info(f"Sent {sum(len(json.loads(r['Data'].decode('utf-8'))['numbers']) for r in batch)} numbers, Total sent: {total_numbers_sent}")
+                        last_log = time.time()
                     break
                 except Exception as e:
                     logger.error(f"Kinesis send failed: {repr(e)}")
