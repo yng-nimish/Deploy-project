@@ -54,6 +54,13 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/export?format=pdf",
   },
+  {
+    id: "price_1R4QpL013t2ai8cxYm3R0B2Q",
+    title: "Better Sight Guaranteed",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/export?format=pdf",
+  },
 
   /*
 
@@ -107,6 +114,13 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/export?format=pdf",
   },
+  {
+    id: "price_1R4QuQ013t2ai8cxvDAAzJPm",
+    title: "Better Sight Guaranteed",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/export?format=pdf",
+  },
 */
 
   /*{
@@ -115,6 +129,7 @@ const productsArray = [
     price: 0.79,
     pdfUrl: "",
   },
+
   */
 ];
 
