@@ -14,7 +14,6 @@ import openpyxl
 import pandas as pd
 import logging
 
-
 # Logging Setup
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -22,7 +21,7 @@ handler = logging.StreamHandler(sys.stdout)
 handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
 logger.addHandler(handler)
 
-# Script generated for node Custom Transform
+# Custom Transform
 def MyTransform(glueContext, dfc) -> DynamicFrameCollection:
     dynamic_frame = dfc["AmazonKinesis_node"]
     df = dynamic_frame.toDF()
@@ -43,16 +42,31 @@ def MyTransform(glueContext, dfc) -> DynamicFrameCollection:
         logger.error(f"Transform failed: {e}")
         return DynamicFrameCollection({}, glueContext)
 
+# Job Setup
+try:
+    args = getResolvedOptions(sys.argv, ['JOB_NAME', 'TempDir'])  # Fix: Added TempDir
+except Exception as e:
+    logger.error(f"Failed to resolve job arguments: {e}")
+    raise
 
-args = getResolvedOptions(sys.argv, ['JOB_NAME'])
 sc = SparkContext()
 glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
-# Script generated for node Amazon Kinesis
-dataframe_AmazonKinesis_node1741124607807 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/coffeeStream", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1741124607807")
+# Kinesis Source
+dataframe_AmazonKinesis_node1741124607807 = glueContext.create_data_frame.from_options(
+    connection_type="kinesis",
+    connection_options={
+        "typeOfData": "kinesis",
+        "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/coffeeStream",
+        "classification": "json",
+        "startingPosition": "earliest",
+        "inferSchema": "true"
+    },
+    transformation_ctx="dataframe_AmazonKinesis_node1741124607807"
+)
 
 # Excel Save Function
 def save_to_excel_and_upload_to_s3(df, s3_base_path):
@@ -82,10 +96,10 @@ def save_to_excel_and_upload_to_s3(df, s3_base_path):
                     s3_client.put_object(Body=file_stream, Bucket="my-bucket-sun-test", Key=s3_path)
                     logger.info(f"Uploaded {s3_path}")
                     workbook_count += 1
-                    workbook = openpyxl.Workbook()  # Create new workbook
-                    sheet = workbook.active        # Use the active sheet
-                    sheet_count = 1                # Reset sheet count
-                    sheet.title = f"Z{sheet_count}"  # Set title to Z1
+                    workbook = openpyxl.Workbook()
+                    sheet = workbook.active
+                    sheet_count = 1
+                    sheet.title = f"Z{sheet_count}"
                     row = 1
                     col = 1
                 else:
@@ -104,6 +118,7 @@ def save_to_excel_and_upload_to_s3(df, s3_base_path):
             logger.info(f"Uploaded {s3_path}")
     except Exception as e:
         logger.error(f"Excel save/upload failed: {e}")
+
 # Batch Processing
 def processBatch(data_frame, batchId):
     try:
@@ -123,9 +138,17 @@ def processBatch(data_frame, batchId):
     except Exception as e:
         logger.error(f"Batch {batchId} processing failed: {e}")
 
-# Run for 1 Hour
+# Run for 1 Hour (optional restoration)
 logger.info("Starting Glue job for 1 hour...")
+glueContext.forEachBatch(
+    frame=dataframe_AmazonKinesis_node1741124607807,
+    batch_function=processBatch,
+    options={
+        "windowSize": "60 seconds",
+        "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"
+        "batchMaxPollingTimeSeconds": 3600  # 1 hour
+    }
+)
 
-glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1741124607807, batch_function = processBatch, options = {"windowSize": "60 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
 job.commit()
 logger.info("Glue job completed.")

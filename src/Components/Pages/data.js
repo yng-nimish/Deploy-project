@@ -61,9 +61,17 @@ export const data = [
     pdfUrl:
       "https://docs.google.com/document/d/1l0GoJNx3NUV5s5lpNZTGd4_s136c6QSouT3c8_jxHxs/preview",
   },
-
   {
     id: 8,
+    title: "Better Sight Guaranteed",
+    author: "Kevin Patrick Maloney",
+    Date: "14-03-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/preview",
+  },
+
+  {
+    id: 9,
     title: "Click to Close",
     author: "Name",
     Date: "Date",
