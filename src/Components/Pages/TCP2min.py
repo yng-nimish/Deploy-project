@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "coffeeStream"
+KINESIS_STREAM_NAME = "NaturalStream"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,7 +16,7 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "54.237.6.147"
+TCP_HOST = "54.89.108.70"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000  # 4M numbers/request (2x increase)
