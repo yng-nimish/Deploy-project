@@ -339,6 +339,28 @@ nav {
   max-width: fit-content;
   
 }
+.tech-button-2 {
+  width: 100%; /* Take up full width of the table column */
+  padding: 1rem 2.5rem;
+  background-color: #363ABF;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: block; /* Make the button a block element to take full width */
+  text-align: left; /* Align text to the left within the button */
+  
+}
+.tech-button-2:hover {
+  background-color: #2a2fa3; /* Darker hover effect for the button */
+  text-decoration: none;
+
+}
 .about-button-2 {
   padding: 1rem 2.5rem;
   background-color: #363ABF;
