@@ -61,6 +61,13 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/export?format=pdf",
   },
+  {
+    id: "price_1RADTH013t2ai8cx08T5KRFj",
+    title: "No Phishing from this Dock - Guaranteed",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
+  },
 
   /*
 
@@ -120,6 +127,13 @@ const productsArray = [
     price: 0.99,
     pdfUrl:
       "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/export?format=pdf",
+  },
+  {
+    id: "price_1RADVz013t2ai8cxH4kkCZRK",
+    title: "No Phishing from this Dock - Guaranteed",
+    price: 0.99,
+    pdfUrl:
+      "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
   },
 */
 
