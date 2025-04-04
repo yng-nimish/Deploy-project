@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "NaturalStream"
+KINESIS_STREAM_NAME = "ExpertStream"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,7 +16,7 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "54.89.108.70"
+TCP_HOST = "54.84.82.23"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
@@ -36,7 +36,7 @@ SEND_WORKERS = 48
 TARGET_COUNT = 10_000_000_000  # 10B numbers, effectively uncapped for 24 minutes
 BATCH_SIZE = 500
 QUEUE_SIZE = 100_000
-RUN_DURATION = 1440  # 24 minutes in seconds (24 * 60)
+RUN_DURATION = 1200  # 20 minutes in seconds (20 * 60)
 
 # Metrics
 total_numbers_fetched = 0

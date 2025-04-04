@@ -71,7 +71,7 @@ plt.ylabel('Frequency')
 for i, value in enumerate(combined_frequencies):
     plt.text(i, value + 0.05, f'{value}', ha='center', va='bottom')
 
-plt.xticks(rotation=45)
+plt.ticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
