@@ -69,9 +69,16 @@ export const data = [
     pdfUrl:
       "https://docs.google.com/document/d/1fyGk8Lfz05xNSa9Eb2k3n3yLN6uYRs2vzX8tRSZavAA/preview",
   },
-
   {
     id: 9,
+    title: "No Phishing from this Dock - Guaranteed",
+    author: "Kevin Patrick Maloney",
+    Date: "04-04-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/preview",
+  },
+  {
+    id: 10,
     title: "Click to Close",
     author: "Name",
     Date: "Date",
