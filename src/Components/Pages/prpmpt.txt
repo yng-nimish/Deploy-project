@@ -1,0 +1,202 @@
+Act as a senior software engineer specializing in AWS services .
+
+I have a folder in an S3 bucket on AWS which has parquet files stored in a specific format.
+the Primary folder is named Apr 24 it has 12 sub folders each of which are labelled from Test1 to Test12
+Now in these Subfolders I have folders labelled from z1 to z1000 in the first 11 folders but Test12 is incomplete.
+each folder has parquet files in it 
+Now The size of the parquet file should be around 1.4 MB since it has 1 million 3 digit numbers stored in it 
+the structure of the parquet file is as below 
+x_coordinate                   y_coordinate    number
+1                              1                 486
+1                              2                 170
+1                              3                  068
+
+
+the number field is stored as a string since it has leading zeroes as well.
+the last sort of filled column should be 
+1000              1000         (3 digit number )- stored as string.
+
+i.e x coordinate goes from 1 - 1000 , y coordinate also goes from 1 - 1000 and then number field.
+
+I have a Dynamodb Table : CustomerTable in region ca-central-1 .
+
+In the table I have the following attributes:
+Attribute       Type 
+id              (String)
+	
+buyerData       Map
+	
+emailList       Boolean
+	
+items           List
+	
+ownerData       List
+	
+serialKey       String
+
+An example of a serialKey is as below it will always have 9 characters in each row
+
+631044756
+7421F0000
+677972183
+The Task is to write a code that does the following : 
+
+Label the different 3 digit numbers in the serialKey as follows:
+
+for first row 
+fist 3 digits becomes 'a'
+next 3 digits becomes 'b'
+last 3 digits becomes 'c'
+
+for Second row 
+In the second row I will always have a character 'F' . I want to replace it with 9 for our calculation.
+
+fist 3 digits becomes 'd'
+next 3 digits becomes 'e'
+last 3 digits becomes 'f'
+
+for third row 
+
+fist 3 digits becomes 'g'
+next 3 digits becomes 'h'
+last 3 digits becomes 'i'
+
+Therefore for our sample serialKey 
+631044756
+7421F0000
+677972183
+
+a = 631
+b = 044
+c = 756
+d = 742
+e = 190
+f - 000
+g = 677
+h = 972
+i = 183
+
+Also Serial Number is 5 digit in row 2 on and after 'F" so for our example above 
+Serial Number = F0000
+
+Now I  want to create a checking fixture from the Serial Number which would be like this :
+ Below Capital A to Capital P is the value of string Number in parquet files.
+
+A   B   C    D   E 
+F  631  044 756  G
+H  742  190 000  I
+J  677  972 183  K
+L   M   N    O   P
+
+A to P are mapped as follows: where (small a to small i are 3 digit numbers mapped to the serialKey above)
+
+A: aei
+B: adg
+C: beh
+D: cfi
+E: ceg
+F: abc
+G: cba
+H: def
+I: fed
+J: ghi
+K: ihg
+L: gec
+M: gda
+N: heb
+O: ifc
+P: iea
+
+what that basically means is :
+
+A: aei -> X631  Y190  Z183
+B: adg -> X631  Y742  Z677
+C: beh -> X044  Y190  Z972
+D: cfi -> X756  Y1000 Z183
+E: ceg -> X756  Y190  Z677
+F: abc -> X631  Y044  Z756
+G: cba -> X756  Y044  Z631
+H: def -> X742  Y190  Z1000
+I: fed -> X1000 Y190  Z742
+J: ghi -> X677  Y972  Z183
+K: ihg -> X183  Y972  Z677
+L: gec -> X677  Y190  Z756
+M: gda -> X677  Y742  Z631
+N: heb -> X972  Y190  Z044
+O: ifc -> X183  Y1000 Z756
+P: iea -> X183  Y190  Z631
+
+Above X =x_coordinate , Y=y_coordinate and Z = The folder number with z prefix so z742 (folder 742)
+so in order to get the value of P we look for folder name z631 and then we locate the parquet file and then inside the parquet file 
+we get x_coordinate=183 and y_coordinate=190 and the number(stored as string) at that location is value of P.
+Ensure that all values are stored as string since our data has leading zeroes and we want to retain those leading zeroes.
+Note that we replace 0 to be 1000 since our parquet files don't have 000 co-ordinate they only have 1 to 1000
+
+
+
+
+
+
+And finally whenever we save it to dynamodb 
+Dynamo DB Table name : Checking_Fixtures
+Primary Key : Serial Number
+I want it to have the following attributes:
+Folder Name : string ( It is the main folder that we are checking inside of for example Test1)
+Checking_Fixture : String Saved in the order as below 
+                            Value(number at the co-ordinated stored as string )
+A: aei -> X631  Y190  Z183
+B: adg -> X631  Y742  Z677
+C: beh -> X044  Y190  Z972
+D: cfi -> X756  Y1000 Z183
+E: ceg -> X756  Y190  Z677
+F: abc -> X631  Y044  Z756
+G: cba -> X756  Y044  Z631
+H: def -> X742  Y190  Z1000
+I: fed -> X1000 Y190  Z742
+J: ghi -> X677  Y972  Z183
+K: ihg -> X183  Y972  Z677
+L: gec -> X677  Y190  Z756
+M: gda -> X677  Y742  Z631
+N: heb -> X972  Y190  Z044
+O: ifc -> X183  Y1000 Z756
+P: iea -> X183  Y190  Z631
+So for this we need A to P and the co-ordinates and then the value corresponding to each co-ordinate 
+It's sort of a tabular representation.
+
+And all of this would basically be 1 entry since i will have different entries for different customers.
+
+here's a sample S3 URI : s3://my-bucket-parquet-test/April 24/Test11/z106/part-00077-2f2a2e32-385a-4222-b7a3-384298efa95a-c000.snappy.parquet
+
+I want to do it for Test2 folder only at this time.
+I want you to log all errors and also implement detailed logging .
+Note that our CustomerTable is in region ca-central-1 and our parquet files and the new Dynamodb Table Checking_Fixtures is in region us-east-1
+Also inside of each z subfolder there are 2 files 1 of size about 1.35 MB and the 2nd a metadata file of size about 473B so we only want to consider the 1.35MB filea
+and for that we can use something like this : 
+EXPECTED_FILE_SIZE = 1.4 * 1024 * 1024  # 1.4 MB in bytes
+SIZE_TOLERANCE = 0.8 * 1024 * 1024  # 800 KB tolerance
+Write the code to do this . Before beginning ask any follow up questions you have.
+
+
+
+The file naming is consistent but check for size.
+For incomplete folders print out the final missing Z folder so that means Z1000 not found
+But currently we are only running the script for Test2
+
+Serial Number is sufficient as the partition key .
+single string with a tabular representation as well as JSON formatted both work
+
+For Serial Number extraction it is always the substring starting from the F character , it's 5 digits long including the F character
+
+For Performance use Parallelism Basically get the seriaKey from Dynamodb and calculate all the co-ordinates you need that means Calculate A to P first and then fetch only those z subfolders from S3 and do the conversion and finally save them to dynamodb
+
+Errors should be logged and the code should continue processing
+
+parquet files are snappy here's a sample S3 URI for a file inside of Test2 folder 
+s3://my-bucket-parquet-test/April 24/Test2/z326/part-00143-9b38fe4d-3651-4469-811f-807c5a174fbd-c000.snappy.parquet
+
+
+For Coordinate Mapping 
+if we get '000' in small a to small i mapping we replace it with 1000 and continue the rest of the process as it is 
+Also notice for small e we replace F with number 9 
+making e = 190
+this is applicable to x_coordinate , y_coordinate and z subfolder position since our data does not have a 000 position.

@@ -7,16 +7,16 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "ExpertStream"
+KINESIS_STREAM_NAME = "April24ParquetTest"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
     region_name=AWS_REGION,
-    config=Config(max_pool_connections=50)
+    config=Config(max_pool_connections=57)
 )
 
 # TCP API Configuration
-TCP_HOST = "54.84.82.23"
+TCP_HOST = "52.87.231.81"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
@@ -26,7 +26,7 @@ NUMBERS_PER_RECORD = 2000
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler('data_pipeline.log'), logging.StreamHandler()]
+    handlers=[logging.FileHandler('data_pipeline_Apr24.log'), logging.StreamHandler()]
 )
 logger = logging.getLogger()
 
@@ -36,7 +36,7 @@ SEND_WORKERS = 48
 TARGET_COUNT = 10_000_000_000  # 10B numbers, effectively uncapped for 24 minutes
 BATCH_SIZE = 500
 QUEUE_SIZE = 100_000
-RUN_DURATION = 1200  # 20 minutes in seconds (20 * 60)
+RUN_DURATION = 1500  # 25 minutes in seconds (25 * 60)
 
 # Metrics
 total_numbers_fetched = 0
@@ -162,7 +162,7 @@ async def main():
     await asyncio.gather(fetch_task, *send_tasks, return_exceptions=True)
 
 if __name__ == "__main__":
-    logger.info("Starting pipeline for 24 minutes to fetch numbers...")
+    logger.info("Starting pipeline for 25 minutes to fetch numbers...")
     try:
         asyncio.run(main())
     except Exception as e:
