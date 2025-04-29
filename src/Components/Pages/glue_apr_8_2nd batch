@@ -1,0 +1,197 @@
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from awsglue.context import GlueContext
+from awsglue.job import Job
+from pyspark.sql.functions import col, explode, count, pandas_udf, lit, monotonically_increasing_id  # Added missing import
+from pyspark.sql.types import StringType, StructType, StructField, IntegerType
+from awsglue import DynamicFrame
+from awsglue.dynamicframe import DynamicFrameCollection
+import datetime
+import boto3
+from io import BytesIO
+import pandas as pd
+import logging
+
+# Logging Setup
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+logger.addHandler(handler)
+
+# Get job arguments
+args = getResolvedOptions(sys.argv, ['JOB_NAME', 'TempDir'])
+
+# Initialize GlueContext
+glueContext = GlueContext(SparkContext.getOrCreate())
+spark = glueContext.spark_session
+
+# Enable Arrow optimization
+spark.conf.set("spark.sql.execution.arrow.pyspark.enabled", "true")
+spark.conf.set("spark.sql.execution.arrow.maxRecordsPerBatch", "10000")
+logger.info("Arrow optimization enabled with batch size 10000")
+
+# Initialize Glue Job
+job = Job(glueContext)
+job.init(args['JOB_NAME'], args)
+
+# Vectorized UDF for padding numbers
+@pandas_udf(StringType())
+def vectorized_lpad(series: pd.Series) -> pd.Series:
+    return series.astype(str).str.zfill(3)
+
+spark.udf.register("vectorized_lpad", vectorized_lpad)
+
+# Custom Transform
+def MyTransform(glueContext, dfc) -> DynamicFrameCollection:
+    dynamic_frame = dfc["AmazonKinesis_node"]
+    df = dynamic_frame.toDF().cache()
+    record_count = df.count()
+    logger.info(f"MyTransform: Received {record_count} records")
+
+    if record_count == 0:
+        logger.info("MyTransform: No data in batch")
+        return DynamicFrameCollection({}, glueContext)
+
+    try:
+        df_unpacked = df.select(explode(col("numbers")).alias("number"))
+        transformed_count = df_unpacked.count()
+        
+        df_transformed = df_unpacked.withColumn("number", vectorized_lpad(col("number")))
+        dynamic_frame_transformed = DynamicFrame.fromDF(df_transformed, glueContext, "transformed")
+        logger.info(f"MyTransform: Transformed {transformed_count} numbers from {record_count} records")
+        return DynamicFrameCollection({"transformed_number": dynamic_frame_transformed}, glueContext)
+    except Exception as e:
+        logger.error(f"MyTransform: Transform failed: {str(e)}", exc_info=True)
+        return DynamicFrameCollection({}, glueContext)
+
+# Vectorized UDF to assign sheet and position
+@pandas_udf(StructType([
+    StructField("workbook_id", IntegerType()),
+    StructField("sheet_id", IntegerType()),
+    StructField("row_id", IntegerType()),
+    StructField("col_id", IntegerType())
+]))
+def assign_excel_position(index_series: pd.Series) -> pd.DataFrame:
+    total_cells = index_series.size
+    cells_per_sheet = 1000 * 1000
+    sheets_per_workbook = 1000
+    
+    workbook_id = (index_series // (cells_per_sheet * sheets_per_workbook)).astype(int) + 1
+    sheet_id = ((index_series % (cells_per_sheet * sheets_per_workbook)) // cells_per_sheet).astype(int) + 1
+    within_sheet = index_series % cells_per_sheet
+    row_id = (within_sheet // 1000).astype(int) + 1
+    col_id = (within_sheet % 1000).astype(int) + 1
+    
+    return pd.DataFrame({
+        "workbook_id": workbook_id,
+        "sheet_id": sheet_id,
+        "row_id": row_id,
+        "col_id": col_id
+    })
+
+spark.udf.register("assign_excel_position", assign_excel_position)
+
+# Optimized Excel Save Function
+def save_to_excel_and_upload_to_s3(df, s3_base_path):
+    s3_client = boto3.client('s3')
+    
+    try:
+        # Add index and assign positions
+        df_with_index = df.withColumn("idx", monotonically_increasing_id())
+        df_positioned = df_with_index.select(
+            "number",
+            assign_excel_position("idx").alias("position")
+        ).select(
+            "number",
+            col("position.workbook_id").alias("workbook_id"),
+            col("position.sheet_id").alias("sheet_id"),
+            col("position.row_id").alias("row_id"),
+            col("position.col_id").alias("col_id")
+        )
+        
+        df_partitioned = df_positioned.repartition("workbook_id", "sheet_id")
+        total_numbers = df_partitioned.count()
+        logger.info(f"Processing {total_numbers} numbers for Excel")
+
+        def write_excel_partition(iterator):
+            for partition in iterator:
+                workbook_id = partition["workbook_id"].iloc[0]
+                sheet_id = partition["sheet_id"].iloc[0]
+                sheet_data = partition.pivot(index="row_id", columns="col_id", values="number")
+                
+                output = BytesIO()
+                with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+                    sheet_data.to_excel(writer, sheet_name=f"Z{sheet_id}", index=False)
+                
+                output.seek(0)
+                s3_path = f"{s3_base_path}_workbook_{workbook_id}_sheet_{sheet_id}.xlsx"
+                s3_client.put_object(Body=output, Bucket="my-bucket-sun-test", Key=s3_path)
+                logger.info(f"Uploaded sheet Z{sheet_id} in workbook {workbook_id} to {s3_path}")
+                yield pd.DataFrame()
+
+        df_partitioned.groupBy("workbook_id", "sheet_id").applyInPandas(
+            write_excel_partition, schema="dummy string"
+        ).count()
+        
+    except Exception as e:
+        logger.error(f"Excel save/upload failed: {str(e)}", exc_info=True)
+
+# Batch Processing
+def processBatch(data_frame, batchId):
+    try:
+        initial_count = data_frame.count()
+        logger.info(f"Batch {batchId}: Fetched {initial_count} records from Kinesis")
+        
+        if initial_count > 0:
+            dynamic_frame = DynamicFrame.fromDF(data_frame, glueContext, "from_data_frame")
+            transform_result = MyTransform(glueContext, DynamicFrameCollection({"AmazonKinesis_node": dynamic_frame}, glueContext))
+            
+            if "transformed_number" not in transform_result.keys():
+                logger.info(f"Batch {batchId}: No transformed data to process")
+                return
+
+            transformed_dynamic_frame = transform_result["transformed_number"]
+            transformed_df = transformed_dynamic_frame.toDF()
+            
+            total_numbers = transformed_df.count()
+            logger.info(f"Batch {batchId}: Contains {total_numbers} transformed numbers")
+
+            num_partitions = 20
+            transformed_df = transformed_df.repartition(num_partitions)
+            logger.info(f"Batch {batchId}: Repartitioned into {num_partitions} partitions")
+
+            now = datetime.datetime.now()
+            s3_base_path = f"s3://my-bucket-sun-test/temp/ingest_year={now.year:0>4}/ingest_month={now.month:0>2}/ingest_day={now.day:0>2}/output_batch_{batchId}"
+
+            save_to_excel_and_upload_to_s3(transformed_df, s3_base_path)
+            
+            transformed_df.write.mode("overwrite").parquet(f"{s3_base_path}_parquet")
+            logger.info(f"Batch {batchId}: Saved parquet backup to {s3_base_path}_parquet")
+            
+    except Exception as e:
+        logger.error(f"Batch {batchId} processing failed: {str(e)}", exc_info=True)
+
+# Kinesis Stream Setup
+dataframe_AmazonKinesis_node = glueContext.create_data_frame.from_options(
+    connection_type="kinesis",
+    connection_options={
+        "typeOfData": "kinesis",
+        "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/ExpertStream",
+        "classification": "json",
+        "startingPosition": "earliest",
+        "inferSchema": "true"
+    },
+    transformation_ctx="dataframe_AmazonKinesis_node"
+)
+
+glueContext.forEachBatch(
+    frame=dataframe_AmazonKinesis_node,
+    batch_function=processBatch,
+    options={"windowSize": "100 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"}
+)
+
+job.commit()
+logger.info("Glue job completed successfully")

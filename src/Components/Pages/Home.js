@@ -29,12 +29,12 @@ const Home = () => {
     {
       image: FounderSeriesTokens,
       title: "The Founder Series!",
-      text: "On SALE September 17th: Only 10,000 available!",
+      text: "The SUN is Now on Sale! Get your Founder’s Series SUN NOW! Only 10,000 available!",
     },
     {
       image: TokensUnleashed,
       title: "The SUN Unleashed",
-      text: "Delivery begins Black Friday Nov 29th,2024",
+      text: "Delivery begins May 5th, 2025",
     },
     {
       image: BecomeaMember,
