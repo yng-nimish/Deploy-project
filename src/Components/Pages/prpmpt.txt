@@ -162,7 +162,7 @@ O: ifc -> X183  Y1000 Z756
 P: iea -> X183  Y190  Z631
 So for this we need A to P and the co-ordinates and then the value corresponding to each co-ordinate 
 It's sort of a tabular representation.
-
+verifying
 And all of this would basically be 1 entry since i will have different entries for different customers.
 
 here's a sample S3 URI : s3://my-bucket-parquet-test/April 24/Test11/z106/part-00077-2f2a2e32-385a-4222-b7a3-384298efa95a-c000.snappy.parquet
