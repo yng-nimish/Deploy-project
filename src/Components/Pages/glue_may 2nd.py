@@ -6,7 +6,7 @@ from awsglue.context import GlueContext
 from awsglue.job import Job
 from pyspark.context import SparkContext
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, explode, lpad, row_number , lit
+from pyspark.sql.functions import col, explode, lpad, row_number, lit
 from pyspark.sql.window import Window
 from awsglue.dynamicframe import DynamicFrame
 import logging
@@ -79,7 +79,8 @@ def processBatch(data_frame, batchId):
 
         # Read current state
         folder_index, file_count = read_state()
-        folder_name = f"F {folder_index}"
+        # Format folder name with 4-digit padding (F 0000, F 0001, etc.)
+        folder_name = f"F {str(folder_index).zfill(4)}"
 
         # Convert to DynamicFrame for transformation
         dynamic_frame = DynamicFrame.fromDF(data_frame, glueContext, "kinesis_data")
@@ -143,10 +144,11 @@ def processBatch(data_frame, batchId):
                 folder_index += 1
                 file_count = 0
                 new_files_written = 0
-                folder_name = f"F {folder_index}"
+                folder_name = f"F {str(folder_index).zfill(4)}"
                 current_file_idx = 1
 
-            file_name = f"Z{current_file_idx}"
+            # Format file name with 3-digit padding (Z001, Z002, etc.)
+            file_name = f"Z{str(current_file_idx).zfill(3)}"
             output_path = f"{args['OutputS3Path']}/{folder_name}/{file_name}"
             
             # Filter for the current file_idx (i+1 since file_idx starts at 1)
@@ -178,25 +180,10 @@ def processBatch(data_frame, batchId):
 
     except Exception as e:
         logger.error(f"Batch {batchId}: Processing failed: {str(e)}", exc_info=True)
+# Script generated for node Amazon Kinesis
+dataframe_AmazonKinesis_node1746446919754 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/May5th", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1746446919754")
 
-# Kinesis source
-dataframe_AmazonKinesis_node1745502816125 = glueContext.create_data_frame.from_options(
-    connection_type="kinesis",
-    connection_options={
-        "typeOfData": "kinesis",
-        "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/April24ParquetTest",
-        "classification": "json",
-        "startingPosition": "earliest",
-        "inferSchema": "true"
-    },
-    transformation_ctx="dataframe_AmazonKinesis_node1745502816125"
-)
 
-glueContext.forEachBatch(
-    frame=dataframe_AmazonKinesis_node1745502816125,
-    batch_function=processBatch,
-    options={"windowSize": "100 seconds", "checkpointLocation": f"{args['TempDir']}/{args['JOB_NAME']}/checkpoint/"}
-)
-
+glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1746446919754, batch_function = processBatch, options = {"windowSize": "100 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
 job.commit()
 logger.info("Glue job completed successfully")

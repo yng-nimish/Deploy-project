@@ -16,9 +16,9 @@ logger = logging.getLogger(__name__)
 AWS_REGION = 'us-east-1'
 S3_BUCKET = 'my-bucket-founder-series-sun'
 DYNAMODB_TABLE = 'Security_Snippet_Table'
-MAIN_FOLDER = 'Batch 1'
-SUB_FOLDERS = [f'F 000{i}' for i in range(1, 14)]
-Z_FOLDERS = [f'z{i}' for i in range(311, 321)]  # z311 to z320
+MAIN_FOLDER = 'Batch 1/May 2'
+SUB_FOLDERS = [f'F {str(i).zfill(4)}' for i in range(0, 15)]  # F 0001 to F 0014
+Z_FOLDERS = [f'Z{i}' for i in range(311, 321)]  # Z311 to Z320
 X_COORDINATE = 288
 Y_COORDINATE = 600
 EXPECTED_FILE_SIZE = 1.4 * 1024 * 1024  # 1.4 MB in bytes
@@ -96,7 +96,8 @@ def check_duplicate_snippet(folder: str, snippet: str) -> bool:
     """Check if the Security Snippet exists in DynamoDB, excluding the current folder."""
     try:
         response = table.scan(
-            FilterExpression='Security_Snippet = :snippet AND Folder_Name <> :folder',
+            FilterExpression='Security_Snippet = :snippet AND #folder <> :folder',
+            ExpressionAttributeNames={'#folder': 'Folder Name'},  # Alias for attribute with space
             ExpressionAttributeValues={
                 ':snippet': snippet,
                 ':folder': folder
@@ -104,7 +105,7 @@ def check_duplicate_snippet(folder: str, snippet: str) -> bool:
         )
         duplicates = response.get('Items', [])
         if duplicates:
-            logger.info(f"Duplicate Security Snippet '{snippet}' found in folders: {[item['Folder_Name'] for item in duplicates]}")
+            logger.info(f"Duplicate Security Snippet '{snippet}' found in folders: {[item['Folder Name'] for item in duplicates]}")
             return True
         logger.info(f"No duplicates found for Security Snippet '{snippet}'")
         return False
@@ -127,42 +128,42 @@ def save_to_dynamodb(folder: str, snippet: str) -> bool:
         logger.error(f"Error saving to DynamoDB for {folder}: {e}")
         return False
 
-def process_folder(test_folder: str) -> None:
-    """Process a Test folder to extract numbers and save to DynamoDB."""
+def process_folder(f_folder: str) -> None:
+    """Process an F folder to extract numbers and save to DynamoDB."""
     numbers = []
     for z_folder in Z_FOLDERS:
-        prefix = f"{MAIN_FOLDER}/{test_folder}/{z_folder}/"
+        prefix = f"{MAIN_FOLDER}/{f_folder}/{z_folder}/"
         parquet_key = get_parquet_file_path(S3_BUCKET, prefix)
         if not parquet_key:
-            logger.error(f"Skipping {z_folder} in {test_folder}: No suitable Parquet file found")
+            logger.error(f"Skipping {z_folder} in {f_folder}: No suitable Parquet file found")
             continue
 
         number = read_number_from_parquet(S3_BUCKET, parquet_key, X_COORDINATE, Y_COORDINATE)
         if number:
             numbers.append(number)
         else:
-            logger.error(f"Skipping {z_folder} in {test_folder}: No valid number found")
+            logger.error(f"Skipping {z_folder} in {f_folder}: No valid number found")
 
     if len(numbers) == len(Z_FOLDERS):
         security_snippet = ''.join(numbers)
-        logger.info(f"Security Snippet for {test_folder}: {security_snippet}")
+        logger.info(f"Security Snippet for {f_folder}: {security_snippet}")
         
         # Check for duplicates
-        check_duplicate_snippet(test_folder, security_snippet)
+        check_duplicate_snippet(f_folder, security_snippet)
         
         # Save to DynamoDB
-        save_to_dynamodb(test_folder, security_snippet)
+        save_to_dynamodb(f_folder, security_snippet)
     else:
-        logger.error(f"Incomplete Security Snippet for {test_folder}: Only {len(numbers)} numbers collected")
+        logger.error(f"Incomplete Security Snippet for {f_folder}: Only {len(numbers)} numbers collected")
 
 def main():
-    """Main function to process all Test folders."""
-    for test_folder in SUB_FOLDERS:
-        logger.info(f"Processing folder: {test_folder}")
+    """Main function to process all F folders."""
+    for f_folder in SUB_FOLDERS:
+        logger.info(f"Processing folder: {f_folder}")
         try:
-            process_folder(test_folder)
+            process_folder(f_folder)
         except Exception as e:
-            logger.error(f"Error processing {test_folder}: {e}. Continuing with next folder.")
+            logger.error(f"Error processing {f_folder}: {e}. Continuing with next folder.")
 
 if __name__ == "__main__":
     main()

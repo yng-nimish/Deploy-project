@@ -7,16 +7,16 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "April24ParquetTest"
+KINESIS_STREAM_NAME = "May5th"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
     region_name=AWS_REGION,
-    config=Config(max_pool_connections=57)
+    config=Config(max_pool_connections=60)
 )
 
 # TCP API Configuration
-TCP_HOST = "52.87.231.81"
+TCP_HOST = "35.175.233.22"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
@@ -26,7 +26,7 @@ NUMBERS_PER_RECORD = 2000
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler('data_pipeline_Apr24.log'), logging.StreamHandler()]
+    handlers=[logging.FileHandler('data_pipeline_May2.log'), logging.StreamHandler()]
 )
 logger = logging.getLogger()
 
@@ -36,7 +36,7 @@ SEND_WORKERS = 48
 TARGET_COUNT = 10_000_000_000  # 10B numbers, effectively uncapped for 24 minutes
 BATCH_SIZE = 500
 QUEUE_SIZE = 100_000
-RUN_DURATION = 1500  # 25 minutes in seconds (25 * 60)
+RUN_DURATION = 1500  # 25 minutes in seconds (60 * 60)
 
 # Metrics
 total_numbers_fetched = 0

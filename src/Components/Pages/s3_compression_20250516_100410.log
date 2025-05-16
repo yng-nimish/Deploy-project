@@ -1,0 +1,5 @@
+2025-05-16 10:04:10,358 - INFO - [MainThread] - Found credentials in shared credentials file: ~/.aws/credentials
+2025-05-16 10:04:10,924 - INFO - [MainThread] - Found 12 Test folders
+2025-05-16 10:04:10,925 - INFO - [MainThread] - Starting processing of folder 1/12
+2025-05-16 10:04:10,925 - INFO - [MainThread] - Processing folder: April 24/Test1/
+2025-05-16 10:05:12,694 - INFO - [MainThread] - Script execution completed
