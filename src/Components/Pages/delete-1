@@ -1,0 +1,8 @@
+i have data in an s3 bucket and I want to serve that data on my website which is deployed on AWS. 
+The structured data is stored in parquet format.
+The issue is that S3 objects , only allows pre-signed url for 1 pbject at a time and below is how my data is stored. 
+So main folder F 0000 -> this is the folder that i want the consumer to download off of my website. 
+Inside this folder i have 1000 subfolders laelled from Z001 to Z1000. Inside each of the Z folders is the parquet file.
+
+I want the consumer to be able to download F0000 directly.
+How can I get that done?

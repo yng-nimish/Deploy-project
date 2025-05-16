@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from io import BytesIO
 import logging
 import os
+import json  # Added for JSON serialization
 from botocore.config import Config
 
 # Configure logging
@@ -15,7 +16,7 @@ logger = logging.getLogger()
 # Constants
 BUCKET = 'my-bucket-founder-series-sun'
 PRIMARY_FOLDER = 'Batch 1/May 2'
-TEST_FOLDERS = [f'F {str(i).zfill(4)}' for i in range(1, 15)]  # F 0001 to F 0014
+TEST_FOLDERS = [f'F {str(i).zfill(4)}' for i in range(0, 15)]  # F 0001 to F 0014
 Z_FOLDERS = [f'Z{str(i).zfill(3)}' for i in range(1, 1001)]  # Generates Z001, Z002, ..., Z1000
 OUTPUT_PREFIX = 'Batch 1/May12 Testing'
 EXPECTED_FILE_SIZE = 1.4 * 1024 * 1024  # 1.4 MB in bytes
@@ -65,24 +66,25 @@ def validate_parquet_file(s3_uri, s3_client):
             else:
                 validation_result_first_row = f"SUCCESS: {s3_uri} - First row number '{number}' is valid"
         
-        
         # Calculate averages
         df['number_int'] = df['number'].astype(int)
         overall_avg = df['number_int'].mean()
         x_avg = df.groupby('x_coordinate')['number_int'].mean().to_dict()
         y_avg = df.groupby('y_coordinate')['number_int'].mean().to_dict()
         
+        # Serialize dictionaries to JSON strings
         averages = {
             's3_uri': s3_uri,
             'overall_avg': overall_avg,
-            'x_avg': x_avg,
-            'y_avg': y_avg,
+            'x_avg': json.dumps({str(k): v for k, v in x_avg.items()}),  # Convert to JSON string
+            'y_avg': json.dumps({str(k): v for k, v in y_avg.items()}),  # Convert to JSON string
             'test_folder': key.split('/')[1],
             'z_folder': key.split('/')[2]
         }
         
         return validation_result_first_row, validation_result_last_row, averages, df['number_int'].count()
     except Exception as e:
+        logger.error(f"ERROR: {s3_uri} - Failed to process: {str(e)}")
         return f"ERROR: {s3_uri} - Failed to process: {str(e)}", None, None
 
 def process_z_folder(test_folder, z_folder):
@@ -123,6 +125,7 @@ def process_z_folder(test_folder, z_folder):
         
         return validation_results, averages_list, total_rows
     except Exception as e:
+        logger.error(f"ERROR: {prefix} - Failed to process: {str(e)}")
         return [f"ERROR: {prefix} - Failed to process: {str(e)}"], [], 0
 
 def main():
@@ -165,32 +168,47 @@ def main():
     # Aggregate averages per Test folder
     averages_df = pd.DataFrame(all_averages)
     if not averages_df.empty:
-        # Convert x_avg and y_avg dictionaries to JSON-compatible format
-        averages_df['x_avg'] = averages_df['x_avg'].apply(lambda x: {str(k): v for k, v in x.items()})
-        averages_df['y_avg'] = averages_df['y_avg'].apply(lambda x: {str(k): v for k, v in x.items()})
-        
         # Calculate Test folder aggregates
         test_folder_avgs = averages_df.groupby('test_folder').agg({
             'overall_avg': 'mean',
-            'x_avg': lambda x: {
-                str(k): np.mean([d.get(str(k), np.nan) for d in x if str(k) in d])
+            'x_avg': lambda x: json.dumps({  # Serialize to JSON
+                str(k): np.mean([json.loads(d).get(str(k), np.nan) for d in x if str(k) in json.loads(d)])
                 for k in range(1, 1001)
-            },
-            'y_avg': lambda x: {
-                str(k): np.mean([d.get(str(k), np.nan) for d in x if str(k) in d])
+            }),
+            'y_avg': lambda x: json.dumps({  # Serialize to JSON
+                str(k): np.mean([json.loads(d).get(str(k), np.nan) for d in x if str(k) in json.loads(d)])
                 for k in range(1, 1001)
-            }
+            })
         }).reset_index()
         
-        # Combine file-level and test-folder-level averages
-        output_df = pd.concat([
-            averages_df[['s3_uri', 'test_folder', 'z_folder', 'overall_avg', 'x_avg', 'y_avg']],
-            test_folder_avgs.rename(columns={
-                'overall_avg': 'test_overall_avg',
-                'x_avg': 'test_x_avg',
-                'y_avg': 'test_y_avg'
-            })
-        ], axis=0, ignore_index=True)
+        # Merge test folder aggregates into averages_df
+        output_df = averages_df.merge(
+            test_folder_avgs,
+            on='test_folder',
+            how='left',
+            suffixes=('', '_test')
+        )
+        
+        # Rename columns for clarity
+        output_df = output_df.rename(columns={
+            'overall_avg_test': 'test_overall_avg',
+            'x_avg_test': 'test_x_avg',
+            'y_avg_test': 'test_y_avg'
+        })
+        
+        # Ensure all columns are present
+        expected_columns = [
+            's3_uri', 'test_folder', 'z_folder', 'overall_avg', 'x_avg', 'y_avg',
+            'test_overall_avg', 'test_x_avg', 'test_y_avg'
+        ]
+        for col in expected_columns:
+            if col not in output_df.columns:
+                output_df[col] = pd.NA
+        
+        # Log DataFrame schema for debugging
+        logger.info(f"Output DataFrame columns: {output_df.columns.tolist()}")
+        logger.info(f"Sample x_avg: {output_df['x_avg'].iloc[0] if not output_df['x_avg'].empty else 'Empty'}")
+        logger.info(f"Sample test_x_avg: {output_df['test_x_avg'].iloc[0] if not output_df['test_x_avg'].empty else 'Empty'}")
         
         # Write averages to parquet
         averages_key = f"{OUTPUT_PREFIX}/averagesMay12.parquet"
@@ -206,9 +224,9 @@ def main():
         # Log averages
         for _, row in output_df.iterrows():
             if 's3_uri' in row and pd.notna(row['s3_uri']):
-                logger.info(f"Averages for {row['s3_uri']}: Overall={row['overall_avg']:.2f}")
+                logger.info(f"Averages for {row['s3_uri']}: Overall={row['overall_avg']:.2f}, Test_Overall={row.get('test_overall_avg', 'N/A'):.2f}")
             else:
-                logger.info(f"Test folder {row['test_folder']} aggregates: Overall={row['test_overall_avg']:.2f}")
+                logger.info(f"Test folder {row['test_folder']} aggregates: Overall={row.get('test_overall_avg', 'N/A'):.2f}")
 
     logger.info(f"Total rows processed: {total_rows_processed}")
 

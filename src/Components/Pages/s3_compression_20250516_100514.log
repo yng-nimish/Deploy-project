@@ -1,0 +1,19 @@
+2025-05-16 10:05:14,706 - INFO - [MainThread] - Found credentials in shared credentials file: ~/.aws/credentials
+2025-05-16 10:05:15,193 - INFO - [MainThread] - Found 12 Test folders
+2025-05-16 10:05:15,195 - INFO - [MainThread] - Starting processing of folder 1/12
+2025-05-16 10:05:15,195 - INFO - [MainThread] - Processing folder: April 24/Test1/
+2025-05-16 10:08:43,469 - INFO - [MainThread] - Downloaded 979 files from April 24/Test1/
+2025-05-16 10:09:28,318 - INFO - [MainThread] - Successfully added 979/979 files to ZIP
+2025-05-16 10:10:19,577 - INFO - [MainThread] - Uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpa07uu9hh/Test1.zip (1182.95 MB) to s3://my-bucket-parquet-test/ April 24/Compressed/Test1.zip
+2025-05-16 10:10:19,578 - INFO - [MainThread] - Completed Test1: 979 files, Download: 208.28s, Zip: 44.85s, Upload: 51.26s
+2025-05-16 10:10:19,842 - INFO - [MainThread] - Completed processing of folder 1/12
+2025-05-16 10:10:19,842 - INFO - [MainThread] - Starting processing of folder 2/12
+2025-05-16 10:10:19,849 - INFO - [MainThread] - Processing folder: April 24/Test10/
+2025-05-16 10:13:54,677 - INFO - [MainThread] - Downloaded 1000 files from April 24/Test10/
+2025-05-16 10:14:40,652 - INFO - [MainThread] - Successfully added 1000/1000 files to ZIP
+2025-05-16 10:15:34,791 - INFO - [MainThread] - Uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpa07uu9hh/Test10.zip (1208.32 MB) to s3://my-bucket-parquet-test/ April 24/Compressed/Test10.zip
+2025-05-16 10:15:34,792 - INFO - [MainThread] - Completed Test10: 1000 files, Download: 214.83s, Zip: 46.01s, Upload: 54.10s
+2025-05-16 10:15:35,064 - INFO - [MainThread] - Completed processing of folder 2/12
+2025-05-16 10:15:35,064 - INFO - [MainThread] - Starting processing of folder 3/12
+2025-05-16 10:15:35,073 - INFO - [MainThread] - Processing folder: April 24/Test11/
+2025-05-16 10:17:41,698 - INFO - [MainThread] - Script execution completed

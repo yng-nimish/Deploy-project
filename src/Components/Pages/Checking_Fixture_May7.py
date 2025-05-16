@@ -22,16 +22,16 @@ dynamodb_resource = boto3.resource('dynamodb', region_name='us-east-1')
 
 # Constants
 BUCKET_NAME = 'my-bucket-founder-series-sun'
-PRIMARY_FOLDER = 'Batch 1/May 2/F 0003/'
+PRIMARY_FOLDER = 'Batch 1/May 2/F 0000/'
 EXPECTED_FILE_SIZE = 1.4 * 1024 * 1024  # 1.4 MB in bytes 
 SIZE_TOLERANCE = 0.8 * 1024 * 1024  # 800 KB tolerance
 CHECKING_FIXTURES_TABLE = 'Checking_Fixtures'
 
 # Hardcoded serialKey
 SERIAL_KEY = [
-    '931044957',
-    '7420F0003',
-    '676770181'
+    '631044756',
+    '7421F0000',
+    '677972183'
 ]
 
 # Expected parquet schema
@@ -46,18 +46,18 @@ MAPPINGS = {
     'A': ('aei', lambda a, e, i: (a, e, i)),
     'B': ('adg', lambda a, d, g: (a, d, g)),
     'C': ('beh', lambda b, e, h: (b, e, h)),
-    'D': ('cfi', lambda c, f, i: (c, '1000', i)),  # f replaced with 1000
+    'D': ('cfi', lambda c, f, i: (c, f, i)),  # f replaced with 1000
     'E': ('ceg', lambda c, e, g: (c, e, g)),
     'F': ('abc', lambda a, b, c: (a, b, c)),
     'G': ('cba', lambda c, b, a: (c, b, a)),
-    'H': ('def', lambda d, e, f: (d, e, '1000')),  # f replaced with 1000
-    'I': ('fed', lambda f, e, d: ('1000', e, d)),  # f replaced with 1000
+    'H': ('def', lambda d, e, f: (d, e, f)),  # f replaced with 1000
+    'I': ('fed', lambda f, e, d: (f, e, d)),  # f replaced with 1000
     'J': ('ghi', lambda g, h, i: (g, h, i)),
     'K': ('ihg', lambda i, h, g: (i, h, g)),
     'L': ('gec', lambda g, e, c: (g, e, c)),
     'M': ('gda', lambda g, d, a: (g, d, a)),
     'N': ('heb', lambda h, e, b: (h, e, b)),
-    'O': ('ifc', lambda i, f, c: (i, '1000', c)),  # f replaced with 1000
+    'O': ('ifc', lambda i, f, c: (i, f, c)),  # f replaced with 1000
     'P': ('iea', lambda i, e, a: (i, e, a)),
 }
 

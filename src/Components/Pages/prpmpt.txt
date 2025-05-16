@@ -2,7 +2,7 @@ Act as a senior software engineer specializing in AWS services .
 
 I have a folder in an S3 bucket on AWS which has parquet files stored in a specific format.
 the Primary folder is named Apr 24 it has 12 sub folders each of which are labelled from Test1 to Test12
-Now in these Subfolders I have folders labelled from z1 to z1000 in the first 11 folders but Test12 is incomplete.
+Now in these Subfolders I have folders labelled from Z1 to Z1000 in the first 11 folders but Test12 is incomplete.
 each folder has parquet files in it 
 Now The size of the parquet file should be around 1.4 MB since it has 1 million 3 digit numbers stored in it 
 the structure of the parquet file is as below 
@@ -144,22 +144,22 @@ I want it to have the following attributes:
 Folder Name : string ( It is the main folder that we are checking inside of for example Test1)
 Checking_Fixture : String Saved in the order as below 
                             Value(number at the co-ordinated stored as string )
-A: aei -> X631  Y190  Z183
-B: adg -> X631  Y742  Z677
-C: beh -> X044  Y190  Z972
-D: cfi -> X756  Y1000 Z183
-E: ceg -> X756  Y190  Z677
-F: abc -> X631  Y044  Z756
-G: cba -> X756  Y044  Z631
-H: def -> X742  Y190  Z1000
-I: fed -> X1000 Y190  Z742
-J: ghi -> X677  Y972  Z183
-K: ihg -> X183  Y972  Z677
-L: gec -> X677  Y190  Z756
-M: gda -> X677  Y742  Z631
-N: heb -> X972  Y190  Z044
-O: ifc -> X183  Y1000 Z756
-P: iea -> X183  Y190  Z631
+A: aei -> X631  Y190  Z183        182 -check
+B: adg -> X631  Y742  Z677        017 - 
+C: beh -> X044  Y190  Z972        762
+D: cfi -> X756  Y1000 Z183        346
+E: ceg -> X756  Y190  Z677        177
+F: abc -> X631  Y044  Z756        477
+G: cba -> X756  Y044  Z631        223
+H: def -> X742  Y190  Z1000       615
+I: fed -> X1000 Y190  Z742        672
+J: ghi -> X677  Y972  Z183        608
+K: ihg -> X183  Y972  Z677        456
+L: gec -> X677  Y190  Z756        816
+M: gda -> X677  Y742  Z631        053
+N: heb -> X972  Y190  Z044        308
+O: ifc -> X183  Y1000 Z756        042
+P: iea -> X183  Y190  Z631        470
 So for this we need A to P and the co-ordinates and then the value corresponding to each co-ordinate 
 It's sort of a tabular representation.
 verifying
