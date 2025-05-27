@@ -1,6 +1,6 @@
 /**
  * Career Page - Website code
- */
+
 
 import React from "react";
 import Flag2 from "../../Assets/USA.svg";
@@ -147,6 +147,46 @@ const Career = () => {
                   <button type="submit">Submit Profile</button>
                 </div>
               </form>
+            </div>
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Career;
+ */
+
+import React from "react";
+
+const Career = () => {
+  return (
+    <div className="about-wrapper">
+      <div className="about-us-container">
+        <div className="home-banner-container">
+          <div className="rowC">
+            <div>
+              <p className="career-text">
+                <h1 className="primary-heading"> CAREERS </h1>
+                <h1 className="primary-heading">
+                  Reach out to us <br />
+                </h1>
+                Are you ready to Kickstart your career with Your Number
+                Guaranteed Inc. <br />
+                Submit your profile along with your resume.
+              </p>
+            </div>
+            <div className="contact-form">
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScBLuA13L_ZOhaVCdfw5jVn6vVQc708juc41OBWx1O3Pq4Gyw/viewform?usp=sharing&ouid=114622847374359952266"
+                target=""
+                rel=""
+              >
+                <button className="submit-button">Apply Now</button>
+              </a>
             </div>
             <br />
             <br />

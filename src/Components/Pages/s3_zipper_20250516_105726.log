@@ -1,0 +1,6 @@
+2025-05-16 10:57:27,014 - INFO - [load] - Found credentials in shared credentials file: ~/.aws/credentials
+2025-05-16 10:57:27,606 - INFO - [validate_config] - Successfully validated access to bucket: my-bucket-parquet-test
+2025-05-16 10:57:27,685 - INFO - [list_test_folders] - Found 12 test folders under April 24/
+2025-05-16 10:57:27,685 - INFO - [main] - Using temporary directory: /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmp18xvd0jd
+2025-05-16 10:57:27,686 - INFO - [process_folder] - Processing folder: April 24/Test1/
+2025-05-16 10:58:16,172 - WARNING - [main] - Process interrupted by user

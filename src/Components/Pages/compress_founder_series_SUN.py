@@ -27,9 +27,9 @@ except (NoCredentialsError, PartialCredentialsError) as e:
     logger.error(f"Failed to initialize S3 client: {e}")
     sys.exit(1)
 
-bucket_name = 'my-bucket-parquet-test'
-base_prefix = 'April 24/'
-compressed_output_base = "Compressed test SUN's/"
+bucket_name = 'my-bucket-founder-series-sun'
+base_prefix = 'Batch 1/May 2/'
+compressed_output_base = "Compressed test SUN's2/"
 MAX_WORKERS = 4  # Configurable number of concurrent threads
 
 def validate_config():
