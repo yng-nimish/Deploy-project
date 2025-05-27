@@ -9,6 +9,9 @@ import Swal from "sweetalert2";
 import { productsArray } from "./ProductsStore"; // Ensure this import is correct
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
+import { Row, Col } from "react-bootstrap";
+import { productsArraySun } from "./ProductsArraySun";
+import ProductCard from "./ProductCard";
 
 import { CCard } from "@coreui/react";
 import { CCardImage } from "@coreui/react";
@@ -254,7 +257,43 @@ const PurchaseTP = () => {
                 ))}
               </div>
             )}
+
+            <div>
+              <h1 className="primary-heading-2">
+                {" "}
+                <br />
+                Download The SUN <br />
+              </h1>
+              <div>
+                <CCard color="white" className="mb-3">
+                  <CRow className="g-0">
+                    <CCol md={8}>
+                      <CCardBody className="pre-rectangle">
+                        <CCardTitle>Download</CCardTitle>
+                        <CCardText>Download your SUN</CCardText>
+                      </CCardBody>
+                    </CCol>
+                    <CCol className="mb-3 pl-3 my-auto mx-auto col-6" md={4}>
+                      <Link to="/verify">
+                        <CButton color="primary" href="#">
+                          Download &nbsp;&nbsp;&nbsp; <FiArrowRight />
+                        </CButton>
+                      </Link>
+                    </CCol>
+                  </CRow>
+                </CCard>
+              </div>
+
+              <div className="table"></div>
+            </div>
             <div className="table">
+              <div>
+                <h1 className="primary-heading-2">
+                  {" "}
+                  <br />
+                  Download The Technical Papers <br />
+                </h1>
+              </div>
               <table>
                 <thead>
                   <tr>

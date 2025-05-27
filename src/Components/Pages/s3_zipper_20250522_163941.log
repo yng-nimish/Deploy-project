@@ -1,0 +1,250 @@
+2025-05-22 16:39:41,049 - INFO - [load:MainThread] - Found credentials in shared credentials file: ~/.aws/credentials
+2025-05-22 16:39:41,450 - INFO - [validate_config:MainThread] - Successfully validated access to bucket: my-bucket-founder-series-sun
+2025-05-22 16:39:41,521 - INFO - [list_test_folders:MainThread] - Found 14 test folders under Batch 1/May 2/
+2025-05-22 16:39:41,522 - INFO - [main:MainThread] - Using base temporary directory: /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb
+2025-05-22 16:39:41,560 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: Batch 1/May 2/F 0000/
+2025-05-22 16:39:41,702 - INFO - [process_folder:ThreadPoolExecutor-0_2] - Processing folder: Batch 1/May 2/F 0002/
+2025-05-22 16:39:41,703 - INFO - [process_folder:ThreadPoolExecutor-0_3] - Processing folder: Batch 1/May 2/F 0003/
+2025-05-22 16:39:41,704 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: Batch 1/May 2/F 0001/
+2025-05-22 16:48:34,378 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 1000 files from Batch 1/May 2/F 0000/
+2025-05-22 16:48:38,288 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from Batch 1/May 2/F 0001/
+2025-05-22 16:48:43,806 - INFO - [download_s3_folder:ThreadPoolExecutor-0_2] - Downloaded 1000 files from Batch 1/May 2/F 0002/
+2025-05-22 16:48:46,150 - INFO - [download_s3_folder:ThreadPoolExecutor-0_3] - Downloaded 1000 files from Batch 1/May 2/F 0003/
+2025-05-22 16:49:39,989 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 1000 files, total size: 1,420,087,737 bytes
+2025-05-22 16:49:45,628 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,087,920 bytes
+2025-05-22 16:49:51,511 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_2] - Created ZIP with 1000 files, total size: 1,420,088,099 bytes
+2025-05-22 16:49:54,050 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_3] - Created ZIP with 1000 files, total size: 1,420,088,258 bytes
+2025-05-22 16:55:11,555 - WARNING - [_put_conn:ThreadPoolExecutor-12007_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:12,324 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/2d975c30-0f82-4e1b-8f97-5df3e01f1d8c/F 0000.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0000.zip
+2025-05-22 16:55:12,326 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's2/F 0000.zip (expires in 3600 seconds)
+2025-05-22 16:55:12,979 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: Batch 1/May 2/F 0004/
+2025-05-22 16:55:28,423 - WARNING - [_put_conn:ThreadPoolExecutor-12010_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-22 16:55:28,904 - WARNING - [_put_conn:ThreadPoolExecutor-12007_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:31,489 - WARNING - [_put_conn:ThreadPoolExecutor-12007_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:31,738 - WARNING - [_put_conn:ThreadPoolExecutor-12004_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:32,425 - WARNING - [_put_conn:ThreadPoolExecutor-12007_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:32,598 - WARNING - [_put_conn:ThreadPoolExecutor-12007_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:32,750 - WARNING - [_put_conn:ThreadPoolExecutor-12004_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,057 - WARNING - [_put_conn:ThreadPoolExecutor-12007_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,199 - WARNING - [_put_conn:ThreadPoolExecutor-12004_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,678 - WARNING - [_put_conn:ThreadPoolExecutor-12007_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,753 - WARNING - [_put_conn:ThreadPoolExecutor-12004_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,756 - WARNING - [_put_conn:ThreadPoolExecutor-12007_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:33,944 - WARNING - [_put_conn:ThreadPoolExecutor-12007_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:34,269 - WARNING - [_put_conn:ThreadPoolExecutor-12004_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:34,269 - WARNING - [_put_conn:ThreadPoolExecutor-12010_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:38,740 - WARNING - [_put_conn:ThreadPoolExecutor-12010_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:38,776 - WARNING - [_put_conn:ThreadPoolExecutor-12010_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,079 - WARNING - [_put_conn:ThreadPoolExecutor-12004_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,081 - WARNING - [_put_conn:ThreadPoolExecutor-12010_7] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,085 - WARNING - [_put_conn:ThreadPoolExecutor-12046_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,089 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/df2b755c-9551-4a88-a900-c49cd08907d7/F 0001.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0001.zip
+2025-05-22 16:55:39,091 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's2/F 0001.zip (expires in 3600 seconds)
+2025-05-22 16:55:39,368 - WARNING - [_put_conn:ThreadPoolExecutor-12050_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,652 - WARNING - [_put_conn:ThreadPoolExecutor-12007_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,925 - WARNING - [_put_conn:ThreadPoolExecutor-0_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:39,927 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: Batch 1/May 2/F 0005/
+2025-05-22 16:55:40,024 - WARNING - [_put_conn:ThreadPoolExecutor-12010_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:40,032 - INFO - [upload_to_s3:ThreadPoolExecutor-0_2] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/afb2a8d4-b9f4-4107-b642-15789e50d1ea/F 0002.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0002.zip
+2025-05-22 16:55:40,033 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_2] - Generated pre-signed URL for Compressed test SUN's2/F 0002.zip (expires in 3600 seconds)
+2025-05-22 16:55:40,469 - INFO - [process_folder:ThreadPoolExecutor-0_2] - Processing folder: Batch 1/May 2/F 0006/
+2025-05-22 16:55:40,571 - WARNING - [_put_conn:ThreadPoolExecutor-0_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:40,702 - WARNING - [_put_conn:ThreadPoolExecutor-12053_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:41,388 - INFO - [upload_to_s3:ThreadPoolExecutor-0_3] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/146b7bb0-0a73-41c6-b484-0fca9d771981/F 0003.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0003.zip
+2025-05-22 16:55:41,390 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_3] - Generated pre-signed URL for Compressed test SUN's2/F 0003.zip (expires in 3600 seconds)
+2025-05-22 16:55:41,542 - WARNING - [_put_conn:ThreadPoolExecutor-0_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:41,812 - INFO - [process_folder:ThreadPoolExecutor-0_3] - Processing folder: Batch 1/May 2/F 0007/
+2025-05-22 16:55:42,121 - WARNING - [_put_conn:ThreadPoolExecutor-12065_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 16:55:52,090 - WARNING - [_put_conn:ThreadPoolExecutor-12359_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:05:02,053 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 1000 files from Batch 1/May 2/F 0004/
+2025-05-22 17:05:04,163 - INFO - [download_s3_folder:ThreadPoolExecutor-0_3] - Downloaded 1000 files from Batch 1/May 2/F 0007/
+2025-05-22 17:05:05,184 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from Batch 1/May 2/F 0005/
+2025-05-22 17:05:12,424 - INFO - [download_s3_folder:ThreadPoolExecutor-0_2] - Downloaded 1000 files from Batch 1/May 2/F 0006/
+2025-05-22 17:05:59,880 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 1000 files, total size: 1,420,087,632 bytes
+2025-05-22 17:06:02,850 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_3] - Created ZIP with 1000 files, total size: 1,420,088,390 bytes
+2025-05-22 17:06:04,241 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,088,488 bytes
+2025-05-22 17:06:11,690 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_2] - Created ZIP with 1000 files, total size: 1,420,087,261 bytes
+2025-05-22 17:12:02,194 - WARNING - [_put_conn:ThreadPoolExecutor-24019_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:02,544 - WARNING - [_put_conn:ThreadPoolExecutor-24013_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:02,675 - WARNING - [_put_conn:ThreadPoolExecutor-24016_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:04,366 - WARNING - [_put_conn:ThreadPoolExecutor-24022_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:04,519 - WARNING - [_put_conn:ThreadPoolExecutor-24016_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:07,557 - WARNING - [_put_conn:ThreadPoolExecutor-24019_7] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:10,771 - WARNING - [_put_conn:ThreadPoolExecutor-24016_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:11,372 - WARNING - [_put_conn:ThreadPoolExecutor-24013_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:11,381 - WARNING - [_put_conn:ThreadPoolExecutor-24022_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:12,280 - WARNING - [_put_conn:ThreadPoolExecutor-24019_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-22 17:12:13,544 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/aa689b4c-7225-4eaf-814a-5ea352f8ceaa/F 0005.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0005.zip
+2025-05-22 17:12:13,546 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's2/F 0005.zip (expires in 3600 seconds)
+2025-05-22 17:12:14,085 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: Batch 1/May 2/F 0008/
+2025-05-22 17:12:16,266 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/16b70c38-a152-4835-a549-14cb4d03f509/F 0004.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0004.zip
+2025-05-22 17:12:16,267 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's2/F 0004.zip (expires in 3600 seconds)
+2025-05-22 17:12:16,734 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: Batch 1/May 2/F 0009/
+2025-05-22 17:12:21,959 - WARNING - [_put_conn:ThreadPoolExecutor-24049_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:22,399 - WARNING - [_put_conn:ThreadPoolExecutor-24053_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:22,968 - WARNING - [_put_conn:ThreadPoolExecutor-24046_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,118 - WARNING - [_put_conn:ThreadPoolExecutor-24016_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,419 - WARNING - [_put_conn:ThreadPoolExecutor-24022_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,688 - WARNING - [_put_conn:ThreadPoolExecutor-24016_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,706 - WARNING - [_put_conn:ThreadPoolExecutor-24016_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,762 - WARNING - [_put_conn:ThreadPoolExecutor-24016_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:23,834 - WARNING - [_put_conn:ThreadPoolExecutor-24022_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,135 - WARNING - [_put_conn:ThreadPoolExecutor-24022_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,456 - WARNING - [_put_conn:ThreadPoolExecutor-24052_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,750 - WARNING - [_put_conn:ThreadPoolExecutor-24016_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,751 - WARNING - [_put_conn:ThreadPoolExecutor-24016_1] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,751 - WARNING - [_put_conn:ThreadPoolExecutor-24016_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,792 - WARNING - [_put_conn:ThreadPoolExecutor-24022_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,814 - WARNING - [_put_conn:ThreadPoolExecutor-24022_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,985 - WARNING - [_put_conn:ThreadPoolExecutor-24022_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:24,987 - INFO - [upload_to_s3:ThreadPoolExecutor-0_2] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/5d1732ec-0be8-4585-9a0b-1b2974d3e375/F 0006.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0006.zip
+2025-05-22 17:12:24,989 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_2] - Generated pre-signed URL for Compressed test SUN's2/F 0006.zip (expires in 3600 seconds)
+2025-05-22 17:12:25,122 - WARNING - [_put_conn:ThreadPoolExecutor-24058_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:12:25,350 - INFO - [process_folder:ThreadPoolExecutor-0_2] - Processing folder: Batch 1/May 2/F 0010/
+2025-05-22 17:12:26,467 - INFO - [upload_to_s3:ThreadPoolExecutor-0_3] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/44aeddd9-f518-4af6-9d7a-96139745d5a0/F 0007.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0007.zip
+2025-05-22 17:12:26,468 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_3] - Generated pre-signed URL for Compressed test SUN's2/F 0007.zip (expires in 3600 seconds)
+2025-05-22 17:12:26,874 - INFO - [process_folder:ThreadPoolExecutor-0_3] - Processing folder: Batch 1/May 2/F 0011/
+2025-05-22 17:12:27,844 - WARNING - [_put_conn:ThreadPoolExecutor-24097_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:13:32,547 - WARNING - [_put_conn:ThreadPoolExecutor-25583_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:21:27,580 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from Batch 1/May 2/F 0008/
+2025-05-22 17:21:35,135 - INFO - [download_s3_folder:ThreadPoolExecutor-0_3] - Downloaded 1000 files from Batch 1/May 2/F 0011/
+2025-05-22 17:21:35,186 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 1000 files from Batch 1/May 2/F 0009/
+2025-05-22 17:21:38,997 - INFO - [download_s3_folder:ThreadPoolExecutor-0_2] - Downloaded 1000 files from Batch 1/May 2/F 0010/
+2025-05-22 17:22:28,974 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,089,952 bytes
+2025-05-22 17:22:38,011 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_3] - Created ZIP with 1000 files, total size: 1,420,088,450 bytes
+2025-05-22 17:22:38,150 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 1000 files, total size: 1,420,087,162 bytes
+2025-05-22 17:22:42,297 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_2] - Created ZIP with 1000 files, total size: 1,420,088,168 bytes
+2025-05-22 17:28:51,188 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/b1128925-54ec-46c5-a09b-12de431312a6/F 0008.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0008.zip
+2025-05-22 17:28:51,194 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's2/F 0008.zip (expires in 3600 seconds)
+2025-05-22 17:28:53,779 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: Batch 1/May 2/F 0012/
+2025-05-22 17:28:57,817 - WARNING - [_put_conn:ThreadPoolExecutor-36031_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:35,614 - WARNING - [_put_conn:ThreadPoolExecutor-36091_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:38,163 - WARNING - [_put_conn:ThreadPoolExecutor-36034_7] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:40,383 - WARNING - [_put_conn:ThreadPoolExecutor-36031_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:41,909 - WARNING - [_put_conn:ThreadPoolExecutor-36031_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:43,870 - WARNING - [_put_conn:ThreadPoolExecutor-36028_7] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:44,252 - WARNING - [_put_conn:ThreadPoolExecutor-36097_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:46,630 - WARNING - [_put_conn:ThreadPoolExecutor-36106_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:50,043 - WARNING - [_put_conn:ThreadPoolExecutor-36031_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:29:50,057 - WARNING - [_put_conn:ThreadPoolExecutor-36034_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:04,422 - WARNING - [_put_conn:ThreadPoolExecutor-36185_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:05,415 - WARNING - [_put_conn:ThreadPoolExecutor-36031_2] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:05,582 - WARNING - [_put_conn:ThreadPoolExecutor-36034_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:06,589 - WARNING - [_put_conn:ThreadPoolExecutor-36191_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:07,019 - WARNING - [_put_conn:ThreadPoolExecutor-36031_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:07,390 - WARNING - [_put_conn:ThreadPoolExecutor-36034_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:09,097 - WARNING - [_put_conn:ThreadPoolExecutor-36034_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:09,691 - WARNING - [_put_conn:ThreadPoolExecutor-36034_7] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:11,195 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/86675d13-8d58-42a1-9263-48a855b29816/F 0009.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0009.zip
+2025-05-22 17:30:11,196 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's2/F 0009.zip (expires in 3600 seconds)
+2025-05-22 17:30:11,711 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: Batch 1/May 2/F 0014/
+2025-05-22 17:30:14,419 - INFO - [upload_to_s3:ThreadPoolExecutor-0_3] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/32d07e9c-061d-4a7a-bec7-41661d84b480/F 0011.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0011.zip
+2025-05-22 17:30:14,420 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_3] - Generated pre-signed URL for Compressed test SUN's2/F 0011.zip (expires in 3600 seconds)
+2025-05-22 17:30:14,510 - WARNING - [_put_conn:ThreadPoolExecutor-36034_3] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:14,678 - WARNING - [_put_conn:ThreadPoolExecutor-36202_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:15,523 - WARNING - [_put_conn:ThreadPoolExecutor-36034_6] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:15,583 - WARNING - [_put_conn:ThreadPoolExecutor-36034_4] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:15,776 - WARNING - [_put_conn:ThreadPoolExecutor-36205_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:16,724 - WARNING - [_put_conn:ThreadPoolExecutor-36034_8] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:16,853 - WARNING - [_put_conn:ThreadPoolExecutor-36199_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:17,553 - WARNING - [_put_conn:ThreadPoolExecutor-36034_9] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:17,618 - WARNING - [_put_conn:ThreadPoolExecutor-36034_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:17,685 - WARNING - [_put_conn:ThreadPoolExecutor-36034_5] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:17,966 - INFO - [upload_to_s3:ThreadPoolExecutor-0_2] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/4acec481-a313-4fd2-afcc-f522dd8ffc53/F 0010.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0010.zip
+2025-05-22 17:30:17,968 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_2] - Generated pre-signed URL for Compressed test SUN's2/F 0010.zip (expires in 3600 seconds)
+2025-05-22 17:30:18,244 - WARNING - [_put_conn:ThreadPoolExecutor-36214_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:31,913 - WARNING - [_put_conn:ThreadPoolExecutor-36386_0] - Connection pool is full, discarding connection: my-bucket-founder-series-sun.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-22 17:30:36,317 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 33 files from Batch 1/May 2/F 0014/
+2025-05-22 17:30:37,850 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 33 files, total size: 46,862,884 bytes
+2025-05-22 17:30:44,907 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/9f6b516c-fca4-4329-b95a-00f15fff4392/F 0014.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0014.zip
+2025-05-22 17:30:44,909 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's2/F 0014.zip (expires in 3600 seconds)
+2025-05-22 17:35:37,122 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from Batch 1/May 2/F 0012/
+2025-05-22 17:36:24,022 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,088,744 bytes
+2025-05-22 17:38:03,938 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmprize7gwb/326b1cc4-2902-4949-b841-9387ec3817a2/F 0012.zip to s3://my-bucket-founder-series-sun/Compressed test SUN's2/F 0012.zip
+2025-05-22 17:38:03,940 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's2/F 0012.zip (expires in 3600 seconds)
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - 
+Processing Summary:
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0000/
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Size: 1,420,087,737 bytes
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0000.zip
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200000.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T205512Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=ea7a951f2e9698586219b7c5d467cce7e5e619f392aa23c2cd372e53f7d2138c
+
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0001/
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Size: 1,420,087,920 bytes
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0001.zip
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200001.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T205539Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=69e14e452fdf4f839636ab08f1653c2adb59905bfcdedd031ff890680b2c733b
+
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0002/
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Size: 1,420,088,099 bytes
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0002.zip
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200002.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T205540Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2e352107fa2bb1e651d8db4f0110da57c4f0a778d345a83660768539e185c1f0
+
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0003/
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,258 - INFO - [main:MainThread] - Size: 1,420,088,258 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0003.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200003.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T205541Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0370c05c7b4237e635f7630e09ad030697fe3ce95ce27b4ec651d3527d6ff291
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0005/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,088,488 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0005.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200005.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T211213Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1a9f262e64b9085bfa62fb490bab1336a3f57888280d9e1bc77445eac1f7e8c5
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0004/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,087,632 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0004.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200004.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T211216Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b10bf65ce0807007b8dd2e04aef4fb7c33afcfcf38034adc8ba43af6dd9920a0
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0006/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,087,261 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0006.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200006.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T211224Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=eb94ebc82d3ba62f4a4dc5b7a132c86d0ef3287ac48561120ea013ab030e9222
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0007/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,088,390 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0007.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200007.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T211226Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a13a321364916abaed9a6248ace57fe9352d2d3f210936a04d1db47e3d4ece90
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0008/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,089,952 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0008.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200008.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T212851Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=73bd3fefa34cf5da18e1654553d10bdf2399420d825ec271783e1ab65d3dcb5f
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0009/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Size: 1,420,087,162 bytes
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0009.zip
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200009.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T213011Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0a389048c67ef3a2faef52bb267defce883f4a862ad7861b66dfd2500109bd00
+
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0011/
+2025-05-22 17:38:04,259 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Size: 1,420,088,450 bytes
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0011.zip
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200011.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T213014Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6d6f5f1bc87d63170055cf65a597c85136feed9b51e67c680facdcf1da221557
+
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0010/
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Size: 1,420,088,168 bytes
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0010.zip
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200010.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T213017Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=7d93eeb42369b4202ab68957479c582acd09f58875a8a28bc70f1a06d575f85d
+
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0014/
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Files: 33
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Size: 46,862,884 bytes
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0014.zip
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200014.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T213044Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=93755867bf24bdddade2b2ba861fcc974341711194255cb3bba0920a06773176
+
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Folder: Batch 1/May 2/F 0012/
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Files: 1000
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - Size: 1,420,088,744 bytes
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - ZIP: Compressed test SUN's2/F 0012.zip
+2025-05-22 17:38:04,260 - INFO - [main:MainThread] - URL: https://my-bucket-founder-series-sun.s3.amazonaws.com/Compressed%20test%20SUN%27s2/F%200012.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250522%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250522T213803Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=032495715f9cc30b5d83500c5d4c4f265b178db3fdc8821b227dc7df9b859f0d
+

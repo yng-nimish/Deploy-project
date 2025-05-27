@@ -1,0 +1,151 @@
+2025-05-16 11:17:15,091 - INFO - [load:MainThread] - Found credentials in shared credentials file: ~/.aws/credentials
+2025-05-16 11:17:15,951 - INFO - [validate_config:MainThread] - Successfully validated access to bucket: my-bucket-parquet-test
+2025-05-16 11:17:16,034 - INFO - [list_test_folders:MainThread] - Found 12 test folders under April 24/
+2025-05-16 11:17:16,036 - INFO - [main:MainThread] - Using base temporary directory: /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm
+2025-05-16 11:17:16,127 - INFO - [check_if_processed:ThreadPoolExecutor-0_0] - Folder April 24/Test1/ already processed (ZIP exists at Compressed test SUN's/Test1.zip)
+2025-05-16 11:17:16,183 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: April 24/Test2/
+2025-05-16 11:17:16,296 - INFO - [process_folder:ThreadPoolExecutor-0_3] - Processing folder: April 24/Test12/
+2025-05-16 11:17:16,297 - INFO - [check_if_processed:ThreadPoolExecutor-0_2] - Folder April 24/Test11/ already processed (ZIP exists at Compressed test SUN's/Test11.zip)
+2025-05-16 11:17:16,298 - INFO - [check_if_processed:ThreadPoolExecutor-0_1] - Folder April 24/Test10/ already processed (ZIP exists at Compressed test SUN's/Test10.zip)
+2025-05-16 11:17:16,353 - INFO - [check_if_processed:ThreadPoolExecutor-0_2] - Folder April 24/Test4/ already processed (ZIP exists at Compressed test SUN's/Test4.zip)
+2025-05-16 11:17:16,379 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: April 24/Test3/
+2025-05-16 11:17:16,425 - INFO - [process_folder:ThreadPoolExecutor-0_2] - Processing folder: April 24/Test5/
+2025-05-16 11:22:50,563 - INFO - [download_s3_folder:ThreadPoolExecutor-0_3] - Downloaded 237 files from April 24/Test12/
+2025-05-16 11:23:01,643 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_3] - Created ZIP with 237 files, total size: 336,560,581 bytes
+2025-05-16 11:24:10,288 - INFO - [upload_to_s3:ThreadPoolExecutor-0_3] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/fcdb923c-c31b-44ad-9ef7-ca3622beaecd/Test12.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test12.zip
+2025-05-16 11:24:10,291 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_3] - Generated pre-signed URL for Compressed test SUN's/Test12.zip (expires in 3600 seconds)
+2025-05-16 11:24:10,438 - INFO - [process_folder:ThreadPoolExecutor-0_3] - Processing folder: April 24/Test6/
+2025-05-16 11:24:11,046 - WARNING - [_put_conn:ThreadPoolExecutor-3332_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:25:58,972 - WARNING - [_put_conn:ThreadPoolExecutor-3947_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-16 11:32:29,327 - WARNING - [_put_conn:ThreadPoolExecutor-6937_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-16 11:38:35,104 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 1000 files from April 24/Test2/
+2025-05-16 11:38:38,722 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from April 24/Test3/
+2025-05-16 11:39:22,511 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 1000 files, total size: 1,420,089,433 bytes
+2025-05-16 11:39:26,282 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,087,882 bytes
+2025-05-16 11:39:42,962 - INFO - [download_s3_folder:ThreadPoolExecutor-0_2] - Downloaded 1000 files from April 24/Test5/
+2025-05-16 11:40:30,568 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_2] - Created ZIP with 1000 files, total size: 1,420,088,354 bytes
+2025-05-16 11:45:50,856 - INFO - [download_s3_folder:ThreadPoolExecutor-0_3] - Downloaded 1000 files from April 24/Test6/
+2025-05-16 11:46:39,024 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_3] - Created ZIP with 1000 files, total size: 1,420,087,172 bytes
+2025-05-16 11:50:14,801 - WARNING - [_put_conn:ThreadPoolExecutor-11986_7] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:18,392 - WARNING - [_put_conn:ThreadPoolExecutor-11986_8] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:22,323 - WARNING - [_put_conn:ThreadPoolExecutor-11800_9] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:22,665 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/2eadba0b-4c68-46ab-8f0a-0ed7bb4f3b49/Test2.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test2.zip
+2025-05-16 11:50:22,669 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's/Test2.zip (expires in 3600 seconds)
+2025-05-16 11:50:23,163 - INFO - [process_folder:ThreadPoolExecutor-0_0] - Processing folder: April 24/Test7/
+2025-05-16 11:50:23,393 - WARNING - [_put_conn:ThreadPoolExecutor-11986_9] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:25,288 - WARNING - [_put_conn:ThreadPoolExecutor-12724_8] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:27,895 - WARNING - [_put_conn:ThreadPoolExecutor-12730_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:30,670 - WARNING - [_put_conn:ThreadPoolExecutor-12739_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:34,241 - WARNING - [_put_conn:ThreadPoolExecutor-12742_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:38,589 - WARNING - [_put_conn:ThreadPoolExecutor-12751_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:39,454 - WARNING - [_put_conn:ThreadPoolExecutor-11986_4] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:50:39,460 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/dd4dde9e-b33b-47dd-bee0-e93184c2bfa3/Test3.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test3.zip
+2025-05-16 11:50:39,462 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's/Test3.zip (expires in 3600 seconds)
+2025-05-16 11:50:40,187 - INFO - [process_folder:ThreadPoolExecutor-0_1] - Processing folder: April 24/Test8/
+2025-05-16 11:51:19,078 - WARNING - [_put_conn:ThreadPoolExecutor-12913_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:20,165 - WARNING - [_put_conn:ThreadPoolExecutor-12919_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:20,807 - WARNING - [_put_conn:ThreadPoolExecutor-12922_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:23,206 - WARNING - [_put_conn:ThreadPoolExecutor-12724_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:34,576 - WARNING - [_put_conn:ThreadPoolExecutor-12724_9] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:36,775 - WARNING - [_put_conn:ThreadPoolExecutor-12724_3] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:42,316 - WARNING - [_put_conn:ThreadPoolExecutor-13042_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:42,716 - WARNING - [_put_conn:ThreadPoolExecutor-12724_6] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:49,753 - INFO - [upload_to_s3:ThreadPoolExecutor-0_2] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/d4e4b617-fb76-4d09-9262-b499bb992cb3/Test5.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test5.zip
+2025-05-16 11:51:49,756 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_2] - Generated pre-signed URL for Compressed test SUN's/Test5.zip (expires in 3600 seconds)
+2025-05-16 11:51:49,859 - WARNING - [_put_conn:ThreadPoolExecutor-13060_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:51:50,355 - INFO - [process_folder:ThreadPoolExecutor-0_2] - Processing folder: April 24/Test9/
+2025-05-16 11:52:01,006 - WARNING - [_put_conn:ThreadPoolExecutor-13103_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-16 11:53:43,955 - WARNING - [_put_conn:ThreadPoolExecutor-13594_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:46,422 - WARNING - [_put_conn:ThreadPoolExecutor-12724_1] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:46,568 - WARNING - [_put_conn:ThreadPoolExecutor-12724_2] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:47,112 - WARNING - [_put_conn:ThreadPoolExecutor-12724_6] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:47,797 - WARNING - [_put_conn:ThreadPoolExecutor-12724_7] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:47,855 - WARNING - [_put_conn:ThreadPoolExecutor-13603_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:49,021 - WARNING - [_put_conn:ThreadPoolExecutor-12724_4] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:50,256 - INFO - [upload_to_s3:ThreadPoolExecutor-0_3] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/f95792b3-d58f-4914-bdfa-a7135395a206/Test6.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test6.zip
+2025-05-16 11:53:50,259 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_3] - Generated pre-signed URL for Compressed test SUN's/Test6.zip (expires in 3600 seconds)
+2025-05-16 11:53:50,374 - WARNING - [_put_conn:ThreadPoolExecutor-13609_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:53:54,085 - WARNING - [_put_conn:ThreadPoolExecutor-13655_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 11:54:12,220 - WARNING - [_put_conn:ThreadPoolExecutor-13811_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:06:53,769 - INFO - [download_s3_folder:ThreadPoolExecutor-0_0] - Downloaded 1000 files from April 24/Test7/
+2025-05-16 12:07:02,177 - INFO - [download_s3_folder:ThreadPoolExecutor-0_1] - Downloaded 1000 files from April 24/Test8/
+2025-05-16 12:07:32,070 - INFO - [download_s3_folder:ThreadPoolExecutor-0_2] - Downloaded 1000 files from April 24/Test9/
+2025-05-16 12:07:52,608 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_0] - Created ZIP with 1000 files, total size: 1,420,088,080 bytes
+2025-05-16 12:08:04,021 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_1] - Created ZIP with 1000 files, total size: 1,420,088,490 bytes
+2025-05-16 12:08:32,203 - INFO - [create_zip_from_folder:ThreadPoolExecutor-0_2] - Created ZIP with 1000 files, total size: 1,420,088,594 bytes
+2025-05-16 12:19:56,315 - WARNING - [_put_conn:ThreadPoolExecutor-21733_3] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 9
+2025-05-16 12:19:56,840 - INFO - [upload_to_s3:ThreadPoolExecutor-0_0] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/1036232d-663c-421d-9771-31cdc66489d2/Test7.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test7.zip
+2025-05-16 12:19:56,848 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_0] - Generated pre-signed URL for Compressed test SUN's/Test7.zip (expires in 3600 seconds)
+2025-05-16 12:20:04,851 - WARNING - [_put_conn:ThreadPoolExecutor-21733_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:07,643 - WARNING - [_put_conn:ThreadPoolExecutor-21730_2] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:08,523 - WARNING - [_put_conn:ThreadPoolExecutor-21730_3] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:08,538 - WARNING - [_put_conn:ThreadPoolExecutor-21733_1] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:09,182 - WARNING - [_put_conn:ThreadPoolExecutor-21730_1] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:09,239 - WARNING - [_put_conn:ThreadPoolExecutor-21733_5] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:09,254 - WARNING - [_put_conn:ThreadPoolExecutor-21733_7] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:09,649 - WARNING - [_put_conn:ThreadPoolExecutor-21730_2] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:11,347 - WARNING - [_put_conn:ThreadPoolExecutor-21730_0] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:11,780 - WARNING - [_put_conn:ThreadPoolExecutor-21730_9] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:12,066 - WARNING - [_put_conn:ThreadPoolExecutor-21733_8] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:12,176 - WARNING - [_put_conn:ThreadPoolExecutor-21730_4] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:12,571 - WARNING - [_put_conn:ThreadPoolExecutor-21730_6] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:13,361 - WARNING - [_put_conn:ThreadPoolExecutor-21733_6] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:13,507 - WARNING - [_put_conn:ThreadPoolExecutor-21733_4] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:13,981 - WARNING - [_put_conn:ThreadPoolExecutor-21730_7] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:14,093 - WARNING - [_put_conn:ThreadPoolExecutor-21733_3] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:14,853 - WARNING - [_put_conn:ThreadPoolExecutor-21733_9] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:15,261 - INFO - [upload_to_s3:ThreadPoolExecutor-0_2] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/920cf79f-717e-4c61-a8e5-80376c111beb/Test9.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test9.zip
+2025-05-16 12:20:15,265 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_2] - Generated pre-signed URL for Compressed test SUN's/Test9.zip (expires in 3600 seconds)
+2025-05-16 12:20:15,409 - WARNING - [_put_conn:ThreadPoolExecutor-21730_5] - Connection pool is full, discarding connection: my-bucket-parquet-test.s3.us-east-1.amazonaws.com. Connection pool size: 10
+2025-05-16 12:20:15,420 - INFO - [upload_to_s3:ThreadPoolExecutor-0_1] - Successfully uploaded /var/folders/d4/s72sbkr13pq0p568ksrtvdpc0000gn/T/tmpylmuj3dm/331498fa-a2e8-4315-8677-5b6c71a7b883/Test8.zip to s3://my-bucket-parquet-test/Compressed test SUN's/Test8.zip
+2025-05-16 12:20:15,421 - INFO - [generate_presigned_url:ThreadPoolExecutor-0_1] - Generated pre-signed URL for Compressed test SUN's/Test8.zip (expires in 3600 seconds)
+2025-05-16 12:20:15,853 - INFO - [main:MainThread] - 
+Processing Summary:
+2025-05-16 12:20:15,853 - INFO - [main:MainThread] - Folder: April 24/Test12/
+2025-05-16 12:20:15,853 - INFO - [main:MainThread] - Files: 237
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - Size: 336,560,581 bytes
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test12.zip
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test12.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T152410Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=32c556f2afa65b1b99eef1728f970cb1c8ca9f779b8802e82a5a4923d8efa16f
+
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - Folder: April 24/Test2/
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - Size: 1,420,089,433 bytes
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test2.zip
+2025-05-16 12:20:15,854 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test2.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T155022Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=e047aaa11b7bf82fa399639ff20ce9e2dac1d31de28de5e5d80bc42633754a5c
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test3/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,087,882 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test3.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test3.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T155039Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=bc047995aa6d7b572a5a1a242592d2febd457b5af0d3bfe309bd4fb9307f2ee0
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test5/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,088,354 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test5.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test5.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T155149Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=482082b2a420468a12461d0cda1f4434dd2f024279eac102ea3f8ed0e66db8c4
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test6/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,087,172 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test6.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test6.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T155350Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=928e2fd68fb0aab4f111c7ff172397ce8bc4048b87507cd7f3efb0f339da191b
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test7/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,088,080 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test7.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test7.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T161956Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=d4d6b8385691ffcc0719b1d72e5b9865c8faae0901be38a6e2b784de8ef7ac8e
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test9/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,088,594 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test9.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test9.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T162015Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=4c25f7e95fbe2b222a20c33e50aa0f35c345540474adfbc951431166f866e16b
+
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Folder: April 24/Test8/
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Files: 1000
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - Size: 1,420,088,490 bytes
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - ZIP: Compressed test SUN's/Test8.zip
+2025-05-16 12:20:15,855 - INFO - [main:MainThread] - URL: https://my-bucket-parquet-test.s3.amazonaws.com/Compressed%20test%20SUN%27s/Test8.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MTWJ6COK4QMMPJ3%2F20250516%2Fca-central-1%2Fs3%2Faws4_request&X-Amz-Date=20250516T162015Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3f2e31d6f9bbb3251362d1ae4f34bd1004d69d1c4f8eba0e9b333ab77449fe8e
+
