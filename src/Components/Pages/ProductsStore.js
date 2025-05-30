@@ -5,6 +5,7 @@
  */
 const productsArray = [
   // Live Mode
+  /*
   {
     id: "price_1Q5UmO013t2ai8cxX1H3r2IG",
     title: "The One Million Metre Apple Watch Swim Challenge",
@@ -69,8 +70,8 @@ const productsArray = [
       "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
   },
 
-  /*
-
+  
+*/
   //Test Mode
   {
     id: "price_1Q5UlK013t2ai8cxjVmKuYBs",
@@ -135,7 +136,6 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
   },
-*/
 
   /*{
     id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Py2vR013t2ai8cxsp6eOczL
