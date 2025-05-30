@@ -28,7 +28,7 @@ const PurchaseTP = () => {
     items: [], // Initialize as an empty array ok
     serialKeys: [], // Update to hold an array of serial key objects
     priceIds: [], // Add priceIds to state
-    ownerData: [], //get owner data
+    ownerData: [], //get owner data from
   });
 
   const [products, setProducts] = useState([]);
