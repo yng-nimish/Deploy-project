@@ -25,7 +25,7 @@ const PurchaseTP = () => {
   const [userData, setUserData] = useState({
     firstName: "",
     lastName: "",
-    items: [], // Initialize as an empty array
+    items: [], // Initialize as an empty array ok
     serialKeys: [], // Update to hold an array of serial key objects
     priceIds: [], // Add priceIds to state
     ownerData: [], //get owner data
