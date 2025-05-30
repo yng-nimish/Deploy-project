@@ -1,0 +1,19 @@
+{
+  "name": "lambda-verify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.812.0",
+    "@aws-sdk/lib-dynamodb": "^3.814.0",
+    "@aws-sdk/util-dynamodb": "^3.812.0",
+    "aws-sdk": "^2.1692.0"
+  }
+}
