@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { productsArray } from "./ProductsStore"; // Adjust path as needed
+import { productsArray } from "./ProductsStore"; // Ensure this import is correct
 import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import {
@@ -20,32 +20,32 @@ const PurchaseTP = () => {
     firstName: "",
     lastName: "",
     items: [],
-    serialKeys: [], // Array of { serialKey, owner }
+    serialKeys: [],
     priceIds: [],
     ownerData: [],
   });
 
   const [products, setProducts] = useState([]);
+  const [loadingKeys, setLoadingKeys] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Initialize products
-    if (productsArray && productsArray.length) {
+    if (productsArray && Array.isArray(productsArray)) {
       setProducts(productsArray);
     } else {
-      console.error("Products data is not available.");
+      console.error("No products data available");
     }
 
-    // Parse URL parameters
     const urlParams = new URLSearchParams(window.location.search);
-    const firstName = urlParams.get("first_name");
-    const lastName = urlParams.get("last_name");
+    const firstName = urlParams.get("firstName");
+    const lastName = urlParams.get("lastName");
     const itemsParam = urlParams.get("items");
-    const priceIdsParam = urlParams.get("price_id");
-    const ownerDataParam = urlParams.get("owner_data");
+    const priceIdsParam = urlParams.get("priceIds");
+    const ownerDataParam = urlParams.get("ownerData");
     const sessionId = urlParams.get("session_id");
 
-    console.log("URL:", window.location.href);
-    console.log("URL Parameters:", {
+    console.log("URL:", { url: window.location.href });
+    console.log("Parameters:", {
       firstName,
       lastName,
       itemsParam,
@@ -57,15 +57,15 @@ const PurchaseTP = () => {
     let items = [];
     try {
       items = JSON.parse(decodeURIComponent(itemsParam)) || [];
-    } catch (e) {
-      console.error("Failed to parse items from URL:", e);
+    } catch (err) {
+      console.error("Error parsing items:", { error: err });
     }
 
     let ownerData = [];
     try {
       ownerData = JSON.parse(decodeURIComponent(ownerDataParam)) || [];
-    } catch (e) {
-      console.error("Failed to parse owner data from URL:", e);
+    } catch (err) {
+      console.error("Error parsing owner data:", { error: err });
     }
 
     let priceIds = [];
@@ -73,17 +73,22 @@ const PurchaseTP = () => {
       priceIds = decodeURIComponent(priceIdsParam).split(",");
     }
 
-    // Fetch serial keys
-    const fetchSerialKeys = async () => {
-      if (sessionId) {
+    const fetchSerialKeys = async (maxRetries = 3, retryDelay = 2000) => {
+      setLoadingKeys(true);
+      setError(null);
+      let attempts = 0;
+
+      const tryFetch = async () => {
         try {
           const response = await axios.get(
-            `https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
+            `https://xobpfm5d5f5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
           );
-          const serialKeys = response.data.serialKeys.map((key, index) => ({
-            serialKey: key,
-            owner: ownerData[index] || {},
-          }));
+          const serialKeys = response.data.serialKeys.map(
+            (serialKey, serialIndex) => ({
+              serialKey,
+              owner: ownerData[serialIndex] || {},
+            })
+          );
           setUserData({
             firstName: firstName || "",
             lastName: lastName || "",
@@ -92,18 +97,37 @@ const PurchaseTP = () => {
             priceIds,
             ownerData,
           });
+          setLoadingKeys(false);
         } catch (error) {
-          console.error("Failed to fetch serial keys:", error);
-          setUserData({
-            firstName: firstName || "",
-            lastName: lastName || "",
-            items,
-            serialKeys: [],
-            priceIds,
-            ownerData,
-          });
+          console.error("Error fetching serial keys:", { error });
+          if (
+            error.response &&
+            error.response.status === 404 &&
+            attempts < maxRetries
+          ) {
+            attempts++;
+            console.log(`Retry ${attempts}/${maxRetries} in ${retryDelay}ms`);
+            setTimeout(tryFetch, retryDelay);
+          } else {
+            setError("Failed to fetch serial keys. Please try again later.");
+            setLoadingKeys(false);
+            setUserData({
+              firstName: firstName || "",
+              lastName: lastName || "",
+              items,
+              serialKeys: [],
+              priceIds,
+              ownerData,
+            });
+          }
         }
+      };
+
+      if (sessionId) {
+        tryFetch();
       } else {
+        setError("No session ID found.");
+        setLoadingKeys(false);
         setUserData({
           firstName: firstName || "",
           lastName: lastName || "",
@@ -118,26 +142,22 @@ const PurchaseTP = () => {
     fetchSerialKeys();
   }, []);
 
-  const handleDownload = (pdfUrl, title) => {
+  const handleDownload = (pdfUrl, pdfTitle) => {
     Swal.fire({
       title: "Download",
-      text: `Downloading ${title}`,
+      text: `Downloading ${pdfTitle}`,
       icon: "success",
     }).then(() => {
       window.open(pdfUrl, "_blank");
     });
   };
 
-  if (!products.length) {
-    return <div>Loading products...</div>;
-  }
-
   const shouldShowSerialKey =
     userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
     userData.serialKeys &&
     userData.serialKeys.length > 0;
 
-  const formatGrid = (serialKey) => {
+  const formatSerialGrid = (serialKey) => {
     const rows = [
       ["A1", "A2", "A3", "J1", "B1", "B2", "B3", "J1", "C1", "C2", "C3"],
       ["D1", "D2", "D3", "J1", "E1", "E2", "E3", "J1", "F1", "F2", "F3"],
@@ -165,6 +185,25 @@ const PurchaseTP = () => {
             <h2 className="primary-heading">
               Welcome, {userData.firstName} {userData.lastName}!
             </h2>
+
+            {loadingKeys && <p>Loading serial keys...</p>}
+
+            {error && (
+              <Modal show={!!error} onHide={() => setError(null)}>
+                <Modal.Header closeButton>
+                  <Modal.Title>Error</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <p>{error}</p>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={() => setError(null)}>
+                    Close
+                  </Button>
+                </Modal.Footer>
+              </Modal>
+            )}
+
             {shouldShowSerialKey && (
               <div className="serial-keys">
                 <h2>
@@ -179,7 +218,7 @@ const PurchaseTP = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      {formatGrid(key.serialKey)}
+                      {formatSerialGrid(key.serialKey)}
                     </pre>
                     <h3>Owner Details:</h3>
                     <p>
@@ -191,6 +230,7 @@ const PurchaseTP = () => {
                 ))}
               </div>
             )}
+
             <div>
               <h1 className="primary-heading-2">Download The SUN</h1>
               <CCard color="white" className="mb-3">
@@ -211,6 +251,7 @@ const PurchaseTP = () => {
                 </CRow>
               </CCard>
             </div>
+
             <div className="table">
               <h1 className="primary-heading-2">
                 Download The Technical Papers
@@ -233,9 +274,7 @@ const PurchaseTP = () => {
                             handleDownload(item.pdfUrl, item.title)
                           }
                           disabled={
-                            !userData.items.some(
-                              (purchasedItem) => purchasedItem.id === item.id
-                            )
+                            !userData.items.some((p) => p.price === item.id)
                           }
                         >
                           Download
@@ -248,15 +287,16 @@ const PurchaseTP = () => {
             </div>
           </div>
         </div>
+
         <CCard color="white" className="mb-3">
           <CRow className="g-0">
             <CCol md={8}>
               <CCardBody>
                 <CCardTitle>Verify</CCardTitle>
-                <CCardText>Verify your Serial Key</CCardText>
+                <CCardText>Verify your serial key</CCardText>
               </CCardBody>
             </CCol>
-            <CCol md={4} className="mb-3 pl-3 my-auto mx-auto col-6">
+            <CCol md={4} className="mb-3 pl-3 my-auto col-6">
               <Link to="/verify">
                 <CButton color="primary">
                   Verify <FiArrowRight />
