@@ -81,7 +81,7 @@ const PurchaseTP = () => {
       const tryFetch = async () => {
         try {
           const response = await axios.get(
-            `https://xobpfm5d5f5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
+            `https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
           );
           const serialKeys = response.data.serialKeys.map(
             (serialKey, serialIndex) => ({
