@@ -110,7 +110,11 @@ const PurchaseTP = () => {
             console.log(`Retry ${attempts}/${maxRetries} in ${retryDelay}ms`);
             setTimeout(tryFetch, retryDelay);
           } else {
-            setError("Failed to fetch serial keys. Please try again later.");
+            setError(
+              error.response?.status === 404
+                ? "Serial keys not yet available. Please try again later."
+                : "Failed to fetch serial keys. Please try again later."
+            );
             setLoadingKeys(false);
             setUserData({
               firstName: firstName || "",
@@ -220,7 +224,10 @@ const PurchaseTP = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      {formatSerialGrid(key.serialKey)}
+                      {console.log(
+                        "Formatting using p tag serialKey\n" + key.serialKey
+                      )}
+                      {key.serialKey || "Generating Serial Key"}
                     </pre>
                     <h3>Owner Details:</h3>
                     <p>
