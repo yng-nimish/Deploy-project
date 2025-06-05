@@ -61,17 +61,6 @@ function Store() {
       <div className="about-us-container">
         <div className="Purchase-section-2">
           <div className="Purchase-Container">
-            <h1 className="primary-heading-2"> Purchase Technical Papers </h1>
-
-            <div className="table">
-              <Row xs={1} md={3} className="g-4">
-                {filteredProductsArray.map((product, idx) => (
-                  <Col align="center" key={idx}>
-                    <ProductCard product={product} />
-                  </Col>
-                ))}
-              </Row>
-            </div>
             <h1 className="primary-heading-2">
               {" "}
               <br />
@@ -87,6 +76,18 @@ function Store() {
                 ))}
               </Row>
             </div>
+            <h1 className="primary-heading-2"> Purchase Technical Papers </h1>
+
+            <div className="table">
+              <Row xs={1} md={3} className="g-4">
+                {filteredProductsArray.map((product, idx) => (
+                  <Col align="center" key={idx}>
+                    <ProductCard product={product} />
+                  </Col>
+                ))}
+              </Row>
+            </div>
+
             <h1 className="primary-heading-2">
               {" "}
               <br />
@@ -102,17 +103,41 @@ function Store() {
               </Row>
             </div>
 
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column", // Stack buttons vertically
+                alignItems: "center", // Center horizontally
+              }}
+            >
               <p>All prices in $US</p>
+
+              <Button
+                onClick={handleShowCart}
+                style={{
+                  fontSize: "1.5rem", // Increase text size
+                  padding: "1rem 2rem", // Increase padding
+                  margin: "1rem", // Add space between buttons
+                }}
+              >
+                Cart ({productsCount} items)
+              </Button>
+
+              <Button
+                variant="warning"
+                onClick={handlePurchase}
+                style={{
+                  backgroundColor: "#FFD700", // Bright yellow
+                  borderColor: "#FFD700", // Match border
+                  color: "black", // Ensure text is readable
+                  fontSize: "1.5rem",
+                  padding: "1rem 2rem",
+                  margin: "1rem",
+                }}
+              >
+                Proceed to Checkout
+              </Button>
             </div>
-            <Button onClick={handleShowCart}>
-              Cart ({productsCount} items )
-            </Button>
-            <Button variant="success" onClick={handlePurchase}>
-              {" "}
-              {/* Show form on click */}
-              Purchase Items!!
-            </Button>
           </div>
 
           {/* Cart Modal */}
@@ -133,7 +158,15 @@ function Store() {
                   ))}
                   <h1>Total: ${cart.getTotalCost().toFixed(2)}</h1>
                   {isFeeApplicable && <p>{feeMessage}</p>}
-                  <Button variant="success" onClick={handlePurchase}>
+                  <Button
+                    style={{
+                      backgroundColor: "#FFD700", // Bright yellow
+                      borderColor: "#FFD700", // Match border
+                      color: "black", // Ensure text is readable
+                      fontSize: "1.5rem",
+                    }}
+                    onClick={handlePurchase}
+                  >
                     {" "}
                     {/* Show form on click */}
                     Proceed to Checkout

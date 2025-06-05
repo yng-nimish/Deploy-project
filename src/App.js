@@ -24,6 +24,7 @@ import CubeDisplay from "./Components/Pages/CubeDisplay";
 import SerialKeyVerification from "./Components/Pages/SerialKeyVerification";
 import SerialKeyVerification2 from "./Components/Pages/SerialKeyVerification2";
 import Download from "./Download";
+import Account2 from "./Components/Pages/Account2";
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
           <Route path="/book" element={<Book />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/career" element={<Career />} />
-          <Route path="/login" element={<Account />} />
+          <Route path="/login" element={<Account2 />} />
           <Route path="/purchase" element={<Store />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cube" element={<CubeDisplay />} />

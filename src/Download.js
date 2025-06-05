@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
+import InstructionsSection from "./Components/Pages/InstructionsSection";
 import {
   CCard,
   CCardBody,
@@ -81,7 +82,7 @@ const Download = () => {
         <h1 className="primary-heading">Download Your SUN</h1>
         <p>
           Your serial key has been verified. Use the button below to download
-          your SUN file: <strong>{fileName}</strong>
+          your SUN : <strong>{fileName}</strong>
         </p>
 
         {serialKey && (
@@ -97,6 +98,7 @@ const Download = () => {
             </pre>
           </div>
         )}
+        <InstructionsSection />
 
         {error && <div className="alert alert-danger">{error}</div>}
 
@@ -123,9 +125,9 @@ const Download = () => {
         </CCard>
 
         <div className="mt-4">
-          <Link to="/verify">
+          <Link to="/login">
             <Button className="btn btn-secondary">
-              <FiArrowLeft /> Back to Verify
+              <FiArrowLeft /> Back to Previous Purchases
             </Button>
           </Link>
         </div>

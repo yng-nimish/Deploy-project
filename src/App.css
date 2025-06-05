@@ -11,6 +11,142 @@
   width: 100%;
   overflow: hidden;
 }
+/* Ensure the Navbar is always visible and not affected by other components */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #fff; /* Adjust based on your design */
+}
+
+/* Ensure the account page does not override the Navbar and spans full width */
+.account-page {
+  padding-top: 70px; /* Adjust based on your Navbar height */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Ensure PurchaseTP content spans full width with minimal padding */
+.Purchase-Container {
+  padding: 20px 15px; /* Reduced side padding for full-width feel */
+  max-width: 100%; /* Ensure it uses full available width */
+  margin: 0 auto; /* Center content if needed, but allow full width */
+}
+
+/* Ensure serial keys and tables stretch to full width */
+.serial-keys,
+.table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Ensure table content is responsive and full-width */
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Ensure table cells have proper padding */
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* Ensure buttons and other elements are responsive */
+.btn {
+  width: auto;
+  display: inline-block;
+}
+
+/* Styling for the instructions section */
+.instructions-section {
+  width: 100%;
+  padding: 20px 15px;
+  max-width: 100%;
+}
+
+/* Styling for the ordered list */
+.instructions-list {
+  list-style: none;
+  counter-reset: instruction-counter;
+  padding-left: 0;
+}
+
+/* Styling for each list item in the ordered list */
+.instructions-list > li {
+  counter-increment: instruction-counter;
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Custom numbering for top-level list items */
+.instructions-list > li::before {
+  content: counter(instruction-counter) ".";
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary color */
+}
+
+/* Styling for nested unordered lists */
+.instructions-list ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  list-style-type: disc;
+}
+
+/* Ensure nested list items use bullets and do not inherit numbering */
+.instructions-list ul li {
+  padding-left: 0;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+/* Styling for serial key parts list to remove bullet points */
+.instructions-list ul.serial-key-parts {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+/* Ensure serial key parts list items have no bullets */
+.instructions-list ul.serial-key-parts li {
+  list-style-type: none;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Ensure headings are consistent with other components */
+.primary-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Styling for the verify wrapper */
+.verify-wrapper {
+  padding-top: 70px; /* Adjust based on your Navbar height */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Styling for the serial key example */
+.serial-key-example {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  max-width: 100%;
+  overflow-x: auto;
+}
 .app-card-section {
   align-items: center;
   justify-content: space-between;
