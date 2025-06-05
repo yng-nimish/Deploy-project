@@ -1,8 +1,3 @@
-/**
- * E - commerce Purchase Form Page - Website code - used to get customer Information.
- * We have Live mode and test mode for stripe here.
- */
-
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
@@ -11,18 +6,10 @@ import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
 import Terms from "./Terms";
 
-//Test Mode
-
 const stripePromise = loadStripe(
   "REDACTED"
 );
 
-/* 
-// Live Mode
-const stripePromise = loadStripe(
-  "pk_live_51PYCXa013t2ai8cx8TMVzR5XyFKBg1or1U8kZpBudEMObvxQETCZxkiqL3JNFiGdNLeFe9NhuCz58yZto5KIO4Xr00JwUxiYsc"
-);
-*/
 const PurchaseForm = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -40,25 +27,9 @@ const PurchaseForm = () => {
     email: "",
     emailList: false,
     sameAsOwner: false,
-    owners: [], // Array to hold owner information
+    owners: [],
   });
 
-  {
-    /*
-    owners: Array.from({ length: sunProductCount }, () => ({
-      firstName: "",
-      lastName: "",
-      business: "",
-      streetAddress: "",
-      city: "",
-      state: "",
-      zipCode: "",
-      country: "",
-      email: "",
-    })), */
-  }
-
-  // Calculate the number of SUN products in the cart
   const calculateSunProductQuantity = () => {
     return cartItems.reduce((count, item) => {
       const product = productsArraySun.find(
@@ -71,7 +42,6 @@ const PurchaseForm = () => {
   const numSunProducts = calculateSunProductQuantity();
 
   useEffect(() => {
-    // Initialize owner fields based on the number of SUN products
     setFormData((prev) => ({
       ...prev,
       owners: Array.from({ length: numSunProducts }, () => ({
@@ -109,11 +79,31 @@ const PurchaseForm = () => {
     }));
   };
 
+  const handleCheckboxChange = () => {
+    setFormData((prev) => ({
+      ...prev,
+      sameAsOwner: !prev.sameAsOwner,
+      owners: prev.sameAsOwner
+        ? [
+            {
+              firstName: "",
+              lastName: "",
+              business: "",
+              streetAddress: "",
+              city: "",
+              state: "",
+              zipCode: "",
+              country: "",
+              email: "",
+            },
+          ]
+        : prev.owners,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData); // Log form data
-
-    // Assume `cartItems` may contain `productsArray` and `productsArraySun`
+    console.log("Form Data:", formData);
     console.log("Cart Items:", cartItems);
 
     try {
@@ -139,7 +129,6 @@ const PurchaseForm = () => {
             },
             ownerData: formData.sameAsOwner
               ? [
-                  // Have to wrap as an Array for same as owner button
                   {
                     firstName: formData.firstName,
                     lastName: formData.lastName,
@@ -154,8 +143,7 @@ const PurchaseForm = () => {
                 ]
               : formData.owners,
             emailList: formData.emailList,
-            purchaseDate: new Date().toISOString().split("T")[0], // Assuming current date
-
+            purchaseDate: new Date().toISOString().split("T")[0],
             country: formData.country,
           }),
         }
@@ -165,13 +153,7 @@ const PurchaseForm = () => {
       console.log("API Response:", data);
       console.log("Response Status:", response.status);
 
-      let sessionId;
-      try {
-        const parsedBody = JSON.parse(data.body);
-        sessionId = parsedBody.sessionId;
-      } catch (err) {
-        console.error("Failed to parse sessionId from response body", err);
-      }
+      const sessionId = data.sessionId;
 
       if (response.ok && sessionId) {
         const stripe = await stripePromise;
@@ -187,63 +169,11 @@ const PurchaseForm = () => {
         console.error("Invalid response or sessionId:", data);
         navigate("/error");
       }
-
-      /*
-      if (response.ok && data.url) {
-        window.location.href = data.url; // forwarding customer to stripe. now
-      } else {
-        console.error("Error redirecting to Stripe Checkout");
-        console.error("Error response data:", data);
-        console.error("Error response status:", response.status);
-        navigate("/error"); // Redirect to an error page or handle error
-      }
-        */
     } catch (error) {
-      console.error("Submit error:", error); // Debug statement
-      navigate("/error"); // Redirect to an error page or handle error
+      console.error("Submit error:", error);
+      navigate("/error");
     }
   };
-
-  const handleCheckboxChange = () => {
-    setFormData((prev) => ({
-      ...prev,
-      sameAsOwner: !prev.sameAsOwner,
-      owners: prev.sameAsOwner
-        ? [
-            {
-              firstName: "",
-              lastName: "",
-              business: "",
-              streetAddress: "",
-              city: "",
-              state: "",
-              zipCode: "",
-              country: "",
-              email: "",
-            },
-          ]
-        : prev.owners,
-    }));
-  };
-
-  {
-    /*
-        ? Array.from({ length: sunProductCount }, () => ({
-            firstName: "",
-            lastName: "",
-            business: "",
-            streetAddress: "",
-            city: "",
-            state: "",
-            zipCode: "",
-            country: "",
-            email: "",
-          }))
-        : prev.owners,
-    }));
-    };
-    */
-  }
 
   return (
     <div className="about-wrapper">
@@ -267,9 +197,8 @@ const PurchaseForm = () => {
                     Buyer's information{" "}
                   </h2>
                 </div>
-                {/* Buyer's Information Fields */}
                 <div className="input-box">
-                  <label>First Name: </label> &nbsp;
+                  <label>First Name: </label>
                   <input
                     type="text"
                     name="firstName"
@@ -281,7 +210,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Last Name:</label> &nbsp;
+                  <label>Last Name:</label>
                   <input
                     type="text"
                     name="lastName"
@@ -292,7 +221,7 @@ const PurchaseForm = () => {
                     required
                   />
                   <div className="input-box">
-                    <label>Business/organization </label> &nbsp;
+                    <label>Business/organization </label>
                     <input
                       type="text"
                       name="business"
@@ -304,7 +233,7 @@ const PurchaseForm = () => {
                   </div>
                 </div>
                 <div className="input-box">
-                  <label>Street Address:</label> &nbsp;
+                  <label>Street Address:</label>
                   <input
                     type="text"
                     name="streetAddress"
@@ -316,7 +245,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>City/Town:</label> &nbsp;
+                  <label>City/Town:</label>
                   <input
                     type="text"
                     name="city"
@@ -328,9 +257,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  {" "}
-                  &nbsp;
-                  <label>State/Province:</label> &nbsp;
+                  <label>State/Province:</label>
                   <input
                     type="text"
                     name="state"
@@ -342,7 +269,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Zip Code:</label> &nbsp;
+                  <label>Zip Code:</label>
                   <input
                     type="text"
                     name="zipCode"
@@ -354,7 +281,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Country:</label> &nbsp;
+                  <label>Country:</label>
                   <input
                     type="text"
                     name="country"
@@ -366,7 +293,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Email:</label> &nbsp;
+                  <label>Email:</label>
                   <input
                     type="email"
                     name="email"
@@ -378,7 +305,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Subscribe to email list:</label> &nbsp;
+                  <label>Subscribe to email list:</label>
                   <input
                     type="checkbox"
                     name="emailList"
@@ -388,10 +315,9 @@ const PurchaseForm = () => {
                 </div>
                 <div className="input-box">
                   <p>
-                    {" "}
                     <NavLink to="/terms">Terms </NavLink>
                   </p>
-                  <label>I Agree to the Terms:</label> &nbsp;
+                  <label>I Agree to the Terms:</label>
                   <input
                     type="checkbox"
                     name="emailList"
@@ -401,7 +327,7 @@ const PurchaseForm = () => {
                   />
                 </div>
                 <div className="input-box">
-                  <label>Buyer information same as owner: </label> &nbsp;
+                  <label>Buyer information same as owner: </label>
                   <input
                     type="checkbox"
                     name="sameAsOwner"
@@ -411,8 +337,6 @@ const PurchaseForm = () => {
                   <br />
                   <br />
                 </div>
-                {/* Render Owner Fields Dynamically */}
-                {/* Render Owner Fields Dynamically */}
                 {!formData.sameAsOwner &&
                   formData.owners.map((owner, index) => (
                     <div key={index}>
@@ -445,7 +369,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>Business/Organization:</label> &nbsp;
+                        <label>Business/Organization:</label>
                         <input
                           type="text"
                           name="business"
@@ -456,7 +380,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>Street Address:</label> &nbsp;
+                        <label>Street Address:</label>
                         <input
                           type="text"
                           name="streetAddress"
@@ -468,7 +392,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>City/Town:</label> &nbsp;
+                        <label>City/Town:</label>
                         <input
                           type="text"
                           name="city"
@@ -480,7 +404,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>State/Province:</label> &nbsp;
+                        <label>State/Province:</label>
                         <input
                           type="text"
                           name="state"
@@ -492,7 +416,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>Zip Code:</label> &nbsp;
+                        <label>Zip Code:</label>
                         <input
                           type="text"
                           name="zipCode"
@@ -504,7 +428,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>Country:</label> &nbsp;
+                        <label>Country:</label>
                         <input
                           type="text"
                           name="country"
@@ -516,7 +440,7 @@ const PurchaseForm = () => {
                         />
                       </div>
                       <div className="input-box">
-                        <label>Email:</label> &nbsp;
+                        <label>Email:</label>
                         <input
                           type="email"
                           name="email"
@@ -525,7 +449,7 @@ const PurchaseForm = () => {
                           value={owner.email}
                           onChange={(e) => handleOwnerChange(index, e)}
                           required
-                        />{" "}
+                        />
                         <br />
                       </div>
                       <br />
@@ -533,9 +457,9 @@ const PurchaseForm = () => {
                   ))}
                 <button
                   style={{
-                    backgroundColor: "#FFD700", // Bright yellow
-                    borderColor: "#FFD700", // Match border
-                    color: "black", // Ensure text is readable
+                    backgroundColor: "#FFD700",
+                    borderColor: "#FFD700",
+                    color: "black",
                     fontSize: "1.5rem",
                   }}
                   type="submit"
@@ -545,7 +469,7 @@ const PurchaseForm = () => {
                 <Link to="/purchase">
                   <button color="primary" href="#">
                     <FiArrowLeft />
-                    &nbsp;&nbsp;&nbsp; Go Back &nbsp;&nbsp;&nbsp;
+                    &nbsp; Go Back &nbsp;
                   </button>
                 </Link>
               </form>
