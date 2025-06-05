@@ -37,11 +37,12 @@ const PurchaseTP = () => {
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const firstName = urlParams.get("firstName");
-    const lastName = urlParams.get("lastName");
+    const firstName = urlParams.get("first_name");
+    const lastName = urlParams.get("last_name");
+    const priceIdsParam = urlParams.get("price_id");
+    const ownerDataParam = urlParams.get("owner_data");
+
     const itemsParam = urlParams.get("items");
-    const priceIdsParam = urlParams.get("priceIds");
-    const ownerDataParam = urlParams.get("ownerData");
     const sessionId = urlParams.get("session_id");
 
     console.log("URL:", { url: window.location.href });
@@ -183,7 +184,8 @@ const PurchaseTP = () => {
           <div className="Purchase-Container">
             <h1 className="primary-heading">Thank You for Your Purchase!</h1>
             <h2 className="primary-heading">
-              Welcome, {userData.firstName} {userData.lastName}!
+              Welcome To Your Number Guaranteed, {userData.firstName}{" "}
+              {userData.lastName}!
             </h2>
 
             {loadingKeys && <p>Loading serial keys...</p>}
@@ -287,24 +289,6 @@ const PurchaseTP = () => {
             </div>
           </div>
         </div>
-
-        <CCard color="white" className="mb-3">
-          <CRow className="g-0">
-            <CCol md={8}>
-              <CCardBody>
-                <CCardTitle>Verify</CCardTitle>
-                <CCardText>Verify your serial key</CCardText>
-              </CCardBody>
-            </CCol>
-            <CCol md={4} className="mb-3 pl-3 my-auto col-6">
-              <Link to="/verify">
-                <CButton color="primary">
-                  Verify <FiArrowRight />
-                </CButton>
-              </Link>
-            </CCol>
-          </CRow>
-        </CCard>
       </div>
     </div>
   );

@@ -11,15 +11,11 @@ const SerialKeyVerification = () => {
   const { user } = useAuthenticator((context) => [context.user]);
   const navigate = useNavigate();
 
-  // In SerialKeyVerification.js
   const verifySerialKey = async () => {
     setError(null);
     setLoading(true);
 
-    // Normalize serial key to match DynamoDB format (with newlines or spaces)
-    const formattedSerialKey = serialKey
-      .replace(/\s+/g, "\n") // Convert spaces to newlines
-      .trim(); // Remove trailing whitespace
+    const formattedSerialKey = serialKey.replace(/\s+/g, "\n").trim();
     if (!formattedSerialKey) {
       setError("Please enter a valid serial key.");
       setLoading(false);
@@ -64,7 +60,6 @@ const SerialKeyVerification = () => {
     }
   };
 
-  // Handle Enter key press for form submission
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       verifySerialKey();
@@ -73,15 +68,42 @@ const SerialKeyVerification = () => {
 
   return (
     <div className="verify-wrapper">
-      <div className="container">
-        <h1 className="primary-heading">Verify Your Serial Key</h1>
-        <p>
+      <div className="container-fluid">
+        <h1 className="primary-heading mb-4">Verify Your Serial Key</h1>
+        <p className="lead mb-3">
           Enter the serial key provided on your purchase page to download your
           file.
         </p>
-        <div className="form-group">
+        <div className="instructions-section mb-4">
+          <h2 className="h4 mb-3">How to Enter Your Serial Key</h2>
+          <ul className="instructions-list">
+            <li>
+              <strong>Locate Your Serial Key:</strong> You will Find your Serial
+              Key on your welcome email that you received after purchasing your
+              SUN
+              <ul className="serial-key-parts">
+                <li>384216707</li>
+                <li>1880F0000</li>
+                <li>415928043</li>
+              </ul>
+              (e.g., 384216707 1880F0000 415928043 ).
+            </li>
+            <li>
+              <strong>Format the Serial Key:</strong> Enter the serial key as
+              three nine-digit strings, separated by spaces. For example:
+              <pre className="serial-key-example mt-2 p-3 bg-light border rounded">
+                384216707 1880F0000 415928043
+              </pre>
+            </li>
+            <li>
+              <strong>Note:</strong> Ensure each line is a nine-digit string
+              with a single space between each string.
+            </li>
+          </ul>
+        </div>
+        <div className="form-group mb-4">
           <label htmlFor="serialKeyInput" className="form-label">
-            Serial Key
+            <h2 className="h4 mb-3">Serial Key </h2>
           </label>
           <input
             id="serialKeyInput"
@@ -90,7 +112,7 @@ const SerialKeyVerification = () => {
             value={serialKey}
             onChange={(e) => setSerialKey(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Enter your serial key"
+            placeholder="Enter your serial key (e.g., 384216707 1880F0000 415928043)"
             disabled={loading}
           />
           {error && <div className="invalid-feedback">{error}</div>}
@@ -114,7 +136,6 @@ const SerialKeyVerification = () => {
   );
 };
 
-// Wrap the component with Authenticator
 const WrappedSerialKeyVerification = () => {
   return (
     <Authenticator>

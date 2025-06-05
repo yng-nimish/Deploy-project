@@ -9,6 +9,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
+import Terms from "./Terms";
+
 //Test Mode
 
 const stripePromise = loadStripe(
@@ -163,20 +165,29 @@ const PurchaseForm = () => {
       console.log("API Response:", data);
       console.log("Response Status:", response.status);
 
-      if (response.ok && data.sessionId) {
+      let sessionId;
+      try {
+        const parsedBody = JSON.parse(data.body);
+        sessionId = parsedBody.sessionId;
+      } catch (err) {
+        console.error("Failed to parse sessionId from response body", err);
+      }
+
+      if (response.ok && sessionId) {
         const stripe = await stripePromise;
         const { error } = await stripe.redirectToCheckout({
-          sessionId: data.sessionId,
+          sessionId,
         });
 
         if (error) {
-          console.error("Error redirecting to Stripe Checkout:", error);
+          console.error("Stripe redirect error:", error);
           navigate("/error");
         }
       } else {
         console.error("Invalid response or sessionId:", data);
         navigate("/error");
       }
+
       /*
       if (response.ok && data.url) {
         window.location.href = data.url; // forwarding customer to stripe. now
@@ -243,7 +254,8 @@ const PurchaseForm = () => {
               <p>
                 <h7 className="primary-heading-welcome"> Purchase!! </h7>
                 <h1 className="primary-heading">
-                  Fill in the details to continue Purchase!!
+                  Fill in the details to continue Purchase!! and become a member
+                  of Your Number Guaranteed
                 </h1>
               </p>
             </div>
@@ -372,6 +384,20 @@ const PurchaseForm = () => {
                     name="emailList"
                     checked={formData.emailList}
                     onChange={handleChange}
+                  />
+                </div>
+                <div className="input-box">
+                  <p>
+                    {" "}
+                    <NavLink to="/terms">Terms </NavLink>
+                  </p>
+                  <label>I Agree to the Terms:</label> &nbsp;
+                  <input
+                    type="checkbox"
+                    name="emailList"
+                    checked={formData.emailList}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div className="input-box">
@@ -505,7 +531,17 @@ const PurchaseForm = () => {
                       <br />
                     </div>
                   ))}
-                <button type="submit">Continue to Checkout...</button>
+                <button
+                  style={{
+                    backgroundColor: "#FFD700", // Bright yellow
+                    borderColor: "#FFD700", // Match border
+                    color: "black", // Ensure text is readable
+                    fontSize: "1.5rem",
+                  }}
+                  type="submit"
+                >
+                  Proceed to Checkout...
+                </button>
                 <Link to="/purchase">
                   <button color="primary" href="#">
                     <FiArrowLeft />
