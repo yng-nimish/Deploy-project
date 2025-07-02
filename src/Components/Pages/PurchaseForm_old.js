@@ -26,6 +26,7 @@ const PurchaseForm = () => {
     country: "",
     email: "",
     emailList: false,
+    sameAsOwner: false,
     owners: [],
   });
 
@@ -78,6 +79,28 @@ const PurchaseForm = () => {
     }));
   };
 
+  const handleCheckboxChange = () => {
+    setFormData((prev) => ({
+      ...prev,
+      sameAsOwner: !prev.sameAsOwner,
+      owners: prev.sameAsOwner
+        ? [
+            {
+              firstName: "",
+              lastName: "",
+              business: "",
+              streetAddress: "",
+              city: "",
+              state: "",
+              zipCode: "",
+              country: "",
+              email: "",
+            },
+          ]
+        : prev.owners,
+    }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
@@ -104,7 +127,21 @@ const PurchaseForm = () => {
               country: formData.country,
               email: formData.email,
             },
-            ownerData: formData.owners,
+            ownerData: formData.sameAsOwner
+              ? [
+                  {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    business: formData.business,
+                    streetAddress: formData.streetAddress,
+                    city: formData.city,
+                    state: formData.state,
+                    zipCode: formData.zipCode,
+                    country: formData.country,
+                    email: formData.email,
+                  },
+                ]
+              : formData.owners,
             emailList: formData.emailList,
             purchaseDate: new Date().toISOString().split("T")[0],
             country: formData.country,
@@ -148,10 +185,7 @@ const PurchaseForm = () => {
                 <h7 className="primary-heading-welcome"> Purchase!! </h7>
                 <h1 className="primary-heading">
                   Fill in the details to continue Purchase!! and become a member
-                  of Your Number Guaranteed <br></br>
-                  please find and fill in the details of the owner , the owner
-                  is who will have access to our suite of free applications .
-                  Once purchased , the SUN is not transferrable
+                  of Your Number Guaranteed
                 </h1>
               </p>
             </div>
@@ -292,129 +326,135 @@ const PurchaseForm = () => {
                     required
                   />
                 </div>
-                {formData.owners.map((owner, index) => (
-                  <div key={index}>
-                    <h2 className="primary-heading-welcome">
-                      {" "}
-                      Owner {index + 1}{" "}
-                    </h2>
-                    <label>
-                      Please find and fill in the details of the owner , the
-                      owner is who will have access to our suite of free
-                      applications . Once purchased , the SUN is not
-                      transferrable
-                    </label>
-                    <div className="input-box">
-                      <label>First Name:</label>
-                      <input
-                        type="text"
-                        name="firstName"
-                        className="field"
-                        placeholder="Enter Owner's First Name"
-                        value={owner.firstName}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Last Name:</label>
-                      <input
-                        type="text"
-                        name="lastName"
-                        className="field"
-                        placeholder="Enter Owner's Last Name"
-                        value={owner.lastName}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Business/Organization:</label>
-                      <input
-                        type="text"
-                        name="business"
-                        className="field"
-                        placeholder="Business/Organization Name"
-                        value={owner.business}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Street Address:</label>
-                      <input
-                        type="text"
-                        name="streetAddress"
-                        className="field"
-                        placeholder="Enter your Street Address"
-                        value={owner.streetAddress}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>City/Town:</label>
-                      <input
-                        type="text"
-                        name="city"
-                        className="field"
-                        placeholder="Enter your City/Town"
-                        value={owner.city}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>State/Province:</label>
-                      <input
-                        type="text"
-                        name="state"
-                        className="field"
-                        placeholder="Enter your State/Province"
-                        value={owner.state}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Zip Code:</label>
-                      <input
-                        type="text"
-                        name="zipCode"
-                        className="field"
-                        placeholder="Enter Zipcode"
-                        value={owner.zipCode}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Country:</label>
-                      <input
-                        type="text"
-                        name="country"
-                        className="field"
-                        placeholder="Enter Country"
-                        value={owner.country}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
-                    </div>
-                    <div className="input-box">
-                      <label>Email:</label>
-                      <input
-                        type="email"
-                        name="email"
-                        className="field"
-                        placeholder="Enter your Email"
-                        value={owner.email}
-                        onChange={(e) => handleOwnerChange(index, e)}
-                        required
-                      />
+                <div className="input-box">
+                  <label>Buyer information same as owner: </label>
+                  <input
+                    type="checkbox"
+                    name="sameAsOwner"
+                    checked={formData.sameAsOwner}
+                    onChange={handleCheckboxChange}
+                  />
+                  <br />
+                  <br />
+                </div>
+                {!formData.sameAsOwner &&
+                  formData.owners.map((owner, index) => (
+                    <div key={index}>
+                      <h2 className="primary-heading-welcome">
+                        {" "}
+                        Owner {index + 1}{" "}
+                      </h2>
+                      <div className="input-box">
+                        <label>First Name:</label>
+                        <input
+                          type="text"
+                          name="firstName"
+                          className="field"
+                          placeholder="Enter Owner's First Name"
+                          value={owner.firstName}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Last Name:</label>
+                        <input
+                          type="text"
+                          name="lastName"
+                          className="field"
+                          placeholder="Enter Owner's Last Name"
+                          value={owner.lastName}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Business/Organization:</label>
+                        <input
+                          type="text"
+                          name="business"
+                          className="field"
+                          placeholder="Business/Organization Name"
+                          value={owner.business}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Street Address:</label>
+                        <input
+                          type="text"
+                          name="streetAddress"
+                          className="field"
+                          placeholder="Enter your Street Address"
+                          value={owner.streetAddress}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>City/Town:</label>
+                        <input
+                          type="text"
+                          name="city"
+                          className="field"
+                          placeholder="Enter your City/Town"
+                          value={owner.city}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>State/Province:</label>
+                        <input
+                          type="text"
+                          name="state"
+                          className="field"
+                          placeholder="Enter your State/Province"
+                          value={owner.state}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Zip Code:</label>
+                        <input
+                          type="text"
+                          name="zipCode"
+                          className="field"
+                          placeholder="Enter Zipcode"
+                          value={owner.zipCode}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Country:</label>
+                        <input
+                          type="text"
+                          name="country"
+                          className="field"
+                          placeholder="Enter Country"
+                          value={owner.country}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                      </div>
+                      <div className="input-box">
+                        <label>Email:</label>
+                        <input
+                          type="email"
+                          name="email"
+                          className="field"
+                          placeholder="Enter your Email"
+                          value={owner.email}
+                          onChange={(e) => handleOwnerChange(index, e)}
+                          required
+                        />
+                        <br />
+                      </div>
                       <br />
                     </div>
-                    <br />
-                  </div>
-                ))}
+                  ))}
                 <button
                   style={{
                     backgroundColor: "#FFD700",
@@ -428,7 +468,8 @@ const PurchaseForm = () => {
                 </button>
                 <Link to="/purchase">
                   <button color="primary" href="#">
-                    <FiArrowLeft />  Go Back  
+                    <FiArrowLeft />
+                    &nbsp; Go Back &nbsp;
                   </button>
                 </Link>
               </form>

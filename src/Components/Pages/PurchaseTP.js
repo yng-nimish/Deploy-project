@@ -22,7 +22,6 @@ const PurchaseTP = () => {
     items: [],
     serialKeys: [],
     priceIds: [],
-    ownerData: [],
   });
 
   const [products, setProducts] = useState([]);
@@ -40,8 +39,6 @@ const PurchaseTP = () => {
     const firstName = urlParams.get("first_name");
     const lastName = urlParams.get("last_name");
     const priceIdsParam = urlParams.get("price_id");
-    const ownerDataParam = urlParams.get("owner_data");
-
     const itemsParam = urlParams.get("items");
     const sessionId = urlParams.get("session_id");
 
@@ -51,7 +48,6 @@ const PurchaseTP = () => {
       lastName,
       itemsParam,
       priceIdsParam,
-      ownerDataParam,
       sessionId,
     });
 
@@ -60,13 +56,6 @@ const PurchaseTP = () => {
       items = JSON.parse(decodeURIComponent(itemsParam)) || [];
     } catch (err) {
       console.error("Error parsing items:", { error: err });
-    }
-
-    let ownerData = [];
-    try {
-      ownerData = JSON.parse(decodeURIComponent(ownerDataParam)) || [];
-    } catch (err) {
-      console.error("Error parsing owner data:", { error: err });
     }
 
     let priceIds = [];
@@ -84,23 +73,21 @@ const PurchaseTP = () => {
           const response = await axios.get(
             `https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
           );
-          const serialKeys = response.data.serialKeys.map(
-            (serialKey, serialIndex) => ({
-              serialKey,
-              owner: ownerData[serialIndex] || {},
-            })
-          );
+          console.log("Serial Keys Response:", response.data);
           setUserData({
             firstName: firstName || "",
             lastName: lastName || "",
             items,
-            serialKeys,
+            serialKeys: response.data.serialKeys,
             priceIds,
-            ownerData,
           });
           setLoadingKeys(false);
         } catch (error) {
-          console.error("Error fetching serial keys:", { error });
+          console.error("Error fetching serial keys:", {
+            message: error.message,
+            status: error.response?.status,
+            stack: error.stack,
+          });
           if (
             error.response &&
             error.response.status === 404 &&
@@ -122,7 +109,6 @@ const PurchaseTP = () => {
               items,
               serialKeys: [],
               priceIds,
-              ownerData,
             });
           }
         }
@@ -139,7 +125,6 @@ const PurchaseTP = () => {
           items,
           serialKeys: [],
           priceIds,
-          ownerData,
         });
       }
     };
@@ -161,25 +146,6 @@ const PurchaseTP = () => {
     userData.priceIds.includes("price_1PxoiI013t2ai8cxpSKPhDJl") &&
     userData.serialKeys &&
     userData.serialKeys.length > 0;
-
-  const formatSerialGrid = (serialKey) => {
-    const rows = [
-      ["A1", "A2", "A3", "J1", "B1", "B2", "B3", "J1", "C1", "C2", "C3"],
-      ["D1", "D2", "D3", "J1", "E1", "E2", "E3", "J1", "F1", "F2", "F3"],
-      ["G1", "G2", "G3", "J1", "H1", "H2", "H3", "J1", "I1", "I2", "I3"],
-    ];
-    const grid = {};
-    let keyIndex = 0;
-    rows.flat().forEach((cell) => {
-      grid[cell] = serialKey[keyIndex] || "";
-      keyIndex++;
-    });
-
-    const formatCell = (value) => String(value || "");
-    const formatRow = (row) =>
-      row.map((cell) => formatCell(grid[cell])).join("");
-    return rows.map((row) => formatRow(row).trim()).join("\n");
-  };
 
   return (
     <div className="about-wrapper">
@@ -224,9 +190,7 @@ const PurchaseTP = () => {
                         fontFamily: "Courier New, monospace",
                       }}
                     >
-                      {console.log(
-                        "Formatting using p tag serialKey\n" + key.serialKey
-                      )}
+                      {console.log("Formatting serialKey\n" + key.serialKey)}
                       {key.serialKey || "Generating Serial Key"}
                     </pre>
                     <h3>Owner Details:</h3>

@@ -102,14 +102,20 @@ const Terms = () => {
                         free applications. These applications are limited to use
                         by owner only. The owner of the SUN agrees not to
                         share/sell/rent or publish the free applications with/to
-                        anyone else. We reserve the right to limit the number of
-                        times a member can download the same applications. In
-                        simple terms we want members to be able to have
-                        applications on their phone, and or computer and or
-                        tablet. If you get a new phone or computer, then you
-                        should be able to download applications on it.
-                        Essentially, we are trying to limit copyright
-                        violations. We will take legal actions against
+                        anyone else. These applications are under development,
+                        and will be rolling out over time. If a member tries to
+                        or changes any of the content (ie. random numbers
+                        between 000 and 999or their structure) of their SUN,
+                        then the member's membership will be terminated, all
+                        partnership applications will be terminated, and access
+                        to any applications will be terminated. We reserve the
+                        right to limit the number of times a member can download
+                        the same applications. In simple terms we want members
+                        to be able to have applications on their phone, and or
+                        computer and or tablet. If you get a new phone or
+                        computer, then you should be able to download
+                        applications on it. Essentially, we are trying to limit
+                        copyright violations. We will take legal actions against
                         purposeful copyright violations, to recover our costs,
                         lost profits, and seek penalties for people or
                         organizations that intentionally violate our Copyrights.
@@ -125,6 +131,14 @@ const Terms = () => {
                         SUN with trusted Partners. <br />
                         <br />
                         If you lose your SUN, then it is not recoverable.
+                        <br />
+                        <br />
+                        If you are using your SUN with an email address which
+                        could be denied for lost then you may lose access to
+                        your SUN and its applications.Ex : if your employer
+                        email is used and then terminated , in the future , you
+                        will lose your SUN and your applications tied to that
+                        SUN
                         <br />
                         <br /> You have read and agreed to our $1,000,000
                         Guarantee. <br />
