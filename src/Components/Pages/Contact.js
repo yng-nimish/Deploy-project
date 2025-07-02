@@ -170,12 +170,12 @@ const Contact = () => {
             <div className="email-Container">
               <p>
                 {" "}
-                CEO :
+                For all Sales Related Inquiries : CEO :
                 <a href="mailto:ceo@yournumberguaranteed.com">
                   ceo@yournumberguaranteed.com
                 </a>
                 <br />
-                Editor:
+                For all Technical paper related Inquiries : Editor:
                 <a href="mailto:editor@yournumberguaranteed.com">
                   editor@yournumberguaranteed.com
                 </a>
