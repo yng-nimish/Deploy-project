@@ -34,6 +34,23 @@ const Download = () => {
       ? `${serialNumber.replace(/F(\d{4})/, "F $1")}.zip`
       : "Unknown";
 
+  // Retry fetch with exponential backoff
+  const fetchWithRetry = async (url, options, retries = 3, delay = 1000) => {
+    for (let i = 0; i < retries; i++) {
+      try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+          const data = await response.json();
+          throw new Error(data.error || `HTTP ${response.status}`);
+        }
+        return response;
+      } catch (e) {
+        if (i === retries - 1) throw e;
+        await new Promise((resolve) => setTimeout(resolve, delay * 2 ** i));
+      }
+    }
+  };
+
   // Check download status on component mount
   useEffect(() => {
     const checkDownloadStatus = async () => {
@@ -45,8 +62,8 @@ const Download = () => {
       }
 
       try {
-        const response = await fetch(
-          "https://7z52s5d6pa.execute-api.us-east-1.amazonaws.com/Deploy/GeneratePreSignedURL",
+        const response = await fetchWithRetry(
+          "https://ndrlnyi5yd.execute-api.us-east-1.amazonaws.com/Deploy/GeneratePreSignedURL",
           {
             method: "POST",
             headers: {
@@ -55,7 +72,7 @@ const Download = () => {
             body: JSON.stringify({
               fileKey,
               serialKey,
-              email: user.signInDetails.loginId, // Include email
+              email: user.signInDetails.loginId,
             }),
           }
         );
@@ -67,8 +84,6 @@ const Download = () => {
           data.error.includes("already downloaded")
         ) {
           setHasDownloaded(true);
-        } else if (!response.ok) {
-          setError(data.error || "Failed to check download status.");
         }
       } catch (error) {
         console.error("Check download status error:", error);
@@ -92,8 +107,8 @@ const Download = () => {
     }
 
     try {
-      const response = await fetch(
-        "https://7z52s5d6pa.execute-api.us-east-1.amazonaws.com/Deploy/GeneratePreSignedURL",
+      const response = await fetchWithRetry(
+        "https://ndrlnyi5yd.execute-api.us-east-1.amazonaws.com/Deploy/GeneratePreSignedURL",
         {
           method: "POST",
           headers: {
@@ -102,28 +117,80 @@ const Download = () => {
           body: JSON.stringify({
             fileKey,
             serialKey,
-            email: user.signInDetails.loginId, // Include email
+            email: user.signInDetails.loginId,
           }),
         }
       );
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.url && data.downloadId) {
         Swal.fire({
           title: "Download Started",
           text: `Downloading SUN for ${fileName}`,
           icon: "success",
-        }).then(() => {
+          timer: 1500,
+          showConfirmButton: false,
+        }).then(async () => {
+          // Initiate download
           window.open(data.url, "_blank");
-          setHasDownloaded(true); // Disable button after successful download
+
+          // Confirm download with retry
+          try {
+            const confirmResponse = await fetchWithRetry(
+              "https://723gmcbiwi.execute-api.us-east-1.amazonaws.com/Deploy/ConfirmDownload",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  downloadId: data.downloadId,
+                  serialKey,
+                  email: user.signInDetails.loginId,
+                }),
+              }
+            );
+
+            const confirmData = await confirmResponse.json();
+
+            if (!confirmResponse.ok) {
+              throw new Error(
+                confirmData.error ||
+                  `ConfirmDownload failed with status ${confirmResponse.status}`
+              );
+            }
+
+            setHasDownloaded(true); // Disable button after confirmation
+          } catch (confirmError) {
+            console.error("Download confirmation error:", confirmError);
+            Swal.fire({
+              title: "Confirmation Error",
+              text: `Download started, but confirmation failed: ${confirmError.message}. Contact support if needed.`,
+              icon: "warning",
+            });
+          }
         });
       } else {
-        setError(data.error || "Failed to generate download URL.");
+        throw new Error(data.error || "Failed to generate download URL.");
       }
     } catch (error) {
       console.error("Download error:", error);
-      setError("Failed to initiate download. Please try again later.");
+      if (error.message.includes("already downloaded")) {
+        setHasDownloaded(true);
+        Swal.fire({
+          title: "Download Limit Reached",
+          text: "You have already downloaded your SUN.",
+          icon: "info",
+        });
+      } else {
+        setError(error.message || "Failed to initiate download.");
+        Swal.fire({
+          title: "Error",
+          text: error.message || "Failed to initiate download.",
+          icon: "error",
+        });
+      }
     } finally {
       setLoading(false);
     }
@@ -176,7 +243,7 @@ const Download = () => {
                 onClick={handleDownload}
                 disabled={loading || hasDownloaded}
               >
-                {loading ? "Generating URL..." : "Download"}
+                {loading ? "Processing..." : "Download"}
               </CButton>
             </CCol>
           </CRow>

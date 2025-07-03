@@ -134,11 +134,10 @@ const Terms = () => {
                         <br />
                         <br />
                         If you are using your SUN with an email address which
-                        could be denied for lost then you may lose access to
-                        your SUN and its applications.Ex : if your employer
-                        email is used and then terminated , in the future , you
-                        will lose your SUN and your applications tied to that
-                        SUN
+                        could be denied or lost then you may lose access to your
+                        SUN and its applications.Ex : if your employer email is
+                        used and then terminated , in the future , you will lose
+                        your SUN and your applications tied to that SUN.
                         <br />
                         <br /> You have read and agreed to our $1,000,000
                         Guarantee. <br />

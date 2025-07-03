@@ -74,11 +74,24 @@ const PurchaseTP = () => {
             `https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/getSerialKeys/${sessionId}`
           );
           console.log("Serial Keys Response:", response.data);
+
+          // Sort serial keys based on the number after "F" in the second line
+          const sortedSerialKeys = response.data.serialKeys.sort((a, b) => {
+            // Extract the second line from serialKey string
+            const getSerialNumber = (key) => {
+              const lines = key.serialKey.split("\n");
+              const secondLine = lines[1] || ""; // Second line (e.g., "7422F0008")
+              const match = secondLine.match(/F(\d+)/); // Extract number after "F"
+              return match ? parseInt(match[1], 10) : 0; // Convert to number, default to 0 if not found
+            };
+            return getSerialNumber(a) - getSerialNumber(b);
+          });
+
           setUserData({
             firstName: firstName || "",
             lastName: lastName || "",
             items,
-            serialKeys: response.data.serialKeys,
+            serialKeys: sortedSerialKeys,
             priceIds,
           });
           setLoadingKeys(false);

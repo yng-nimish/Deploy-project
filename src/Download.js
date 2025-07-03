@@ -176,7 +176,13 @@ const Download = () => {
       }
     } catch (error) {
       console.error("Download error:", error);
-      if (error.message.includes("already downloaded")) {
+      if (error.message.includes("NoSuchKey")) {
+        Swal.fire({
+          title: "SUN Under Construction",
+          text: "Your SUN is under construction. We will notify you when it’s ready to download.",
+          icon: "info",
+        });
+      } else if (error.message.includes("already downloaded")) {
         setHasDownloaded(true);
         Swal.fire({
           title: "Download Limit Reached",
