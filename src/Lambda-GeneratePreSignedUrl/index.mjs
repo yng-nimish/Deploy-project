@@ -1,10 +1,19 @@
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import pkg from "@aws-sdk/lib-dynamodb";
+const { DynamoDBDocumentClient, ScanCommand } = pkg;
+import { v4 as uuidv4 } from "uuid";
 
 const s3Client = new S3Client({ region: "us-east-1" });
+const dynamoDBClient = new DynamoDBClient({ region: "ca-central-1" });
+const dynamoDB = DynamoDBDocumentClient.from(dynamoDBClient);
 
 export const handler = async (event) => {
   try {
+    // Log the full event for debugging
+    console.log("Full event:", JSON.stringify(event, null, 2));
+
     // Parse request body
     let body;
     try {
@@ -16,45 +25,163 @@ export const handler = async (event) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
         },
         body: JSON.stringify({ error: "Invalid JSON in request body." }),
       };
     }
 
-    const { fileKey } = body;
+    const { fileKey, serialKey, email } = body;
+
+    // Log received body
+    console.log("Received request body:", { fileKey, serialKey, email });
 
     // Validate input
-    if (!fileKey?.trim()) {
+    const missingFields = [];
+    if (!fileKey?.trim()) missingFields.push("fileKey");
+    if (!serialKey?.trim()) missingFields.push("serialKey");
+    if (!email?.trim()) missingFields.push("email");
+
+    if (missingFields.length > 0) {
+      console.error("Missing or empty fields:", missingFields.join(", "));
       return {
         statusCode: 400,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
         },
-        body: JSON.stringify({ error: "File key is required." }),
+        body: JSON.stringify({
+          error: `Missing or empty fields: ${missingFields.join(", ")}`,
+          received: { fileKey, serialKey, email },
+        }),
       };
     }
 
-    // Extract serial number (e.g., F0000 from F7410347907421F0000473272182.zip)
-    const serialNumberMatch = fileKey.match(/F\d{4}/);
-    if (!serialNumberMatch) {
+    // Normalize serial key to match VerifySerialKey logic
+    const normalizedSerialKey = serialKey.replace(/\s+/g, "\n").trim();
+    const serialKeyVariations = [
+      normalizedSerialKey,
+      normalizedSerialKey + "\n",
+      normalizedSerialKey + "\n\n",
+      normalizedSerialKey.replace(/\n/g, ""),
+    ];
+
+    let customer;
+    // Try each serial key variation
+    for (const key of serialKeyVariations) {
+      const params = {
+        TableName: "CustomerTable",
+        FilterExpression: "contains(serialKey, :serialKey)",
+        ExpressionAttributeValues: {
+          ":serialKey": key,
+        },
+      };
+
+      try {
+        const result = await dynamoDB.send(new ScanCommand(params));
+        console.log(
+          "DynamoDB scan result for key:",
+          key,
+          "Items:",
+          result.Items
+        );
+
+        if (result.Items && result.Items.length > 0) {
+          // Check ownerData for email match
+          const matchingItem = result.Items.find((item) => {
+            let ownerData = [];
+            try {
+              ownerData = Array.isArray(item.ownerData)
+                ? item.ownerData
+                : typeof item.ownerData === "string" && item.ownerData
+                ? JSON.parse(item.ownerData)
+                : [];
+              if (!Array.isArray(ownerData)) ownerData = [];
+            } catch (e) {
+              console.error("Error parsing ownerData:", item, e.message);
+              return false;
+            }
+            console.log("ownerData:", ownerData, "Checking email:", email);
+            return ownerData.some(
+              (owner) =>
+                owner.email && owner.email.toLowerCase() === email.toLowerCase()
+            );
+          });
+
+          if (matchingItem) {
+            customer = matchingItem;
+            console.log(
+              "Found matching customer with serialKey:",
+              key,
+              "and email:",
+              email
+            );
+            break;
+          }
+        }
+      } catch (e) {
+        console.error("DynamoDB scan failed for key:", key, e.message, e.stack);
+        continue;
+      }
+    }
+
+    if (!customer) {
+      console.error(
+        "Customer not found for email:",
+        email,
+        "and serialKey variations:",
+        serialKeyVariations
+      );
+      return {
+        statusCode: 404,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
+        },
+        body: JSON.stringify({ error: "Customer not found." }),
+      };
+    }
+
+    // Check if already downloaded
+    if (customer.DownloadedFounderSeriesSUN) {
+      console.log("Customer already downloaded SUN:", normalizedSerialKey);
+      return {
+        statusCode: 403,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
+        },
+        body: JSON.stringify({
+          error: "You have already downloaded your SUN.",
+          hasDownloaded: true,
+        }),
+      };
+    }
+
+    // Validate fileKey format (e.g., F 0001.zip)
+    if (!fileKey.match(/^F \d{4}\.zip$/)) {
       console.error("Invalid fileKey format:", fileKey);
       return {
         statusCode: 400,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
         },
         body: JSON.stringify({ error: "Invalid file key format." }),
       };
     }
 
-    const serialNumber = serialNumberMatch[0];
-    // Include space in the S3 key (e.g., F 0000.zip)
-    const s3Key = `Compressed test SUN's2/${serialNumber.replace(
-      /F(\d{4})/,
-      "F $1"
-    )}.zip`;
+    // Construct S3 key using the provided fileKey
+    const s3Key = `Compressed test SUN's2/${fileKey}`;
 
     // Generate pre-signed URL
     const command = new GetObjectCommand({
@@ -62,28 +189,21 @@ export const handler = async (event) => {
       Key: s3Key,
     });
 
+    let url;
+    const downloadId = uuidv4();
     try {
-      const url = await getSignedUrl(s3Client, command, { expiresIn: 3600 }); // URL expires in 1 hour
-      return {
-        statusCode: 200,
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({ url }),
-      };
-    } catch (error) {
-      console.error(
-        "Error generating pre-signed URL:",
-        error.message,
-        error.stack
-      );
-      if (error.name === "NoSuchKey") {
+      url = await getSignedUrl(s3Client, command, { expiresIn: 3600 }); // URL expires in 1 hour
+      console.log("Generated pre-signed URL for downloadId:", downloadId);
+    } catch (e) {
+      console.error("Error generating pre-signed URL:", e.message, e.stack);
+      if (e.name === "NoSuchKey") {
         return {
           statusCode: 404,
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "POST,OPTIONS",
           },
           body: JSON.stringify({ error: `File ${s3Key} not found in S3.` }),
         };
@@ -93,10 +213,23 @@ export const handler = async (event) => {
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Methods": "POST,OPTIONS",
         },
         body: JSON.stringify({ error: "Failed to generate download URL." }),
       };
     }
+
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST,OPTIONS",
+      },
+      body: JSON.stringify({ url, downloadId, hasDownloaded: false }),
+    };
   } catch (error) {
     console.error("Error in generatePresignedUrl:", error.message, error.stack);
     return {
@@ -104,6 +237,8 @@ export const handler = async (event) => {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Content-Type",
+        "Access-Control-Allow-Methods": "POST,OPTIONS",
       },
       body: JSON.stringify({ error: "Internal server error." }),
     };

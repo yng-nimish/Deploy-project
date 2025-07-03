@@ -148,10 +148,10 @@ const PurchaseForm = () => {
                 <h7 className="primary-heading-welcome"> Purchase!! </h7>
                 <h1 className="primary-heading">
                   Fill in the details to continue Purchase!! and become a member
-                  of Your Number Guaranteed <br></br>
-                  please find and fill in the details of the owner , the owner
-                  is who will have access to our suite of free applications .
-                  Once purchased , the SUN is not transferrable
+                  of Your Number Guaranteed .<br></br>
+                  Please find and fill in the details of the owner , the owner
+                  is the only person who will have access to our suite of free
+                  applications . Once purchased , the SUN is not transferrable.
                 </h1>
               </p>
             </div>
