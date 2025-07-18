@@ -12,6 +12,13 @@ const productsArraySun = [
     price: 99.99,
     pdfUrl: "",
   },
+  {
+    id: "price_bulk_sun_contact",
+    title: "The Founder Series SUN",
+    price: 99.99,
+    pdfUrl: "",
+    isBulkPurchase: true,
+  },
   */
   // Test Mode
 
@@ -20,6 +27,13 @@ const productsArraySun = [
     title: "The Founder Series SUN",
     price: 99.99,
     pdfUrl: "",
+  },
+  {
+    id: "price_bulk_sun_contact",
+    title: "The Founder Series SUN",
+    price: 99.99,
+    pdfUrl: "",
+    isBulkPurchase: true,
   },
 ];
 

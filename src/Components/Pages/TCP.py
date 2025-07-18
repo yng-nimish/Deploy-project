@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "May5th"
+KINESIS_STREAM_NAME = "July17th"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,7 +16,7 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "35.175.233.22"
+TCP_HOST = "34.227.90.83"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
@@ -26,7 +26,7 @@ NUMBERS_PER_RECORD = 2000
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler('data_pipeline_May2.log'), logging.StreamHandler()]
+    handlers=[logging.FileHandler('data_pipeline_July17.log'), logging.StreamHandler()]
 )
 logger = logging.getLogger()
 

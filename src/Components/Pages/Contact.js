@@ -55,7 +55,8 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "4883d29a-334f-46ea-9b90-79657f9de435"); // Access keys for Editor@yournumberguaranteed.com
+    //   formData.append("access_key", "4883d29a-334f-46ea-9b90-79657f9de435"); // Access keys for Editor@yournumberguaranteed.com
+    formData.append("access_key", "14e7a7cf-3ae8-4c8c-b522-2590c31e5686"); // Access keys for CEO@yournumberguaranteed.com
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);

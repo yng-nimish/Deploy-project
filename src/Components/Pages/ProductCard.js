@@ -2,6 +2,7 @@
  * E - commerce Product Card Page - Website code
  */
 import { Card, Button, Form, Row, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import { CartContext } from "./CartContext";
 import { useContext, useState, useEffect } from "react";
 
@@ -12,6 +13,7 @@ function ProductCard(props) {
   const [inputQuantity, setInputQuantity] = useState(
     productQuantity > 0 ? productQuantity : 1
   );
+
   // Update inputQuantity when productQuantity changes
   useEffect(() => {
     setInputQuantity(productQuantity > 0 ? productQuantity : 1);
@@ -36,6 +38,7 @@ function ProductCard(props) {
     cart.addOneToCart(product.id, inputQuantity); // Pass the input quantity directly
     setInputQuantity(1); // Reset input after adding
   };
+
   const handleIncrement = () => {
     setInputQuantity((prev) => {
       const newQuantity = prev + 1;
@@ -54,13 +57,16 @@ function ProductCard(props) {
     }
   };
 
-  console.log(cart.items);
   return (
     <Card>
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-        <Card.Text>${product.price}</Card.Text>
-        {productQuantity > 0 ? (
+        <Card.Text>${product.price.toFixed(2)}</Card.Text>
+        {product.isBulkPurchase ? (
+          <Button variant="primary" as={NavLink} to="/contact">
+            Bulk Purchase - Contact Us
+          </Button>
+        ) : productQuantity > 0 ? (
           <>
             <Form as={Row}>
               <Form.Label column="true" sm="6">
@@ -74,20 +80,10 @@ function ProductCard(props) {
                   min="1"
                   style={{ width: "80px", display: "inline-block" }}
                 />
-                <Button
-                  sm="6"
-                  onClick={handleIncrement}
-                  //      onClick={() => cart.addOneToCart(product.id)}
-                  className="mx-2"
-                >
+                <Button sm="6" onClick={handleIncrement} className="mx-2">
                   +
                 </Button>
-                <Button
-                  sm="6"
-                  onClick={handleDecrement}
-                  //    onClick={() => cart.removeOneFromCart(product.id)}
-                  className="mx-2"
-                >
+                <Button sm="6" onClick={handleDecrement} className="mx-2">
                   -
                 </Button>
               </Col>
@@ -101,11 +97,7 @@ function ProductCard(props) {
             </Button>
           </>
         ) : (
-          <Button
-            variant="primary"
-            //      onClick={() => cart.addOneToCart(product.id)}
-            onClick={handleAddToCart}
-          >
+          <Button variant="primary" onClick={handleAddToCart}>
             Add To Cart
           </Button>
         )}

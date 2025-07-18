@@ -42,22 +42,21 @@ job.init(args['JOB_NAME'], args)
 # S3 client for state management
 s3_client = boto3.client('s3')
 state_file = f"{args['TempDir']}/{args['JOB_NAME']}/state.json"
-
 def read_state():
     try:
         bucket, key = state_file.replace("s3://", "").split("/", 1)
         response = s3_client.get_object(Bucket=bucket, Key=key)
         state = json.loads(response['Body'].read().decode('utf-8'))
-        folder_index = state.get('folder_index', 1)
+        folder_index = state.get('folder_index', 13)  # Initialize to 13 if no state
         file_count = state.get('file_count', 0)
         logger.info(f"Read state: folder_index={folder_index}, file_count={file_count}")
         return folder_index, file_count
     except s3_client.exceptions.NoSuchKey:
-        logger.info("No state file found, initializing with folder_index=1, file_count=0")
-        return 1, 0
+        logger.info("No state file found, initializing with folder_index=13, file_count=0")
+        return 13, 0
     except Exception as e:
         logger.error(f"Failed to read state: {str(e)}")
-        return 1, 0
+        return 13, 0
 
 def write_state(folder_index, file_count):
     try:
@@ -79,8 +78,9 @@ def processBatch(data_frame, batchId):
 
         # Read current state
         folder_index, file_count = read_state()
-        # Format folder name with 4-digit padding (F 0000, F 0001, etc.)
+        # Format folder name with 4-digit padding starting from F 0013
         folder_name = f"F {str(folder_index).zfill(4)}"
+        logger.info(f"Batch {batchId}: Processing folder {folder_name}")
 
         # Convert to DynamicFrame for transformation
         dynamic_frame = DynamicFrame.fromDF(data_frame, glueContext, "kinesis_data")
@@ -99,8 +99,8 @@ def processBatch(data_frame, batchId):
 
         # Calculate number of complete files (1M numbers each)
         cells_per_file = 1000 * 1000  # 1M cells per file
-        num_files = total_numbers // cells_per_file  # e.g., 107 for 107,691,986
-        max_rows = num_files * cells_per_file  # e.g., 107,000,000
+        num_files = total_numbers // cells_per_file
+        max_rows = num_files * cells_per_file
 
         if num_files == 0:
             logger.info(f"Batch {batchId}: Not enough numbers ({total_numbers}) for a complete file")
@@ -146,6 +146,7 @@ def processBatch(data_frame, batchId):
                 new_files_written = 0
                 folder_name = f"F {str(folder_index).zfill(4)}"
                 current_file_idx = 1
+                logger.info(f"Batch {batchId}: Rolled over to new folder {folder_name}")
 
             # Format file name with 3-digit padding (Z001, Z002, etc.)
             file_name = f"Z{str(current_file_idx).zfill(3)}"
@@ -175,15 +176,19 @@ def processBatch(data_frame, batchId):
         if file_count >= 1000:
             folder_index += 1
             file_count = file_count % 1000
+            logger.info(f"Batch {batchId}: Incremented folder_index to {folder_index}, reset file_count to {file_count}")
         write_state(folder_index, file_count)
         logger.info(f"Batch {batchId}: Completed writing {new_files_written} files, total file_count={file_count}")
 
     except Exception as e:
         logger.error(f"Batch {batchId}: Processing failed: {str(e)}", exc_info=True)
+
+
 # Script generated for node Amazon Kinesis
-dataframe_AmazonKinesis_node1746446919754 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/May5th", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1746446919754")
+dataframe_AmazonKinesis_node1752761246177 = glueContext.create_data_frame.from_options(connection_type="kinesis",connection_options={"typeOfData": "kinesis", "streamARN": "arn:aws:kinesis:us-east-1:851725381788:stream/July17th", "classification": "json", "startingPosition": "earliest", "inferSchema": "true"}, transformation_ctx="dataframe_AmazonKinesis_node1752761246177")
 
 
-glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1746446919754, batch_function = processBatch, options = {"windowSize": "100 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
+
+glueContext.forEachBatch(frame = dataframe_AmazonKinesis_node1752761246177, batch_function = processBatch, options = {"windowSize": "100 seconds", "checkpointLocation": args["TempDir"] + "/" + args["JOB_NAME"] + "/checkpoint/"})
 job.commit()
 logger.info("Glue job completed successfully")

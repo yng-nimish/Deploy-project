@@ -29,6 +29,11 @@ const PurchaseForm = () => {
     owners: [],
   });
 
+  const [validationErrors, setValidationErrors] = useState({
+    buyer: { firstName: null, lastName: null },
+    owners: [],
+  });
+
   const calculateSunProductQuantity = () => {
     return cartItems.reduce((count, item) => {
       const product = productsArraySun.find(
@@ -55,7 +60,28 @@ const PurchaseForm = () => {
         email: "",
       })),
     }));
+    setValidationErrors((prev) => ({
+      ...prev,
+      owners: Array.from({ length: numSunProducts }, () => ({
+        firstName: null,
+        lastName: null,
+      })),
+    }));
   }, [numSunProducts]);
+
+  const validateName = (name, fieldName) => {
+    console.log(`Validating ${fieldName}: ${name}`);
+    if (!name) {
+      console.warn(`${fieldName} is empty`);
+      return "This field is required";
+    }
+    if (!/^[A-Za-z]+$/.test(name)) {
+      console.warn(`${fieldName} contains invalid characters: ${name}`);
+      return "Only alphabetic characters allowed";
+    }
+    console.log(`${fieldName} is valid: ${name}`);
+    return null;
+  };
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -63,6 +89,14 @@ const PurchaseForm = () => {
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
+
+    if (name === "firstName" || name === "lastName") {
+      const error = validateName(value, name);
+      setValidationErrors((prev) => ({
+        ...prev,
+        buyer: { ...prev.buyer, [name]: error },
+      }));
+    }
   };
 
   const handleOwnerChange = (index, e) => {
@@ -76,12 +110,43 @@ const PurchaseForm = () => {
       ...prev,
       owners: updatedOwners,
     }));
+
+    if (name === "firstName" || name === "lastName") {
+      const error = validateName(value, `Owner ${index + 1} ${name}`);
+      const updatedOwnerErrors = [...validationErrors.owners];
+      updatedOwnerErrors[index] = {
+        ...updatedOwnerErrors[index],
+        [name]: error,
+      };
+      setValidationErrors((prev) => ({
+        ...prev,
+        owners: updatedOwnerErrors,
+      }));
+    }
+  };
+
+  const isFormValid = () => {
+    const buyerValid =
+      !validationErrors.buyer.firstName && !validationErrors.buyer.lastName;
+    const ownersValid = validationErrors.owners.every(
+      (owner) => !owner.firstName && !owner.lastName
+    );
+    console.log(
+      `Form validation - Buyer valid: ${buyerValid}, Owners valid: ${ownersValid}`
+    );
+    return buyerValid && ownersValid;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form Data:", formData);
     console.log("Cart Items:", cartItems);
+    console.log("Validation Errors:", validationErrors);
+
+    if (!isFormValid()) {
+      console.error("Form submission blocked due to validation errors");
+      return;
+    }
 
     try {
       const response = await fetch(
@@ -148,10 +213,10 @@ const PurchaseForm = () => {
                 <h7 className="primary-heading-welcome"> Purchase!! </h7>
                 <h1 className="primary-heading">
                   Fill in the details to continue Purchase!! and become a member
-                  of Your Number Guaranteed .<br></br>
-                  Please find and fill in the details of the owner , the owner
-                  is the only person who will have access to our suite of free
-                  applications . Once purchased , the SUN is not transferrable.
+                  of Your Number Guaranteed.<br></br>
+                  Please find and fill in the details of the owner, the owner is
+                  the only person who will have access to our suite of free
+                  applications. Once purchased, the SUN is not transferrable.
                 </h1>
               </p>
             </div>
@@ -174,6 +239,11 @@ const PurchaseForm = () => {
                     onChange={handleChange}
                     required
                   />
+                  {validationErrors.buyer.firstName && (
+                    <p style={{ color: "red", fontSize: "0.8rem" }}>
+                      {validationErrors.buyer.firstName}
+                    </p>
+                  )}
                 </div>
                 <div className="input-box">
                   <label>Last Name:</label>
@@ -186,17 +256,22 @@ const PurchaseForm = () => {
                     onChange={handleChange}
                     required
                   />
-                  <div className="input-box">
-                    <label>Business/organization </label>
-                    <input
-                      type="text"
-                      name="business"
-                      className="field"
-                      placeholder="Business/Organization Name"
-                      value={formData.business}
-                      onChange={handleChange}
-                    />
-                  </div>
+                  {validationErrors.buyer.lastName && (
+                    <p style={{ color: "red", fontSize: "0.8rem" }}>
+                      {validationErrors.buyer.lastName}
+                    </p>
+                  )}
+                </div>
+                <div className="input-box">
+                  <label>Business/organization </label>
+                  <input
+                    type="text"
+                    name="business"
+                    className="field"
+                    placeholder="Business/Organization Name"
+                    value={formData.business}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className="input-box">
                   <label>Street Address:</label>
@@ -286,8 +361,8 @@ const PurchaseForm = () => {
                   <label>I Agree to the Terms:</label>
                   <input
                     type="checkbox"
-                    name="emailList"
-                    checked={formData.emailList}
+                    name="termsAgreed"
+                    checked={formData.termsAgreed}
                     onChange={handleChange}
                     required
                   />
@@ -299,10 +374,10 @@ const PurchaseForm = () => {
                       Owner {index + 1}{" "}
                     </h2>
                     <label>
-                      Please find and fill in the details of the owner , the
-                      owner is who will have access to our suite of free
-                      applications . Once purchased , the SUN is not
-                      transferrable
+                      Please find and fill in the details of the owner, the
+                      owner is the only person who will have access to our suite
+                      of free applications. Once purchased, the SUN is not
+                      transferrable.
                     </label>
                     <div className="input-box">
                       <label>First Name:</label>
@@ -315,6 +390,11 @@ const PurchaseForm = () => {
                         onChange={(e) => handleOwnerChange(index, e)}
                         required
                       />
+                      {validationErrors.owners[index]?.firstName && (
+                        <p style={{ color: "red", fontSize: "0.8rem" }}>
+                          {validationErrors.owners[index].firstName}
+                        </p>
+                      )}
                     </div>
                     <div className="input-box">
                       <label>Last Name:</label>
@@ -327,6 +407,11 @@ const PurchaseForm = () => {
                         onChange={(e) => handleOwnerChange(index, e)}
                         required
                       />
+                      {validationErrors.owners[index]?.lastName && (
+                        <p style={{ color: "red", fontSize: "0.8rem" }}>
+                          {validationErrors.owners[index].lastName}
+                        </p>
+                      )}
                     </div>
                     <div className="input-box">
                       <label>Business/Organization:</label>
@@ -421,14 +506,17 @@ const PurchaseForm = () => {
                     borderColor: "#FFD700",
                     color: "black",
                     fontSize: "1.5rem",
+                    opacity: isFormValid() ? 1 : 0.5,
+                    cursor: isFormValid() ? "pointer" : "not-allowed",
                   }}
                   type="submit"
+                  disabled={!isFormValid()}
                 >
                   Proceed to Checkout...
                 </button>
                 <Link to="/purchase">
                   <button color="primary" href="#">
-                    <FiArrowLeft />  Go Back  
+                    <FiArrowLeft /> Go Back
                   </button>
                 </Link>
               </form>

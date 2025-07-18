@@ -1,0 +1,11 @@
+2025-07-17 09:38:41,467 - INFO - Starting pipeline for 25 minutes to fetch numbers...
+2025-07-17 09:38:50,171 - INFO - Completed in 8.70 seconds
+2025-07-17 09:38:50,172 - INFO - Total numbers fetched: 0
+2025-07-17 09:38:50,172 - INFO - Total numbers sent: 0
+2025-07-17 09:38:50,172 - INFO - Throughput: 0 numbers/minute
+2025-07-17 09:39:54,205 - INFO - Starting pipeline for 25 minutes to fetch numbers...
+2025-07-17 09:40:23,499 - INFO - Completed in 29.29 seconds
+2025-07-17 09:40:23,500 - INFO - Total numbers fetched: 0
+2025-07-17 09:40:23,500 - INFO - Total numbers sent: 0
+2025-07-17 09:40:23,500 - INFO - Throughput: 0 numbers/minute
+2025-07-17 09:40:23,501 - INFO - Avg fetch time: 17.783 seconds (21 calls)
