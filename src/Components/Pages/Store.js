@@ -28,7 +28,8 @@ function Store() {
 
   const handlePurchase = () => {
     const sunProductCount = productsArraySun.reduce(
-      (count, product) => count + product.quantity,
+      (count, product) =>
+        count + (product.isBulkPurchase ? 0 : product.quantity),
       0
     );
 
@@ -42,7 +43,6 @@ function Store() {
 
   const filteredProductsArray = productsArray.filter(
     //(product) => product.id !== "price_1Py2vR013t2ai8cxsp6eOczL" // Live Mode
-
     (product) => product.id !== "price_1Px8XL013t2ai8cxAOSkYTjB" // Test Mode
   );
   const totalCost = cart.getTotalCost();

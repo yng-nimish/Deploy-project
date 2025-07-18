@@ -1,4 +1,8 @@
-import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
+import {
+  S3Client,
+  GetObjectCommand,
+  HeadObjectCommand,
+} from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import pkg from "@aws-sdk/lib-dynamodb";
@@ -183,6 +187,37 @@ export const handler = async (event) => {
     // Construct S3 key using the provided fileKey
     const s3Key = `Compressed test SUN's2/${fileKey}`;
 
+    // Check if file exists in S3
+    try {
+      const headCommand = new HeadObjectCommand({
+        Bucket: "my-bucket-founder-series-sun",
+        Key: s3Key,
+      });
+      await s3Client.send(headCommand);
+      console.log("File exists in S3:", s3Key);
+    } catch (e) {
+      console.error();
+
+      if (e.name === "NotFound" || e.name === "NoSuchKey") {
+        console.log("File not found in S3, SUN under construction:", s3Key);
+        return {
+          statusCode: 202, // Changed to 202 to indicate an informational status
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "POST,OPTIONS",
+          },
+          body: JSON.stringify({
+            error: "SUN Under Construction",
+            message:
+              "Your SUN is under construction. We will notify you when it’s ready to download.",
+          }),
+        };
+      }
+      throw e; // Rethrow other errors
+    }
+
     // Generate pre-signed URL
     const command = new GetObjectCommand({
       Bucket: "my-bucket-founder-series-sun",
@@ -196,18 +231,6 @@ export const handler = async (event) => {
       console.log("Generated pre-signed URL for downloadId:", downloadId);
     } catch (e) {
       console.error("Error generating pre-signed URL:", e.message, e.stack);
-      if (e.name === "NoSuchKey") {
-        return {
-          statusCode: 404,
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "POST,OPTIONS",
-          },
-          body: JSON.stringify({ error: `File ${s3Key} not found in S3.` }),
-        };
-      }
       return {
         statusCode: 500,
         headers: {

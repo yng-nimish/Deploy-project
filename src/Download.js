@@ -41,7 +41,9 @@ const Download = () => {
         const response = await fetch(url, options);
         if (!response.ok) {
           const data = await response.json();
-          throw new Error(data.error || `HTTP ${response.status}`);
+          throw new Error(
+            data.message || data.error || `HTTP ${response.status}`
+          );
         }
         return response;
       } catch (e) {
@@ -84,10 +86,29 @@ const Download = () => {
           data.error.includes("already downloaded")
         ) {
           setHasDownloaded(true);
+          Swal.fire({
+            title: "Download Limit Reached",
+            text: "You have already downloaded your SUN.",
+            icon: "info",
+          });
+        } else if (
+          response.status === 202 &&
+          data.error === "SUN Under Construction"
+        ) {
+          Swal.fire({
+            title: "SUN Under Construction",
+            text: data.message,
+            icon: "info",
+          });
         }
       } catch (error) {
-        console.error("Check download status error:", error);
+        console.error("Check download status error:", error.message);
         setError("Failed to verify download status. Please try again later.");
+        Swal.fire({
+          title: "Error",
+          text: error.message,
+          icon: "error",
+        });
       }
     };
 
@@ -133,6 +154,12 @@ const Download = () => {
           showConfirmButton: false,
         }).then(async () => {
           // Initiate download
+          console.log(
+            "Initiating download for fileKey:",
+            fileKey,
+            "with URL:",
+            data.url
+          );
           window.open(data.url, "_blank");
 
           // Confirm download with retry
@@ -157,13 +184,16 @@ const Download = () => {
             if (!confirmResponse.ok) {
               throw new Error(
                 confirmData.error ||
-                  `ConfirmDownload failed with status ${confirmResponse.status}`
+                  `ConfirmDownload failed with status: ${confirmResponse.status}`
               );
             }
-
-            setHasDownloaded(true); // Disable button after confirmation
+            console.log(
+              "Download confirmation successful for downloadId:",
+              data.downloadId
+            );
+            setHasDownloaded(true); // Disable download button after successful confirmation
           } catch (confirmError) {
-            console.error("Download confirmation error:", confirmError);
+            console.error("Download confirmation error:", confirmError.message);
             Swal.fire({
               title: "Confirmation Error",
               text: `Download started, but confirmation failed: ${confirmError.message}. Contact support if needed.`,
@@ -172,11 +202,13 @@ const Download = () => {
           }
         });
       } else {
-        throw new Error(data.error || "Failed to generate download URL.");
+        throw new Error(
+          data.message || data.error || "Failed to generate download URL."
+        );
       }
     } catch (error) {
-      console.error("Download error:", error);
-      if (error.message.includes("NoSuchKey")) {
+      console.error("Download error:", error.message);
+      if (error.message.includes("Your SUN is under construction")) {
         Swal.fire({
           title: "SUN Under Construction",
           text: "Your SUN is under construction. We will notify you when it’s ready to download.",
