@@ -69,6 +69,14 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
   },
+  {
+    id: "price_1RrQGu013t2ai8cxgAxXmVxQ",
+    title: "Never Miss “Your Number Guaranteed” Lotto Selection",
+    author: "Kevin Patrick Maloney",
+    Date: "01-08-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/140RaE-N4ZrWeNHfetlWoX87SUKndd7nOP__EZByVwJo/preview",
+  },
 
   
 */
@@ -135,6 +143,14 @@ const productsArray = [
     price: 0.99,
     pdfUrl:
       "https://docs.google.com/document/d/1BPKSEGWDjMKNsFazrLbk0-jrMDnAfTONmJZYEKI1F5M/export?format=pdf",
+  },
+  {
+    id: "price_1RrQMt013t2ai8cxbkbFUcF2",
+    title: "Never Miss “Your Number Guaranteed” Lotto Selection",
+    author: "Kevin Patrick Maloney",
+    Date: "01-08-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/140RaE-N4ZrWeNHfetlWoX87SUKndd7nOP__EZByVwJo/preview",
   },
 
   /*{

@@ -79,6 +79,14 @@ export const data = [
   },
   {
     id: 10,
+    title: "Never Miss “Your Number Guaranteed” Lotto Selection",
+    author: "Kevin Patrick Maloney",
+    Date: "01-08-2025",
+    pdfUrl:
+      "https://docs.google.com/document/d/140RaE-N4ZrWeNHfetlWoX87SUKndd7nOP__EZByVwJo/preview",
+  },
+  {
+    id: 11,
     title: "Click to Close",
     author: "Name",
     Date: "Date",
