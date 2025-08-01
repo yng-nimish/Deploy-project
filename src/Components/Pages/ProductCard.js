@@ -61,7 +61,12 @@ function ProductCard(props) {
     <Card>
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-        <Card.Text>${product.price.toFixed(2)}</Card.Text>
+        <Card.Text>
+          {typeof product?.price === "number"
+            ? `$${product.price.toFixed(2)}`
+            : "Price unavailable"}
+        </Card.Text>
+
         {product.isBulkPurchase ? (
           <Button variant="primary" as={NavLink} to="/contact">
             Bulk Purchase - Contact Us
