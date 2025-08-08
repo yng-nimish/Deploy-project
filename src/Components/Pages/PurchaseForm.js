@@ -6,9 +6,8 @@ import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
 import Terms from "./Terms";
 
-const stripePromise = loadStripe(
-  "REDACTED"
-);
+// Load Stripe with the environment variable
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const PurchaseForm = () => {
   const location = useLocation();
