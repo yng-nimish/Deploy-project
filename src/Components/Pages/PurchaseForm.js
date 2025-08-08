@@ -7,7 +7,7 @@ import { productsArraySun } from "./ProductsArraySun";
 import Terms from "./Terms";
 
 const stripePromise = loadStripe(
-  "REDACTED"
+  "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"
 );
 
 const PurchaseForm = () => {

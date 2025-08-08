@@ -7368,3 +7368,956 @@
 2025-07-28 07:05:21,596 [INFO] Deleted Batch 1/May 2/F 0036/Z229/part-00000-7c85037b-e239-43db-90d1-d08e5f6d7ec1-c000.snappy.parquet
 2025-07-28 07:05:21,599 [INFO] Completed: 453/453 objects processed successfully
 2025-07-28 07:05:21,599 [INFO] Successfully renamed Batch 1/May 2/F 0036/ to Batch 1/May 2/Partial 4/
+2025-08-08 07:41:46,954 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-08-08 07:41:47,149 [INFO] Listing objects in Batch 1/May 2/F 0048/
+2025-08-08 07:41:47,797 [INFO] Found 474 objects to process
+2025-08-08 07:41:47,983 [INFO] Copied Batch 1/May 2/F 0048/Z001/part-00000-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z001/part-00000-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet
+2025-08-08 07:41:48,054 [INFO] Deleted Batch 1/May 2/F 0048/Z001/part-00000-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet
+2025-08-08 07:41:48,218 [INFO] Copied Batch 1/May 2/F 0048/Z006/part-00000-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z006/part-00000-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet
+2025-08-08 07:41:48,291 [INFO] Deleted Batch 1/May 2/F 0048/Z006/part-00000-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet
+2025-08-08 07:41:48,450 [INFO] Copied Batch 1/May 2/F 0048/Z002/part-00000-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z002/part-00000-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet
+2025-08-08 07:41:48,516 [INFO] Deleted Batch 1/May 2/F 0048/Z002/part-00000-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet
+2025-08-08 07:41:48,519 [INFO] Copied Batch 1/May 2/F 0048/Z004/part-00000-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z004/part-00000-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet
+2025-08-08 07:41:48,529 [INFO] Copied Batch 1/May 2/F 0048/Z003/part-00000-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z003/part-00000-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet
+2025-08-08 07:41:48,562 [INFO] Copied Batch 1/May 2/F 0048/Z005/part-00000-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z005/part-00000-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet
+2025-08-08 07:41:48,563 [INFO] Copied Batch 1/May 2/F 0048/Z001/part-00029-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z001/part-00029-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet
+2025-08-08 07:41:48,601 [INFO] Deleted Batch 1/May 2/F 0048/Z004/part-00000-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet
+2025-08-08 07:41:48,602 [INFO] Deleted Batch 1/May 2/F 0048/Z003/part-00000-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet
+2025-08-08 07:41:48,605 [INFO] Copied Batch 1/May 2/F 0048/Z006/part-00033-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z006/part-00033-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet
+2025-08-08 07:41:48,606 [INFO] Copied Batch 1/May 2/F 0048/Z005/part-00035-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z005/part-00035-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet
+2025-08-08 07:41:48,612 [INFO] Copied Batch 1/May 2/F 0048/Z003/part-00006-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z003/part-00006-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet
+2025-08-08 07:41:48,625 [INFO] Copied Batch 1/May 2/F 0048/Z004/part-00008-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z004/part-00008-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet
+2025-08-08 07:41:48,638 [INFO] Deleted Batch 1/May 2/F 0048/Z005/part-00000-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet
+2025-08-08 07:41:48,638 [INFO] Deleted Batch 1/May 2/F 0048/Z001/part-00029-474a183c-678f-435b-b32b-f5d770137da9-c000.snappy.parquet
+2025-08-08 07:41:48,644 [INFO] Copied Batch 1/May 2/F 0048/Z002/part-00045-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z002/part-00045-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet
+2025-08-08 07:41:48,683 [INFO] Copied Batch 1/May 2/F 0048/Z007/part-00000-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z007/part-00000-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet
+2025-08-08 07:41:48,701 [INFO] Deleted Batch 1/May 2/F 0048/Z006/part-00033-9ee25211-80fb-4a34-a3ef-a4e9ebe27cc1-c000.snappy.parquet
+2025-08-08 07:41:48,705 [INFO] Deleted Batch 1/May 2/F 0048/Z003/part-00006-12d9f8df-f0a1-4091-9584-54523f7d0bac-c000.snappy.parquet
+2025-08-08 07:41:48,706 [INFO] Deleted Batch 1/May 2/F 0048/Z005/part-00035-c47f88cf-8e38-458d-a669-06269a1f8981-c000.snappy.parquet
+2025-08-08 07:41:48,716 [INFO] Deleted Batch 1/May 2/F 0048/Z002/part-00045-e3c093a6-f1a3-4d43-9c21-f2fbb26c2a21-c000.snappy.parquet
+2025-08-08 07:41:48,721 [INFO] Deleted Batch 1/May 2/F 0048/Z004/part-00008-4c66dec2-eea4-46cd-b735-7b96cbcb357e-c000.snappy.parquet
+2025-08-08 07:41:48,751 [INFO] Deleted Batch 1/May 2/F 0048/Z007/part-00000-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet
+2025-08-08 07:41:48,831 [INFO] Copied Batch 1/May 2/F 0048/Z009/part-00000-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z009/part-00000-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet
+2025-08-08 07:41:48,850 [INFO] Copied Batch 1/May 2/F 0048/Z008/part-00000-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z008/part-00000-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet
+2025-08-08 07:41:48,851 [INFO] Copied Batch 1/May 2/F 0048/Z010/part-00000-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z010/part-00000-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet
+2025-08-08 07:41:48,859 [INFO] Copied Batch 1/May 2/F 0048/Z011/part-00000-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z011/part-00000-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet
+2025-08-08 07:41:48,866 [INFO] Copied Batch 1/May 2/F 0048/Z007/part-00006-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z007/part-00006-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet
+2025-08-08 07:41:48,900 [INFO] Deleted Batch 1/May 2/F 0048/Z009/part-00000-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet
+2025-08-08 07:41:48,920 [INFO] Copied Batch 1/May 2/F 0048/Z008/part-00028-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z008/part-00028-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet
+2025-08-08 07:41:48,922 [INFO] Deleted Batch 1/May 2/F 0048/Z010/part-00000-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet
+2025-08-08 07:41:48,926 [INFO] Deleted Batch 1/May 2/F 0048/Z011/part-00000-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet
+2025-08-08 07:41:48,929 [INFO] Deleted Batch 1/May 2/F 0048/Z008/part-00000-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet
+2025-08-08 07:41:48,936 [INFO] Deleted Batch 1/May 2/F 0048/Z007/part-00006-ac71f0ea-753f-4226-8051-2d9cae91e3de-c000.snappy.parquet
+2025-08-08 07:41:48,964 [INFO] Copied Batch 1/May 2/F 0048/Z009/part-00021-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z009/part-00021-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet
+2025-08-08 07:41:48,966 [INFO] Copied Batch 1/May 2/F 0048/Z012/part-00000-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z012/part-00000-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet
+2025-08-08 07:41:48,984 [INFO] Copied Batch 1/May 2/F 0048/Z011/part-00009-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z011/part-00009-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet
+2025-08-08 07:41:48,989 [INFO] Deleted Batch 1/May 2/F 0048/Z008/part-00028-af860c68-92a0-4f0f-86cd-4f55410becc2-c000.snappy.parquet
+2025-08-08 07:41:49,028 [INFO] Copied Batch 1/May 2/F 0048/Z010/part-00028-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z010/part-00028-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet
+2025-08-08 07:41:49,034 [INFO] Deleted Batch 1/May 2/F 0048/Z009/part-00021-90e5a911-1571-4a95-a159-4b5d8d7bc919-c000.snappy.parquet
+2025-08-08 07:41:49,035 [INFO] Deleted Batch 1/May 2/F 0048/Z012/part-00000-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet
+2025-08-08 07:41:49,048 [INFO] Deleted Batch 1/May 2/F 0048/Z011/part-00009-29b075bf-4013-4594-b701-1edd6f0c7e8a-c000.snappy.parquet
+2025-08-08 07:41:49,101 [INFO] Copied Batch 1/May 2/F 0048/Z013/part-00000-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z013/part-00000-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet
+2025-08-08 07:41:49,101 [INFO] Deleted Batch 1/May 2/F 0048/Z010/part-00028-5061d2c9-adf8-45a9-b036-ccecd3bf18d3-c000.snappy.parquet
+2025-08-08 07:41:49,114 [INFO] Copied Batch 1/May 2/F 0048/Z014/part-00000-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z014/part-00000-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet
+2025-08-08 07:41:49,160 [INFO] Copied Batch 1/May 2/F 0048/Z015/part-00000-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z015/part-00000-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet
+2025-08-08 07:41:49,176 [INFO] Copied Batch 1/May 2/F 0048/Z013/part-00017-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z013/part-00017-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet
+2025-08-08 07:41:49,177 [INFO] Deleted Batch 1/May 2/F 0048/Z013/part-00000-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet
+2025-08-08 07:41:49,182 [INFO] Deleted Batch 1/May 2/F 0048/Z014/part-00000-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet
+2025-08-08 07:41:49,196 [INFO] Copied Batch 1/May 2/F 0048/Z016/part-00000-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z016/part-00000-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet
+2025-08-08 07:41:49,231 [INFO] Deleted Batch 1/May 2/F 0048/Z015/part-00000-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet
+2025-08-08 07:41:49,251 [INFO] Copied Batch 1/May 2/F 0048/Z014/part-00032-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z014/part-00032-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet
+2025-08-08 07:41:49,253 [INFO] Deleted Batch 1/May 2/F 0048/Z013/part-00017-19ae18b8-6a6e-4586-9aba-763fb1fe521e-c000.snappy.parquet
+2025-08-08 07:41:49,270 [INFO] Deleted Batch 1/May 2/F 0048/Z016/part-00000-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet
+2025-08-08 07:41:49,277 [INFO] Copied Batch 1/May 2/F 0048/Z012/part-00013-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z012/part-00013-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet
+2025-08-08 07:41:49,279 [INFO] Copied Batch 1/May 2/F 0048/Z017/part-00000-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z017/part-00000-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet
+2025-08-08 07:41:49,289 [INFO] Copied Batch 1/May 2/F 0048/Z016/part-00044-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z016/part-00044-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet
+2025-08-08 07:41:49,321 [INFO] Deleted Batch 1/May 2/F 0048/Z014/part-00032-b94af97b-00e5-4ab2-a412-ae295e3002b1-c000.snappy.parquet
+2025-08-08 07:41:49,324 [INFO] Copied Batch 1/May 2/F 0048/Z015/part-00009-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z015/part-00009-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet
+2025-08-08 07:41:49,345 [INFO] Deleted Batch 1/May 2/F 0048/Z017/part-00000-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet
+2025-08-08 07:41:49,360 [INFO] Deleted Batch 1/May 2/F 0048/Z016/part-00044-749c5fb7-646b-444f-91fe-b62d59a2b71d-c000.snappy.parquet
+2025-08-08 07:41:49,370 [INFO] Deleted Batch 1/May 2/F 0048/Z012/part-00013-7e119345-4e3f-48cb-899a-b848fb372572-c000.snappy.parquet
+2025-08-08 07:41:49,387 [INFO] Deleted Batch 1/May 2/F 0048/Z015/part-00009-bec82e13-8e01-4b25-9791-484fdd0c61d3-c000.snappy.parquet
+2025-08-08 07:41:49,408 [INFO] Copied Batch 1/May 2/F 0048/Z018/part-00000-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z018/part-00000-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet
+2025-08-08 07:41:49,415 [INFO] Copied Batch 1/May 2/F 0048/Z019/part-00000-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z019/part-00000-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet
+2025-08-08 07:41:49,469 [INFO] Copied Batch 1/May 2/F 0048/Z020/part-00000-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z020/part-00000-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet
+2025-08-08 07:41:49,474 [INFO] Deleted Batch 1/May 2/F 0048/Z018/part-00000-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet
+2025-08-08 07:41:49,491 [INFO] Deleted Batch 1/May 2/F 0048/Z019/part-00000-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet
+2025-08-08 07:41:49,506 [INFO] Copied Batch 1/May 2/F 0048/Z017/part-00042-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z017/part-00042-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet
+2025-08-08 07:41:49,523 [INFO] Copied Batch 1/May 2/F 0048/Z021/part-00000-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z021/part-00000-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet
+2025-08-08 07:41:49,527 [INFO] Copied Batch 1/May 2/F 0048/Z018/part-00017-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z018/part-00017-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet
+2025-08-08 07:41:49,532 [INFO] Copied Batch 1/May 2/F 0048/Z019/part-00031-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z019/part-00031-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet
+2025-08-08 07:41:49,538 [INFO] Deleted Batch 1/May 2/F 0048/Z020/part-00000-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet
+2025-08-08 07:41:49,547 [INFO] Copied Batch 1/May 2/F 0048/Z022/part-00000-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z022/part-00000-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet
+2025-08-08 07:41:49,573 [INFO] Deleted Batch 1/May 2/F 0048/Z017/part-00042-542ef99d-53aa-4811-9b7b-51f4eaaed85a-c000.snappy.parquet
+2025-08-08 07:41:49,589 [INFO] Deleted Batch 1/May 2/F 0048/Z021/part-00000-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet
+2025-08-08 07:41:49,591 [INFO] Copied Batch 1/May 2/F 0048/Z020/part-00029-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z020/part-00029-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet
+2025-08-08 07:41:49,596 [INFO] Deleted Batch 1/May 2/F 0048/Z018/part-00017-24218645-07c9-41d6-83e9-2755e1cce691-c000.snappy.parquet
+2025-08-08 07:41:49,598 [INFO] Deleted Batch 1/May 2/F 0048/Z019/part-00031-c5d40cdc-34cd-4165-a8df-624dee2ad56d-c000.snappy.parquet
+2025-08-08 07:41:49,601 [INFO] Copied Batch 1/May 2/F 0048/Z021/part-00039-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z021/part-00039-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet
+2025-08-08 07:41:49,611 [INFO] Deleted Batch 1/May 2/F 0048/Z022/part-00000-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet
+2025-08-08 07:41:49,645 [INFO] Copied Batch 1/May 2/F 0048/Z023/part-00000-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z023/part-00000-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet
+2025-08-08 07:41:49,658 [INFO] Deleted Batch 1/May 2/F 0048/Z020/part-00029-18e0b9b9-d084-4ea9-aa06-aaf6982226e8-c000.snappy.parquet
+2025-08-08 07:41:49,664 [INFO] Deleted Batch 1/May 2/F 0048/Z021/part-00039-ef6da5b1-cec5-4d85-b26a-4318ed10382a-c000.snappy.parquet
+2025-08-08 07:41:49,711 [INFO] Deleted Batch 1/May 2/F 0048/Z023/part-00000-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet
+2025-08-08 07:41:49,714 [INFO] Copied Batch 1/May 2/F 0048/Z022/part-00004-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z022/part-00004-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet
+2025-08-08 07:41:49,721 [INFO] Copied Batch 1/May 2/F 0048/Z024/part-00000-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z024/part-00000-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet
+2025-08-08 07:41:49,747 [INFO] Copied Batch 1/May 2/F 0048/Z026/part-00000-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z026/part-00000-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet
+2025-08-08 07:41:49,780 [INFO] Copied Batch 1/May 2/F 0048/Z025/part-00000-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z025/part-00000-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet
+2025-08-08 07:41:49,783 [INFO] Deleted Batch 1/May 2/F 0048/Z024/part-00000-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet
+2025-08-08 07:41:49,793 [INFO] Deleted Batch 1/May 2/F 0048/Z022/part-00004-d7c00c8d-1724-4b1e-9f08-e98b5052c2e9-c000.snappy.parquet
+2025-08-08 07:41:49,812 [INFO] Deleted Batch 1/May 2/F 0048/Z026/part-00000-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet
+2025-08-08 07:41:49,814 [INFO] Copied Batch 1/May 2/F 0048/Z027/part-00000-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z027/part-00000-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet
+2025-08-08 07:41:49,826 [INFO] Copied Batch 1/May 2/F 0048/Z023/part-00034-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z023/part-00034-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet
+2025-08-08 07:41:49,848 [INFO] Copied Batch 1/May 2/F 0048/Z025/part-00044-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z025/part-00044-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet
+2025-08-08 07:41:49,860 [INFO] Deleted Batch 1/May 2/F 0048/Z025/part-00000-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet
+2025-08-08 07:41:49,879 [INFO] Deleted Batch 1/May 2/F 0048/Z027/part-00000-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet
+2025-08-08 07:41:49,897 [INFO] Deleted Batch 1/May 2/F 0048/Z023/part-00034-3fb4ed46-fe57-4e26-bbb3-f4f79a974c40-c000.snappy.parquet
+2025-08-08 07:41:49,917 [INFO] Copied Batch 1/May 2/F 0048/Z026/part-00032-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z026/part-00032-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet
+2025-08-08 07:41:49,925 [INFO] Deleted Batch 1/May 2/F 0048/Z025/part-00044-0885ec06-c7e8-411d-89ab-8956944a54d5-c000.snappy.parquet
+2025-08-08 07:41:49,961 [INFO] Copied Batch 1/May 2/F 0048/Z024/part-00038-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z024/part-00038-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet
+2025-08-08 07:41:49,968 [INFO] Copied Batch 1/May 2/F 0048/Z028/part-00000-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z028/part-00000-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet
+2025-08-08 07:41:49,974 [INFO] Copied Batch 1/May 2/F 0048/Z029/part-00000-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z029/part-00000-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet
+2025-08-08 07:41:49,983 [INFO] Deleted Batch 1/May 2/F 0048/Z026/part-00032-23673cbb-3a7d-48a6-9d32-f00ef25babc5-c000.snappy.parquet
+2025-08-08 07:41:49,988 [INFO] Copied Batch 1/May 2/F 0048/Z027/part-00011-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z027/part-00011-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet
+2025-08-08 07:41:50,024 [INFO] Deleted Batch 1/May 2/F 0048/Z024/part-00038-796d88f2-fe80-4d93-9924-3616ad5d4113-c000.snappy.parquet
+2025-08-08 07:41:50,040 [INFO] Deleted Batch 1/May 2/F 0048/Z028/part-00000-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet
+2025-08-08 07:41:50,041 [INFO] Deleted Batch 1/May 2/F 0048/Z029/part-00000-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet
+2025-08-08 07:41:50,048 [INFO] Copied Batch 1/May 2/F 0048/Z030/part-00000-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z030/part-00000-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet
+2025-08-08 07:41:50,055 [INFO] Deleted Batch 1/May 2/F 0048/Z027/part-00011-67a646bc-1559-4803-a981-3b0394919309-c000.snappy.parquet
+2025-08-08 07:41:50,103 [INFO] Copied Batch 1/May 2/F 0048/Z028/part-00027-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z028/part-00027-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet
+2025-08-08 07:41:50,109 [INFO] Copied Batch 1/May 2/F 0048/Z031/part-00000-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z031/part-00000-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet
+2025-08-08 07:41:50,113 [INFO] Deleted Batch 1/May 2/F 0048/Z030/part-00000-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet
+2025-08-08 07:41:50,168 [INFO] Copied Batch 1/May 2/F 0048/Z029/part-00020-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z029/part-00020-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet
+2025-08-08 07:41:50,180 [INFO] Deleted Batch 1/May 2/F 0048/Z028/part-00027-74ed6bd4-8764-4515-9ce4-c7230ccf998a-c000.snappy.parquet
+2025-08-08 07:41:50,182 [INFO] Deleted Batch 1/May 2/F 0048/Z031/part-00000-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet
+2025-08-08 07:41:50,184 [INFO] Copied Batch 1/May 2/F 0048/Z030/part-00029-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z030/part-00029-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet
+2025-08-08 07:41:50,233 [INFO] Copied Batch 1/May 2/F 0048/Z032/part-00000-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z032/part-00000-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet
+2025-08-08 07:41:50,240 [INFO] Copied Batch 1/May 2/F 0048/Z033/part-00000-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z033/part-00000-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet
+2025-08-08 07:41:50,254 [INFO] Deleted Batch 1/May 2/F 0048/Z029/part-00020-a0b84b9a-bf62-479c-95d7-4d70b98928fd-c000.snappy.parquet
+2025-08-08 07:41:50,256 [INFO] Deleted Batch 1/May 2/F 0048/Z030/part-00029-c5f98a1a-be8c-44d4-9f90-36423df261ee-c000.snappy.parquet
+2025-08-08 07:41:50,262 [INFO] Copied Batch 1/May 2/F 0048/Z034/part-00000-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z034/part-00000-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet
+2025-08-08 07:41:50,263 [INFO] Copied Batch 1/May 2/F 0048/Z032/part-00046-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z032/part-00046-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet
+2025-08-08 07:41:50,311 [INFO] Deleted Batch 1/May 2/F 0048/Z032/part-00000-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet
+2025-08-08 07:41:50,313 [INFO] Deleted Batch 1/May 2/F 0048/Z033/part-00000-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet
+2025-08-08 07:41:50,330 [INFO] Deleted Batch 1/May 2/F 0048/Z034/part-00000-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet
+2025-08-08 07:41:50,333 [INFO] Copied Batch 1/May 2/F 0048/Z033/part-00028-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z033/part-00028-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet
+2025-08-08 07:41:50,337 [INFO] Deleted Batch 1/May 2/F 0048/Z032/part-00046-d0ebe5ec-6205-4cfa-8a90-e9233383bade-c000.snappy.parquet
+2025-08-08 07:41:50,348 [INFO] Copied Batch 1/May 2/F 0048/Z035/part-00000-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z035/part-00000-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet
+2025-08-08 07:41:50,409 [INFO] Deleted Batch 1/May 2/F 0048/Z033/part-00028-42eb53e7-bf67-49d8-941c-14ba27ccb9e6-c000.snappy.parquet
+2025-08-08 07:41:50,427 [INFO] Deleted Batch 1/May 2/F 0048/Z035/part-00000-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet
+2025-08-08 07:41:50,432 [INFO] Copied Batch 1/May 2/F 0048/Z036/part-00000-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z036/part-00000-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet
+2025-08-08 07:41:50,445 [INFO] Copied Batch 1/May 2/F 0048/Z034/part-00034-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z034/part-00034-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet
+2025-08-08 07:41:50,474 [INFO] Copied Batch 1/May 2/F 0048/Z031/part-00031-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z031/part-00031-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet
+2025-08-08 07:41:50,476 [INFO] Copied Batch 1/May 2/F 0048/Z037/part-00000-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z037/part-00000-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet
+2025-08-08 07:41:50,482 [INFO] Copied Batch 1/May 2/F 0048/Z035/part-00042-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z035/part-00042-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet
+2025-08-08 07:41:50,502 [INFO] Deleted Batch 1/May 2/F 0048/Z036/part-00000-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet
+2025-08-08 07:41:50,531 [INFO] Deleted Batch 1/May 2/F 0048/Z034/part-00034-0f997b1b-26fc-4d9e-8074-011bbaab6b26-c000.snappy.parquet
+2025-08-08 07:41:50,532 [INFO] Copied Batch 1/May 2/F 0048/Z038/part-00000-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z038/part-00000-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet
+2025-08-08 07:41:50,546 [INFO] Deleted Batch 1/May 2/F 0048/Z037/part-00000-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet
+2025-08-08 07:41:50,553 [INFO] Deleted Batch 1/May 2/F 0048/Z035/part-00042-ae4fe140-c916-433e-80b9-14793a805d93-c000.snappy.parquet
+2025-08-08 07:41:50,555 [INFO] Deleted Batch 1/May 2/F 0048/Z031/part-00031-36c99c87-2704-4de2-82d7-84c8212f4495-c000.snappy.parquet
+2025-08-08 07:41:50,601 [INFO] Copied Batch 1/May 2/F 0048/Z036/part-00002-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z036/part-00002-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet
+2025-08-08 07:41:50,602 [INFO] Copied Batch 1/May 2/F 0048/Z039/part-00000-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z039/part-00000-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet
+2025-08-08 07:41:50,603 [INFO] Copied Batch 1/May 2/F 0048/Z037/part-00026-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z037/part-00026-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet
+2025-08-08 07:41:50,607 [INFO] Deleted Batch 1/May 2/F 0048/Z038/part-00000-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet
+2025-08-08 07:41:50,671 [INFO] Deleted Batch 1/May 2/F 0048/Z039/part-00000-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet
+2025-08-08 07:41:50,677 [INFO] Deleted Batch 1/May 2/F 0048/Z036/part-00002-0f1d3bc7-e2d6-4762-b428-a86c9fee9a64-c000.snappy.parquet
+2025-08-08 07:41:50,686 [INFO] Copied Batch 1/May 2/F 0048/Z040/part-00000-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z040/part-00000-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet
+2025-08-08 07:41:50,709 [INFO] Copied Batch 1/May 2/F 0048/Z041/part-00000-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z041/part-00000-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet
+2025-08-08 07:41:50,754 [INFO] Deleted Batch 1/May 2/F 0048/Z040/part-00000-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet
+2025-08-08 07:41:50,767 [INFO] Copied Batch 1/May 2/F 0048/Z038/part-00029-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z038/part-00029-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet
+2025-08-08 07:41:50,768 [INFO] Copied Batch 1/May 2/F 0048/Z042/part-00000-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z042/part-00000-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet
+2025-08-08 07:41:50,773 [INFO] Copied Batch 1/May 2/F 0048/Z039/part-00005-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z039/part-00005-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet
+2025-08-08 07:41:50,782 [INFO] Deleted Batch 1/May 2/F 0048/Z041/part-00000-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet
+2025-08-08 07:41:50,819 [INFO] Copied Batch 1/May 2/F 0048/Z043/part-00000-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z043/part-00000-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet
+2025-08-08 07:41:50,819 [INFO] Copied Batch 1/May 2/F 0048/Z041/part-00021-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z041/part-00021-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet
+2025-08-08 07:41:50,869 [INFO] Deleted Batch 1/May 2/F 0048/Z038/part-00029-e23f0016-1873-49a0-af88-677c316229ea-c000.snappy.parquet
+2025-08-08 07:41:50,869 [INFO] Deleted Batch 1/May 2/F 0048/Z039/part-00005-28456e9d-7817-40e8-bef1-de5b18adb023-c000.snappy.parquet
+2025-08-08 07:41:50,870 [INFO] Copied Batch 1/May 2/F 0048/Z040/part-00005-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z040/part-00005-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet
+2025-08-08 07:41:50,872 [INFO] Deleted Batch 1/May 2/F 0048/Z042/part-00000-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet
+2025-08-08 07:41:50,913 [INFO] Deleted Batch 1/May 2/F 0048/Z043/part-00000-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet
+2025-08-08 07:41:50,941 [INFO] Deleted Batch 1/May 2/F 0048/Z041/part-00021-ca1de7fb-35c0-4e41-be54-c678181ae67e-c000.snappy.parquet
+2025-08-08 07:41:50,942 [INFO] Copied Batch 1/May 2/F 0048/Z044/part-00000-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z044/part-00000-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet
+2025-08-08 07:41:50,955 [INFO] Deleted Batch 1/May 2/F 0048/Z040/part-00005-96fe70f3-ea60-4175-bfce-a731493b2fbf-c000.snappy.parquet
+2025-08-08 07:41:50,989 [INFO] Copied Batch 1/May 2/F 0048/Z042/part-00008-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z042/part-00008-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet
+2025-08-08 07:41:50,992 [INFO] Copied Batch 1/May 2/F 0048/Z043/part-00020-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z043/part-00020-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet
+2025-08-08 07:41:51,019 [INFO] Deleted Batch 1/May 2/F 0048/Z044/part-00000-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet
+2025-08-08 07:41:51,021 [INFO] Copied Batch 1/May 2/F 0048/Z045/part-00000-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z045/part-00000-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet
+2025-08-08 07:41:51,057 [INFO] Deleted Batch 1/May 2/F 0048/Z043/part-00020-a3fa80a8-87a9-4d82-b8ff-4d087574eb97-c000.snappy.parquet
+2025-08-08 07:41:51,063 [INFO] Deleted Batch 1/May 2/F 0048/Z042/part-00008-7a495ff6-f469-46ee-867b-4e30de690457-c000.snappy.parquet
+2025-08-08 07:41:51,081 [INFO] Copied Batch 1/May 2/F 0048/Z046/part-00000-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z046/part-00000-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet
+2025-08-08 07:41:51,086 [INFO] Deleted Batch 1/May 2/F 0048/Z045/part-00000-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet
+2025-08-08 07:41:51,099 [INFO] Copied Batch 1/May 2/F 0048/Z047/part-00000-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z047/part-00000-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet
+2025-08-08 07:41:51,161 [INFO] Deleted Batch 1/May 2/F 0048/Z046/part-00000-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet
+2025-08-08 07:41:51,170 [INFO] Copied Batch 1/May 2/F 0048/Z044/part-00025-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z044/part-00025-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet
+2025-08-08 07:41:51,195 [INFO] Deleted Batch 1/May 2/F 0048/Z047/part-00000-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet
+2025-08-08 07:41:51,198 [INFO] Copied Batch 1/May 2/F 0048/Z045/part-00040-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z045/part-00040-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet
+2025-08-08 07:41:51,241 [INFO] Copied Batch 1/May 2/F 0048/Z048/part-00000-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z048/part-00000-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet
+2025-08-08 07:41:51,260 [INFO] Copied Batch 1/May 2/F 0048/Z049/part-00000-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z049/part-00000-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet
+2025-08-08 07:41:51,264 [INFO] Deleted Batch 1/May 2/F 0048/Z044/part-00025-6e30f3d4-ef76-49e3-8da7-bbd8db5d8ed5-c000.snappy.parquet
+2025-08-08 07:41:51,281 [INFO] Deleted Batch 1/May 2/F 0048/Z045/part-00040-3ce251c1-3f16-4271-94c4-2250546dea6b-c000.snappy.parquet
+2025-08-08 07:41:51,286 [INFO] Copied Batch 1/May 2/F 0048/Z047/part-00027-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z047/part-00027-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet
+2025-08-08 07:41:51,320 [INFO] Deleted Batch 1/May 2/F 0048/Z048/part-00000-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet
+2025-08-08 07:41:51,326 [INFO] Deleted Batch 1/May 2/F 0048/Z037/part-00026-fc0944c7-debe-4d8a-9587-be2e3fa412b9-c000.snappy.parquet
+2025-08-08 07:41:51,339 [INFO] Deleted Batch 1/May 2/F 0048/Z049/part-00000-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet
+2025-08-08 07:41:51,372 [INFO] Copied Batch 1/May 2/F 0048/Z048/part-00041-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z048/part-00041-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet
+2025-08-08 07:41:51,385 [INFO] Deleted Batch 1/May 2/F 0048/Z047/part-00027-c9217cc2-a06b-4b58-bac3-a9a2ae6b6b70-c000.snappy.parquet
+2025-08-08 07:41:51,387 [INFO] Copied Batch 1/May 2/F 0048/Z046/part-00018-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z046/part-00018-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet
+2025-08-08 07:41:51,398 [INFO] Copied Batch 1/May 2/F 0048/Z050/part-00000-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z050/part-00000-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet
+2025-08-08 07:41:51,439 [INFO] Copied Batch 1/May 2/F 0048/Z049/part-00036-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z049/part-00036-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet
+2025-08-08 07:41:51,458 [INFO] Copied Batch 1/May 2/F 0048/Z051/part-00000-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z051/part-00000-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet
+2025-08-08 07:41:51,462 [INFO] Deleted Batch 1/May 2/F 0048/Z048/part-00041-9651e317-2bf7-4a01-9b6b-7342eeba0823-c000.snappy.parquet
+2025-08-08 07:41:51,477 [INFO] Deleted Batch 1/May 2/F 0048/Z046/part-00018-30c5063a-a051-4e1b-8160-c09814bc5c60-c000.snappy.parquet
+2025-08-08 07:41:51,478 [INFO] Copied Batch 1/May 2/F 0048/Z052/part-00000-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z052/part-00000-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet
+2025-08-08 07:41:51,482 [INFO] Copied Batch 1/May 2/F 0048/Z050/part-00013-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z050/part-00013-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet
+2025-08-08 07:41:51,499 [INFO] Deleted Batch 1/May 2/F 0048/Z050/part-00000-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet
+2025-08-08 07:41:51,519 [INFO] Deleted Batch 1/May 2/F 0048/Z049/part-00036-f9aa1f08-2b4a-449f-9cfa-0350f08c9b69-c000.snappy.parquet
+2025-08-08 07:41:51,548 [INFO] Deleted Batch 1/May 2/F 0048/Z051/part-00000-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet
+2025-08-08 07:41:51,549 [INFO] Deleted Batch 1/May 2/F 0048/Z052/part-00000-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet
+2025-08-08 07:41:51,559 [INFO] Deleted Batch 1/May 2/F 0048/Z050/part-00013-f84c936b-a99b-4ed0-afcc-e908f61c4582-c000.snappy.parquet
+2025-08-08 07:41:51,580 [INFO] Copied Batch 1/May 2/F 0048/Z053/part-00000-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z053/part-00000-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet
+2025-08-08 07:41:51,592 [INFO] Copied Batch 1/May 2/F 0048/Z052/part-00003-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z052/part-00003-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet
+2025-08-08 07:41:51,629 [INFO] Copied Batch 1/May 2/F 0048/Z051/part-00020-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z051/part-00020-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet
+2025-08-08 07:41:51,636 [INFO] Copied Batch 1/May 2/F 0048/Z054/part-00000-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z054/part-00000-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet
+2025-08-08 07:41:51,668 [INFO] Deleted Batch 1/May 2/F 0048/Z053/part-00000-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet
+2025-08-08 07:41:51,668 [INFO] Copied Batch 1/May 2/F 0048/Z055/part-00000-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z055/part-00000-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet
+2025-08-08 07:41:51,674 [INFO] Deleted Batch 1/May 2/F 0048/Z052/part-00003-6168f441-8053-4cec-8751-c3971a65cd1f-c000.snappy.parquet
+2025-08-08 07:41:51,719 [INFO] Deleted Batch 1/May 2/F 0048/Z054/part-00000-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet
+2025-08-08 07:41:51,720 [INFO] Copied Batch 1/May 2/F 0048/Z056/part-00000-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z056/part-00000-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet
+2025-08-08 07:41:51,728 [INFO] Deleted Batch 1/May 2/F 0048/Z051/part-00020-c4d1a2df-c5ac-4b1a-96d0-45cb30899b32-c000.snappy.parquet
+2025-08-08 07:41:51,743 [INFO] Deleted Batch 1/May 2/F 0048/Z055/part-00000-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet
+2025-08-08 07:41:51,758 [INFO] Copied Batch 1/May 2/F 0048/Z053/part-00022-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z053/part-00022-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet
+2025-08-08 07:41:51,782 [INFO] Copied Batch 1/May 2/F 0048/Z054/part-00034-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z054/part-00034-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet
+2025-08-08 07:41:51,788 [INFO] Copied Batch 1/May 2/F 0048/Z055/part-00017-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z055/part-00017-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet
+2025-08-08 07:41:51,792 [INFO] Deleted Batch 1/May 2/F 0048/Z056/part-00000-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet
+2025-08-08 07:41:51,839 [INFO] Deleted Batch 1/May 2/F 0048/Z053/part-00022-061113da-7015-4ef0-b6bd-47176bd36333-c000.snappy.parquet
+2025-08-08 07:41:51,854 [INFO] Deleted Batch 1/May 2/F 0048/Z054/part-00034-93048fea-df64-449d-ab73-57767808c768-c000.snappy.parquet
+2025-08-08 07:41:51,855 [INFO] Copied Batch 1/May 2/F 0048/Z056/part-00003-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z056/part-00003-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet
+2025-08-08 07:41:51,860 [INFO] Deleted Batch 1/May 2/F 0048/Z055/part-00017-cbdce0ec-441e-4f2e-8b49-59ef0e226137-c000.snappy.parquet
+2025-08-08 07:41:51,876 [INFO] Copied Batch 1/May 2/F 0048/Z057/part-00000-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z057/part-00000-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet
+2025-08-08 07:41:51,928 [INFO] Copied Batch 1/May 2/F 0048/Z057/part-00006-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z057/part-00006-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet
+2025-08-08 07:41:51,928 [INFO] Copied Batch 1/May 2/F 0048/Z058/part-00000-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z058/part-00000-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet
+2025-08-08 07:41:51,929 [INFO] Copied Batch 1/May 2/F 0048/Z059/part-00000-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z059/part-00000-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet
+2025-08-08 07:41:51,945 [INFO] Deleted Batch 1/May 2/F 0048/Z057/part-00000-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet
+2025-08-08 07:41:51,954 [INFO] Deleted Batch 1/May 2/F 0048/Z056/part-00003-cb71b969-77e2-48f1-9ef6-9500673f1733-c000.snappy.parquet
+2025-08-08 07:41:51,988 [INFO] Copied Batch 1/May 2/F 0048/Z058/part-00003-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z058/part-00003-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet
+2025-08-08 07:41:52,000 [INFO] Deleted Batch 1/May 2/F 0048/Z058/part-00000-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet
+2025-08-08 07:41:52,003 [INFO] Deleted Batch 1/May 2/F 0048/Z057/part-00006-1da37822-543d-4e6d-8b86-cc6754d26382-c000.snappy.parquet
+2025-08-08 07:41:52,016 [INFO] Copied Batch 1/May 2/F 0048/Z060/part-00000-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z060/part-00000-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet
+2025-08-08 07:41:52,020 [INFO] Deleted Batch 1/May 2/F 0048/Z059/part-00000-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet
+2025-08-08 07:41:52,034 [INFO] Copied Batch 1/May 2/F 0048/Z061/part-00000-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z061/part-00000-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet
+2025-08-08 07:41:52,057 [INFO] Copied Batch 1/May 2/F 0048/Z059/part-00014-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z059/part-00014-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet
+2025-08-08 07:41:52,070 [INFO] Deleted Batch 1/May 2/F 0048/Z058/part-00003-84b11866-9b47-43f7-a9a4-83030bd718ce-c000.snappy.parquet
+2025-08-08 07:41:52,087 [INFO] Deleted Batch 1/May 2/F 0048/Z060/part-00000-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet
+2025-08-08 07:41:52,110 [INFO] Copied Batch 1/May 2/F 0048/Z062/part-00000-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z062/part-00000-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet
+2025-08-08 07:41:52,144 [INFO] Deleted Batch 1/May 2/F 0048/Z059/part-00014-b1faefc0-d14a-4261-8cfb-8053efeedeb5-c000.snappy.parquet
+2025-08-08 07:41:52,159 [INFO] Deleted Batch 1/May 2/F 0048/Z061/part-00000-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet
+2025-08-08 07:41:52,187 [INFO] Copied Batch 1/May 2/F 0048/Z063/part-00000-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z063/part-00000-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet
+2025-08-08 07:41:52,191 [INFO] Deleted Batch 1/May 2/F 0048/Z062/part-00000-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet
+2025-08-08 07:41:52,193 [INFO] Copied Batch 1/May 2/F 0048/Z060/part-00011-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z060/part-00011-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet
+2025-08-08 07:41:52,218 [INFO] Copied Batch 1/May 2/F 0048/Z061/part-00022-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z061/part-00022-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet
+2025-08-08 07:41:52,227 [INFO] Copied Batch 1/May 2/F 0048/Z064/part-00000-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z064/part-00000-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet
+2025-08-08 07:41:52,255 [INFO] Deleted Batch 1/May 2/F 0048/Z063/part-00000-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet
+2025-08-08 07:41:52,270 [INFO] Deleted Batch 1/May 2/F 0048/Z060/part-00011-f1572fc8-ccdc-4046-9dc3-de0a87dc669f-c000.snappy.parquet
+2025-08-08 07:41:52,270 [INFO] Copied Batch 1/May 2/F 0048/Z062/part-00026-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z062/part-00026-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet
+2025-08-08 07:41:52,293 [INFO] Deleted Batch 1/May 2/F 0048/Z061/part-00022-2c003372-5641-4315-b732-b4a4fe099dd5-c000.snappy.parquet
+2025-08-08 07:41:52,298 [INFO] Copied Batch 1/May 2/F 0048/Z065/part-00000-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z065/part-00000-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet
+2025-08-08 07:41:52,300 [INFO] Deleted Batch 1/May 2/F 0048/Z064/part-00000-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet
+2025-08-08 07:41:52,318 [INFO] Copied Batch 1/May 2/F 0048/Z063/part-00009-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z063/part-00009-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet
+2025-08-08 07:41:52,338 [INFO] Deleted Batch 1/May 2/F 0048/Z062/part-00026-daffd3c3-0842-4d76-be50-44ec35062e1a-c000.snappy.parquet
+2025-08-08 07:41:52,342 [INFO] Copied Batch 1/May 2/F 0048/Z066/part-00000-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z066/part-00000-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet
+2025-08-08 07:41:52,384 [INFO] Deleted Batch 1/May 2/F 0048/Z065/part-00000-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet
+2025-08-08 07:41:52,392 [INFO] Deleted Batch 1/May 2/F 0048/Z063/part-00009-085bf476-5638-4899-aae8-d8a8eb9ca1fe-c000.snappy.parquet
+2025-08-08 07:41:52,416 [INFO] Deleted Batch 1/May 2/F 0048/Z066/part-00000-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet
+2025-08-08 07:41:52,428 [INFO] Copied Batch 1/May 2/F 0048/Z067/part-00000-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z067/part-00000-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet
+2025-08-08 07:41:52,435 [INFO] Copied Batch 1/May 2/F 0048/Z064/part-00027-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z064/part-00027-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet
+2025-08-08 07:41:52,459 [INFO] Copied Batch 1/May 2/F 0048/Z065/part-00023-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z065/part-00023-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet
+2025-08-08 07:41:52,468 [INFO] Copied Batch 1/May 2/F 0048/Z068/part-00000-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z068/part-00000-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet
+2025-08-08 07:41:52,498 [INFO] Deleted Batch 1/May 2/F 0048/Z067/part-00000-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet
+2025-08-08 07:41:52,505 [INFO] Deleted Batch 1/May 2/F 0048/Z064/part-00027-eb8a2a32-84ab-4ed8-8662-4bd7d848532e-c000.snappy.parquet
+2025-08-08 07:41:52,522 [INFO] Copied Batch 1/May 2/F 0048/Z069/part-00000-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z069/part-00000-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet
+2025-08-08 07:41:52,529 [INFO] Deleted Batch 1/May 2/F 0048/Z065/part-00023-339fd826-60a1-4dbe-a765-448fc8a3a918-c000.snappy.parquet
+2025-08-08 07:41:52,552 [INFO] Deleted Batch 1/May 2/F 0048/Z068/part-00000-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet
+2025-08-08 07:41:52,571 [INFO] Copied Batch 1/May 2/F 0048/Z066/part-00009-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z066/part-00009-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet
+2025-08-08 07:41:52,598 [INFO] Copied Batch 1/May 2/F 0048/Z070/part-00000-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z070/part-00000-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet
+2025-08-08 07:41:52,616 [INFO] Deleted Batch 1/May 2/F 0048/Z069/part-00000-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet
+2025-08-08 07:41:52,620 [INFO] Copied Batch 1/May 2/F 0048/Z068/part-00003-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z068/part-00003-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet
+2025-08-08 07:41:52,628 [INFO] Copied Batch 1/May 2/F 0048/Z067/part-00002-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z067/part-00002-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet
+2025-08-08 07:41:52,642 [INFO] Deleted Batch 1/May 2/F 0048/Z066/part-00009-df0539a4-4751-4ea8-bbd0-30d7b10d00a6-c000.snappy.parquet
+2025-08-08 07:41:52,670 [INFO] Copied Batch 1/May 2/F 0048/Z071/part-00000-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z071/part-00000-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet
+2025-08-08 07:41:52,673 [INFO] Deleted Batch 1/May 2/F 0048/Z070/part-00000-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet
+2025-08-08 07:41:52,699 [INFO] Deleted Batch 1/May 2/F 0048/Z067/part-00002-71620cb1-c78e-4d27-9f40-818293a7a8de-c000.snappy.parquet
+2025-08-08 07:41:52,701 [INFO] Deleted Batch 1/May 2/F 0048/Z068/part-00003-2271008f-5496-42ea-b868-876892f207a6-c000.snappy.parquet
+2025-08-08 07:41:52,704 [INFO] Copied Batch 1/May 2/F 0048/Z069/part-00024-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z069/part-00024-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet
+2025-08-08 07:41:52,727 [INFO] Copied Batch 1/May 2/F 0048/Z072/part-00000-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z072/part-00000-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet
+2025-08-08 07:41:52,740 [INFO] Deleted Batch 1/May 2/F 0048/Z071/part-00000-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet
+2025-08-08 07:41:52,741 [INFO] Copied Batch 1/May 2/F 0048/Z070/part-00008-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z070/part-00008-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet
+2025-08-08 07:41:52,772 [INFO] Deleted Batch 1/May 2/F 0048/Z069/part-00024-ea8aafe7-df9d-4e76-bd32-1475cd03d8d9-c000.snappy.parquet
+2025-08-08 07:41:52,784 [INFO] Copied Batch 1/May 2/F 0048/Z071/part-00008-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z071/part-00008-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet
+2025-08-08 07:41:52,791 [INFO] Deleted Batch 1/May 2/F 0048/Z072/part-00000-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet
+2025-08-08 07:41:52,808 [INFO] Copied Batch 1/May 2/F 0048/Z073/part-00000-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z073/part-00000-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet
+2025-08-08 07:41:52,816 [INFO] Deleted Batch 1/May 2/F 0048/Z070/part-00008-f391ba1c-e965-412e-9dc9-aa735d8b67e8-c000.snappy.parquet
+2025-08-08 07:41:52,873 [INFO] Copied Batch 1/May 2/F 0048/Z074/part-00000-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z074/part-00000-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet
+2025-08-08 07:41:52,875 [INFO] Deleted Batch 1/May 2/F 0048/Z071/part-00008-708043dd-3394-41b5-bad9-bb3a0fc7e448-c000.snappy.parquet
+2025-08-08 07:41:52,876 [INFO] Deleted Batch 1/May 2/F 0048/Z073/part-00000-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet
+2025-08-08 07:41:52,918 [INFO] Copied Batch 1/May 2/F 0048/Z072/part-00037-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z072/part-00037-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet
+2025-08-08 07:41:52,920 [INFO] Copied Batch 1/May 2/F 0048/Z075/part-00000-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z075/part-00000-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet
+2025-08-08 07:41:52,929 [INFO] Copied Batch 1/May 2/F 0048/Z073/part-00009-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z073/part-00009-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet
+2025-08-08 07:41:52,966 [INFO] Deleted Batch 1/May 2/F 0048/Z074/part-00000-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet
+2025-08-08 07:41:52,976 [INFO] Copied Batch 1/May 2/F 0048/Z076/part-00000-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z076/part-00000-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet
+2025-08-08 07:41:52,984 [INFO] Deleted Batch 1/May 2/F 0048/Z075/part-00000-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet
+2025-08-08 07:41:52,988 [INFO] Deleted Batch 1/May 2/F 0048/Z072/part-00037-5512172c-c3ba-4661-807d-cb391edb0439-c000.snappy.parquet
+2025-08-08 07:41:53,001 [INFO] Deleted Batch 1/May 2/F 0048/Z073/part-00009-6b8454a3-a77a-482f-b58f-70f6291a249c-c000.snappy.parquet
+2025-08-08 07:41:53,005 [INFO] Copied Batch 1/May 2/F 0048/Z074/part-00009-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z074/part-00009-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet
+2025-08-08 07:41:53,014 [INFO] Copied Batch 1/May 2/F 0048/Z075/part-00032-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z075/part-00032-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet
+2025-08-08 07:41:53,035 [INFO] Copied Batch 1/May 2/F 0048/Z077/part-00000-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z077/part-00000-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet
+2025-08-08 07:41:53,044 [INFO] Deleted Batch 1/May 2/F 0048/Z076/part-00000-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet
+2025-08-08 07:41:53,082 [INFO] Deleted Batch 1/May 2/F 0048/Z074/part-00009-dfd60509-7eb1-495a-ba38-e402404fb780-c000.snappy.parquet
+2025-08-08 07:41:53,085 [INFO] Deleted Batch 1/May 2/F 0048/Z075/part-00032-a80cf51b-b999-4a4d-ad76-8110ece1728a-c000.snappy.parquet
+2025-08-08 07:41:53,102 [INFO] Deleted Batch 1/May 2/F 0048/Z077/part-00000-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet
+2025-08-08 07:41:53,132 [INFO] Copied Batch 1/May 2/F 0048/Z077/part-00013-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z077/part-00013-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet
+2025-08-08 07:41:53,155 [INFO] Copied Batch 1/May 2/F 0048/Z079/part-00000-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z079/part-00000-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet
+2025-08-08 07:41:53,171 [INFO] Copied Batch 1/May 2/F 0048/Z076/part-00029-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z076/part-00029-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet
+2025-08-08 07:41:53,182 [INFO] Copied Batch 1/May 2/F 0048/Z078/part-00000-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z078/part-00000-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet
+2025-08-08 07:41:53,200 [INFO] Copied Batch 1/May 2/F 0048/Z080/part-00000-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z080/part-00000-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet
+2025-08-08 07:41:53,212 [INFO] Deleted Batch 1/May 2/F 0048/Z077/part-00013-f6f1f69d-e678-495f-8cf1-56a0ca4a47ea-c000.snappy.parquet
+2025-08-08 07:41:53,224 [INFO] Deleted Batch 1/May 2/F 0048/Z079/part-00000-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet
+2025-08-08 07:41:53,244 [INFO] Deleted Batch 1/May 2/F 0048/Z076/part-00029-f6537c19-94aa-4e26-a2a4-1248d04c94e1-c000.snappy.parquet
+2025-08-08 07:41:53,249 [INFO] Deleted Batch 1/May 2/F 0048/Z078/part-00000-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet
+2025-08-08 07:41:53,263 [INFO] Deleted Batch 1/May 2/F 0048/Z080/part-00000-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet
+2025-08-08 07:41:53,276 [INFO] Copied Batch 1/May 2/F 0048/Z079/part-00030-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z079/part-00030-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet
+2025-08-08 07:41:53,286 [INFO] Copied Batch 1/May 2/F 0048/Z078/part-00023-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z078/part-00023-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet
+2025-08-08 07:41:53,289 [INFO] Copied Batch 1/May 2/F 0048/Z081/part-00000-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z081/part-00000-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet
+2025-08-08 07:41:53,349 [INFO] Deleted Batch 1/May 2/F 0048/Z079/part-00030-fbe868ff-a83a-48cb-94f2-b10bcf1b5a3e-c000.snappy.parquet
+2025-08-08 07:41:53,355 [INFO] Deleted Batch 1/May 2/F 0048/Z078/part-00023-46126f8a-8193-4f6e-97e3-e93a3293e4d6-c000.snappy.parquet
+2025-08-08 07:41:53,359 [INFO] Deleted Batch 1/May 2/F 0048/Z081/part-00000-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet
+2025-08-08 07:41:53,385 [INFO] Copied Batch 1/May 2/F 0048/Z081/part-00015-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z081/part-00015-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet
+2025-08-08 07:41:53,395 [INFO] Copied Batch 1/May 2/F 0048/Z082/part-00000-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z082/part-00000-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet
+2025-08-08 07:41:53,395 [INFO] Copied Batch 1/May 2/F 0048/Z080/part-00025-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z080/part-00025-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet
+2025-08-08 07:41:53,404 [INFO] Copied Batch 1/May 2/F 0048/Z083/part-00000-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z083/part-00000-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet
+2025-08-08 07:41:53,448 [INFO] Copied Batch 1/May 2/F 0048/Z084/part-00000-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z084/part-00000-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet
+2025-08-08 07:41:53,456 [INFO] Deleted Batch 1/May 2/F 0048/Z081/part-00015-0c552760-5afc-475c-aae3-a9555a90acc3-c000.snappy.parquet
+2025-08-08 07:41:53,465 [INFO] Deleted Batch 1/May 2/F 0048/Z080/part-00025-6687985c-c20a-4462-93e4-152d7a3a60f5-c000.snappy.parquet
+2025-08-08 07:41:53,470 [INFO] Deleted Batch 1/May 2/F 0048/Z082/part-00000-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet
+2025-08-08 07:41:53,473 [INFO] Deleted Batch 1/May 2/F 0048/Z083/part-00000-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet
+2025-08-08 07:41:53,500 [INFO] Copied Batch 1/May 2/F 0048/Z082/part-00012-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z082/part-00012-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet
+2025-08-08 07:41:53,522 [INFO] Deleted Batch 1/May 2/F 0048/Z084/part-00000-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet
+2025-08-08 07:41:53,523 [INFO] Copied Batch 1/May 2/F 0048/Z083/part-00019-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z083/part-00019-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet
+2025-08-08 07:41:53,552 [INFO] Copied Batch 1/May 2/F 0048/Z085/part-00000-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z085/part-00000-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet
+2025-08-08 07:41:53,572 [INFO] Deleted Batch 1/May 2/F 0048/Z082/part-00012-8875c172-b2ef-44f5-becb-edb51f422eb3-c000.snappy.parquet
+2025-08-08 07:41:53,596 [INFO] Deleted Batch 1/May 2/F 0048/Z083/part-00019-2c20e730-e22c-43f0-ad11-0c4186e59c56-c000.snappy.parquet
+2025-08-08 07:41:53,615 [INFO] Copied Batch 1/May 2/F 0048/Z084/part-00019-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z084/part-00019-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet
+2025-08-08 07:41:53,618 [INFO] Copied Batch 1/May 2/F 0048/Z085/part-00014-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z085/part-00014-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet
+2025-08-08 07:41:53,622 [INFO] Deleted Batch 1/May 2/F 0048/Z085/part-00000-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet
+2025-08-08 07:41:53,639 [INFO] Copied Batch 1/May 2/F 0048/Z087/part-00000-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z087/part-00000-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet
+2025-08-08 07:41:53,659 [INFO] Copied Batch 1/May 2/F 0048/Z086/part-00000-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z086/part-00000-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet
+2025-08-08 07:41:53,681 [INFO] Deleted Batch 1/May 2/F 0048/Z084/part-00019-8aacaf32-0df6-4596-b811-0bf7c50ff583-c000.snappy.parquet
+2025-08-08 07:41:53,684 [INFO] Copied Batch 1/May 2/F 0048/Z088/part-00000-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z088/part-00000-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet
+2025-08-08 07:41:53,694 [INFO] Deleted Batch 1/May 2/F 0048/Z085/part-00014-e6920125-d91f-422e-8276-5a515919df53-c000.snappy.parquet
+2025-08-08 07:41:53,707 [INFO] Deleted Batch 1/May 2/F 0048/Z087/part-00000-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet
+2025-08-08 07:41:53,710 [INFO] Copied Batch 1/May 2/F 0048/Z087/part-00021-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z087/part-00021-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet
+2025-08-08 07:41:53,733 [INFO] Deleted Batch 1/May 2/F 0048/Z086/part-00000-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet
+2025-08-08 07:41:53,749 [INFO] Copied Batch 1/May 2/F 0048/Z089/part-00000-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z089/part-00000-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet
+2025-08-08 07:41:53,756 [INFO] Copied Batch 1/May 2/F 0048/Z086/part-00021-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z086/part-00021-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet
+2025-08-08 07:41:53,768 [INFO] Deleted Batch 1/May 2/F 0048/Z088/part-00000-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet
+2025-08-08 07:41:53,773 [INFO] Deleted Batch 1/May 2/F 0048/Z087/part-00021-1eb24acf-6d73-4d07-a92d-d75da85ac799-c000.snappy.parquet
+2025-08-08 07:41:53,809 [INFO] Copied Batch 1/May 2/F 0048/Z088/part-00002-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z088/part-00002-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet
+2025-08-08 07:41:53,816 [INFO] Deleted Batch 1/May 2/F 0048/Z089/part-00000-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet
+2025-08-08 07:41:53,824 [INFO] Deleted Batch 1/May 2/F 0048/Z086/part-00021-bc9882e9-b4cc-4f31-b336-ded39e512924-c000.snappy.parquet
+2025-08-08 07:41:53,829 [INFO] Copied Batch 1/May 2/F 0048/Z090/part-00000-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z090/part-00000-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet
+2025-08-08 07:41:53,863 [INFO] Copied Batch 1/May 2/F 0048/Z089/part-00030-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z089/part-00030-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet
+2025-08-08 07:41:53,899 [INFO] Deleted Batch 1/May 2/F 0048/Z088/part-00002-eefd3a13-cd80-46d0-88d8-ffe9dc374245-c000.snappy.parquet
+2025-08-08 07:41:53,901 [INFO] Deleted Batch 1/May 2/F 0048/Z090/part-00000-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet
+2025-08-08 07:41:53,916 [INFO] Copied Batch 1/May 2/F 0048/Z092/part-00000-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z092/part-00000-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet
+2025-08-08 07:41:53,924 [INFO] Copied Batch 1/May 2/F 0048/Z091/part-00000-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z091/part-00000-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet
+2025-08-08 07:41:53,937 [INFO] Deleted Batch 1/May 2/F 0048/Z089/part-00030-bd3f39d4-5b2d-4bf8-a961-4ce9b9620ffc-c000.snappy.parquet
+2025-08-08 07:41:53,975 [INFO] Copied Batch 1/May 2/F 0048/Z093/part-00000-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z093/part-00000-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet
+2025-08-08 07:41:53,982 [INFO] Deleted Batch 1/May 2/F 0048/Z092/part-00000-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet
+2025-08-08 07:41:53,989 [INFO] Deleted Batch 1/May 2/F 0048/Z091/part-00000-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet
+2025-08-08 07:41:53,998 [INFO] Copied Batch 1/May 2/F 0048/Z090/part-00003-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z090/part-00003-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet
+2025-08-08 07:41:54,036 [INFO] Copied Batch 1/May 2/F 0048/Z091/part-00011-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z091/part-00011-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet
+2025-08-08 07:41:54,046 [INFO] Deleted Batch 1/May 2/F 0048/Z093/part-00000-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet
+2025-08-08 07:41:54,049 [INFO] Copied Batch 1/May 2/F 0048/Z092/part-00015-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z092/part-00015-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet
+2025-08-08 07:41:54,066 [INFO] Deleted Batch 1/May 2/F 0048/Z090/part-00003-67155c43-97f8-45ac-9896-6ecb2417031d-c000.snappy.parquet
+2025-08-08 07:41:54,104 [INFO] Deleted Batch 1/May 2/F 0048/Z091/part-00011-2a40151e-0734-445a-8cbc-d8debfaa4acb-c000.snappy.parquet
+2025-08-08 07:41:54,112 [INFO] Copied Batch 1/May 2/F 0048/Z095/part-00000-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z095/part-00000-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet
+2025-08-08 07:41:54,115 [INFO] Copied Batch 1/May 2/F 0048/Z094/part-00000-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z094/part-00000-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet
+2025-08-08 07:41:54,116 [INFO] Deleted Batch 1/May 2/F 0048/Z092/part-00015-75fe2bba-3d9b-4c8e-b17e-71d4cab6388c-c000.snappy.parquet
+2025-08-08 07:41:54,124 [INFO] Copied Batch 1/May 2/F 0048/Z093/part-00038-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z093/part-00038-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet
+2025-08-08 07:41:54,175 [INFO] Copied Batch 1/May 2/F 0048/Z096/part-00000-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z096/part-00000-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet
+2025-08-08 07:41:54,179 [INFO] Deleted Batch 1/May 2/F 0048/Z095/part-00000-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet
+2025-08-08 07:41:54,192 [INFO] Copied Batch 1/May 2/F 0048/Z094/part-00004-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z094/part-00004-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet
+2025-08-08 07:41:54,198 [INFO] Deleted Batch 1/May 2/F 0048/Z094/part-00000-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet
+2025-08-08 07:41:54,222 [INFO] Deleted Batch 1/May 2/F 0048/Z093/part-00038-92686337-d558-4b8c-bfd0-578c6485bfec-c000.snappy.parquet
+2025-08-08 07:41:54,224 [INFO] Copied Batch 1/May 2/F 0048/Z095/part-00008-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z095/part-00008-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet
+2025-08-08 07:41:54,231 [INFO] Copied Batch 1/May 2/F 0048/Z097/part-00000-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z097/part-00000-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet
+2025-08-08 07:41:54,243 [INFO] Deleted Batch 1/May 2/F 0048/Z096/part-00000-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet
+2025-08-08 07:41:54,261 [INFO] Deleted Batch 1/May 2/F 0048/Z094/part-00004-dd192c2d-19b1-4212-a2a8-e94a8841cb4c-c000.snappy.parquet
+2025-08-08 07:41:54,265 [INFO] Copied Batch 1/May 2/F 0048/Z098/part-00000-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z098/part-00000-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet
+2025-08-08 07:41:54,294 [INFO] Deleted Batch 1/May 2/F 0048/Z095/part-00008-7ed2a4fc-5541-48be-9bcf-98708e9b032d-c000.snappy.parquet
+2025-08-08 07:41:54,303 [INFO] Deleted Batch 1/May 2/F 0048/Z097/part-00000-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet
+2025-08-08 07:41:54,317 [INFO] Copied Batch 1/May 2/F 0048/Z096/part-00025-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z096/part-00025-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet
+2025-08-08 07:41:54,335 [INFO] Deleted Batch 1/May 2/F 0048/Z098/part-00000-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet
+2025-08-08 07:41:54,359 [INFO] Copied Batch 1/May 2/F 0048/Z097/part-00013-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z097/part-00013-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet
+2025-08-08 07:41:54,368 [INFO] Copied Batch 1/May 2/F 0048/Z099/part-00000-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z099/part-00000-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet
+2025-08-08 07:41:54,393 [INFO] Deleted Batch 1/May 2/F 0048/Z096/part-00025-ff923bfc-9d48-48e4-854d-1367fefc5771-c000.snappy.parquet
+2025-08-08 07:41:54,426 [INFO] Deleted Batch 1/May 2/F 0048/Z097/part-00013-a4faafe4-335c-47fd-94cf-50d47552eaeb-c000.snappy.parquet
+2025-08-08 07:41:54,427 [INFO] Copied Batch 1/May 2/F 0048/Z098/part-00010-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z098/part-00010-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet
+2025-08-08 07:41:54,451 [INFO] Deleted Batch 1/May 2/F 0048/Z099/part-00000-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet
+2025-08-08 07:41:54,470 [INFO] Copied Batch 1/May 2/F 0048/Z101/part-00000-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z101/part-00000-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet
+2025-08-08 07:41:54,472 [INFO] Copied Batch 1/May 2/F 0048/Z099/part-00021-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z099/part-00021-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet
+2025-08-08 07:41:54,497 [INFO] Deleted Batch 1/May 2/F 0048/Z098/part-00010-ecb15885-aca5-4d0a-87b2-c4745dae21fd-c000.snappy.parquet
+2025-08-08 07:41:54,509 [INFO] Copied Batch 1/May 2/F 0048/Z102/part-00000-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z102/part-00000-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet
+2025-08-08 07:41:54,510 [INFO] Copied Batch 1/May 2/F 0048/Z100/part-00000-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z100/part-00000-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet
+2025-08-08 07:41:54,541 [INFO] Deleted Batch 1/May 2/F 0048/Z101/part-00000-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet
+2025-08-08 07:41:54,542 [INFO] Copied Batch 1/May 2/F 0048/Z100/part-00009-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z100/part-00009-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet
+2025-08-08 07:41:54,547 [INFO] Deleted Batch 1/May 2/F 0048/Z099/part-00021-d764f8c9-c6a9-4e1f-ad28-95b81ff8940a-c000.snappy.parquet
+2025-08-08 07:41:54,561 [INFO] Copied Batch 1/May 2/F 0048/Z101/part-00018-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z101/part-00018-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet
+2025-08-08 07:41:54,578 [INFO] Deleted Batch 1/May 2/F 0048/Z100/part-00000-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet
+2025-08-08 07:41:54,581 [INFO] Deleted Batch 1/May 2/F 0048/Z102/part-00000-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet
+2025-08-08 07:41:54,584 [INFO] Copied Batch 1/May 2/F 0048/Z103/part-00000-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z103/part-00000-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet
+2025-08-08 07:41:54,622 [INFO] Deleted Batch 1/May 2/F 0048/Z100/part-00009-5843d70c-865e-4aff-b333-1d8543ee8592-c000.snappy.parquet
+2025-08-08 07:41:54,628 [INFO] Deleted Batch 1/May 2/F 0048/Z101/part-00018-a1d1fbbe-ab99-4d20-a383-8ffe5bf25067-c000.snappy.parquet
+2025-08-08 07:41:54,656 [INFO] Deleted Batch 1/May 2/F 0048/Z103/part-00000-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet
+2025-08-08 07:41:54,688 [INFO] Copied Batch 1/May 2/F 0048/Z102/part-00009-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z102/part-00009-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet
+2025-08-08 07:41:54,722 [INFO] Copied Batch 1/May 2/F 0048/Z105/part-00000-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z105/part-00000-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet
+2025-08-08 07:41:54,751 [INFO] Copied Batch 1/May 2/F 0048/Z104/part-00000-d610ad1f-b60a-47e9-a835-0c9089644dcf-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z104/part-00000-d610ad1f-b60a-47e9-a835-0c9089644dcf-c000.snappy.parquet
+2025-08-08 07:41:54,761 [INFO] Copied Batch 1/May 2/F 0048/Z106/part-00000-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z106/part-00000-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet
+2025-08-08 07:41:54,775 [INFO] Copied Batch 1/May 2/F 0048/Z103/part-00022-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z103/part-00022-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet
+2025-08-08 07:41:54,784 [INFO] Deleted Batch 1/May 2/F 0048/Z102/part-00009-a05a783a-033d-421c-a3b2-a70edfe1289c-c000.snappy.parquet
+2025-08-08 07:41:54,790 [INFO] Deleted Batch 1/May 2/F 0048/Z105/part-00000-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet
+2025-08-08 07:41:54,819 [INFO] Copied Batch 1/May 2/F 0048/Z108/part-00000-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z108/part-00000-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet
+2025-08-08 07:41:54,819 [INFO] Copied Batch 1/May 2/F 0048/Z107/part-00000-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z107/part-00000-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet
+2025-08-08 07:41:54,828 [INFO] Deleted Batch 1/May 2/F 0048/Z104/part-00000-d610ad1f-b60a-47e9-a835-0c9089644dcf-c000.snappy.parquet
+2025-08-08 07:41:54,840 [INFO] Deleted Batch 1/May 2/F 0048/Z106/part-00000-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet
+2025-08-08 07:41:54,842 [INFO] Copied Batch 1/May 2/F 0048/Z106/part-00018-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z106/part-00018-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet
+2025-08-08 07:41:54,846 [INFO] Deleted Batch 1/May 2/F 0048/Z103/part-00022-2a75172c-a0e8-4a12-8f7b-ce136c1bf99a-c000.snappy.parquet
+2025-08-08 07:41:54,846 [INFO] Copied Batch 1/May 2/F 0048/Z105/part-00024-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z105/part-00024-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet
+2025-08-08 07:41:54,865 [INFO] Copied Batch 1/May 2/F 0048/Z107/part-00012-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z107/part-00012-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet
+2025-08-08 07:41:54,899 [INFO] Deleted Batch 1/May 2/F 0048/Z107/part-00000-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet
+2025-08-08 07:41:54,910 [INFO] Deleted Batch 1/May 2/F 0048/Z108/part-00000-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet
+2025-08-08 07:41:54,914 [INFO] Deleted Batch 1/May 2/F 0048/Z105/part-00024-9bfd4985-db17-48da-99cc-f5f2de1da47a-c000.snappy.parquet
+2025-08-08 07:41:54,918 [INFO] Deleted Batch 1/May 2/F 0048/Z106/part-00018-801a87cd-2bc4-4d61-92c8-32fa2f17ecb9-c000.snappy.parquet
+2025-08-08 07:41:54,935 [INFO] Deleted Batch 1/May 2/F 0048/Z107/part-00012-8011a028-bcd6-4e36-8c36-7ead9d9b336b-c000.snappy.parquet
+2025-08-08 07:41:54,996 [INFO] Copied Batch 1/May 2/F 0048/Z110/part-00000-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z110/part-00000-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet
+2025-08-08 07:41:55,019 [INFO] Copied Batch 1/May 2/F 0048/Z109/part-00000-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z109/part-00000-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet
+2025-08-08 07:41:55,064 [INFO] Deleted Batch 1/May 2/F 0048/Z110/part-00000-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet
+2025-08-08 07:41:55,083 [INFO] Deleted Batch 1/May 2/F 0048/Z109/part-00000-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet
+2025-08-08 07:41:55,089 [INFO] Copied Batch 1/May 2/F 0048/Z112/part-00000-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z112/part-00000-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet
+2025-08-08 07:41:55,091 [INFO] Copied Batch 1/May 2/F 0048/Z110/part-00022-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z110/part-00022-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet
+2025-08-08 07:41:55,096 [INFO] Copied Batch 1/May 2/F 0048/Z111/part-00000-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z111/part-00000-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet
+2025-08-08 07:41:55,098 [INFO] Copied Batch 1/May 2/F 0048/Z113/part-00000-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z113/part-00000-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet
+2025-08-08 07:41:55,100 [INFO] Copied Batch 1/May 2/F 0048/Z109/part-00011-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z109/part-00011-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet
+2025-08-08 07:41:55,123 [INFO] Copied Batch 1/May 2/F 0048/Z108/part-00011-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z108/part-00011-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet
+2025-08-08 07:41:55,159 [INFO] Deleted Batch 1/May 2/F 0048/Z112/part-00000-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet
+2025-08-08 07:41:55,172 [INFO] Deleted Batch 1/May 2/F 0048/Z111/part-00000-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet
+2025-08-08 07:41:55,174 [INFO] Deleted Batch 1/May 2/F 0048/Z113/part-00000-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet
+2025-08-08 07:41:55,175 [INFO] Deleted Batch 1/May 2/F 0048/Z109/part-00011-42926d94-6a04-4f55-aacb-08c5ed976594-c000.snappy.parquet
+2025-08-08 07:41:55,179 [INFO] Deleted Batch 1/May 2/F 0048/Z110/part-00022-c39ce67b-c42f-415e-b821-84eace7ab902-c000.snappy.parquet
+2025-08-08 07:41:55,198 [INFO] Copied Batch 1/May 2/F 0048/Z111/part-00012-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z111/part-00012-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet
+2025-08-08 07:41:55,200 [INFO] Copied Batch 1/May 2/F 0048/Z112/part-00017-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z112/part-00017-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet
+2025-08-08 07:41:55,205 [INFO] Deleted Batch 1/May 2/F 0048/Z108/part-00011-dbc22c7f-38fd-4d17-aaf2-62ce0860c335-c000.snappy.parquet
+2025-08-08 07:41:55,275 [INFO] Deleted Batch 1/May 2/F 0048/Z112/part-00017-74b00b3d-6050-4e53-b1e1-9063929e1a26-c000.snappy.parquet
+2025-08-08 07:41:55,276 [INFO] Deleted Batch 1/May 2/F 0048/Z111/part-00012-fd8dcc36-19fd-480a-b54b-f7d690bae70c-c000.snappy.parquet
+2025-08-08 07:41:55,287 [INFO] Copied Batch 1/May 2/F 0048/Z114/part-00000-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z114/part-00000-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet
+2025-08-08 07:41:55,330 [INFO] Copied Batch 1/May 2/F 0048/Z116/part-00000-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z116/part-00000-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet
+2025-08-08 07:41:55,335 [INFO] Copied Batch 1/May 2/F 0048/Z115/part-00000-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z115/part-00000-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet
+2025-08-08 07:41:55,355 [INFO] Copied Batch 1/May 2/F 0048/Z113/part-00011-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z113/part-00011-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet
+2025-08-08 07:41:55,371 [INFO] Copied Batch 1/May 2/F 0048/Z117/part-00000-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z117/part-00000-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet
+2025-08-08 07:41:55,393 [INFO] Deleted Batch 1/May 2/F 0048/Z114/part-00000-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet
+2025-08-08 07:41:55,400 [INFO] Deleted Batch 1/May 2/F 0048/Z116/part-00000-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet
+2025-08-08 07:41:55,411 [INFO] Deleted Batch 1/May 2/F 0048/Z115/part-00000-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet
+2025-08-08 07:41:55,424 [INFO] Deleted Batch 1/May 2/F 0048/Z113/part-00011-db7f0772-18a7-490b-9ea1-9eb810f21ef9-c000.snappy.parquet
+2025-08-08 07:41:55,439 [INFO] Copied Batch 1/May 2/F 0048/Z115/part-00018-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z115/part-00018-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet
+2025-08-08 07:41:55,449 [INFO] Deleted Batch 1/May 2/F 0048/Z117/part-00000-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet
+2025-08-08 07:41:55,450 [INFO] Copied Batch 1/May 2/F 0048/Z118/part-00000-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z118/part-00000-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet
+2025-08-08 07:41:55,451 [INFO] Copied Batch 1/May 2/F 0048/Z114/part-00006-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z114/part-00006-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet
+2025-08-08 07:41:55,506 [INFO] Deleted Batch 1/May 2/F 0048/Z115/part-00018-3e0e753c-30fa-4ee2-8fe3-a7b9017b93ca-c000.snappy.parquet
+2025-08-08 07:41:55,510 [INFO] Copied Batch 1/May 2/F 0048/Z116/part-00004-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z116/part-00004-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet
+2025-08-08 07:41:55,526 [INFO] Deleted Batch 1/May 2/F 0048/Z118/part-00000-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet
+2025-08-08 07:41:55,539 [INFO] Deleted Batch 1/May 2/F 0048/Z114/part-00006-07950385-fdc4-4d60-b3ac-2b750b20c804-c000.snappy.parquet
+2025-08-08 07:41:55,568 [INFO] Copied Batch 1/May 2/F 0048/Z119/part-00000-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z119/part-00000-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet
+2025-08-08 07:41:55,569 [INFO] Copied Batch 1/May 2/F 0048/Z117/part-00025-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z117/part-00025-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet
+2025-08-08 07:41:55,583 [INFO] Deleted Batch 1/May 2/F 0048/Z116/part-00004-ac2162c7-46d8-411b-9403-5e25dac6634f-c000.snappy.parquet
+2025-08-08 07:41:55,615 [INFO] Copied Batch 1/May 2/F 0048/Z120/part-00000-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z120/part-00000-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet
+2025-08-08 07:41:55,629 [INFO] Copied Batch 1/May 2/F 0048/Z118/part-00003-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z118/part-00003-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet
+2025-08-08 07:41:55,637 [INFO] Deleted Batch 1/May 2/F 0048/Z117/part-00025-76f78f05-0107-4f34-9e5a-3f9c81d5ef18-c000.snappy.parquet
+2025-08-08 07:41:55,641 [INFO] Deleted Batch 1/May 2/F 0048/Z119/part-00000-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet
+2025-08-08 07:41:55,675 [INFO] Copied Batch 1/May 2/F 0048/Z119/part-00009-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z119/part-00009-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet
+2025-08-08 07:41:55,686 [INFO] Deleted Batch 1/May 2/F 0048/Z120/part-00000-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet
+2025-08-08 07:41:55,698 [INFO] Copied Batch 1/May 2/F 0048/Z121/part-00000-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z121/part-00000-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet
+2025-08-08 07:41:55,732 [INFO] Copied Batch 1/May 2/F 0048/Z122/part-00000-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z122/part-00000-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet
+2025-08-08 07:41:55,747 [INFO] Deleted Batch 1/May 2/F 0048/Z118/part-00003-843c5837-ccac-492b-a063-25d92393c472-c000.snappy.parquet
+2025-08-08 07:41:55,748 [INFO] Deleted Batch 1/May 2/F 0048/Z119/part-00009-4f11c5a9-c9b8-43c1-8ec1-8f513e1d023f-c000.snappy.parquet
+2025-08-08 07:41:55,758 [INFO] Copied Batch 1/May 2/F 0048/Z120/part-00014-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z120/part-00014-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet
+2025-08-08 07:41:55,766 [INFO] Deleted Batch 1/May 2/F 0048/Z121/part-00000-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet
+2025-08-08 07:41:55,821 [INFO] Copied Batch 1/May 2/F 0048/Z121/part-00003-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z121/part-00003-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet
+2025-08-08 07:41:55,822 [INFO] Deleted Batch 1/May 2/F 0048/Z120/part-00014-84f06b38-65db-4393-86e5-292461f9fc6f-c000.snappy.parquet
+2025-08-08 07:41:55,829 [INFO] Copied Batch 1/May 2/F 0048/Z123/part-00000-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z123/part-00000-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet
+2025-08-08 07:41:55,832 [INFO] Deleted Batch 1/May 2/F 0048/Z122/part-00000-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet
+2025-08-08 07:41:55,865 [INFO] Copied Batch 1/May 2/F 0048/Z124/part-00000-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z124/part-00000-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet
+2025-08-08 07:41:55,896 [INFO] Deleted Batch 1/May 2/F 0048/Z121/part-00003-dcd59a44-4475-495c-914f-d08b345c05b6-c000.snappy.parquet
+2025-08-08 07:41:55,912 [INFO] Copied Batch 1/May 2/F 0048/Z125/part-00000-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z125/part-00000-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet
+2025-08-08 07:41:55,954 [INFO] Deleted Batch 1/May 2/F 0048/Z124/part-00000-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet
+2025-08-08 07:41:55,971 [INFO] Copied Batch 1/May 2/F 0048/Z123/part-00006-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z123/part-00006-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet
+2025-08-08 07:41:55,984 [INFO] Deleted Batch 1/May 2/F 0048/Z125/part-00000-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet
+2025-08-08 07:41:55,985 [INFO] Copied Batch 1/May 2/F 0048/Z126/part-00000-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z126/part-00000-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet
+2025-08-08 07:41:55,990 [INFO] Copied Batch 1/May 2/F 0048/Z122/part-00003-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z122/part-00003-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet
+2025-08-08 07:41:56,036 [INFO] Deleted Batch 1/May 2/F 0048/Z123/part-00006-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet
+2025-08-08 07:41:56,037 [INFO] Copied Batch 1/May 2/F 0048/Z127/part-00000-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z127/part-00000-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet
+2025-08-08 07:41:56,051 [INFO] Copied Batch 1/May 2/F 0048/Z125/part-00013-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z125/part-00013-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet
+2025-08-08 07:41:56,053 [INFO] Copied Batch 1/May 2/F 0048/Z124/part-00021-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z124/part-00021-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet
+2025-08-08 07:41:56,060 [INFO] Deleted Batch 1/May 2/F 0048/Z122/part-00003-56dfe882-6e0a-44b1-a04e-ba78d0c1aa11-c000.snappy.parquet
+2025-08-08 07:41:56,062 [INFO] Deleted Batch 1/May 2/F 0048/Z126/part-00000-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet
+2025-08-08 07:41:56,109 [INFO] Deleted Batch 1/May 2/F 0048/Z127/part-00000-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet
+2025-08-08 07:41:56,127 [INFO] Copied Batch 1/May 2/F 0048/Z126/part-00012-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z126/part-00012-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet
+2025-08-08 07:41:56,136 [INFO] Deleted Batch 1/May 2/F 0048/Z124/part-00021-0c0c4cba-f171-4b41-a4ae-307e7746e25e-c000.snappy.parquet
+2025-08-08 07:41:56,167 [INFO] Deleted Batch 1/May 2/F 0048/Z125/part-00013-d461d393-f2b8-43b3-aaab-d07a4c9716ef-c000.snappy.parquet
+2025-08-08 07:41:56,169 [INFO] Copied Batch 1/May 2/F 0048/Z128/part-00000-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z128/part-00000-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet
+2025-08-08 07:41:56,174 [INFO] Copied Batch 1/May 2/F 0048/Z127/part-00009-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z127/part-00009-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet
+2025-08-08 07:41:56,200 [INFO] Deleted Batch 1/May 2/F 0048/Z126/part-00012-8a16e344-c319-445b-8951-7089dac9bb8c-c000.snappy.parquet
+2025-08-08 07:41:56,235 [INFO] Copied Batch 1/May 2/F 0048/Z129/part-00000-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z129/part-00000-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet
+2025-08-08 07:41:56,237 [INFO] Deleted Batch 1/May 2/F 0048/Z128/part-00000-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet
+2025-08-08 07:41:56,243 [INFO] Deleted Batch 1/May 2/F 0048/Z127/part-00009-96f4886e-afd5-4399-955a-5b848d79ecd2-c000.snappy.parquet
+2025-08-08 07:41:56,270 [INFO] Copied Batch 1/May 2/F 0048/Z130/part-00000-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z130/part-00000-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet
+2025-08-08 07:41:56,311 [INFO] Deleted Batch 1/May 2/F 0048/Z129/part-00000-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet
+2025-08-08 07:41:56,324 [INFO] Copied Batch 1/May 2/F 0048/Z131/part-00000-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z131/part-00000-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet
+2025-08-08 07:41:56,327 [INFO] Copied Batch 1/May 2/F 0048/Z128/part-00009-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z128/part-00009-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet
+2025-08-08 07:41:56,330 [INFO] Copied Batch 1/May 2/F 0048/Z129/part-00013-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z129/part-00013-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet
+2025-08-08 07:41:56,340 [INFO] Deleted Batch 1/May 2/F 0048/Z130/part-00000-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet
+2025-08-08 07:41:56,398 [INFO] Deleted Batch 1/May 2/F 0048/Z131/part-00000-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet
+2025-08-08 07:41:56,398 [INFO] Deleted Batch 1/May 2/F 0048/Z128/part-00009-504c9fc9-ebb5-4957-af91-1878fea40e91-c000.snappy.parquet
+2025-08-08 07:41:56,403 [INFO] Deleted Batch 1/May 2/F 0048/Z129/part-00013-2df47dc6-dfb1-4a1f-811d-cd1e4278773c-c000.snappy.parquet
+2025-08-08 07:41:56,407 [INFO] Copied Batch 1/May 2/F 0048/Z132/part-00000-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z132/part-00000-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet
+2025-08-08 07:41:56,442 [INFO] Copied Batch 1/May 2/F 0048/Z130/part-00009-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z130/part-00009-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet
+2025-08-08 07:41:56,466 [INFO] Copied Batch 1/May 2/F 0048/Z131/part-00018-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z131/part-00018-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet
+2025-08-08 07:41:56,479 [INFO] Copied Batch 1/May 2/F 0048/Z133/part-00000-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z133/part-00000-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet
+2025-08-08 07:41:56,485 [INFO] Deleted Batch 1/May 2/F 0048/Z132/part-00000-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet
+2025-08-08 07:41:56,514 [INFO] Deleted Batch 1/May 2/F 0048/Z130/part-00009-6dc9b313-4120-47d7-b442-e6966b8dff5d-c000.snappy.parquet
+2025-08-08 07:41:56,518 [INFO] Copied Batch 1/May 2/F 0048/Z132/part-00011-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z132/part-00011-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet
+2025-08-08 07:41:56,532 [INFO] Deleted Batch 1/May 2/F 0048/Z131/part-00018-dbb87af1-8491-45e5-81c5-8caa573999b3-c000.snappy.parquet
+2025-08-08 07:41:56,551 [INFO] Deleted Batch 1/May 2/F 0048/Z133/part-00000-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet
+2025-08-08 07:41:56,586 [INFO] Deleted Batch 1/May 2/F 0048/Z132/part-00011-d8ebf9a9-896f-48d3-9c47-203e9b2700cc-c000.snappy.parquet
+2025-08-08 07:41:56,594 [INFO] Copied Batch 1/May 2/F 0048/Z134/part-00000-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z134/part-00000-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet
+2025-08-08 07:41:56,601 [INFO] Copied Batch 1/May 2/F 0048/Z135/part-00000-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z135/part-00000-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet
+2025-08-08 07:41:56,623 [INFO] Copied Batch 1/May 2/F 0048/Z133/part-00006-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z133/part-00006-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet
+2025-08-08 07:41:56,659 [INFO] Deleted Batch 1/May 2/F 0048/Z123/part-00000-b95f8166-295d-46cb-84a3-0fc573825689-c000.snappy.parquet
+2025-08-08 07:41:56,661 [INFO] Deleted Batch 1/May 2/F 0048/Z134/part-00000-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet
+2025-08-08 07:41:56,668 [INFO] Deleted Batch 1/May 2/F 0048/Z135/part-00000-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet
+2025-08-08 07:41:56,673 [INFO] Copied Batch 1/May 2/F 0048/Z136/part-00000-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z136/part-00000-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet
+2025-08-08 07:41:56,697 [INFO] Deleted Batch 1/May 2/F 0048/Z133/part-00006-c6b038b8-73b4-4a02-9ca4-b3acbbc00fb0-c000.snappy.parquet
+2025-08-08 07:41:56,697 [INFO] Copied Batch 1/May 2/F 0048/Z134/part-00003-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z134/part-00003-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet
+2025-08-08 07:41:56,738 [INFO] Deleted Batch 1/May 2/F 0048/Z136/part-00000-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet
+2025-08-08 07:41:56,748 [INFO] Copied Batch 1/May 2/F 0048/Z137/part-00000-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z137/part-00000-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet
+2025-08-08 07:41:56,754 [INFO] Copied Batch 1/May 2/F 0048/Z135/part-00003-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z135/part-00003-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet
+2025-08-08 07:41:56,770 [INFO] Deleted Batch 1/May 2/F 0048/Z134/part-00003-d57cdd9d-0ea5-4d9c-a786-182ec4a4b153-c000.snappy.parquet
+2025-08-08 07:41:56,821 [INFO] Copied Batch 1/May 2/F 0048/Z136/part-00001-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z136/part-00001-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet
+2025-08-08 07:41:56,824 [INFO] Deleted Batch 1/May 2/F 0048/Z135/part-00003-ecbdb629-19dc-4a6c-a882-9e5c4a8b5b30-c000.snappy.parquet
+2025-08-08 07:41:56,829 [INFO] Copied Batch 1/May 2/F 0048/Z138/part-00000-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z138/part-00000-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet
+2025-08-08 07:41:56,832 [INFO] Deleted Batch 1/May 2/F 0048/Z137/part-00000-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet
+2025-08-08 07:41:56,885 [INFO] Copied Batch 1/May 2/F 0048/Z139/part-00000-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z139/part-00000-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet
+2025-08-08 07:41:56,888 [INFO] Copied Batch 1/May 2/F 0048/Z137/part-00016-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z137/part-00016-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet
+2025-08-08 07:41:56,902 [INFO] Deleted Batch 1/May 2/F 0048/Z136/part-00001-0aa6d88d-c2ae-4ec3-8384-7ecd502fc40d-c000.snappy.parquet
+2025-08-08 07:41:56,946 [INFO] Copied Batch 1/May 2/F 0048/Z140/part-00000-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z140/part-00000-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet
+2025-08-08 07:41:56,960 [INFO] Copied Batch 1/May 2/F 0048/Z138/part-00006-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z138/part-00006-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet
+2025-08-08 07:41:56,963 [INFO] Deleted Batch 1/May 2/F 0048/Z137/part-00016-65559035-4870-43d9-8818-5c28802576d7-c000.snappy.parquet
+2025-08-08 07:41:56,974 [INFO] Deleted Batch 1/May 2/F 0048/Z139/part-00000-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet
+2025-08-08 07:41:56,978 [INFO] Copied Batch 1/May 2/F 0048/Z139/part-00009-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z139/part-00009-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet
+2025-08-08 07:41:56,986 [INFO] Copied Batch 1/May 2/F 0048/Z141/part-00000-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z141/part-00000-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet
+2025-08-08 07:41:57,021 [INFO] Copied Batch 1/May 2/F 0048/Z140/part-00017-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z140/part-00017-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet
+2025-08-08 07:41:57,026 [INFO] Deleted Batch 1/May 2/F 0048/Z138/part-00006-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet
+2025-08-08 07:41:57,032 [INFO] Deleted Batch 1/May 2/F 0048/Z140/part-00000-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet
+2025-08-08 07:41:57,052 [INFO] Deleted Batch 1/May 2/F 0048/Z139/part-00009-684d93cb-408a-44f1-be02-282a9cef651e-c000.snappy.parquet
+2025-08-08 07:41:57,054 [INFO] Deleted Batch 1/May 2/F 0048/Z141/part-00000-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet
+2025-08-08 07:41:57,082 [INFO] Deleted Batch 1/May 2/F 0048/Z138/part-00000-6bc10cc0-6068-41ad-bf77-c889083fda89-c000.snappy.parquet
+2025-08-08 07:41:57,088 [INFO] Deleted Batch 1/May 2/F 0048/Z140/part-00017-e40d991a-b1a5-4d22-a336-d6946085a729-c000.snappy.parquet
+2025-08-08 07:41:57,092 [INFO] Copied Batch 1/May 2/F 0048/Z141/part-00016-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z141/part-00016-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet
+2025-08-08 07:41:57,135 [INFO] Copied Batch 1/May 2/F 0048/Z142/part-00000-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z142/part-00000-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet
+2025-08-08 07:41:57,139 [INFO] Copied Batch 1/May 2/F 0048/Z143/part-00000-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z143/part-00000-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet
+2025-08-08 07:41:57,157 [INFO] Deleted Batch 1/May 2/F 0048/Z141/part-00016-b6c39cc6-5d41-4785-b89b-3758a4b9cc53-c000.snappy.parquet
+2025-08-08 07:41:57,191 [INFO] Copied Batch 1/May 2/F 0048/Z142/part-00009-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z142/part-00009-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet
+2025-08-08 07:41:57,192 [INFO] Copied Batch 1/May 2/F 0048/Z144/part-00000-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z144/part-00000-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet
+2025-08-08 07:41:57,207 [INFO] Deleted Batch 1/May 2/F 0048/Z143/part-00000-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet
+2025-08-08 07:41:57,208 [INFO] Deleted Batch 1/May 2/F 0048/Z142/part-00000-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet
+2025-08-08 07:41:57,229 [INFO] Copied Batch 1/May 2/F 0048/Z145/part-00000-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z145/part-00000-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet
+2025-08-08 07:41:57,246 [INFO] Copied Batch 1/May 2/F 0048/Z146/part-00000-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z146/part-00000-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet
+2025-08-08 07:41:57,264 [INFO] Deleted Batch 1/May 2/F 0048/Z144/part-00000-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet
+2025-08-08 07:41:57,267 [INFO] Deleted Batch 1/May 2/F 0048/Z142/part-00009-13b31115-c348-46d9-935c-7e45c2e3a67f-c000.snappy.parquet
+2025-08-08 07:41:57,310 [INFO] Deleted Batch 1/May 2/F 0048/Z145/part-00000-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet
+2025-08-08 07:41:57,328 [INFO] Copied Batch 1/May 2/F 0048/Z145/part-00014-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z145/part-00014-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet
+2025-08-08 07:41:57,333 [INFO] Copied Batch 1/May 2/F 0048/Z144/part-00003-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z144/part-00003-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet
+2025-08-08 07:41:57,334 [INFO] Deleted Batch 1/May 2/F 0048/Z146/part-00000-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet
+2025-08-08 07:41:57,347 [INFO] Copied Batch 1/May 2/F 0048/Z143/part-00013-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z143/part-00013-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet
+2025-08-08 07:41:57,401 [INFO] Deleted Batch 1/May 2/F 0048/Z144/part-00003-59746f94-6404-4db2-a531-c1d4aab12523-c000.snappy.parquet
+2025-08-08 07:41:57,402 [INFO] Deleted Batch 1/May 2/F 0048/Z145/part-00014-4d5e8e79-8598-4854-bc68-2ee2d9019db3-c000.snappy.parquet
+2025-08-08 07:41:57,421 [INFO] Copied Batch 1/May 2/F 0048/Z146/part-00011-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z146/part-00011-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet
+2025-08-08 07:41:57,431 [INFO] Deleted Batch 1/May 2/F 0048/Z143/part-00013-acda8ca5-df71-415e-8771-983aadad2042-c000.snappy.parquet
+2025-08-08 07:41:57,455 [INFO] Copied Batch 1/May 2/F 0048/Z148/part-00000-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z148/part-00000-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet
+2025-08-08 07:41:57,481 [INFO] Copied Batch 1/May 2/F 0048/Z149/part-00000-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z149/part-00000-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet
+2025-08-08 07:41:57,487 [INFO] Deleted Batch 1/May 2/F 0048/Z146/part-00011-5899fb04-1e23-4996-9252-341edd1967bf-c000.snappy.parquet
+2025-08-08 07:41:57,491 [INFO] Copied Batch 1/May 2/F 0048/Z147/part-00000-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z147/part-00000-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet
+2025-08-08 07:41:57,496 [INFO] Copied Batch 1/May 2/F 0048/Z147/part-00002-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z147/part-00002-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet
+2025-08-08 07:41:57,541 [INFO] Deleted Batch 1/May 2/F 0048/Z148/part-00000-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet
+2025-08-08 07:41:57,551 [INFO] Deleted Batch 1/May 2/F 0048/Z149/part-00000-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet
+2025-08-08 07:41:57,566 [INFO] Deleted Batch 1/May 2/F 0048/Z147/part-00002-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet
+2025-08-08 07:41:57,566 [INFO] Deleted Batch 1/May 2/F 0048/Z147/part-00000-03de7a89-45ef-4ca1-a2d2-98b5723dd2f4-c000.snappy.parquet
+2025-08-08 07:41:57,581 [INFO] Copied Batch 1/May 2/F 0048/Z151/part-00000-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z151/part-00000-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet
+2025-08-08 07:41:57,613 [INFO] Copied Batch 1/May 2/F 0048/Z149/part-00009-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z149/part-00009-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet
+2025-08-08 07:41:57,620 [INFO] Copied Batch 1/May 2/F 0048/Z148/part-00006-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z148/part-00006-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet
+2025-08-08 07:41:57,621 [INFO] Copied Batch 1/May 2/F 0048/Z150/part-00000-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z150/part-00000-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet
+2025-08-08 07:41:57,654 [INFO] Deleted Batch 1/May 2/F 0048/Z151/part-00000-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet
+2025-08-08 07:41:57,687 [INFO] Deleted Batch 1/May 2/F 0048/Z149/part-00009-fa716d5a-3610-483e-bcd6-10a1277c2ef3-c000.snappy.parquet
+2025-08-08 07:41:57,691 [INFO] Copied Batch 1/May 2/F 0048/Z150/part-00007-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z150/part-00007-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet
+2025-08-08 07:41:57,697 [INFO] Deleted Batch 1/May 2/F 0048/Z148/part-00006-3408bc67-413d-4a6c-bef7-b1fbb7687830-c000.snappy.parquet
+2025-08-08 07:41:57,702 [INFO] Deleted Batch 1/May 2/F 0048/Z150/part-00000-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet
+2025-08-08 07:41:57,743 [INFO] Copied Batch 1/May 2/F 0048/Z152/part-00000-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z152/part-00000-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet
+2025-08-08 07:41:57,763 [INFO] Copied Batch 1/May 2/F 0048/Z151/part-00003-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z151/part-00003-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet
+2025-08-08 07:41:57,768 [INFO] Deleted Batch 1/May 2/F 0048/Z150/part-00007-30e8b349-3f06-4176-86a4-a31f2f2ac9d3-c000.snappy.parquet
+2025-08-08 07:41:57,784 [INFO] Copied Batch 1/May 2/F 0048/Z153/part-00000-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z153/part-00000-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet
+2025-08-08 07:41:57,815 [INFO] Copied Batch 1/May 2/F 0048/Z152/part-00009-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z152/part-00009-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet
+2025-08-08 07:41:57,817 [INFO] Deleted Batch 1/May 2/F 0048/Z152/part-00000-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet
+2025-08-08 07:41:57,837 [INFO] Copied Batch 1/May 2/F 0048/Z154/part-00000-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z154/part-00000-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet
+2025-08-08 07:41:57,862 [INFO] Deleted Batch 1/May 2/F 0048/Z151/part-00003-5509b5ab-006d-46cc-944f-3d81bb50b99a-c000.snappy.parquet
+2025-08-08 07:41:57,863 [INFO] Deleted Batch 1/May 2/F 0048/Z153/part-00000-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet
+2025-08-08 07:41:57,883 [INFO] Copied Batch 1/May 2/F 0048/Z153/part-00002-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z153/part-00002-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet
+2025-08-08 07:41:57,900 [INFO] Deleted Batch 1/May 2/F 0048/Z152/part-00009-2f71fec4-00f5-4e5a-a07f-dc8f9db67953-c000.snappy.parquet
+2025-08-08 07:41:57,916 [INFO] Deleted Batch 1/May 2/F 0048/Z154/part-00000-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet
+2025-08-08 07:41:57,945 [INFO] Copied Batch 1/May 2/F 0048/Z156/part-00000-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z156/part-00000-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet
+2025-08-08 07:41:57,962 [INFO] Copied Batch 1/May 2/F 0048/Z155/part-00000-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z155/part-00000-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet
+2025-08-08 07:41:57,973 [INFO] Copied Batch 1/May 2/F 0048/Z155/part-00004-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z155/part-00004-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet
+2025-08-08 07:41:57,983 [INFO] Copied Batch 1/May 2/F 0048/Z154/part-00003-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z154/part-00003-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet
+2025-08-08 07:41:58,013 [INFO] Deleted Batch 1/May 2/F 0048/Z153/part-00002-3d4e38df-d8da-4ed9-ac7d-a759ec366956-c000.snappy.parquet
+2025-08-08 07:41:58,024 [INFO] Copied Batch 1/May 2/F 0048/Z157/part-00000-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z157/part-00000-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet
+2025-08-08 07:41:58,033 [INFO] Deleted Batch 1/May 2/F 0048/Z156/part-00000-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet
+2025-08-08 07:41:58,033 [INFO] Deleted Batch 1/May 2/F 0048/Z155/part-00000-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet
+2025-08-08 07:41:58,053 [INFO] Deleted Batch 1/May 2/F 0048/Z154/part-00003-ef20b49b-8a2e-4875-b68d-dcb2760a1554-c000.snappy.parquet
+2025-08-08 07:41:58,065 [INFO] Deleted Batch 1/May 2/F 0048/Z155/part-00004-b8256aac-e984-4608-91d5-15e29238f630-c000.snappy.parquet
+2025-08-08 07:41:58,097 [INFO] Copied Batch 1/May 2/F 0048/Z157/part-00008-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z157/part-00008-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet
+2025-08-08 07:41:58,100 [INFO] Deleted Batch 1/May 2/F 0048/Z157/part-00000-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet
+2025-08-08 07:41:58,112 [INFO] Copied Batch 1/May 2/F 0048/Z156/part-00008-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z156/part-00008-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet
+2025-08-08 07:41:58,169 [INFO] Deleted Batch 1/May 2/F 0048/Z157/part-00008-5887ef91-fd09-42bb-9493-6f313b9a374e-c000.snappy.parquet
+2025-08-08 07:41:58,192 [INFO] Copied Batch 1/May 2/F 0048/Z158/part-00017-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z158/part-00017-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet
+2025-08-08 07:41:58,194 [INFO] Copied Batch 1/May 2/F 0048/Z159/part-00000-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z159/part-00000-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet
+2025-08-08 07:41:58,208 [INFO] Deleted Batch 1/May 2/F 0048/Z156/part-00008-4ce2c2ae-238c-4db2-abed-88e7f4b6e149-c000.snappy.parquet
+2025-08-08 07:41:58,240 [INFO] Copied Batch 1/May 2/F 0048/Z161/part-00000-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z161/part-00000-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet
+2025-08-08 07:41:58,263 [INFO] Deleted Batch 1/May 2/F 0048/Z159/part-00000-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet
+2025-08-08 07:41:58,272 [INFO] Deleted Batch 1/May 2/F 0048/Z158/part-00017-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet
+2025-08-08 07:41:58,289 [INFO] Copied Batch 1/May 2/F 0048/Z158/part-00000-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z158/part-00000-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet
+2025-08-08 07:41:58,313 [INFO] Copied Batch 1/May 2/F 0048/Z159/part-00009-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z159/part-00009-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet
+2025-08-08 07:41:58,314 [INFO] Deleted Batch 1/May 2/F 0048/Z161/part-00000-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet
+2025-08-08 07:41:58,329 [INFO] Copied Batch 1/May 2/F 0048/Z160/part-00009-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z160/part-00009-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet
+2025-08-08 07:41:58,338 [INFO] Copied Batch 1/May 2/F 0048/Z162/part-00000-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z162/part-00000-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet
+2025-08-08 07:41:58,359 [INFO] Copied Batch 1/May 2/F 0048/Z160/part-00000-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z160/part-00000-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet
+2025-08-08 07:41:58,360 [INFO] Deleted Batch 1/May 2/F 0048/Z158/part-00000-2d2b45fc-39e4-4c09-ba02-ed905be4b10f-c000.snappy.parquet
+2025-08-08 07:41:58,379 [INFO] Copied Batch 1/May 2/F 0048/Z161/part-00012-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z161/part-00012-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet
+2025-08-08 07:41:58,384 [INFO] Deleted Batch 1/May 2/F 0048/Z159/part-00009-fb2e1fef-e384-44e5-b3b7-1c610a0d9b57-c000.snappy.parquet
+2025-08-08 07:41:58,401 [INFO] Deleted Batch 1/May 2/F 0048/Z160/part-00009-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet
+2025-08-08 07:41:58,411 [INFO] Deleted Batch 1/May 2/F 0048/Z162/part-00000-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet
+2025-08-08 07:41:58,437 [INFO] Deleted Batch 1/May 2/F 0048/Z160/part-00000-f0319d48-3775-4c90-bf0d-2a7a0372f917-c000.snappy.parquet
+2025-08-08 07:41:58,453 [INFO] Deleted Batch 1/May 2/F 0048/Z161/part-00012-7fcbe8c7-5b74-4609-847f-df6adbd33df9-c000.snappy.parquet
+2025-08-08 07:41:58,477 [INFO] Copied Batch 1/May 2/F 0048/Z163/part-00000-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z163/part-00000-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet
+2025-08-08 07:41:58,480 [INFO] Copied Batch 1/May 2/F 0048/Z162/part-00009-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z162/part-00009-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet
+2025-08-08 07:41:58,484 [INFO] Copied Batch 1/May 2/F 0048/Z164/part-00000-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z164/part-00000-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet
+2025-08-08 07:41:58,552 [INFO] Deleted Batch 1/May 2/F 0048/Z163/part-00000-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet
+2025-08-08 07:41:58,557 [INFO] Deleted Batch 1/May 2/F 0048/Z164/part-00000-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet
+2025-08-08 07:41:58,557 [INFO] Copied Batch 1/May 2/F 0048/Z165/part-00000-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z165/part-00000-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet
+2025-08-08 07:41:58,561 [INFO] Deleted Batch 1/May 2/F 0048/Z162/part-00009-5a9647b7-60b1-470a-868f-e9d38cfda418-c000.snappy.parquet
+2025-08-08 07:41:58,562 [INFO] Copied Batch 1/May 2/F 0048/Z163/part-00013-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z163/part-00013-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet
+2025-08-08 07:41:58,579 [INFO] Copied Batch 1/May 2/F 0048/Z164/part-00001-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z164/part-00001-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet
+2025-08-08 07:41:58,594 [INFO] Copied Batch 1/May 2/F 0048/Z166/part-00000-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z166/part-00000-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet
+2025-08-08 07:41:58,628 [INFO] Deleted Batch 1/May 2/F 0048/Z165/part-00000-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet
+2025-08-08 07:41:58,636 [INFO] Deleted Batch 1/May 2/F 0048/Z163/part-00013-bc541999-5ba5-4731-9a05-b1ab338a151b-c000.snappy.parquet
+2025-08-08 07:41:58,646 [INFO] Deleted Batch 1/May 2/F 0048/Z164/part-00001-6e673c56-4894-475a-b433-cf96a23349b4-c000.snappy.parquet
+2025-08-08 07:41:58,666 [INFO] Deleted Batch 1/May 2/F 0048/Z166/part-00000-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet
+2025-08-08 07:41:58,681 [INFO] Copied Batch 1/May 2/F 0048/Z166/part-00009-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z166/part-00009-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet
+2025-08-08 07:41:58,736 [INFO] Copied Batch 1/May 2/F 0048/Z167/part-00000-c9e73784-a637-4586-8b31-265a203f85d3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z167/part-00000-c9e73784-a637-4586-8b31-265a203f85d3-c000.snappy.parquet
+2025-08-08 07:41:58,739 [INFO] Copied Batch 1/May 2/F 0048/Z169/part-00000-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z169/part-00000-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet
+2025-08-08 07:41:58,752 [INFO] Deleted Batch 1/May 2/F 0048/Z166/part-00009-1b2b24e1-67f7-426d-979a-9c200375b9f3-c000.snappy.parquet
+2025-08-08 07:41:58,773 [INFO] Copied Batch 1/May 2/F 0048/Z165/part-00012-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z165/part-00012-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet
+2025-08-08 07:41:58,796 [INFO] Copied Batch 1/May 2/F 0048/Z171/part-00000-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z171/part-00000-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet
+2025-08-08 07:41:58,814 [INFO] Deleted Batch 1/May 2/F 0048/Z169/part-00000-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet
+2025-08-08 07:41:58,816 [INFO] Deleted Batch 1/May 2/F 0048/Z167/part-00000-c9e73784-a637-4586-8b31-265a203f85d3-c000.snappy.parquet
+2025-08-08 07:41:58,859 [INFO] Copied Batch 1/May 2/F 0048/Z169/part-00013-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z169/part-00013-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet
+2025-08-08 07:41:58,874 [INFO] Deleted Batch 1/May 2/F 0048/Z165/part-00012-73d8184b-7c42-4444-bda7-a6a30d71e16e-c000.snappy.parquet
+2025-08-08 07:41:58,882 [INFO] Deleted Batch 1/May 2/F 0048/Z171/part-00000-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet
+2025-08-08 07:41:58,894 [INFO] Copied Batch 1/May 2/F 0048/Z172/part-00000-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z172/part-00000-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet
+2025-08-08 07:41:58,914 [INFO] Copied Batch 1/May 2/F 0048/Z170/part-00009-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z170/part-00009-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet
+2025-08-08 07:41:58,922 [INFO] Copied Batch 1/May 2/F 0048/Z170/part-00000-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z170/part-00000-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet
+2025-08-08 07:41:58,948 [INFO] Copied Batch 1/May 2/F 0048/Z171/part-00015-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z171/part-00015-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet
+2025-08-08 07:41:58,957 [INFO] Deleted Batch 1/May 2/F 0048/Z169/part-00013-5e7a264b-51b7-4fb8-a5a0-35d5885ea598-c000.snappy.parquet
+2025-08-08 07:41:58,988 [INFO] Deleted Batch 1/May 2/F 0048/Z170/part-00000-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet
+2025-08-08 07:41:59,020 [INFO] Deleted Batch 1/May 2/F 0048/Z171/part-00015-30516ba2-6ad8-468b-80ec-ccf3583ccaeb-c000.snappy.parquet
+2025-08-08 07:41:59,022 [INFO] Copied Batch 1/May 2/F 0048/Z174/part-00000-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z174/part-00000-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet
+2025-08-08 07:41:59,031 [INFO] Copied Batch 1/May 2/F 0048/Z173/part-00000-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z173/part-00000-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet
+2025-08-08 07:41:59,074 [INFO] Copied Batch 1/May 2/F 0048/Z172/part-00009-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z172/part-00009-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet
+2025-08-08 07:41:59,082 [INFO] Copied Batch 1/May 2/F 0048/Z173/part-00012-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z173/part-00012-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet
+2025-08-08 07:41:59,089 [INFO] Deleted Batch 1/May 2/F 0048/Z174/part-00000-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet
+2025-08-08 07:41:59,110 [INFO] Deleted Batch 1/May 2/F 0048/Z172/part-00000-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet
+2025-08-08 07:41:59,118 [INFO] Deleted Batch 1/May 2/F 0048/Z170/part-00009-c4ea18bc-cebe-429f-8e20-2443058fb437-c000.snappy.parquet
+2025-08-08 07:41:59,146 [INFO] Deleted Batch 1/May 2/F 0048/Z173/part-00000-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet
+2025-08-08 07:41:59,149 [INFO] Deleted Batch 1/May 2/F 0048/Z172/part-00009-ca8ec657-12d3-4712-8433-ac8319f89f61-c000.snappy.parquet
+2025-08-08 07:41:59,157 [INFO] Copied Batch 1/May 2/F 0048/Z175/part-00000-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z175/part-00000-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet
+2025-08-08 07:41:59,180 [INFO] Deleted Batch 1/May 2/F 0048/Z173/part-00012-2bf10fb4-80ed-4252-a8c7-9fd9b8c09441-c000.snappy.parquet
+2025-08-08 07:41:59,222 [INFO] Deleted Batch 1/May 2/F 0048/Z175/part-00000-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet
+2025-08-08 07:41:59,294 [INFO] Copied Batch 1/May 2/F 0048/Z168/part-00000-a18e33e6-5358-4b99-9f3e-bc4a8426723d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z168/part-00000-a18e33e6-5358-4b99-9f3e-bc4a8426723d-c000.snappy.parquet
+2025-08-08 07:41:59,308 [INFO] Copied Batch 1/May 2/F 0048/Z176/part-00000-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z176/part-00000-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet
+2025-08-08 07:41:59,328 [INFO] Copied Batch 1/May 2/F 0048/Z178/part-00000-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z178/part-00000-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet
+2025-08-08 07:41:59,341 [INFO] Copied Batch 1/May 2/F 0048/Z174/part-00011-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z174/part-00011-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet
+2025-08-08 07:41:59,350 [INFO] Copied Batch 1/May 2/F 0048/Z175/part-00002-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z175/part-00002-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet
+2025-08-08 07:41:59,358 [INFO] Deleted Batch 1/May 2/F 0048/Z168/part-00000-a18e33e6-5358-4b99-9f3e-bc4a8426723d-c000.snappy.parquet
+2025-08-08 07:41:59,369 [INFO] Copied Batch 1/May 2/F 0048/Z179/part-00000-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z179/part-00000-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet
+2025-08-08 07:41:59,386 [INFO] Deleted Batch 1/May 2/F 0048/Z176/part-00000-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet
+2025-08-08 07:41:59,407 [INFO] Copied Batch 1/May 2/F 0048/Z176/part-00004-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z176/part-00004-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet
+2025-08-08 07:41:59,411 [INFO] Deleted Batch 1/May 2/F 0048/Z174/part-00011-cd759e48-9dfe-4c73-8e15-a9daf08d52a7-c000.snappy.parquet
+2025-08-08 07:41:59,444 [INFO] Deleted Batch 1/May 2/F 0048/Z179/part-00000-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet
+2025-08-08 07:41:59,487 [INFO] Copied Batch 1/May 2/F 0048/Z178/part-00017-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z178/part-00017-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet
+2025-08-08 07:41:59,507 [INFO] Deleted Batch 1/May 2/F 0048/Z176/part-00004-5f765d79-44c5-4e90-8c1e-aab09cd0d157-c000.snappy.parquet
+2025-08-08 07:41:59,531 [INFO] Deleted Batch 1/May 2/F 0048/Z178/part-00000-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet
+2025-08-08 07:41:59,553 [INFO] Copied Batch 1/May 2/F 0048/Z177/part-00012-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z177/part-00012-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet
+2025-08-08 07:41:59,566 [INFO] Deleted Batch 1/May 2/F 0048/Z175/part-00002-0e307abc-6ace-43ea-95bb-ded4a767d6ad-c000.snappy.parquet
+2025-08-08 07:41:59,566 [INFO] Copied Batch 1/May 2/F 0048/Z180/part-00000-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z180/part-00000-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet
+2025-08-08 07:41:59,605 [INFO] Deleted Batch 1/May 2/F 0048/Z178/part-00017-fba94d05-03a0-428d-81ff-987de81784d8-c000.snappy.parquet
+2025-08-08 07:41:59,622 [INFO] Deleted Batch 1/May 2/F 0048/Z177/part-00012-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet
+2025-08-08 07:41:59,634 [INFO] Deleted Batch 1/May 2/F 0048/Z180/part-00000-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet
+2025-08-08 07:41:59,645 [INFO] Copied Batch 1/May 2/F 0048/Z179/part-00011-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z179/part-00011-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet
+2025-08-08 07:41:59,660 [INFO] Copied Batch 1/May 2/F 0048/Z182/part-00000-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z182/part-00000-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet
+2025-08-08 07:41:59,715 [INFO] Deleted Batch 1/May 2/F 0048/Z179/part-00011-b52ae509-b6e5-489e-97a8-408a3bb7e1b3-c000.snappy.parquet
+2025-08-08 07:41:59,722 [INFO] Copied Batch 1/May 2/F 0048/Z183/part-00000-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z183/part-00000-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet
+2025-08-08 07:41:59,735 [INFO] Deleted Batch 1/May 2/F 0048/Z182/part-00000-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet
+2025-08-08 07:41:59,754 [INFO] Copied Batch 1/May 2/F 0048/Z180/part-00015-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z180/part-00015-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet
+2025-08-08 07:41:59,768 [INFO] Copied Batch 1/May 2/F 0048/Z184/part-00000-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z184/part-00000-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet
+2025-08-08 07:41:59,773 [INFO] Copied Batch 1/May 2/F 0048/Z181/part-00000-3396f433-c285-4fe3-af53-7ff26eb58d10-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z181/part-00000-3396f433-c285-4fe3-af53-7ff26eb58d10-c000.snappy.parquet
+2025-08-08 07:41:59,799 [INFO] Deleted Batch 1/May 2/F 0048/Z183/part-00000-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet
+2025-08-08 07:41:59,809 [INFO] Copied Batch 1/May 2/F 0048/Z182/part-00003-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z182/part-00003-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet
+2025-08-08 07:41:59,841 [INFO] Deleted Batch 1/May 2/F 0048/Z184/part-00000-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet
+2025-08-08 07:41:59,844 [INFO] Deleted Batch 1/May 2/F 0048/Z181/part-00000-3396f433-c285-4fe3-af53-7ff26eb58d10-c000.snappy.parquet
+2025-08-08 07:41:59,847 [INFO] Deleted Batch 1/May 2/F 0048/Z180/part-00015-6f2df463-4cf4-466f-af81-a8748c8c7150-c000.snappy.parquet
+2025-08-08 07:41:59,868 [INFO] Copied Batch 1/May 2/F 0048/Z177/part-00000-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z177/part-00000-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet
+2025-08-08 07:41:59,878 [INFO] Deleted Batch 1/May 2/F 0048/Z182/part-00003-e7c6bfab-8f98-4a5c-b5c8-ef4de58b3e45-c000.snappy.parquet
+2025-08-08 07:41:59,901 [INFO] Copied Batch 1/May 2/F 0048/Z184/part-00003-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z184/part-00003-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet
+2025-08-08 07:41:59,903 [INFO] Copied Batch 1/May 2/F 0048/Z185/part-00000-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z185/part-00000-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet
+2025-08-08 07:41:59,928 [INFO] Deleted Batch 1/May 2/F 0048/Z177/part-00000-1d9e2d9b-7623-404b-b307-639e20abbe22-c000.snappy.parquet
+2025-08-08 07:41:59,966 [INFO] Copied Batch 1/May 2/F 0048/Z183/part-00006-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z183/part-00006-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet
+2025-08-08 07:41:59,970 [INFO] Deleted Batch 1/May 2/F 0048/Z184/part-00003-3b0a0b61-6daa-4b5f-bb6c-07af8852ac47-c000.snappy.parquet
+2025-08-08 07:41:59,973 [INFO] Deleted Batch 1/May 2/F 0048/Z185/part-00000-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet
+2025-08-08 07:41:59,985 [INFO] Copied Batch 1/May 2/F 0048/Z185/part-00014-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z185/part-00014-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet
+2025-08-08 07:41:59,999 [INFO] Copied Batch 1/May 2/F 0048/Z186/part-00000-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z186/part-00000-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet
+2025-08-08 07:42:00,035 [INFO] Copied Batch 1/May 2/F 0048/Z188/part-00000-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z188/part-00000-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet
+2025-08-08 07:42:00,045 [INFO] Copied Batch 1/May 2/F 0048/Z187/part-00000-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z187/part-00000-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet
+2025-08-08 07:42:00,051 [INFO] Deleted Batch 1/May 2/F 0048/Z183/part-00006-9133c1ad-e884-49b7-9973-3e63c776f289-c000.snappy.parquet
+2025-08-08 07:42:00,053 [INFO] Deleted Batch 1/May 2/F 0048/Z185/part-00014-52eff747-956b-4c97-bf3e-0096ae93dd35-c000.snappy.parquet
+2025-08-08 07:42:00,118 [INFO] Deleted Batch 1/May 2/F 0048/Z188/part-00000-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet
+2025-08-08 07:42:00,118 [INFO] Deleted Batch 1/May 2/F 0048/Z186/part-00000-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet
+2025-08-08 07:42:00,123 [INFO] Deleted Batch 1/May 2/F 0048/Z187/part-00000-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet
+2025-08-08 07:42:00,124 [INFO] Copied Batch 1/May 2/F 0048/Z187/part-00009-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z187/part-00009-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet
+2025-08-08 07:42:00,170 [INFO] Copied Batch 1/May 2/F 0048/Z189/part-00000-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z189/part-00000-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet
+2025-08-08 07:42:00,200 [INFO] Deleted Batch 1/May 2/F 0048/Z187/part-00009-d2603e73-887d-4bce-9d0f-c0a2d9c43000-c000.snappy.parquet
+2025-08-08 07:42:00,213 [INFO] Copied Batch 1/May 2/F 0048/Z189/part-00015-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z189/part-00015-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet
+2025-08-08 07:42:00,215 [INFO] Copied Batch 1/May 2/F 0048/Z190/part-00000-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z190/part-00000-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet
+2025-08-08 07:42:00,241 [INFO] Deleted Batch 1/May 2/F 0048/Z189/part-00000-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet
+2025-08-08 07:42:00,247 [INFO] Copied Batch 1/May 2/F 0048/Z188/part-00011-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z188/part-00011-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet
+2025-08-08 07:42:00,261 [INFO] Copied Batch 1/May 2/F 0048/Z186/part-00002-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z186/part-00002-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet
+2025-08-08 07:42:00,272 [INFO] Copied Batch 1/May 2/F 0048/Z191/part-00000-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z191/part-00000-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet
+2025-08-08 07:42:00,285 [INFO] Deleted Batch 1/May 2/F 0048/Z189/part-00015-4ccdd9f4-81bc-479f-9b97-aee2cc6594a5-c000.snappy.parquet
+2025-08-08 07:42:00,285 [INFO] Copied Batch 1/May 2/F 0048/Z192/part-00000-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z192/part-00000-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet
+2025-08-08 07:42:00,291 [INFO] Deleted Batch 1/May 2/F 0048/Z190/part-00000-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet
+2025-08-08 07:42:00,320 [INFO] Deleted Batch 1/May 2/F 0048/Z188/part-00011-42d76cac-2775-4011-87ea-9ba620d2a371-c000.snappy.parquet
+2025-08-08 07:42:00,323 [INFO] Copied Batch 1/May 2/F 0048/Z190/part-00009-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z190/part-00009-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet
+2025-08-08 07:42:00,335 [INFO] Deleted Batch 1/May 2/F 0048/Z186/part-00002-3417a37c-ce72-494b-b989-b4790d5092e6-c000.snappy.parquet
+2025-08-08 07:42:00,354 [INFO] Deleted Batch 1/May 2/F 0048/Z192/part-00000-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet
+2025-08-08 07:42:00,365 [INFO] Deleted Batch 1/May 2/F 0048/Z191/part-00000-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet
+2025-08-08 07:42:00,394 [INFO] Copied Batch 1/May 2/F 0048/Z191/part-00002-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z191/part-00002-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet
+2025-08-08 07:42:00,396 [INFO] Deleted Batch 1/May 2/F 0048/Z190/part-00009-85ad1fb3-3e95-4324-915b-cb3603b45c35-c000.snappy.parquet
+2025-08-08 07:42:00,431 [INFO] Copied Batch 1/May 2/F 0048/Z194/part-00000-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z194/part-00000-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet
+2025-08-08 07:42:00,468 [INFO] Deleted Batch 1/May 2/F 0048/Z191/part-00002-bc07dd1d-7ee5-4ea7-bf8c-8f534043775a-c000.snappy.parquet
+2025-08-08 07:42:00,468 [INFO] Copied Batch 1/May 2/F 0048/Z192/part-00011-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z192/part-00011-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet
+2025-08-08 07:42:00,499 [INFO] Copied Batch 1/May 2/F 0048/Z195/part-00000-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z195/part-00000-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet
+2025-08-08 07:42:00,507 [INFO] Deleted Batch 1/May 2/F 0048/Z194/part-00000-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet
+2025-08-08 07:42:00,512 [INFO] Copied Batch 1/May 2/F 0048/Z196/part-00000-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z196/part-00000-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet
+2025-08-08 07:42:00,518 [INFO] Copied Batch 1/May 2/F 0048/Z193/part-00000-15a8f808-42fb-419b-b851-388b925b9894-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z193/part-00000-15a8f808-42fb-419b-b851-388b925b9894-c000.snappy.parquet
+2025-08-08 07:42:00,541 [INFO] Deleted Batch 1/May 2/F 0048/Z192/part-00011-193d0a36-2a82-41cd-a05f-833a2211403f-c000.snappy.parquet
+2025-08-08 07:42:00,548 [INFO] Copied Batch 1/May 2/F 0048/Z197/part-00000-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z197/part-00000-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet
+2025-08-08 07:42:00,557 [INFO] Copied Batch 1/May 2/F 0048/Z194/part-00008-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z194/part-00008-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet
+2025-08-08 07:42:00,584 [INFO] Deleted Batch 1/May 2/F 0048/Z195/part-00000-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet
+2025-08-08 07:42:00,584 [INFO] Deleted Batch 1/May 2/F 0048/Z196/part-00000-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet
+2025-08-08 07:42:00,585 [INFO] Copied Batch 1/May 2/F 0048/Z195/part-00008-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z195/part-00008-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet
+2025-08-08 07:42:00,589 [INFO] Deleted Batch 1/May 2/F 0048/Z193/part-00000-15a8f808-42fb-419b-b851-388b925b9894-c000.snappy.parquet
+2025-08-08 07:42:00,621 [INFO] Deleted Batch 1/May 2/F 0048/Z197/part-00000-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet
+2025-08-08 07:42:00,633 [INFO] Deleted Batch 1/May 2/F 0048/Z194/part-00008-7f444dc7-73c0-498d-bf90-6d10f1bc5dd4-c000.snappy.parquet
+2025-08-08 07:42:00,633 [INFO] Copied Batch 1/May 2/F 0048/Z196/part-00013-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z196/part-00013-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet
+2025-08-08 07:42:00,656 [INFO] Copied Batch 1/May 2/F 0048/Z198/part-00000-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z198/part-00000-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet
+2025-08-08 07:42:00,662 [INFO] Deleted Batch 1/May 2/F 0048/Z195/part-00008-db2e0179-2706-4baf-84fd-af437c7f6ef9-c000.snappy.parquet
+2025-08-08 07:42:00,708 [INFO] Deleted Batch 1/May 2/F 0048/Z196/part-00013-3b16225a-f342-4815-8750-cd3e17fd2771-c000.snappy.parquet
+2025-08-08 07:42:00,720 [INFO] Deleted Batch 1/May 2/F 0048/Z198/part-00000-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet
+2025-08-08 07:42:00,739 [INFO] Copied Batch 1/May 2/F 0048/Z200/part-00000-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z200/part-00000-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet
+2025-08-08 07:42:00,756 [INFO] Copied Batch 1/May 2/F 0048/Z199/part-00000-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z199/part-00000-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet
+2025-08-08 07:42:00,782 [INFO] Copied Batch 1/May 2/F 0048/Z197/part-00001-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z197/part-00001-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet
+2025-08-08 07:42:00,791 [INFO] Copied Batch 1/May 2/F 0048/Z201/part-00000-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z201/part-00000-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet
+2025-08-08 07:42:00,808 [INFO] Deleted Batch 1/May 2/F 0048/Z200/part-00000-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet
+2025-08-08 07:42:00,835 [INFO] Deleted Batch 1/May 2/F 0048/Z199/part-00000-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet
+2025-08-08 07:42:00,848 [INFO] Copied Batch 1/May 2/F 0048/Z199/part-00009-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z199/part-00009-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet
+2025-08-08 07:42:00,856 [INFO] Deleted Batch 1/May 2/F 0048/Z197/part-00001-55212d0d-bda4-407c-b868-46d84c1dfd19-c000.snappy.parquet
+2025-08-08 07:42:00,863 [INFO] Deleted Batch 1/May 2/F 0048/Z201/part-00000-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet
+2025-08-08 07:42:00,867 [INFO] Copied Batch 1/May 2/F 0048/Z198/part-00010-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z198/part-00010-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet
+2025-08-08 07:42:00,872 [INFO] Copied Batch 1/May 2/F 0048/Z202/part-00000-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z202/part-00000-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet
+2025-08-08 07:42:00,886 [INFO] Copied Batch 1/May 2/F 0048/Z200/part-00004-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z200/part-00004-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet
+2025-08-08 07:42:00,916 [INFO] Deleted Batch 1/May 2/F 0048/Z199/part-00009-8d6f3d64-ef28-4020-b56b-419122f3b107-c000.snappy.parquet
+2025-08-08 07:42:00,941 [INFO] Deleted Batch 1/May 2/F 0048/Z198/part-00010-de351a6d-228e-48a0-91d1-bdc0f215b4dc-c000.snappy.parquet
+2025-08-08 07:42:00,947 [INFO] Deleted Batch 1/May 2/F 0048/Z202/part-00000-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet
+2025-08-08 07:42:00,953 [INFO] Copied Batch 1/May 2/F 0048/Z203/part-00000-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z203/part-00000-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet
+2025-08-08 07:42:00,962 [INFO] Deleted Batch 1/May 2/F 0048/Z200/part-00004-84fc08e0-2ec1-4cc4-8299-8d45e301e5d5-c000.snappy.parquet
+2025-08-08 07:42:01,012 [INFO] Copied Batch 1/May 2/F 0048/Z201/part-00001-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z201/part-00001-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet
+2025-08-08 07:42:01,012 [INFO] Copied Batch 1/May 2/F 0048/Z204/part-00000-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z204/part-00000-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet
+2025-08-08 07:42:01,019 [INFO] Copied Batch 1/May 2/F 0048/Z202/part-00010-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z202/part-00010-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet
+2025-08-08 07:42:01,021 [INFO] Deleted Batch 1/May 2/F 0048/Z203/part-00000-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet
+2025-08-08 07:42:01,071 [INFO] Copied Batch 1/May 2/F 0048/Z205/part-00000-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z205/part-00000-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet
+2025-08-08 07:42:01,086 [INFO] Deleted Batch 1/May 2/F 0048/Z201/part-00001-aef6f6f5-fa7a-47cf-8b6b-61ca56f6c59c-c000.snappy.parquet
+2025-08-08 07:42:01,091 [INFO] Deleted Batch 1/May 2/F 0048/Z202/part-00010-f2bdd9e7-dade-4345-903d-6d1244f427ca-c000.snappy.parquet
+2025-08-08 07:42:01,092 [INFO] Deleted Batch 1/May 2/F 0048/Z204/part-00000-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet
+2025-08-08 07:42:01,102 [INFO] Copied Batch 1/May 2/F 0048/Z206/part-00000-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z206/part-00000-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet
+2025-08-08 07:42:01,118 [INFO] Copied Batch 1/May 2/F 0048/Z203/part-00001-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z203/part-00001-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet
+2025-08-08 07:42:01,150 [INFO] Deleted Batch 1/May 2/F 0048/Z205/part-00000-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet
+2025-08-08 07:42:01,154 [INFO] Copied Batch 1/May 2/F 0048/Z204/part-00008-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z204/part-00008-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet
+2025-08-08 07:42:01,169 [INFO] Deleted Batch 1/May 2/F 0048/Z206/part-00000-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet
+2025-08-08 07:42:01,182 [INFO] Copied Batch 1/May 2/F 0048/Z205/part-00010-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z205/part-00010-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet
+2025-08-08 07:42:01,183 [INFO] Copied Batch 1/May 2/F 0048/Z207/part-00000-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z207/part-00000-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet
+2025-08-08 07:42:01,191 [INFO] Deleted Batch 1/May 2/F 0048/Z203/part-00001-757ce59d-fe7f-4e6b-8d25-1673a024ea23-c000.snappy.parquet
+2025-08-08 07:42:01,223 [INFO] Deleted Batch 1/May 2/F 0048/Z204/part-00008-1ec744e1-b286-4001-8d96-3e8ee495ae01-c000.snappy.parquet
+2025-08-08 07:42:01,223 [INFO] Copied Batch 1/May 2/F 0048/Z206/part-00003-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z206/part-00003-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet
+2025-08-08 07:42:01,251 [INFO] Deleted Batch 1/May 2/F 0048/Z205/part-00010-fc5ae7ca-be56-4050-aa89-c53c11e8ed0f-c000.snappy.parquet
+2025-08-08 07:42:01,261 [INFO] Deleted Batch 1/May 2/F 0048/Z207/part-00000-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet
+2025-08-08 07:42:01,299 [INFO] Deleted Batch 1/May 2/F 0048/Z206/part-00003-15af416d-c23a-4611-ab28-498a25c989db-c000.snappy.parquet
+2025-08-08 07:42:01,307 [INFO] Copied Batch 1/May 2/F 0048/Z208/part-00000-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z208/part-00000-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet
+2025-08-08 07:42:01,326 [INFO] Copied Batch 1/May 2/F 0048/Z209/part-00000-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z209/part-00000-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet
+2025-08-08 07:42:01,327 [INFO] Copied Batch 1/May 2/F 0048/Z207/part-00007-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z207/part-00007-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet
+2025-08-08 07:42:01,350 [INFO] Copied Batch 1/May 2/F 0048/Z210/part-00000-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z210/part-00000-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet
+2025-08-08 07:42:01,394 [INFO] Deleted Batch 1/May 2/F 0048/Z208/part-00000-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet
+2025-08-08 07:42:01,397 [INFO] Deleted Batch 1/May 2/F 0048/Z209/part-00000-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet
+2025-08-08 07:42:01,398 [INFO] Copied Batch 1/May 2/F 0048/Z208/part-00008-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z208/part-00008-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet
+2025-08-08 07:42:01,406 [INFO] Deleted Batch 1/May 2/F 0048/Z207/part-00007-343ee9dc-56b0-4ad5-b837-b1dc5d28a248-c000.snappy.parquet
+2025-08-08 07:42:01,423 [INFO] Deleted Batch 1/May 2/F 0048/Z210/part-00000-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet
+2025-08-08 07:42:01,433 [INFO] Copied Batch 1/May 2/F 0048/Z209/part-00003-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z209/part-00003-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet
+2025-08-08 07:42:01,459 [INFO] Copied Batch 1/May 2/F 0048/Z211/part-00000-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z211/part-00000-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet
+2025-08-08 07:42:01,500 [INFO] Copied Batch 1/May 2/F 0048/Z212/part-00000-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z212/part-00000-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet
+2025-08-08 07:42:01,537 [INFO] Deleted Batch 1/May 2/F 0048/Z208/part-00008-0fc86f57-2f8d-479a-97ce-53c986fca7c3-c000.snappy.parquet
+2025-08-08 07:42:01,538 [INFO] Copied Batch 1/May 2/F 0048/Z210/part-00006-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z210/part-00006-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet
+2025-08-08 07:42:01,539 [INFO] Deleted Batch 1/May 2/F 0048/Z209/part-00003-a4195f05-c100-4b20-aefe-00b97f63969f-c000.snappy.parquet
+2025-08-08 07:42:01,540 [INFO] Copied Batch 1/May 2/F 0048/Z211/part-00003-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z211/part-00003-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet
+2025-08-08 07:42:01,615 [INFO] Deleted Batch 1/May 2/F 0048/Z211/part-00000-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet
+2025-08-08 07:42:01,615 [INFO] Deleted Batch 1/May 2/F 0048/Z210/part-00006-67dd2bfc-a22a-440f-8468-4570eb169b42-c000.snappy.parquet
+2025-08-08 07:42:01,618 [INFO] Deleted Batch 1/May 2/F 0048/Z211/part-00003-b921993f-5cc1-4278-85c5-e4b4e15a1b7d-c000.snappy.parquet
+2025-08-08 07:42:01,620 [INFO] Deleted Batch 1/May 2/F 0048/Z212/part-00000-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet
+2025-08-08 07:42:01,625 [INFO] Copied Batch 1/May 2/F 0048/Z213/part-00000-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z213/part-00000-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet
+2025-08-08 07:42:01,634 [INFO] Copied Batch 1/May 2/F 0048/Z214/part-00000-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z214/part-00000-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet
+2025-08-08 07:42:01,691 [INFO] Copied Batch 1/May 2/F 0048/Z215/part-00000-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z215/part-00000-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet
+2025-08-08 07:42:01,695 [INFO] Deleted Batch 1/May 2/F 0048/Z213/part-00000-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet
+2025-08-08 07:42:01,701 [INFO] Deleted Batch 1/May 2/F 0048/Z214/part-00000-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet
+2025-08-08 07:42:01,716 [INFO] Copied Batch 1/May 2/F 0048/Z212/part-00006-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z212/part-00006-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet
+2025-08-08 07:42:01,736 [INFO] Copied Batch 1/May 2/F 0048/Z213/part-00002-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z213/part-00002-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet
+2025-08-08 07:42:01,760 [INFO] Deleted Batch 1/May 2/F 0048/Z215/part-00000-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet
+2025-08-08 07:42:01,806 [INFO] Deleted Batch 1/May 2/F 0048/Z213/part-00002-895473f1-f9cb-4f5c-ab1e-9501c63eb717-c000.snappy.parquet
+2025-08-08 07:42:01,808 [INFO] Copied Batch 1/May 2/F 0048/Z217/part-00000-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z217/part-00000-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet
+2025-08-08 07:42:01,815 [INFO] Deleted Batch 1/May 2/F 0048/Z212/part-00006-ae679654-f91d-4618-8d2b-d989a3888822-c000.snappy.parquet
+2025-08-08 07:42:01,822 [INFO] Copied Batch 1/May 2/F 0048/Z216/part-00000-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z216/part-00000-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet
+2025-08-08 07:42:01,845 [INFO] Copied Batch 1/May 2/F 0048/Z214/part-00001-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z214/part-00001-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet
+2025-08-08 07:42:01,872 [INFO] Copied Batch 1/May 2/F 0048/Z215/part-00003-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z215/part-00003-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet
+2025-08-08 07:42:01,890 [INFO] Deleted Batch 1/May 2/F 0048/Z217/part-00000-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet
+2025-08-08 07:42:01,890 [INFO] Copied Batch 1/May 2/F 0048/Z218/part-00000-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z218/part-00000-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet
+2025-08-08 07:42:01,898 [INFO] Copied Batch 1/May 2/F 0048/Z216/part-00007-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z216/part-00007-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet
+2025-08-08 07:42:01,898 [INFO] Deleted Batch 1/May 2/F 0048/Z216/part-00000-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet
+2025-08-08 07:42:01,912 [INFO] Deleted Batch 1/May 2/F 0048/Z214/part-00001-6f4030fb-9daf-4f1a-aa27-2928cf34dd17-c000.snappy.parquet
+2025-08-08 07:42:01,961 [INFO] Deleted Batch 1/May 2/F 0048/Z218/part-00000-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet
+2025-08-08 07:42:01,972 [INFO] Deleted Batch 1/May 2/F 0048/Z215/part-00003-eb419861-53de-4b4b-b26b-2da1b5f863f7-c000.snappy.parquet
+2025-08-08 07:42:01,976 [INFO] Copied Batch 1/May 2/F 0048/Z217/part-00010-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z217/part-00010-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet
+2025-08-08 07:42:01,978 [INFO] Deleted Batch 1/May 2/F 0048/Z216/part-00007-17f1bc84-239a-4dd7-9c3a-d38f69db4561-c000.snappy.parquet
+2025-08-08 07:42:01,993 [INFO] Copied Batch 1/May 2/F 0048/Z219/part-00000-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z219/part-00000-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet
+2025-08-08 07:42:02,004 [INFO] Copied Batch 1/May 2/F 0048/Z218/part-00009-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z218/part-00009-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet
+2025-08-08 07:42:02,045 [INFO] Copied Batch 1/May 2/F 0048/Z220/part-00000-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z220/part-00000-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet
+2025-08-08 07:42:02,049 [INFO] Deleted Batch 1/May 2/F 0048/Z217/part-00010-b4d0ec1b-bb99-445a-8e5f-49401ff28210-c000.snappy.parquet
+2025-08-08 07:42:02,065 [INFO] Copied Batch 1/May 2/F 0048/Z221/part-00000-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z221/part-00000-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet
+2025-08-08 07:42:02,068 [INFO] Deleted Batch 1/May 2/F 0048/Z219/part-00000-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet
+2025-08-08 07:42:02,072 [INFO] Deleted Batch 1/May 2/F 0048/Z218/part-00009-69ba0142-35e8-4258-8674-a0d6e669f75c-c000.snappy.parquet
+2025-08-08 07:42:02,089 [INFO] Copied Batch 1/May 2/F 0048/Z219/part-00004-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z219/part-00004-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet
+2025-08-08 07:42:02,125 [INFO] Deleted Batch 1/May 2/F 0048/Z220/part-00000-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet
+2025-08-08 07:42:02,134 [INFO] Deleted Batch 1/May 2/F 0048/Z221/part-00000-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet
+2025-08-08 07:42:02,135 [INFO] Copied Batch 1/May 2/F 0048/Z222/part-00000-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z222/part-00000-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet
+2025-08-08 07:42:02,159 [INFO] Deleted Batch 1/May 2/F 0048/Z219/part-00004-2721878d-8b29-4c02-b581-47f5a487bc31-c000.snappy.parquet
+2025-08-08 07:42:02,160 [INFO] Copied Batch 1/May 2/F 0048/Z220/part-00001-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z220/part-00001-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet
+2025-08-08 07:42:02,205 [INFO] Copied Batch 1/May 2/F 0048/Z221/part-00010-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z221/part-00010-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet
+2025-08-08 07:42:02,205 [INFO] Copied Batch 1/May 2/F 0048/Z223/part-00000-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z223/part-00000-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet
+2025-08-08 07:42:02,206 [INFO] Deleted Batch 1/May 2/F 0048/Z222/part-00000-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet
+2025-08-08 07:42:02,219 [INFO] Copied Batch 1/May 2/F 0048/Z224/part-00000-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z224/part-00000-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet
+2025-08-08 07:42:02,227 [INFO] Deleted Batch 1/May 2/F 0048/Z220/part-00001-c043450d-b7f3-457b-ab6d-77c426007ac4-c000.snappy.parquet
+2025-08-08 07:42:02,236 [INFO] Copied Batch 1/May 2/F 0048/Z222/part-00001-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z222/part-00001-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet
+2025-08-08 07:42:02,271 [INFO] Deleted Batch 1/May 2/F 0048/Z221/part-00010-11a99a09-d686-4d9b-845b-1a20b4bdb117-c000.snappy.parquet
+2025-08-08 07:42:02,277 [INFO] Deleted Batch 1/May 2/F 0048/Z223/part-00000-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet
+2025-08-08 07:42:02,294 [INFO] Copied Batch 1/May 2/F 0048/Z225/part-00000-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z225/part-00000-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet
+2025-08-08 07:42:02,296 [INFO] Deleted Batch 1/May 2/F 0048/Z224/part-00000-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet
+2025-08-08 07:42:02,315 [INFO] Copied Batch 1/May 2/F 0048/Z223/part-00008-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z223/part-00008-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet
+2025-08-08 07:42:02,320 [INFO] Deleted Batch 1/May 2/F 0048/Z222/part-00001-0aa1cc72-5478-4654-9698-12ff9c8448ec-c000.snappy.parquet
+2025-08-08 07:42:02,362 [INFO] Deleted Batch 1/May 2/F 0048/Z225/part-00000-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet
+2025-08-08 07:42:02,381 [INFO] Deleted Batch 1/May 2/F 0048/Z223/part-00008-6fa4f850-8b43-4a45-a11b-d41af165ab52-c000.snappy.parquet
+2025-08-08 07:42:02,393 [INFO] Copied Batch 1/May 2/F 0048/Z226/part-00000-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z226/part-00000-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet
+2025-08-08 07:42:02,406 [INFO] Copied Batch 1/May 2/F 0048/Z224/part-00010-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z224/part-00010-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet
+2025-08-08 07:42:02,424 [INFO] Copied Batch 1/May 2/F 0048/Z227/part-00000-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z227/part-00000-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet
+2025-08-08 07:42:02,441 [INFO] Copied Batch 1/May 2/F 0048/Z225/part-00003-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z225/part-00003-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet
+2025-08-08 07:42:02,465 [INFO] Deleted Batch 1/May 2/F 0048/Z226/part-00000-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet
+2025-08-08 07:42:02,486 [INFO] Deleted Batch 1/May 2/F 0048/Z224/part-00010-5240fe9a-5c79-4fda-93a2-a9046caaa723-c000.snappy.parquet
+2025-08-08 07:42:02,495 [INFO] Deleted Batch 1/May 2/F 0048/Z227/part-00000-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet
+2025-08-08 07:42:02,509 [INFO] Deleted Batch 1/May 2/F 0048/Z225/part-00003-e4301a38-e3ee-4cb2-9af6-db3cd29ce640-c000.snappy.parquet
+2025-08-08 07:42:02,524 [INFO] Copied Batch 1/May 2/F 0048/Z228/part-00000-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z228/part-00000-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet
+2025-08-08 07:42:02,533 [INFO] Copied Batch 1/May 2/F 0048/Z226/part-00007-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z226/part-00007-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet
+2025-08-08 07:42:02,570 [INFO] Copied Batch 1/May 2/F 0048/Z227/part-00008-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z227/part-00008-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet
+2025-08-08 07:42:02,600 [INFO] Deleted Batch 1/May 2/F 0048/Z228/part-00000-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet
+2025-08-08 07:42:02,609 [INFO] Copied Batch 1/May 2/F 0048/Z230/part-00000-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z230/part-00000-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet
+2025-08-08 07:42:02,612 [INFO] Copied Batch 1/May 2/F 0048/Z228/part-00001-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z228/part-00001-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet
+2025-08-08 07:42:02,638 [INFO] Deleted Batch 1/May 2/F 0048/Z226/part-00007-5bd44b9e-c7b7-4ce1-a234-23c896395008-c000.snappy.parquet
+2025-08-08 07:42:02,642 [INFO] Deleted Batch 1/May 2/F 0048/Z227/part-00008-ec7be174-68c9-48bb-99fb-0406cb07d609-c000.snappy.parquet
+2025-08-08 07:42:02,671 [INFO] Copied Batch 1/May 2/F 0048/Z233/part-00000-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z233/part-00000-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet
+2025-08-08 07:42:02,674 [INFO] Copied Batch 1/May 2/F 0048/Z229/part-00000-6bcd3238-484f-4451-8cf1-b7cb92be8c7c-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z229/part-00000-6bcd3238-484f-4451-8cf1-b7cb92be8c7c-c000.snappy.parquet
+2025-08-08 07:42:02,696 [INFO] Deleted Batch 1/May 2/F 0048/Z228/part-00001-bb86e5f0-0003-4aec-977b-5e13faae22e3-c000.snappy.parquet
+2025-08-08 07:42:02,708 [INFO] Deleted Batch 1/May 2/F 0048/Z230/part-00000-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet
+2025-08-08 07:42:02,742 [INFO] Deleted Batch 1/May 2/F 0048/Z233/part-00000-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet
+2025-08-08 07:42:02,745 [INFO] Deleted Batch 1/May 2/F 0048/Z229/part-00000-6bcd3238-484f-4451-8cf1-b7cb92be8c7c-c000.snappy.parquet
+2025-08-08 07:42:02,753 [INFO] Copied Batch 1/May 2/F 0048/Z230/part-00003-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z230/part-00003-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet
+2025-08-08 07:42:02,759 [INFO] Copied Batch 1/May 2/F 0048/Z232/part-00000-e1b2b8cc-f224-4cef-8e8b-5ee0c352913f-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z232/part-00000-e1b2b8cc-f224-4cef-8e8b-5ee0c352913f-c000.snappy.parquet
+2025-08-08 07:42:02,797 [INFO] Copied Batch 1/May 2/F 0048/Z231/part-00000-0ec585a1-8fbb-45e9-9c3a-92afadde11cd-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z231/part-00000-0ec585a1-8fbb-45e9-9c3a-92afadde11cd-c000.snappy.parquet
+2025-08-08 07:42:02,803 [INFO] Copied Batch 1/May 2/F 0048/Z234/part-00000-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z234/part-00000-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet
+2025-08-08 07:42:02,824 [INFO] Deleted Batch 1/May 2/F 0048/Z230/part-00003-95b8bedc-6710-46a0-a41f-9989c29960cd-c000.snappy.parquet
+2025-08-08 07:42:02,831 [INFO] Deleted Batch 1/May 2/F 0048/Z232/part-00000-e1b2b8cc-f224-4cef-8e8b-5ee0c352913f-c000.snappy.parquet
+2025-08-08 07:42:02,867 [INFO] Copied Batch 1/May 2/F 0048/Z235/part-00000-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z235/part-00000-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet
+2025-08-08 07:42:02,868 [INFO] Copied Batch 1/May 2/F 0048/Z233/part-00001-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z233/part-00001-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet
+2025-08-08 07:42:02,873 [INFO] Deleted Batch 1/May 2/F 0048/Z234/part-00000-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet
+2025-08-08 07:42:02,877 [INFO] Deleted Batch 1/May 2/F 0048/Z231/part-00000-0ec585a1-8fbb-45e9-9c3a-92afadde11cd-c000.snappy.parquet
+2025-08-08 07:42:02,878 [INFO] Copied Batch 1/May 2/F 0048/Z234/part-00003-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z234/part-00003-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet
+2025-08-08 07:42:02,919 [INFO] Copied Batch 1/May 2/F 0048/Z236/part-00000-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z236/part-00000-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet
+2025-08-08 07:42:02,936 [INFO] Deleted Batch 1/May 2/F 0048/Z235/part-00000-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet
+2025-08-08 07:42:02,937 [INFO] Deleted Batch 1/May 2/F 0048/Z233/part-00001-acb83220-4b23-4206-807f-ba9629d02b56-c000.snappy.parquet
+2025-08-08 07:42:02,950 [INFO] Deleted Batch 1/May 2/F 0048/Z234/part-00003-1d2b5269-e146-4200-a0df-e0c64c096c81-c000.snappy.parquet
+2025-08-08 07:42:02,977 [INFO] Copied Batch 1/May 2/F 0048/Z237/part-00000-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z237/part-00000-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet
+2025-08-08 07:42:03,010 [INFO] Copied Batch 1/May 2/F 0048/Z235/part-00002-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z235/part-00002-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet
+2025-08-08 07:42:03,019 [INFO] Copied Batch 1/May 2/F 0048/Z238/part-00000-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z238/part-00000-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet
+2025-08-08 07:42:03,036 [INFO] Deleted Batch 1/May 2/F 0048/Z236/part-00000-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet
+2025-08-08 07:42:03,041 [INFO] Copied Batch 1/May 2/F 0048/Z236/part-00003-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z236/part-00003-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet
+2025-08-08 07:42:03,050 [INFO] Deleted Batch 1/May 2/F 0048/Z237/part-00000-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet
+2025-08-08 07:42:03,082 [INFO] Deleted Batch 1/May 2/F 0048/Z235/part-00002-06247dff-3a0a-479f-b6c6-7fde3c406ce7-c000.snappy.parquet
+2025-08-08 07:42:03,087 [INFO] Deleted Batch 1/May 2/F 0048/Z238/part-00000-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet
+2025-08-08 07:42:03,088 [INFO] Copied Batch 1/May 2/F 0048/Z237/part-00002-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z237/part-00002-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet
+2025-08-08 07:42:03,116 [INFO] Copied Batch 1/May 2/F 0048/Z241/part-00000-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z241/part-00000-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet
+2025-08-08 07:42:03,118 [INFO] Deleted Batch 1/May 2/F 0048/Z236/part-00003-2c08458c-e9ef-44a8-9e9a-ec6bc7b875c1-c000.snappy.parquet
+2025-08-08 07:42:03,159 [INFO] Copied Batch 1/May 2/F 0048/Z238/part-00001-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z238/part-00001-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet
+2025-08-08 07:42:03,161 [INFO] Deleted Batch 1/May 2/F 0048/Z237/part-00002-930ce422-ccf4-4fff-a093-e8b9cd8ffc63-c000.snappy.parquet
+2025-08-08 07:42:03,194 [INFO] Copied Batch 1/May 2/F 0048/Z239/part-00000-fcc2dab4-8c19-4962-983e-449f84c10be2-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z239/part-00000-fcc2dab4-8c19-4962-983e-449f84c10be2-c000.snappy.parquet
+2025-08-08 07:42:03,201 [INFO] Deleted Batch 1/May 2/F 0048/Z241/part-00000-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet
+2025-08-08 07:42:03,242 [INFO] Copied Batch 1/May 2/F 0048/Z240/part-00000-0210ed07-44f4-4665-b0a0-377b3f72192e-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z240/part-00000-0210ed07-44f4-4665-b0a0-377b3f72192e-c000.snappy.parquet
+2025-08-08 07:42:03,251 [INFO] Deleted Batch 1/May 2/F 0048/Z238/part-00001-e6f64225-c788-409a-8ff6-7ab45f6bc030-c000.snappy.parquet
+2025-08-08 07:42:03,278 [INFO] Deleted Batch 1/May 2/F 0048/Z239/part-00000-fcc2dab4-8c19-4962-983e-449f84c10be2-c000.snappy.parquet
+2025-08-08 07:42:03,286 [INFO] Copied Batch 1/May 2/F 0048/Z241/part-00001-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z241/part-00001-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet
+2025-08-08 07:42:03,312 [INFO] Deleted Batch 1/May 2/F 0048/Z240/part-00000-0210ed07-44f4-4665-b0a0-377b3f72192e-c000.snappy.parquet
+2025-08-08 07:42:03,327 [INFO] Copied Batch 1/May 2/F 0048/Z243/part-00000-bed20296-1568-4361-8d38-97654aaa885b-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z243/part-00000-bed20296-1568-4361-8d38-97654aaa885b-c000.snappy.parquet
+2025-08-08 07:42:03,357 [INFO] Copied Batch 1/May 2/F 0048/Z242/part-00000-12f85a64-113c-4bbc-bc1f-20fc1e871b41-c000.snappy.parquet to Batch 1/May 2/Partial 5/Z242/part-00000-12f85a64-113c-4bbc-bc1f-20fc1e871b41-c000.snappy.parquet
+2025-08-08 07:42:03,363 [INFO] Deleted Batch 1/May 2/F 0048/Z241/part-00001-a092a435-b44c-4009-9487-929eefc80fba-c000.snappy.parquet
+2025-08-08 07:42:03,394 [INFO] Deleted Batch 1/May 2/F 0048/Z243/part-00000-bed20296-1568-4361-8d38-97654aaa885b-c000.snappy.parquet
+2025-08-08 07:42:03,426 [INFO] Deleted Batch 1/May 2/F 0048/Z242/part-00000-12f85a64-113c-4bbc-bc1f-20fc1e871b41-c000.snappy.parquet
+2025-08-08 07:42:03,428 [INFO] Completed: 474/474 objects processed successfully
+2025-08-08 07:42:03,428 [INFO] Successfully renamed Batch 1/May 2/F 0048/ to Batch 1/May 2/Partial 5/

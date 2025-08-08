@@ -107,8 +107,8 @@ def rename_s3_folder(bucket_name, old_prefix, new_prefix, max_workers=20):
 
 # Configuration
 bucket_name = 'my-bucket-founder-series-sun'
-old_prefix = 'Batch 1/May 2/F 0036/'
-new_prefix = 'Batch 1/May 2/Partial 4/'
+old_prefix = 'Batch 1/May 2/F 0048/'
+new_prefix = 'Batch 1/May 2/Partial 5/' 
 
 # Execute the rename
 rename_s3_folder(bucket_name, old_prefix, new_prefix, max_workers=10)

@@ -47,16 +47,16 @@ def read_state():
         bucket, key = state_file.replace("s3://", "").split("/", 1)
         response = s3_client.get_object(Bucket=bucket, Key=key)
         state = json.loads(response['Body'].read().decode('utf-8'))
-        folder_index = state.get('folder_index', 36)  # Initialize to 36 if no state
+        folder_index = state.get('folder_index', 48)  # Initialize to 48 if no state
         file_count = state.get('file_count', 0)
         logger.info(f"Read state: folder_index={folder_index}, file_count={file_count}")
         return folder_index, file_count
     except s3_client.exceptions.NoSuchKey:
-        logger.info("No state file found, initializing with folder_index=36, file_count=0")
-        return 36, 0
+        logger.info("No state file found, initializing with folder_index=48, file_count=0")
+        return 48, 0
     except Exception as e:
         logger.error(f"Failed to read state: {str(e)}")
-        return 36, 0
+        return 48, 0
 
 def write_state(folder_index, file_count):
     try:

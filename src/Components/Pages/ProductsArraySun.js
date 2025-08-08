@@ -4,7 +4,6 @@
  * We have Live mode and test mode for stripe here.
  */
 const productsArraySun = [
-  /*
   {
     // Live Mode
     id: "price_1Py2vL013t2ai8cxo0WMZZHi",
@@ -19,7 +18,7 @@ const productsArraySun = [
     pdfUrl: "",
     isBulkPurchase: true,
   },
-  */
+  /*
   // Test Mode
 
   {
@@ -35,6 +34,7 @@ const productsArraySun = [
     pdfUrl: "",
     isBulkPurchase: true,
   },
+    */
 ];
 
 function getProductSunData(id) {

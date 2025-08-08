@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "July28th"
+KINESIS_STREAM_NAME = "Aug8th"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,7 +16,7 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "100.25.28.66"
+TCP_HOST = "100.26.20.184"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
@@ -33,10 +33,10 @@ logger = logging.getLogger()
 # Constants
 FETCH_WORKERS = 24
 SEND_WORKERS = 48
-TARGET_COUNT = 10_000_000_000  # 10B numbers, effectively uncapped for 24 minutes
+TARGET_COUNT = 11_000_000_000  # 11B numbers, effectively uncapped for 24 minutes
 BATCH_SIZE = 500
 QUEUE_SIZE = 100_000
-RUN_DURATION = 1500  # 25 minutes in seconds (60 * 60)
+RUN_DURATION = 4800  # 80 minutes in seconds (60 * 80)
 
 # Metrics
 total_numbers_fetched = 0
@@ -162,7 +162,7 @@ async def main():
     await asyncio.gather(fetch_task, *send_tasks, return_exceptions=True)
 
 if __name__ == "__main__":
-    logger.info("Starting pipeline for 25 minutes to fetch numbers...")
+    logger.info("Starting pipeline for 80 minutes to fetch numbers...")
     try:
         asyncio.run(main())
     except Exception as e:
