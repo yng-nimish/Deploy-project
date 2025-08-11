@@ -7,7 +7,10 @@ import { productsArraySun } from "./ProductsArraySun";
 import Terms from "./Terms";
 
 // Load Stripe with the environment variable
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(
+  process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE
+);
+console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE);
 
 const PurchaseForm = () => {
   const location = useLocation();

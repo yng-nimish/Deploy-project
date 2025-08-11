@@ -7,7 +7,7 @@ import json
 from botocore.config import Config
 
 # Kinesis Configuration
-KINESIS_STREAM_NAME = "Aug8th"
+KINESIS_STREAM_NAME = "Aug11th"
 AWS_REGION = "us-east-1"
 kinesis_client = boto3.client(
     "kinesis",
@@ -16,7 +16,7 @@ kinesis_client = boto3.client(
 )
 
 # TCP API Configuration
-TCP_HOST = "100.26.20.184"
+TCP_HOST = "100.26.250.254"
 TCP_PORT = 4902
 BYTES_PER_NUMBER = 4
 NUMBERS_PER_REQUEST = 4_000_000
