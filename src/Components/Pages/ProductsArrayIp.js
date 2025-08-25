@@ -3,6 +3,7 @@
  * We have Live mode and test mode for stripe here.
  */
 const productsArrayIp = [
+  /*
   {
     // Live Mode
     id: "price_1Q2JFt013t2ai8cxvwjxNO6w",
@@ -17,7 +18,7 @@ const productsArrayIp = [
     price: 0.99,
     pdfUrl: "",
   },
-  /*
+*/
   {
     // Test Mode
     id: "price_1Q2JAh013t2ai8cxysic35Zn",
@@ -31,7 +32,6 @@ const productsArrayIp = [
     price: 0.99,
     pdfUrl: "",
   },
-   */
 ];
 
 function getProductIpData(id) {
