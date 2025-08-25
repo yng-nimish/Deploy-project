@@ -1,0 +1,4 @@
+2025-08-22 17:15:16,962 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-08-22 17:15:17,109 [INFO] S3 client initialized successfully.
+2025-08-22 17:15:17,109 [INFO] Starting S3 cleanup (dry run) for bucket my-bucket-founder-series-sun
+2025-08-22 17:15:17,109 [INFO] Processing F folder: F 0000

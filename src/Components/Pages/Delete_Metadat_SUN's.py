@@ -22,7 +22,7 @@ BUCKET_NAME = 'my-bucket-founder-series-sun'
 PREFIX = 'Batch 1/May 2/'
 REGION = 'us-east-1'
 SIZE_THRESHOLD = 1_000_000  # 1 MB in bytes
-F_FOLDERS = [f'F {str(i).zfill(4)}' for i in range(15)]  # F 0000 to F 0014
+F_FOLDERS = [f'F {str(i).zfill(4)}' for i in range(99)]  # F 0000 to F 0014
 Z_FOLDERS = [f'Z{str(i).zfill(3)}' for i in range(1, 1001)]  # Z001 to Z1000
 MAX_WORKERS = 10  # Adjust based on system and AWS rate limits
 
@@ -108,6 +108,6 @@ def main(dry_run=True):
 
 if __name__ == "__main__":
     # Run with dry_run=True to list files without deleting
-    # main(dry_run=True)
+     #main(dry_run=True)
     # To perform actual deletions, run with dry_run=False
     main(dry_run=False)
