@@ -18,6 +18,7 @@ import Store from "./Components/Pages/Store";
 import CartProvider from "./Components/Pages/CartContext";
 import PurchaseTP from "./Components/Pages/PurchaseTP";
 import PurchaseForm from "./Components/Pages/PurchaseForm";
+import PurchaseFormNew from "./Components/Pages/PurchaseForm_New";
 import Application_download from "./Components/Pages/Application_download";
 import Terms from "./Components/Pages/Terms";
 import CubeDisplay from "./Components/Pages/CubeDisplay";
@@ -50,7 +51,7 @@ function App() {
 
           <Route path="/guarantee" element={<Guarantee />} />
           <Route path="/purchaseTP" element={<PurchaseTP />} />
-          <Route path="/purchaseform" element={<PurchaseForm />} />
+          <Route path="/purchaseform" element={<PurchaseFormNew />} />
           <Route
             path="/applicationDownload"
             element={<Application_download />}
