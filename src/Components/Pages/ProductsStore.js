@@ -4,7 +4,6 @@
  * We have Live mode and test mode for stripe here.
  */
 const productsArray = [
-  /*
   // Live Mode
 
   {
@@ -78,8 +77,8 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/140RaE-N4ZrWeNHfetlWoX87SUKndd7nOP__EZByVwJo/preview",
   },
-*/
 
+  /*
   //Test Mode
   {
     id: "price_1Q5UlK013t2ai8cxjVmKuYBs",
@@ -152,7 +151,7 @@ const productsArray = [
     pdfUrl:
       "https://docs.google.com/document/d/140RaE-N4ZrWeNHfetlWoX87SUKndd7nOP__EZByVwJo/preview",
   },
-
+*/
   /*{
     id: "price_1PtTgV013t2ai8cxcqb7PFfy",price_1Py2vR013t2ai8cxsp6eOczL
     title: "Payment Processing Fee",

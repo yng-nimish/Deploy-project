@@ -8,21 +8,19 @@ import Terms from "./Terms";
 
 // Load Stripe with the environment variable
 
-/*
 // Stripe LIVE mode
 const stripePromise = loadStripe(
   process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE
 );
 console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE);
 
-*/
-
+/*
 // Stripe Test mode
 const stripePromise = loadStripe(
   process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST
 );
 console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST);
-
+*/
 const PurchaseForm = () => {
   const location = useLocation();
   const navigate = useNavigate();
