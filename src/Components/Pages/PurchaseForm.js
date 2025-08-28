@@ -16,6 +16,7 @@ const stripePromise = loadStripe(
 console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE);
 
 */
+
 // Stripe Test mode
 const stripePromise = loadStripe(
   process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST

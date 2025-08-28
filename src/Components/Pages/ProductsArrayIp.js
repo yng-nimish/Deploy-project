@@ -18,6 +18,24 @@ const productsArrayIp = [
     price: 0.99,
     pdfUrl: "",
   },
+    {
+    id: "price_1S0rBE013t2ai8cxpuV1P94I",
+    title: "Use our K cube",
+    price: 0.99,
+    pdfUrl: "",
+  },
+    {
+    id: "price_1S0rCe013t2ai8cxo9B3fAsu",
+    title: "Use our F cube",
+    price: 0.99,
+    pdfUrl: "",
+  },
+    {
+    id: "price_1S1AQz013t2ai8cxbTzKChWo",
+    title: "Use Doing Smart Things",
+    price: 0.99,
+    pdfUrl: "",
+  },
 */
   {
     // Test Mode
@@ -29,6 +47,24 @@ const productsArrayIp = [
   {
     id: "price_1Q2JC0013t2ai8cxLrf2vafb",
     title: "Use our IP",
+    price: 0.99,
+    pdfUrl: "",
+  },
+  {
+    id: "price_1S0rEz013t2ai8cx31Elh67h",
+    title: "Use our K cube",
+    price: 0.99,
+    pdfUrl: "",
+  },
+  {
+    id: "price_1S0rFg013t2ai8cxmDJezoN6",
+    title: "Use our F cube",
+    price: 0.99,
+    pdfUrl: "",
+  },
+  {
+    id: "price_1S1AOu013t2ai8cxj419QiUs",
+    title: "Use Doing Smart Things",
     price: 0.99,
     pdfUrl: "",
   },
