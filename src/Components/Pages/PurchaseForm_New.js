@@ -4,23 +4,29 @@ import { loadStripe } from "@stripe/stripe-js";
 import { Link, NavLink } from "react-router-dom";
 import { FiArrowLeft } from "react-icons/fi";
 import { productsArraySun } from "./ProductsArraySun";
-import Terms from "./Terms";
 
-// Load Stripe with the environment variable
-
-// Stripe LIVE mode
-const stripePromise = loadStripe(
-  process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE
-);
-console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE);
-
-/*
-// Stripe Test mode
-const stripePromise = loadStripe(
-  process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST
-);
-console.log("Stripe Key:", process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_TEST);
-*/
+// Load Stripe with validation
+let stripePromise = null;
+try {
+  const stripeKey = process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY_LIVE;
+  console.log(
+    "Attempting to load Stripe with key:",
+    stripeKey ? "Key present" : "Key missing"
+  );
+  if (!stripeKey || typeof stripeKey !== "string") {
+    throw new Error(
+      "Stripe publishable key is missing or invalid. Please check environment configuration."
+    );
+  }
+  stripePromise = loadStripe(stripeKey);
+  console.log("Stripe initialized successfully with live key.");
+} catch (error) {
+  console.error("Failed to initialize Stripe:", {
+    message: error.message,
+    stack: error.stack,
+  });
+  stripePromise = null; // Ensure stripePromise is null if initialization fails
+}
 
 const PurchaseForm = () => {
   const location = useLocation();
@@ -49,17 +55,23 @@ const PurchaseForm = () => {
   });
 
   const calculateSunProductQuantity = () => {
-    return cartItems.reduce((count, item) => {
+    console.log("Calculating SUN product quantity", { cartItems });
+    const count = cartItems.reduce((count, item) => {
       const product = productsArraySun.find(
         (product) => product.id === item.id
       );
       return product ? count + item.quantity : count;
     }, 0);
+    console.log("SUN product quantity:", count);
+    return count;
   };
 
   const numSunProducts = calculateSunProductQuantity();
 
   useEffect(() => {
+    console.log("Updating formData and validationErrors for owners", {
+      numSunProducts,
+    });
     setFormData((prev) => ({
       ...prev,
       owners: Array.from({ length: numSunProducts }, () => ({
@@ -99,6 +111,7 @@ const PurchaseForm = () => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
+    console.log(`Handling change for ${name}:`, { value, type, checked });
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
@@ -115,6 +128,9 @@ const PurchaseForm = () => {
 
   const handleOwnerChange = (index, e) => {
     const { name, value } = e.target;
+    console.log(`Handling owner change for index ${index}, field ${name}:`, {
+      value,
+    });
     const updatedOwners = [...formData.owners];
     updatedOwners[index] = {
       ...updatedOwners[index],
@@ -146,17 +162,21 @@ const PurchaseForm = () => {
       (owner) => !owner.firstName && !owner.lastName
     );
     const termsAgreed = formData.termsAgreed;
-    console.log(
-      `Form validation - Buyer valid: ${buyerValid}, Owners valid: ${ownersValid}, Terms agreed: ${termsAgreed}`
-    );
+    console.log("Form validation check", {
+      buyerValid,
+      ownersValid,
+      termsAgreed,
+    });
     return buyerValid && ownersValid && termsAgreed;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
-    console.log("Cart Items:", cartItems);
-    console.log("Validation Errors:", validationErrors);
+    console.log("Submitting form", {
+      formData,
+      cartItems,
+      validationErrors,
+    });
 
     if (!isFormValid()) {
       console.error("Form submission blocked due to validation errors");
@@ -166,7 +186,17 @@ const PurchaseForm = () => {
       return;
     }
 
+    if (!stripePromise) {
+      console.error("Stripe is not initialized. Cannot proceed to checkout.");
+      setErrorMessage(
+        "Payment service is not properly configured. Please contact support."
+      );
+      navigate("/error");
+      return;
+    }
+
     try {
+      console.log("Sending checkout request to API");
       const response = await fetch(
         "https://xobpfm5d5g.execute-api.ca-central-1.amazonaws.com/prod/checkout",
         {
@@ -196,8 +226,10 @@ const PurchaseForm = () => {
       );
 
       const data = await response.json();
-      console.log("API Response:", data);
-      console.log("Response Status:", response.status);
+      console.log("API Response:", {
+        status: response.status,
+        data,
+      });
 
       if (!response.ok) {
         console.error("API error:", data);
@@ -209,15 +241,25 @@ const PurchaseForm = () => {
       }
 
       const sessionId = data.sessionId;
+      console.log("Received sessionId:", sessionId);
 
       if (sessionId) {
         const stripe = await stripePromise;
+        console.log(
+          "Redirecting to Stripe checkout with sessionId:",
+          sessionId
+        );
         const { error } = await stripe.redirectToCheckout({
           sessionId,
         });
 
         if (error) {
-          console.error("Stripe redirect error:", error);
+          console.error("Stripe redirect error:", {
+            message: error.message,
+            type: error.type,
+            code: error.code,
+            stack: error.stack,
+          });
           setErrorMessage(
             "Failed to redirect to payment page: " + error.message
           );
@@ -231,7 +273,10 @@ const PurchaseForm = () => {
         navigate("/error");
       }
     } catch (error) {
-      console.error("Submit error:", error);
+      console.error("Submit error:", {
+        message: error.message,
+        stack: error.stack,
+      });
       setErrorMessage(
         "An unexpected error occurred. Please try again or contact support."
       );

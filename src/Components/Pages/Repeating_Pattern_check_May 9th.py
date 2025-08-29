@@ -177,7 +177,7 @@ def main():
 
     # Process folders sequentially
     all_matches = []
-    for i in range(15):
+    for i in range(110):
         f_folder = f"F {str(i).zfill(4)}"
         logger.info(f"Processing folder {f_folder}")
         matches = process_folder(f_folder, REFERENCE_GROUPS)
