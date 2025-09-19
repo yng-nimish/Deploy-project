@@ -1,0 +1,272 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template for automated EC2 -> Kinesis -> Glue -> S3 pipeline triggered on EC2 startup
+
+Parameters:
+  InstanceType:
+    Type: String
+    Default: f1.2xlarge
+    Description: EC2 instance type
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: EC2 KeyPair for SSH access
+  S3Bucket:
+    Type: String
+    Default: my-bucket-founder-series-sun
+    Description: S3 bucket for Glue script and output
+  GlueScriptS3Key:
+    Type: String
+    Default: scripts/glue_script.py
+    Description: S3 key for Glue ETL script
+  MarketplaceAMI:
+    Type: String
+    Description: AMI ID for AWS Marketplace AMI
+  StreamShardCount:
+    Type: Number
+    Default: 60
+    Description: Number of shards for Kinesis stream
+
+Resources:
+  # IAM Role for EC2
+  EC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: ec2.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: EC2PipelinePolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - kinesis:CreateStream
+                  - kinesis:PutRecords
+                  - kinesis:DescribeStream
+                  - kinesis:DeleteStream
+                  - glue:CreateJob
+                  - glue:StartJobRun
+                  - glue:GetJobRun
+                  - glue:DeleteJob
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                  - ec2:DescribeInstances
+                  - states:StartExecution
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref EC2Role
+
+  # Security Group for EC2
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow TCP port 4902 and SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 4902
+          ToPort: 4902
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  # EC2 Instance
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      SecurityGroups:
+        - !Ref EC2SecurityGroup
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      ImageId: !Ref MarketplaceAMI
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum update -y
+          yum install -y python3 python3-pip
+          pip3 install boto3 asyncio
+          aws s3 cp s3://${S3Bucket}/${GlueScriptS3Key} /home/ec2-user/glue_script.py
+          # Fetch public IP
+          PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4)
+          INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
+          # Generate stream name and Glue job name based on date
+          STREAM_NAME=$(date +%b%d%Y | sed 's/0\([0-9]\)/\1/')
+          JOB_NAME="GlueJob-$STREAM_NAME"
+          # Create Kinesis stream
+          aws kinesis create-stream --stream-name $STREAM_NAME --shard-count ${StreamShardCount} --region us-east-1
+          # Wait for Kinesis stream to be active
+          until aws kinesis describe-stream --stream-name $STREAM_NAME --region us-east-1 | grep -q '"StreamStatus": "ACTIVE"'; do
+            sleep 5
+          done
+          # Create Glue job
+          aws glue create-job \
+            --name $JOB_NAME \
+            --role AWSGlueKinesisS3FullAccess \
+            --command '{"Name": "gluestreaming", "ScriptLocation": "s3://${S3Bucket}/${GlueScriptS3Key}", "PythonVersion": "3"}' \
+            --default-arguments '{"--TempDir": "s3://${S3Bucket}/temp/", "--OutputS3Path": "s3://${S3Bucket}/Batch 1/May 2/", "--extra-py-files": "s3://${S3Bucket}/openpyxl-3.1.5-py2.py3-none-any.whl,s3://${S3Bucket}/et_xmlfile-2.0.0-py3-none-any.whl,s3://${S3Bucket}/XlsxWriter-3.2.2-py3-none-any.whl,s3://${S3Bucket}/pyarrow-19.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", "--enable-continuous-cloudwatch-log": "true", "--job-language": "python", "--job-type": "streaming", "--worker-type": "G.1X", "--number-of-workers": "10", "--glue-version": "5.0"}' \
+            --max-retries 0 \
+            --timeout 2880 \
+            --glue-version "5.0" \
+            --number-of-workers 10 \
+            --worker-type G.1X \
+            --region us-east-1
+          # Start Glue job
+          aws glue start-job-run --job-name $JOB_NAME --arguments '{"--JOB_NAME":"'$JOB_NAME'","--streamARN":"arn:aws:kinesis:us-east-1:${AWS::AccountId}:stream/$STREAM_NAME"}' --region us-east-1
+          # Run the EC2 script
+          cat << 'EOF' > /home/ec2-user/data_pipeline.py
+          ${EC2Script}
+          EOF
+          sed -i "s/TCP_HOST = .*/TCP_HOST = \"$PUBLIC_IP\"/" /home/ec2-user/data_pipeline.py
+          sed -i "s/KINESIS_STREAM_NAME = .*/KINESIS_STREAM_NAME = \"$STREAM_NAME\"/" /home/ec2-user/data_pipeline.py
+          python3 /home/ec2-user/data_pipeline.py
+          # Start Step Functions for monitoring and cleanup
+          aws stepfunctions start-execution \
+            --state-machine-arn ${PipelineStateMachine.Arn} \
+            --input '{"stream_name":"'$STREAM_NAME'","instance_id":"'$INSTANCE_ID'","job_name":"'$JOB_NAME'"}' \
+            --region us-east-1
+      Tags:
+        - Key: Name
+          Value: DataPipelineEC2
+
+  # IAM Role for Glue
+  GlueRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AWSGlueKinesisS3FullAccess
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: glue.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole
+      Policies:
+        - PolicyName: GlueKinesisS3Policy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:ListBucket
+                Resource:
+                  - !Sub arn:aws:s3:::${S3Bucket}
+                  - !Sub arn:aws:s3:::${S3Bucket}/*
+              - Effect: Allow
+                Action:
+                  - kinesis:DescribeStream
+                  - kinesis:GetShardIterator
+                  - kinesis:GetRecords
+                Resource: '*'
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+
+  # IAM Role for Lambda and Step Functions
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+                - states.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: LambdaOrchestrationPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ec2:DescribeInstances
+                  - ec2:TerminateInstances
+                  - kinesis:DescribeStream
+                  - kinesis:DeleteStream
+                  - glue:GetJobRun
+                  - glue:DeleteJob
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: '*'
+
+  # Step Functions State Machine
+  PipelineStateMachine:
+    Type: AWS::StepFunctions::StateMachine
+    Properties:
+      RoleArn: !GetAtt LambdaExecutionRole.Arn
+      DefinitionString: !Sub |
+        {
+          "Comment": "Pipeline Monitoring and Cleanup",
+          "StartAt": "MonitorGlueJob",
+          "States": {
+            "MonitorGlueJob": {
+              "Type": "Task",
+              "Resource": !GetAtt MonitorGlueJobLambda.Arn,
+              "ResultPath": "$.monitor",
+              "Next": "CheckJobStatus",
+              "Retry": [
+                {
+                  "ErrorEquals": ["States.ALL"],
+                  "IntervalSeconds": 30,
+                  "MaxAttempts": 9600,
+                  "BackoffRate": 1.0
+                }
+              ]
+            },
+            "CheckJobStatus": {
+              "Type": "Choice",
+              "Choices": [
+                {
+                  "Variable": "$.monitor.status",
+                  "StringEquals": "SUCCEEDED",
+                  "Next": "Cleanup"
+                },
+                {
+                  "Variable": "$.monitor.status",
+                  "StringEquals": "FAILED",
+                  "Next": "Cleanup"
+                },
+                {
+                  "Variable": "$.monitor.status",
+                  "StringEquals": "STOPPED",
+                  "Next": "Cleanup"
+                }
+              ],
+              "Default": "MonitorGlueJob"
+            },
+            "Cleanup": {
+              "Type": "Task",
+              "Resource": !GetAtt CleanupLambda.Arn,
+              "InputPath": "$.monitor",
+              "End": true
+            }
+          }
+        }
+
+Outputs:
+  StateMachineArn:
+    Value: !Ref PipelineStateMachine

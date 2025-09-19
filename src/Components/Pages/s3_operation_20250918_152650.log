@@ -1,0 +1,325 @@
+2025-09-18 15:26:50,699 [INFO] Starting S3 folder copy and rename operation
+2025-09-18 15:26:50,731 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-09-18 15:26:51,340 [INFO] Bucket my-bucket-founder-series-sun exists and is accessible
+2025-09-18 15:26:51,341 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z001/ -> destination: Batch 1/May 2/F 0048/Z858/
+2025-09-18 15:26:51,403 [INFO] Copying Batch 1/May 2/Partial 7/Z001/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet to Batch 1/May 2/F 0048/Z858/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,549 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z001/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet to Batch 1/May 2/F 0048/Z858/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,549 [INFO] Copying Batch 1/May 2/Partial 7/Z001/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet to Batch 1/May 2/F 0048/Z858/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,892 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z001/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet to Batch 1/May 2/F 0048/Z858/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,892 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z001/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,951 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z001/part-00000-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:51,951 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z001/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:52,004 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z001/part-00002-388dd865-7893-4ae5-bdd0-f1e771a02b06-c000.snappy.parquet
+2025-09-18 15:26:52,004 [INFO] Completed processing Batch 1/May 2/Partial 7/Z001/ -> Batch 1/May 2/F 0048/Z858/
+2025-09-18 15:26:52,004 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z002/ -> destination: Batch 1/May 2/F 0048/Z859/
+2025-09-18 15:26:52,056 [INFO] Copying Batch 1/May 2/Partial 7/Z002/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet to Batch 1/May 2/F 0048/Z859/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,265 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z002/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet to Batch 1/May 2/F 0048/Z859/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,265 [INFO] Copying Batch 1/May 2/Partial 7/Z002/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet to Batch 1/May 2/F 0048/Z859/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,565 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z002/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet to Batch 1/May 2/F 0048/Z859/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,566 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z002/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,621 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z002/part-00000-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,622 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z002/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,674 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z002/part-00006-e0977f20-23df-4306-ac95-a4b6dd8981fd-c000.snappy.parquet
+2025-09-18 15:26:52,674 [INFO] Completed processing Batch 1/May 2/Partial 7/Z002/ -> Batch 1/May 2/F 0048/Z859/
+2025-09-18 15:26:52,674 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z003/ -> destination: Batch 1/May 2/F 0048/Z860/
+2025-09-18 15:26:52,726 [INFO] Copying Batch 1/May 2/Partial 7/Z003/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet to Batch 1/May 2/F 0048/Z860/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:52,882 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z003/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet to Batch 1/May 2/F 0048/Z860/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:52,882 [INFO] Copying Batch 1/May 2/Partial 7/Z003/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet to Batch 1/May 2/F 0048/Z860/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,316 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z003/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet to Batch 1/May 2/F 0048/Z860/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,316 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z003/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,372 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z003/part-00000-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,372 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z003/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,427 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z003/part-00009-93db3adc-6e78-4005-b4b5-0bfe7a066108-c000.snappy.parquet
+2025-09-18 15:26:53,427 [INFO] Completed processing Batch 1/May 2/Partial 7/Z003/ -> Batch 1/May 2/F 0048/Z860/
+2025-09-18 15:26:53,427 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z004/ -> destination: Batch 1/May 2/F 0048/Z861/
+2025-09-18 15:26:53,480 [INFO] Copying Batch 1/May 2/Partial 7/Z004/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z861/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,626 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z004/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z861/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,627 [INFO] Copying Batch 1/May 2/Partial 7/Z004/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z861/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,913 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z004/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z861/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,913 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z004/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,966 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z004/part-00000-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:53,967 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z004/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:54,022 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z004/part-00007-9cc5b8b8-45d7-44ff-90c4-4b30788bbde9-c000.snappy.parquet
+2025-09-18 15:26:54,022 [INFO] Completed processing Batch 1/May 2/Partial 7/Z004/ -> Batch 1/May 2/F 0048/Z861/
+2025-09-18 15:26:54,022 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z005/ -> destination: Batch 1/May 2/F 0048/Z862/
+2025-09-18 15:26:54,071 [INFO] Copying Batch 1/May 2/Partial 7/Z005/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet to Batch 1/May 2/F 0048/Z862/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,206 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z005/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet to Batch 1/May 2/F 0048/Z862/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,206 [INFO] Copying Batch 1/May 2/Partial 7/Z005/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet to Batch 1/May 2/F 0048/Z862/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,509 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z005/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet to Batch 1/May 2/F 0048/Z862/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,510 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z005/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,562 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z005/part-00000-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,562 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z005/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,614 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z005/part-00003-9cd01600-41ce-40d3-868e-9facde98ad49-c000.snappy.parquet
+2025-09-18 15:26:54,614 [INFO] Completed processing Batch 1/May 2/Partial 7/Z005/ -> Batch 1/May 2/F 0048/Z862/
+2025-09-18 15:26:54,614 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z006/ -> destination: Batch 1/May 2/F 0048/Z863/
+2025-09-18 15:26:54,666 [INFO] Copying Batch 1/May 2/Partial 7/Z006/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet to Batch 1/May 2/F 0048/Z863/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:54,811 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z006/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet to Batch 1/May 2/F 0048/Z863/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:54,811 [INFO] Copying Batch 1/May 2/Partial 7/Z006/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet to Batch 1/May 2/F 0048/Z863/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,108 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z006/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet to Batch 1/May 2/F 0048/Z863/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,108 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z006/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,179 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z006/part-00000-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,180 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z006/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,235 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z006/part-00009-8bd081d7-4c42-464e-9ed0-6ad98d0d1125-c000.snappy.parquet
+2025-09-18 15:26:55,236 [INFO] Completed processing Batch 1/May 2/Partial 7/Z006/ -> Batch 1/May 2/F 0048/Z863/
+2025-09-18 15:26:55,236 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z007/ -> destination: Batch 1/May 2/F 0048/Z864/
+2025-09-18 15:26:55,289 [INFO] Copying Batch 1/May 2/Partial 7/Z007/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet to Batch 1/May 2/F 0048/Z864/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,502 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z007/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet to Batch 1/May 2/F 0048/Z864/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,502 [INFO] Copying Batch 1/May 2/Partial 7/Z007/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet to Batch 1/May 2/F 0048/Z864/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,750 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z007/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet to Batch 1/May 2/F 0048/Z864/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,750 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z007/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,804 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z007/part-00000-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,804 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z007/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,863 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z007/part-00002-82abcc53-52f0-4ad9-8d44-502ba3c48841-c000.snappy.parquet
+2025-09-18 15:26:55,863 [INFO] Completed processing Batch 1/May 2/Partial 7/Z007/ -> Batch 1/May 2/F 0048/Z864/
+2025-09-18 15:26:55,863 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z008/ -> destination: Batch 1/May 2/F 0048/Z865/
+2025-09-18 15:26:55,919 [INFO] Copying Batch 1/May 2/Partial 7/Z008/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet to Batch 1/May 2/F 0048/Z865/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,095 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z008/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet to Batch 1/May 2/F 0048/Z865/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,096 [INFO] Copying Batch 1/May 2/Partial 7/Z008/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet to Batch 1/May 2/F 0048/Z865/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,347 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z008/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet to Batch 1/May 2/F 0048/Z865/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,348 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z008/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,400 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z008/part-00000-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,400 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z008/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,460 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z008/part-00001-d223a437-4f3b-49ae-b5ca-7779e3646d7e-c000.snappy.parquet
+2025-09-18 15:26:56,461 [INFO] Completed processing Batch 1/May 2/Partial 7/Z008/ -> Batch 1/May 2/F 0048/Z865/
+2025-09-18 15:26:56,461 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z009/ -> destination: Batch 1/May 2/F 0048/Z866/
+2025-09-18 15:26:56,511 [INFO] Copying Batch 1/May 2/Partial 7/Z009/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet to Batch 1/May 2/F 0048/Z866/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:56,686 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z009/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet to Batch 1/May 2/F 0048/Z866/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:56,686 [INFO] Copying Batch 1/May 2/Partial 7/Z009/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet to Batch 1/May 2/F 0048/Z866/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,017 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z009/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet to Batch 1/May 2/F 0048/Z866/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,017 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z009/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,074 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z009/part-00000-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,075 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z009/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,130 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z009/part-00003-3bbb45f3-3151-4a03-ab8b-a43d11816649-c000.snappy.parquet
+2025-09-18 15:26:57,130 [INFO] Completed processing Batch 1/May 2/Partial 7/Z009/ -> Batch 1/May 2/F 0048/Z866/
+2025-09-18 15:26:57,130 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z010/ -> destination: Batch 1/May 2/F 0048/Z867/
+2025-09-18 15:26:57,183 [INFO] Copying Batch 1/May 2/Partial 7/Z010/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet to Batch 1/May 2/F 0048/Z867/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet
+2025-09-18 15:26:57,562 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z010/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet to Batch 1/May 2/F 0048/Z867/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet
+2025-09-18 15:26:57,562 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z010/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet
+2025-09-18 15:26:57,614 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z010/part-00000-8f58473f-c3d0-48c2-bf35-4fc0aed81684-c000.snappy.parquet
+2025-09-18 15:26:57,615 [INFO] Completed processing Batch 1/May 2/Partial 7/Z010/ -> Batch 1/May 2/F 0048/Z867/
+2025-09-18 15:26:57,615 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z011/ -> destination: Batch 1/May 2/F 0048/Z868/
+2025-09-18 15:26:57,671 [INFO] Copying Batch 1/May 2/Partial 7/Z011/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z868/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet
+2025-09-18 15:26:57,976 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z011/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z868/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet
+2025-09-18 15:26:57,976 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z011/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet
+2025-09-18 15:26:58,032 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z011/part-00000-6dc11baf-14c9-41d1-973e-2d8a8b40051f-c000.snappy.parquet
+2025-09-18 15:26:58,032 [INFO] Completed processing Batch 1/May 2/Partial 7/Z011/ -> Batch 1/May 2/F 0048/Z868/
+2025-09-18 15:26:58,033 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z012/ -> destination: Batch 1/May 2/F 0048/Z869/
+2025-09-18 15:26:58,090 [INFO] Copying Batch 1/May 2/Partial 7/Z012/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet to Batch 1/May 2/F 0048/Z869/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet
+2025-09-18 15:26:58,411 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z012/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet to Batch 1/May 2/F 0048/Z869/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet
+2025-09-18 15:26:58,411 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z012/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet
+2025-09-18 15:26:58,466 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z012/part-00000-a6fb57da-c27a-463e-8a08-e4a59c802399-c000.snappy.parquet
+2025-09-18 15:26:58,466 [INFO] Completed processing Batch 1/May 2/Partial 7/Z012/ -> Batch 1/May 2/F 0048/Z869/
+2025-09-18 15:26:58,466 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z013/ -> destination: Batch 1/May 2/F 0048/Z870/
+2025-09-18 15:26:58,517 [INFO] Copying Batch 1/May 2/Partial 7/Z013/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet to Batch 1/May 2/F 0048/Z870/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:58,814 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z013/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet to Batch 1/May 2/F 0048/Z870/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:58,815 [INFO] Copying Batch 1/May 2/Partial 7/Z013/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet to Batch 1/May 2/F 0048/Z870/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,104 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z013/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet to Batch 1/May 2/F 0048/Z870/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,104 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z013/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,158 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z013/part-00000-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,158 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z013/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,212 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z013/part-00004-3b50834a-4eb6-46da-9f93-6b07ce0da3fc-c000.snappy.parquet
+2025-09-18 15:26:59,212 [INFO] Completed processing Batch 1/May 2/Partial 7/Z013/ -> Batch 1/May 2/F 0048/Z870/
+2025-09-18 15:26:59,212 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z014/ -> destination: Batch 1/May 2/F 0048/Z871/
+2025-09-18 15:26:59,271 [INFO] Copying Batch 1/May 2/Partial 7/Z014/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z871/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet
+2025-09-18 15:26:59,685 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z014/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z871/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet
+2025-09-18 15:26:59,686 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z014/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet
+2025-09-18 15:26:59,739 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z014/part-00000-2673150a-3ec7-4a45-825a-1673134c397f-c000.snappy.parquet
+2025-09-18 15:26:59,739 [INFO] Completed processing Batch 1/May 2/Partial 7/Z014/ -> Batch 1/May 2/F 0048/Z871/
+2025-09-18 15:26:59,739 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z015/ -> destination: Batch 1/May 2/F 0048/Z872/
+2025-09-18 15:26:59,791 [INFO] Copying Batch 1/May 2/Partial 7/Z015/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet to Batch 1/May 2/F 0048/Z872/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:26:59,969 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z015/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet to Batch 1/May 2/F 0048/Z872/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:26:59,969 [INFO] Copying Batch 1/May 2/Partial 7/Z015/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet to Batch 1/May 2/F 0048/Z872/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,297 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z015/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet to Batch 1/May 2/F 0048/Z872/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,297 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z015/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,349 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z015/part-00000-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,349 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z015/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,402 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z015/part-00006-4b88ad61-38ff-474f-bb3e-c003d6f904a8-c000.snappy.parquet
+2025-09-18 15:27:00,402 [INFO] Completed processing Batch 1/May 2/Partial 7/Z015/ -> Batch 1/May 2/F 0048/Z872/
+2025-09-18 15:27:00,402 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z016/ -> destination: Batch 1/May 2/F 0048/Z873/
+2025-09-18 15:27:00,452 [INFO] Copying Batch 1/May 2/Partial 7/Z016/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z873/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet
+2025-09-18 15:27:00,715 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z016/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z873/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet
+2025-09-18 15:27:00,716 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z016/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet
+2025-09-18 15:27:00,775 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z016/part-00000-a52f7916-fc83-4e8e-84cb-aa6f1c2c5b5f-c000.snappy.parquet
+2025-09-18 15:27:00,775 [INFO] Completed processing Batch 1/May 2/Partial 7/Z016/ -> Batch 1/May 2/F 0048/Z873/
+2025-09-18 15:27:00,775 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z017/ -> destination: Batch 1/May 2/F 0048/Z874/
+2025-09-18 15:27:00,826 [INFO] Copying Batch 1/May 2/Partial 7/Z017/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet to Batch 1/May 2/F 0048/Z874/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,104 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z017/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet to Batch 1/May 2/F 0048/Z874/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,104 [INFO] Copying Batch 1/May 2/Partial 7/Z017/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet to Batch 1/May 2/F 0048/Z874/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,405 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z017/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet to Batch 1/May 2/F 0048/Z874/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,405 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z017/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,462 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z017/part-00000-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,462 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z017/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,516 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z017/part-00001-8db4d46f-fb3c-4012-840e-cc113b516445-c000.snappy.parquet
+2025-09-18 15:27:01,517 [INFO] Completed processing Batch 1/May 2/Partial 7/Z017/ -> Batch 1/May 2/F 0048/Z874/
+2025-09-18 15:27:01,517 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z018/ -> destination: Batch 1/May 2/F 0048/Z875/
+2025-09-18 15:27:01,568 [INFO] Copying Batch 1/May 2/Partial 7/Z018/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet to Batch 1/May 2/F 0048/Z875/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet
+2025-09-18 15:27:01,882 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z018/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet to Batch 1/May 2/F 0048/Z875/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet
+2025-09-18 15:27:01,882 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z018/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet
+2025-09-18 15:27:01,936 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z018/part-00000-33156116-df2e-409b-b422-d1b97f7b7cd6-c000.snappy.parquet
+2025-09-18 15:27:01,936 [INFO] Completed processing Batch 1/May 2/Partial 7/Z018/ -> Batch 1/May 2/F 0048/Z875/
+2025-09-18 15:27:01,936 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z019/ -> destination: Batch 1/May 2/F 0048/Z876/
+2025-09-18 15:27:01,997 [INFO] Copying Batch 1/May 2/Partial 7/Z019/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z876/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,140 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z019/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z876/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,140 [INFO] Copying Batch 1/May 2/Partial 7/Z019/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z876/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,532 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z019/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z876/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,532 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z019/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,585 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z019/part-00000-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,585 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z019/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,639 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z019/part-00003-bf4262ba-4ff9-4c0f-a25b-a36d56cf47c7-c000.snappy.parquet
+2025-09-18 15:27:02,640 [INFO] Completed processing Batch 1/May 2/Partial 7/Z019/ -> Batch 1/May 2/F 0048/Z876/
+2025-09-18 15:27:02,640 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z020/ -> destination: Batch 1/May 2/F 0048/Z877/
+2025-09-18 15:27:02,694 [INFO] Copying Batch 1/May 2/Partial 7/Z020/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z877/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet
+2025-09-18 15:27:02,997 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z020/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z877/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet
+2025-09-18 15:27:02,998 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z020/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet
+2025-09-18 15:27:03,058 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z020/part-00000-eb025630-2726-4b8d-93fd-c7c365964a9f-c000.snappy.parquet
+2025-09-18 15:27:03,059 [INFO] Completed processing Batch 1/May 2/Partial 7/Z020/ -> Batch 1/May 2/F 0048/Z877/
+2025-09-18 15:27:03,059 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z021/ -> destination: Batch 1/May 2/F 0048/Z878/
+2025-09-18 15:27:03,111 [INFO] Copying Batch 1/May 2/Partial 7/Z021/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z878/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet
+2025-09-18 15:27:03,311 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z021/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z878/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet
+2025-09-18 15:27:03,311 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z021/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet
+2025-09-18 15:27:03,367 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z021/part-00000-acf9f20a-6e53-407d-856c-fc2d387f0c1b-c000.snappy.parquet
+2025-09-18 15:27:03,367 [INFO] Completed processing Batch 1/May 2/Partial 7/Z021/ -> Batch 1/May 2/F 0048/Z878/
+2025-09-18 15:27:03,367 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z022/ -> destination: Batch 1/May 2/F 0048/Z879/
+2025-09-18 15:27:03,420 [INFO] Copying Batch 1/May 2/Partial 7/Z022/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z879/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:03,559 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z022/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z879/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:03,560 [INFO] Copying Batch 1/May 2/Partial 7/Z022/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z879/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,043 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z022/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z879/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,044 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z022/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,104 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z022/part-00000-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,104 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z022/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,158 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z022/part-00001-66ba1335-8715-402e-b7ca-d2fcd46208b2-c000.snappy.parquet
+2025-09-18 15:27:04,159 [INFO] Completed processing Batch 1/May 2/Partial 7/Z022/ -> Batch 1/May 2/F 0048/Z879/
+2025-09-18 15:27:04,159 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z023/ -> destination: Batch 1/May 2/F 0048/Z880/
+2025-09-18 15:27:04,211 [INFO] Copying Batch 1/May 2/Partial 7/Z023/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z880/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,369 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z023/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z880/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,369 [INFO] Copying Batch 1/May 2/Partial 7/Z023/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z880/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,655 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z023/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet to Batch 1/May 2/F 0048/Z880/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,655 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z023/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,708 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z023/part-00000-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,708 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z023/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,766 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z023/part-00002-fdf2821f-ec95-4576-bb28-c286fb3ed50b-c000.snappy.parquet
+2025-09-18 15:27:04,766 [INFO] Completed processing Batch 1/May 2/Partial 7/Z023/ -> Batch 1/May 2/F 0048/Z880/
+2025-09-18 15:27:04,767 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z024/ -> destination: Batch 1/May 2/F 0048/Z881/
+2025-09-18 15:27:04,818 [INFO] Copying Batch 1/May 2/Partial 7/Z024/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z881/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:04,987 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z024/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z881/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:04,987 [INFO] Copying Batch 1/May 2/Partial 7/Z024/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z881/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,344 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z024/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet to Batch 1/May 2/F 0048/Z881/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,345 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z024/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,401 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z024/part-00000-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,401 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z024/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,460 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z024/part-00005-09cdf098-efc1-4ed1-8633-115bdb067ba2-c000.snappy.parquet
+2025-09-18 15:27:05,460 [INFO] Completed processing Batch 1/May 2/Partial 7/Z024/ -> Batch 1/May 2/F 0048/Z881/
+2025-09-18 15:27:05,461 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z025/ -> destination: Batch 1/May 2/F 0048/Z882/
+2025-09-18 15:27:05,510 [INFO] Copying Batch 1/May 2/Partial 7/Z025/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet to Batch 1/May 2/F 0048/Z882/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:05,644 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z025/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet to Batch 1/May 2/F 0048/Z882/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:05,645 [INFO] Copying Batch 1/May 2/Partial 7/Z025/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet to Batch 1/May 2/F 0048/Z882/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:05,966 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z025/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet to Batch 1/May 2/F 0048/Z882/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:05,967 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z025/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:06,023 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z025/part-00000-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:06,023 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z025/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:06,078 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z025/part-00004-cf78a2e6-92a3-4bdb-8aa0-2fb08b755600-c000.snappy.parquet
+2025-09-18 15:27:06,078 [INFO] Completed processing Batch 1/May 2/Partial 7/Z025/ -> Batch 1/May 2/F 0048/Z882/
+2025-09-18 15:27:06,078 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z026/ -> destination: Batch 1/May 2/F 0048/Z883/
+2025-09-18 15:27:06,132 [INFO] Copying Batch 1/May 2/Partial 7/Z026/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z883/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,278 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z026/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z883/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,278 [INFO] Copying Batch 1/May 2/Partial 7/Z026/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z883/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,557 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z026/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet to Batch 1/May 2/F 0048/Z883/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,558 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z026/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,615 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z026/part-00000-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,615 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z026/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,669 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z026/part-00001-917e4e9f-11d6-471c-9bcf-bb3f414d0de9-c000.snappy.parquet
+2025-09-18 15:27:06,670 [INFO] Completed processing Batch 1/May 2/Partial 7/Z026/ -> Batch 1/May 2/F 0048/Z883/
+2025-09-18 15:27:06,670 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z027/ -> destination: Batch 1/May 2/F 0048/Z884/
+2025-09-18 15:27:06,720 [INFO] Copying Batch 1/May 2/Partial 7/Z027/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet to Batch 1/May 2/F 0048/Z884/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:06,892 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z027/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet to Batch 1/May 2/F 0048/Z884/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:06,893 [INFO] Copying Batch 1/May 2/Partial 7/Z027/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet to Batch 1/May 2/F 0048/Z884/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,215 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z027/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet to Batch 1/May 2/F 0048/Z884/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,215 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z027/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,269 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z027/part-00000-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,270 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z027/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,324 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z027/part-00005-7d67a070-01a6-4f4c-aec0-6ea1dc48cd32-c000.snappy.parquet
+2025-09-18 15:27:07,324 [INFO] Completed processing Batch 1/May 2/Partial 7/Z027/ -> Batch 1/May 2/F 0048/Z884/
+2025-09-18 15:27:07,324 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z028/ -> destination: Batch 1/May 2/F 0048/Z885/
+2025-09-18 15:27:07,379 [INFO] Copying Batch 1/May 2/Partial 7/Z028/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z885/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,510 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z028/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z885/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,510 [INFO] Copying Batch 1/May 2/Partial 7/Z028/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z885/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,796 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z028/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z885/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,796 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z028/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,871 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z028/part-00000-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,871 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z028/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,925 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z028/part-00004-ab6c5096-2b0e-4159-9a83-f8eb1425826c-c000.snappy.parquet
+2025-09-18 15:27:07,926 [INFO] Completed processing Batch 1/May 2/Partial 7/Z028/ -> Batch 1/May 2/F 0048/Z885/
+2025-09-18 15:27:07,926 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z029/ -> destination: Batch 1/May 2/F 0048/Z886/
+2025-09-18 15:27:07,978 [INFO] Copying Batch 1/May 2/Partial 7/Z029/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet to Batch 1/May 2/F 0048/Z886/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,140 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z029/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet to Batch 1/May 2/F 0048/Z886/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,140 [INFO] Copying Batch 1/May 2/Partial 7/Z029/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet to Batch 1/May 2/F 0048/Z886/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,425 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z029/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet to Batch 1/May 2/F 0048/Z886/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,425 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z029/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,482 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z029/part-00000-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,482 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z029/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,538 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z029/part-00002-3ff4d542-d461-4b77-a80a-f7b6ecd60e48-c000.snappy.parquet
+2025-09-18 15:27:08,538 [INFO] Completed processing Batch 1/May 2/Partial 7/Z029/ -> Batch 1/May 2/F 0048/Z886/
+2025-09-18 15:27:08,539 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z030/ -> destination: Batch 1/May 2/F 0048/Z887/
+2025-09-18 15:27:08,595 [INFO] Copying Batch 1/May 2/Partial 7/Z030/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet to Batch 1/May 2/F 0048/Z887/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:08,728 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z030/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet to Batch 1/May 2/F 0048/Z887/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:08,728 [INFO] Copying Batch 1/May 2/Partial 7/Z030/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet to Batch 1/May 2/F 0048/Z887/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:08,973 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z030/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet to Batch 1/May 2/F 0048/Z887/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:08,974 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z030/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:09,025 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z030/part-00000-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:09,026 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z030/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:09,083 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z030/part-00003-10298d27-55b6-423b-8cf3-1d4cf700f4a1-c000.snappy.parquet
+2025-09-18 15:27:09,083 [INFO] Completed processing Batch 1/May 2/Partial 7/Z030/ -> Batch 1/May 2/F 0048/Z887/
+2025-09-18 15:27:09,083 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z031/ -> destination: Batch 1/May 2/F 0048/Z888/
+2025-09-18 15:27:09,135 [INFO] Copying Batch 1/May 2/Partial 7/Z031/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet to Batch 1/May 2/F 0048/Z888/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,295 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z031/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet to Batch 1/May 2/F 0048/Z888/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,295 [INFO] Copying Batch 1/May 2/Partial 7/Z031/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet to Batch 1/May 2/F 0048/Z888/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,556 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z031/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet to Batch 1/May 2/F 0048/Z888/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,556 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z031/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,613 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z031/part-00000-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,614 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z031/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,666 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z031/part-00002-366d5a01-d884-4d6a-9f57-7ebb120c30ef-c000.snappy.parquet
+2025-09-18 15:27:09,666 [INFO] Completed processing Batch 1/May 2/Partial 7/Z031/ -> Batch 1/May 2/F 0048/Z888/
+2025-09-18 15:27:09,666 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z032/ -> destination: Batch 1/May 2/F 0048/Z889/
+2025-09-18 15:27:09,763 [INFO] Copying Batch 1/May 2/Partial 7/Z032/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z889/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:09,954 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z032/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z889/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:09,954 [INFO] Copying Batch 1/May 2/Partial 7/Z032/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z889/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,281 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z032/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet to Batch 1/May 2/F 0048/Z889/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,281 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z032/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,336 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z032/part-00000-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,336 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z032/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,538 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z032/part-00003-d3249a79-8d14-451b-82d4-1d19c657764f-c000.snappy.parquet
+2025-09-18 15:27:10,538 [INFO] Completed processing Batch 1/May 2/Partial 7/Z032/ -> Batch 1/May 2/F 0048/Z889/
+2025-09-18 15:27:10,538 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z033/ -> destination: Batch 1/May 2/F 0048/Z890/
+2025-09-18 15:27:10,594 [INFO] Copying Batch 1/May 2/Partial 7/Z033/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z890/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:10,757 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z033/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z890/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:10,757 [INFO] Copying Batch 1/May 2/Partial 7/Z033/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z890/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,084 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z033/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet to Batch 1/May 2/F 0048/Z890/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,085 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z033/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,138 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z033/part-00000-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,138 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z033/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,198 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z033/part-00002-6e4aac56-2ea8-4d61-97a8-cdbfbeb3f36c-c000.snappy.parquet
+2025-09-18 15:27:11,198 [INFO] Completed processing Batch 1/May 2/Partial 7/Z033/ -> Batch 1/May 2/F 0048/Z890/
+2025-09-18 15:27:11,198 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z034/ -> destination: Batch 1/May 2/F 0048/Z891/
+2025-09-18 15:27:11,251 [INFO] Copying Batch 1/May 2/Partial 7/Z034/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet to Batch 1/May 2/F 0048/Z891/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,409 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z034/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet to Batch 1/May 2/F 0048/Z891/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,409 [INFO] Copying Batch 1/May 2/Partial 7/Z034/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet to Batch 1/May 2/F 0048/Z891/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,660 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z034/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet to Batch 1/May 2/F 0048/Z891/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,661 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z034/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,714 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z034/part-00000-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,714 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z034/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,768 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z034/part-00001-86d6118a-13ac-4ad4-bfe2-e4b9c29d03d3-c000.snappy.parquet
+2025-09-18 15:27:11,769 [INFO] Completed processing Batch 1/May 2/Partial 7/Z034/ -> Batch 1/May 2/F 0048/Z891/
+2025-09-18 15:27:11,769 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z035/ -> destination: Batch 1/May 2/F 0048/Z892/
+2025-09-18 15:27:11,818 [INFO] Copying Batch 1/May 2/Partial 7/Z035/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z892/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet
+2025-09-18 15:27:12,362 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z035/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet to Batch 1/May 2/F 0048/Z892/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet
+2025-09-18 15:27:12,362 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z035/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet
+2025-09-18 15:27:12,416 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z035/part-00000-fd81d99e-8a57-4ab7-bac5-9691100cd2f7-c000.snappy.parquet
+2025-09-18 15:27:12,417 [INFO] Completed processing Batch 1/May 2/Partial 7/Z035/ -> Batch 1/May 2/F 0048/Z892/
+2025-09-18 15:27:12,417 [INFO] Processing source folder: Batch 1/May 2/Partial 7/Z036/ -> destination: Batch 1/May 2/F 0048/Z893/
+2025-09-18 15:27:12,469 [INFO] Copying Batch 1/May 2/Partial 7/Z036/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet to Batch 1/May 2/F 0048/Z893/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet
+2025-09-18 15:27:12,768 [INFO] Successfully copied Batch 1/May 2/Partial 7/Z036/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet to Batch 1/May 2/F 0048/Z893/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet
+2025-09-18 15:27:12,768 [INFO] Deleting source object Batch 1/May 2/Partial 7/Z036/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet
+2025-09-18 15:27:12,866 [INFO] Successfully deleted Batch 1/May 2/Partial 7/Z036/part-00000-730aea57-afe8-4f91-b152-e9fb96761059-c000.snappy.parquet
+2025-09-18 15:27:12,866 [INFO] Completed processing Batch 1/May 2/Partial 7/Z036/ -> Batch 1/May 2/F 0048/Z893/
+2025-09-18 15:27:12,866 [INFO] Successfully processed folders Z001 to Z036 to destination Z858 to Z893
+2025-09-18 15:27:12,874 [INFO] S3 folder copy and rename operation completed

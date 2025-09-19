@@ -48,7 +48,7 @@ const quizData = [
   },
   {
     question: "Which of these companies was not founded in a garage?",
-    options: ["Amazon", "Google", "Apple", "Microsoft", "Meta"],
+    options: ["Amazon", "Google", "Apple", "Microsoft", "ta"],
     answer: "Amazon",
   },
   {

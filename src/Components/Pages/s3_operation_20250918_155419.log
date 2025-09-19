@@ -1,0 +1,663 @@
+2025-09-18 15:54:19,293 [INFO] Starting S3 folder copy and rename operation
+2025-09-18 15:54:19,334 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-09-18 15:54:20,055 [INFO] Bucket my-bucket-founder-series-sun exists and is accessible
+2025-09-18 15:54:20,055 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z001/ -> destination: Batch 1/May 2/F 0125/Z085/
+2025-09-18 15:54:20,107 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z001/, skipping
+2025-09-18 15:54:20,107 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z002/ -> destination: Batch 1/May 2/F 0125/Z086/
+2025-09-18 15:54:20,154 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z002/, skipping
+2025-09-18 15:54:20,154 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z003/ -> destination: Batch 1/May 2/F 0125/Z087/
+2025-09-18 15:54:20,201 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z003/, skipping
+2025-09-18 15:54:20,202 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z004/ -> destination: Batch 1/May 2/F 0125/Z088/
+2025-09-18 15:54:20,253 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z004/, skipping
+2025-09-18 15:54:20,253 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z005/ -> destination: Batch 1/May 2/F 0125/Z089/
+2025-09-18 15:54:20,303 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z005/, skipping
+2025-09-18 15:54:20,304 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z006/ -> destination: Batch 1/May 2/F 0125/Z090/
+2025-09-18 15:54:20,350 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z006/, skipping
+2025-09-18 15:54:20,352 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z007/ -> destination: Batch 1/May 2/F 0125/Z091/
+2025-09-18 15:54:20,401 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z007/, skipping
+2025-09-18 15:54:20,401 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z008/ -> destination: Batch 1/May 2/F 0125/Z092/
+2025-09-18 15:54:20,459 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z008/, skipping
+2025-09-18 15:54:20,460 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z009/ -> destination: Batch 1/May 2/F 0125/Z093/
+2025-09-18 15:54:20,509 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z009/, skipping
+2025-09-18 15:54:20,510 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z010/ -> destination: Batch 1/May 2/F 0125/Z094/
+2025-09-18 15:54:20,556 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z010/, skipping
+2025-09-18 15:54:20,557 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z011/ -> destination: Batch 1/May 2/F 0125/Z095/
+2025-09-18 15:54:20,602 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z011/, skipping
+2025-09-18 15:54:20,603 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z012/ -> destination: Batch 1/May 2/F 0125/Z096/
+2025-09-18 15:54:20,654 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z012/, skipping
+2025-09-18 15:54:20,654 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z013/ -> destination: Batch 1/May 2/F 0125/Z097/
+2025-09-18 15:54:20,700 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z013/, skipping
+2025-09-18 15:54:20,700 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z014/ -> destination: Batch 1/May 2/F 0125/Z098/
+2025-09-18 15:54:20,750 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z014/, skipping
+2025-09-18 15:54:20,750 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z015/ -> destination: Batch 1/May 2/F 0125/Z099/
+2025-09-18 15:54:20,799 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z015/, skipping
+2025-09-18 15:54:20,800 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z016/ -> destination: Batch 1/May 2/F 0125/Z100/
+2025-09-18 15:54:20,849 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z016/, skipping
+2025-09-18 15:54:20,849 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z017/ -> destination: Batch 1/May 2/F 0125/Z101/
+2025-09-18 15:54:20,900 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z017/, skipping
+2025-09-18 15:54:20,900 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z018/ -> destination: Batch 1/May 2/F 0125/Z102/
+2025-09-18 15:54:20,947 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z018/, skipping
+2025-09-18 15:54:20,947 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z019/ -> destination: Batch 1/May 2/F 0125/Z103/
+2025-09-18 15:54:20,992 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z019/, skipping
+2025-09-18 15:54:20,992 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z020/ -> destination: Batch 1/May 2/F 0125/Z104/
+2025-09-18 15:54:21,047 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z020/, skipping
+2025-09-18 15:54:21,047 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z021/ -> destination: Batch 1/May 2/F 0125/Z105/
+2025-09-18 15:54:21,093 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z021/, skipping
+2025-09-18 15:54:21,094 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z022/ -> destination: Batch 1/May 2/F 0125/Z106/
+2025-09-18 15:54:21,141 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z022/, skipping
+2025-09-18 15:54:21,142 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z023/ -> destination: Batch 1/May 2/F 0125/Z107/
+2025-09-18 15:54:21,189 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z023/, skipping
+2025-09-18 15:54:21,190 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z024/ -> destination: Batch 1/May 2/F 0125/Z108/
+2025-09-18 15:54:21,240 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z024/, skipping
+2025-09-18 15:54:21,240 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z025/ -> destination: Batch 1/May 2/F 0125/Z109/
+2025-09-18 15:54:21,293 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z025/, skipping
+2025-09-18 15:54:21,293 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z026/ -> destination: Batch 1/May 2/F 0125/Z110/
+2025-09-18 15:54:21,342 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z026/, skipping
+2025-09-18 15:54:21,342 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z027/ -> destination: Batch 1/May 2/F 0125/Z111/
+2025-09-18 15:54:21,417 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z027/, skipping
+2025-09-18 15:54:21,417 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z028/ -> destination: Batch 1/May 2/F 0125/Z112/
+2025-09-18 15:54:21,467 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z028/, skipping
+2025-09-18 15:54:21,467 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z029/ -> destination: Batch 1/May 2/F 0125/Z113/
+2025-09-18 15:54:21,514 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z029/, skipping
+2025-09-18 15:54:21,515 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z030/ -> destination: Batch 1/May 2/F 0125/Z114/
+2025-09-18 15:54:21,565 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z030/, skipping
+2025-09-18 15:54:21,565 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z031/ -> destination: Batch 1/May 2/F 0125/Z115/
+2025-09-18 15:54:21,626 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z031/, skipping
+2025-09-18 15:54:21,626 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z032/ -> destination: Batch 1/May 2/F 0125/Z116/
+2025-09-18 15:54:21,676 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z032/, skipping
+2025-09-18 15:54:21,677 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z033/ -> destination: Batch 1/May 2/F 0125/Z117/
+2025-09-18 15:54:21,723 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z033/, skipping
+2025-09-18 15:54:21,723 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z034/ -> destination: Batch 1/May 2/F 0125/Z118/
+2025-09-18 15:54:21,776 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z034/, skipping
+2025-09-18 15:54:21,776 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z035/ -> destination: Batch 1/May 2/F 0125/Z119/
+2025-09-18 15:54:21,826 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z035/, skipping
+2025-09-18 15:54:21,826 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z036/ -> destination: Batch 1/May 2/F 0125/Z120/
+2025-09-18 15:54:21,881 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z036/, skipping
+2025-09-18 15:54:21,882 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z037/ -> destination: Batch 1/May 2/F 0125/Z121/
+2025-09-18 15:54:21,931 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z037/, skipping
+2025-09-18 15:54:21,931 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z038/ -> destination: Batch 1/May 2/F 0125/Z122/
+2025-09-18 15:54:21,981 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z038/, skipping
+2025-09-18 15:54:21,981 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z039/ -> destination: Batch 1/May 2/F 0125/Z123/
+2025-09-18 15:54:22,031 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z039/, skipping
+2025-09-18 15:54:22,031 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z040/ -> destination: Batch 1/May 2/F 0125/Z124/
+2025-09-18 15:54:22,080 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z040/, skipping
+2025-09-18 15:54:22,081 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z041/ -> destination: Batch 1/May 2/F 0125/Z125/
+2025-09-18 15:54:22,138 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z041/, skipping
+2025-09-18 15:54:22,138 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z042/ -> destination: Batch 1/May 2/F 0125/Z126/
+2025-09-18 15:54:22,188 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z042/, skipping
+2025-09-18 15:54:22,188 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z043/ -> destination: Batch 1/May 2/F 0125/Z127/
+2025-09-18 15:54:22,240 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z043/, skipping
+2025-09-18 15:54:22,240 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z044/ -> destination: Batch 1/May 2/F 0125/Z128/
+2025-09-18 15:54:22,290 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z044/, skipping
+2025-09-18 15:54:22,290 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z045/ -> destination: Batch 1/May 2/F 0125/Z129/
+2025-09-18 15:54:22,338 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z045/, skipping
+2025-09-18 15:54:22,338 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z046/ -> destination: Batch 1/May 2/F 0125/Z130/
+2025-09-18 15:54:22,387 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z046/, skipping
+2025-09-18 15:54:22,388 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z047/ -> destination: Batch 1/May 2/F 0125/Z131/
+2025-09-18 15:54:22,435 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z047/, skipping
+2025-09-18 15:54:22,435 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z048/ -> destination: Batch 1/May 2/F 0125/Z132/
+2025-09-18 15:54:22,485 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z048/, skipping
+2025-09-18 15:54:22,485 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z049/ -> destination: Batch 1/May 2/F 0125/Z133/
+2025-09-18 15:54:22,532 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z049/, skipping
+2025-09-18 15:54:22,532 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z050/ -> destination: Batch 1/May 2/F 0125/Z134/
+2025-09-18 15:54:22,579 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z050/, skipping
+2025-09-18 15:54:22,580 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z051/ -> destination: Batch 1/May 2/F 0125/Z135/
+2025-09-18 15:54:22,627 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z051/, skipping
+2025-09-18 15:54:22,627 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z052/ -> destination: Batch 1/May 2/F 0125/Z136/
+2025-09-18 15:54:22,689 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z052/, skipping
+2025-09-18 15:54:22,689 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z053/ -> destination: Batch 1/May 2/F 0125/Z137/
+2025-09-18 15:54:22,734 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z053/, skipping
+2025-09-18 15:54:22,735 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z054/ -> destination: Batch 1/May 2/F 0125/Z138/
+2025-09-18 15:54:22,785 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z054/, skipping
+2025-09-18 15:54:22,785 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z055/ -> destination: Batch 1/May 2/F 0125/Z139/
+2025-09-18 15:54:22,833 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z055/, skipping
+2025-09-18 15:54:22,833 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z056/ -> destination: Batch 1/May 2/F 0125/Z140/
+2025-09-18 15:54:22,883 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z056/, skipping
+2025-09-18 15:54:22,884 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z057/ -> destination: Batch 1/May 2/F 0125/Z141/
+2025-09-18 15:54:22,932 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z057/, skipping
+2025-09-18 15:54:22,932 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z058/ -> destination: Batch 1/May 2/F 0125/Z142/
+2025-09-18 15:54:22,978 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z058/, skipping
+2025-09-18 15:54:22,978 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z059/ -> destination: Batch 1/May 2/F 0125/Z143/
+2025-09-18 15:54:23,029 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z059/, skipping
+2025-09-18 15:54:23,029 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z060/ -> destination: Batch 1/May 2/F 0125/Z144/
+2025-09-18 15:54:23,077 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z060/, skipping
+2025-09-18 15:54:23,077 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z061/ -> destination: Batch 1/May 2/F 0125/Z145/
+2025-09-18 15:54:23,122 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z061/, skipping
+2025-09-18 15:54:23,122 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z062/ -> destination: Batch 1/May 2/F 0125/Z146/
+2025-09-18 15:54:23,167 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z062/, skipping
+2025-09-18 15:54:23,177 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z063/ -> destination: Batch 1/May 2/F 0125/Z147/
+2025-09-18 15:54:23,224 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z063/, skipping
+2025-09-18 15:54:23,224 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z064/ -> destination: Batch 1/May 2/F 0125/Z148/
+2025-09-18 15:54:23,273 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z064/, skipping
+2025-09-18 15:54:23,273 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z065/ -> destination: Batch 1/May 2/F 0125/Z149/
+2025-09-18 15:54:23,320 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z065/, skipping
+2025-09-18 15:54:23,324 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z066/ -> destination: Batch 1/May 2/F 0125/Z150/
+2025-09-18 15:54:23,371 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z066/, skipping
+2025-09-18 15:54:23,371 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z067/ -> destination: Batch 1/May 2/F 0125/Z151/
+2025-09-18 15:54:23,422 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z067/, skipping
+2025-09-18 15:54:23,422 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z068/ -> destination: Batch 1/May 2/F 0125/Z152/
+2025-09-18 15:54:23,470 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z068/, skipping
+2025-09-18 15:54:23,470 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z069/ -> destination: Batch 1/May 2/F 0125/Z153/
+2025-09-18 15:54:23,518 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z069/, skipping
+2025-09-18 15:54:23,518 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z070/ -> destination: Batch 1/May 2/F 0125/Z154/
+2025-09-18 15:54:23,566 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z070/, skipping
+2025-09-18 15:54:23,566 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z071/ -> destination: Batch 1/May 2/F 0125/Z155/
+2025-09-18 15:54:23,612 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z071/, skipping
+2025-09-18 15:54:23,612 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z072/ -> destination: Batch 1/May 2/F 0125/Z156/
+2025-09-18 15:54:23,656 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z072/, skipping
+2025-09-18 15:54:23,656 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z073/ -> destination: Batch 1/May 2/F 0125/Z157/
+2025-09-18 15:54:23,708 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z073/, skipping
+2025-09-18 15:54:23,708 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z074/ -> destination: Batch 1/May 2/F 0125/Z158/
+2025-09-18 15:54:23,757 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z074/, skipping
+2025-09-18 15:54:23,757 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z075/ -> destination: Batch 1/May 2/F 0125/Z159/
+2025-09-18 15:54:23,805 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z075/, skipping
+2025-09-18 15:54:23,805 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z076/ -> destination: Batch 1/May 2/F 0125/Z160/
+2025-09-18 15:54:23,852 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z076/, skipping
+2025-09-18 15:54:23,853 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z077/ -> destination: Batch 1/May 2/F 0125/Z161/
+2025-09-18 15:54:23,900 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z077/, skipping
+2025-09-18 15:54:23,901 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z078/ -> destination: Batch 1/May 2/F 0125/Z162/
+2025-09-18 15:54:23,947 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z078/, skipping
+2025-09-18 15:54:23,947 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z079/ -> destination: Batch 1/May 2/F 0125/Z163/
+2025-09-18 15:54:23,998 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z079/, skipping
+2025-09-18 15:54:23,998 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z080/ -> destination: Batch 1/May 2/F 0125/Z164/
+2025-09-18 15:54:24,045 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z080/, skipping
+2025-09-18 15:54:24,045 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z081/ -> destination: Batch 1/May 2/F 0125/Z165/
+2025-09-18 15:54:24,094 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z081/, skipping
+2025-09-18 15:54:24,094 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z082/ -> destination: Batch 1/May 2/F 0125/Z166/
+2025-09-18 15:54:24,143 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z082/, skipping
+2025-09-18 15:54:24,143 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z083/ -> destination: Batch 1/May 2/F 0125/Z167/
+2025-09-18 15:54:24,191 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z083/, skipping
+2025-09-18 15:54:24,191 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z084/ -> destination: Batch 1/May 2/F 0125/Z168/
+2025-09-18 15:54:24,234 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z084/, skipping
+2025-09-18 15:54:24,234 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z085/ -> destination: Batch 1/May 2/F 0125/Z169/
+2025-09-18 15:54:24,279 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z085/, skipping
+2025-09-18 15:54:24,280 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z086/ -> destination: Batch 1/May 2/F 0125/Z170/
+2025-09-18 15:54:24,324 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z086/, skipping
+2025-09-18 15:54:24,324 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z087/ -> destination: Batch 1/May 2/F 0125/Z171/
+2025-09-18 15:54:24,377 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z087/, skipping
+2025-09-18 15:54:24,377 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z088/ -> destination: Batch 1/May 2/F 0125/Z172/
+2025-09-18 15:54:24,424 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z088/, skipping
+2025-09-18 15:54:24,424 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z089/ -> destination: Batch 1/May 2/F 0125/Z173/
+2025-09-18 15:54:24,473 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z089/, skipping
+2025-09-18 15:54:24,473 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z090/ -> destination: Batch 1/May 2/F 0125/Z174/
+2025-09-18 15:54:24,523 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z090/, skipping
+2025-09-18 15:54:24,523 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z091/ -> destination: Batch 1/May 2/F 0125/Z175/
+2025-09-18 15:54:24,569 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z091/, skipping
+2025-09-18 15:54:24,569 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z092/ -> destination: Batch 1/May 2/F 0125/Z176/
+2025-09-18 15:54:24,615 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z092/, skipping
+2025-09-18 15:54:24,615 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z093/ -> destination: Batch 1/May 2/F 0125/Z177/
+2025-09-18 15:54:24,664 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z093/, skipping
+2025-09-18 15:54:24,664 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z094/ -> destination: Batch 1/May 2/F 0125/Z178/
+2025-09-18 15:54:24,712 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z094/, skipping
+2025-09-18 15:54:24,713 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z095/ -> destination: Batch 1/May 2/F 0125/Z179/
+2025-09-18 15:54:24,759 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z095/, skipping
+2025-09-18 15:54:24,759 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z096/ -> destination: Batch 1/May 2/F 0125/Z180/
+2025-09-18 15:54:24,807 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z096/, skipping
+2025-09-18 15:54:24,807 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z097/ -> destination: Batch 1/May 2/F 0125/Z181/
+2025-09-18 15:54:24,853 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z097/, skipping
+2025-09-18 15:54:24,854 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z098/ -> destination: Batch 1/May 2/F 0125/Z182/
+2025-09-18 15:54:24,906 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z098/, skipping
+2025-09-18 15:54:24,907 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z099/ -> destination: Batch 1/May 2/F 0125/Z183/
+2025-09-18 15:54:24,996 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z099/, skipping
+2025-09-18 15:54:24,996 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z100/ -> destination: Batch 1/May 2/F 0125/Z184/
+2025-09-18 15:54:25,272 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z100/, skipping
+2025-09-18 15:54:25,272 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z101/ -> destination: Batch 1/May 2/F 0125/Z185/
+2025-09-18 15:54:25,320 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z101/, skipping
+2025-09-18 15:54:25,320 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z102/ -> destination: Batch 1/May 2/F 0125/Z186/
+2025-09-18 15:54:25,369 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z102/, skipping
+2025-09-18 15:54:25,370 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z103/ -> destination: Batch 1/May 2/F 0125/Z187/
+2025-09-18 15:54:25,432 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z103/, skipping
+2025-09-18 15:54:25,433 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z104/ -> destination: Batch 1/May 2/F 0125/Z188/
+2025-09-18 15:54:25,479 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z104/, skipping
+2025-09-18 15:54:25,480 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z105/ -> destination: Batch 1/May 2/F 0125/Z189/
+2025-09-18 15:54:25,526 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z105/, skipping
+2025-09-18 15:54:25,526 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z106/ -> destination: Batch 1/May 2/F 0125/Z190/
+2025-09-18 15:54:25,572 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z106/, skipping
+2025-09-18 15:54:25,572 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z107/ -> destination: Batch 1/May 2/F 0125/Z191/
+2025-09-18 15:54:25,632 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z107/, skipping
+2025-09-18 15:54:25,632 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z108/ -> destination: Batch 1/May 2/F 0125/Z192/
+2025-09-18 15:54:25,680 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z108/, skipping
+2025-09-18 15:54:25,680 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z109/ -> destination: Batch 1/May 2/F 0125/Z193/
+2025-09-18 15:54:25,727 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z109/, skipping
+2025-09-18 15:54:25,728 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z110/ -> destination: Batch 1/May 2/F 0125/Z194/
+2025-09-18 15:54:25,776 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z110/, skipping
+2025-09-18 15:54:25,776 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z111/ -> destination: Batch 1/May 2/F 0125/Z195/
+2025-09-18 15:54:25,826 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z111/, skipping
+2025-09-18 15:54:25,826 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z112/ -> destination: Batch 1/May 2/F 0125/Z196/
+2025-09-18 15:54:25,874 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z112/, skipping
+2025-09-18 15:54:25,874 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z113/ -> destination: Batch 1/May 2/F 0125/Z197/
+2025-09-18 15:54:25,922 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z113/, skipping
+2025-09-18 15:54:25,923 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z114/ -> destination: Batch 1/May 2/F 0125/Z198/
+2025-09-18 15:54:25,973 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z114/, skipping
+2025-09-18 15:54:25,973 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z115/ -> destination: Batch 1/May 2/F 0125/Z199/
+2025-09-18 15:54:26,020 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z115/, skipping
+2025-09-18 15:54:26,020 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z116/ -> destination: Batch 1/May 2/F 0125/Z200/
+2025-09-18 15:54:26,067 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z116/, skipping
+2025-09-18 15:54:26,068 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z117/ -> destination: Batch 1/May 2/F 0125/Z201/
+2025-09-18 15:54:26,115 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z117/, skipping
+2025-09-18 15:54:26,116 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z118/ -> destination: Batch 1/May 2/F 0125/Z202/
+2025-09-18 15:54:26,164 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z118/, skipping
+2025-09-18 15:54:26,164 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z119/ -> destination: Batch 1/May 2/F 0125/Z203/
+2025-09-18 15:54:26,212 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z119/, skipping
+2025-09-18 15:54:26,212 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z120/ -> destination: Batch 1/May 2/F 0125/Z204/
+2025-09-18 15:54:26,272 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z120/, skipping
+2025-09-18 15:54:26,272 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z121/ -> destination: Batch 1/May 2/F 0125/Z205/
+2025-09-18 15:54:26,320 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z121/, skipping
+2025-09-18 15:54:26,321 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z122/ -> destination: Batch 1/May 2/F 0125/Z206/
+2025-09-18 15:54:26,369 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z122/, skipping
+2025-09-18 15:54:26,370 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z123/ -> destination: Batch 1/May 2/F 0125/Z207/
+2025-09-18 15:54:26,419 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z123/, skipping
+2025-09-18 15:54:26,419 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z124/ -> destination: Batch 1/May 2/F 0125/Z208/
+2025-09-18 15:54:26,469 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z124/, skipping
+2025-09-18 15:54:26,469 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z125/ -> destination: Batch 1/May 2/F 0125/Z209/
+2025-09-18 15:54:26,517 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z125/, skipping
+2025-09-18 15:54:26,517 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z126/ -> destination: Batch 1/May 2/F 0125/Z210/
+2025-09-18 15:54:26,566 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z126/, skipping
+2025-09-18 15:54:26,566 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z127/ -> destination: Batch 1/May 2/F 0125/Z211/
+2025-09-18 15:54:26,612 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z127/, skipping
+2025-09-18 15:54:26,612 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z128/ -> destination: Batch 1/May 2/F 0125/Z212/
+2025-09-18 15:54:26,660 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z128/, skipping
+2025-09-18 15:54:26,661 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z129/ -> destination: Batch 1/May 2/F 0125/Z213/
+2025-09-18 15:54:26,710 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z129/, skipping
+2025-09-18 15:54:26,710 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z130/ -> destination: Batch 1/May 2/F 0125/Z214/
+2025-09-18 15:54:26,758 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z130/, skipping
+2025-09-18 15:54:26,759 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z131/ -> destination: Batch 1/May 2/F 0125/Z215/
+2025-09-18 15:54:26,806 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z131/, skipping
+2025-09-18 15:54:26,806 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z132/ -> destination: Batch 1/May 2/F 0125/Z216/
+2025-09-18 15:54:26,852 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z132/, skipping
+2025-09-18 15:54:26,853 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z133/ -> destination: Batch 1/May 2/F 0125/Z217/
+2025-09-18 15:54:26,899 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z133/, skipping
+2025-09-18 15:54:26,899 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z134/ -> destination: Batch 1/May 2/F 0125/Z218/
+2025-09-18 15:54:26,946 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z134/, skipping
+2025-09-18 15:54:26,946 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z135/ -> destination: Batch 1/May 2/F 0125/Z219/
+2025-09-18 15:54:26,991 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z135/, skipping
+2025-09-18 15:54:26,991 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z136/ -> destination: Batch 1/May 2/F 0125/Z220/
+2025-09-18 15:54:27,039 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z136/, skipping
+2025-09-18 15:54:27,039 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z137/ -> destination: Batch 1/May 2/F 0125/Z221/
+2025-09-18 15:54:27,086 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z137/, skipping
+2025-09-18 15:54:27,086 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z138/ -> destination: Batch 1/May 2/F 0125/Z222/
+2025-09-18 15:54:27,134 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z138/, skipping
+2025-09-18 15:54:27,134 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z139/ -> destination: Batch 1/May 2/F 0125/Z223/
+2025-09-18 15:54:27,181 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z139/, skipping
+2025-09-18 15:54:27,181 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z140/ -> destination: Batch 1/May 2/F 0125/Z224/
+2025-09-18 15:54:27,233 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z140/, skipping
+2025-09-18 15:54:27,234 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z141/ -> destination: Batch 1/May 2/F 0125/Z225/
+2025-09-18 15:54:27,297 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z141/, skipping
+2025-09-18 15:54:27,297 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z142/ -> destination: Batch 1/May 2/F 0125/Z226/
+2025-09-18 15:54:27,347 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z142/, skipping
+2025-09-18 15:54:27,347 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z143/ -> destination: Batch 1/May 2/F 0125/Z227/
+2025-09-18 15:54:27,395 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z143/, skipping
+2025-09-18 15:54:27,395 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z144/ -> destination: Batch 1/May 2/F 0125/Z228/
+2025-09-18 15:54:27,456 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z144/, skipping
+2025-09-18 15:54:27,456 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z145/ -> destination: Batch 1/May 2/F 0125/Z229/
+2025-09-18 15:54:27,502 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z145/, skipping
+2025-09-18 15:54:27,503 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z146/ -> destination: Batch 1/May 2/F 0125/Z230/
+2025-09-18 15:54:27,575 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z146/, skipping
+2025-09-18 15:54:27,576 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z147/ -> destination: Batch 1/May 2/F 0125/Z231/
+2025-09-18 15:54:27,624 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z147/, skipping
+2025-09-18 15:54:27,624 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z148/ -> destination: Batch 1/May 2/F 0125/Z232/
+2025-09-18 15:54:27,670 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z148/, skipping
+2025-09-18 15:54:27,670 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z149/ -> destination: Batch 1/May 2/F 0125/Z233/
+2025-09-18 15:54:27,716 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z149/, skipping
+2025-09-18 15:54:27,716 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z150/ -> destination: Batch 1/May 2/F 0125/Z234/
+2025-09-18 15:54:27,764 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z150/, skipping
+2025-09-18 15:54:27,765 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z151/ -> destination: Batch 1/May 2/F 0125/Z235/
+2025-09-18 15:54:27,812 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z151/, skipping
+2025-09-18 15:54:27,812 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z152/ -> destination: Batch 1/May 2/F 0125/Z236/
+2025-09-18 15:54:27,859 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z152/, skipping
+2025-09-18 15:54:27,859 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z153/ -> destination: Batch 1/May 2/F 0125/Z237/
+2025-09-18 15:54:27,908 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z153/, skipping
+2025-09-18 15:54:27,909 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z154/ -> destination: Batch 1/May 2/F 0125/Z238/
+2025-09-18 15:54:27,987 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z154/, skipping
+2025-09-18 15:54:27,987 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z155/ -> destination: Batch 1/May 2/F 0125/Z239/
+2025-09-18 15:54:28,036 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z155/, skipping
+2025-09-18 15:54:28,037 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z156/ -> destination: Batch 1/May 2/F 0125/Z240/
+2025-09-18 15:54:28,086 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z156/, skipping
+2025-09-18 15:54:28,086 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z157/ -> destination: Batch 1/May 2/F 0125/Z241/
+2025-09-18 15:54:28,133 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z157/, skipping
+2025-09-18 15:54:28,133 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z158/ -> destination: Batch 1/May 2/F 0125/Z242/
+2025-09-18 15:54:28,181 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z158/, skipping
+2025-09-18 15:54:28,181 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z159/ -> destination: Batch 1/May 2/F 0125/Z243/
+2025-09-18 15:54:28,231 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z159/, skipping
+2025-09-18 15:54:28,231 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z160/ -> destination: Batch 1/May 2/F 0125/Z244/
+2025-09-18 15:54:28,280 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z160/, skipping
+2025-09-18 15:54:28,280 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z161/ -> destination: Batch 1/May 2/F 0125/Z245/
+2025-09-18 15:54:28,328 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z161/, skipping
+2025-09-18 15:54:28,329 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z162/ -> destination: Batch 1/May 2/F 0125/Z246/
+2025-09-18 15:54:28,375 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z162/, skipping
+2025-09-18 15:54:28,375 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z163/ -> destination: Batch 1/May 2/F 0125/Z247/
+2025-09-18 15:54:28,424 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z163/, skipping
+2025-09-18 15:54:28,425 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z164/ -> destination: Batch 1/May 2/F 0125/Z248/
+2025-09-18 15:54:28,474 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z164/, skipping
+2025-09-18 15:54:28,474 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z165/ -> destination: Batch 1/May 2/F 0125/Z249/
+2025-09-18 15:54:28,551 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z165/, skipping
+2025-09-18 15:54:28,551 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z166/ -> destination: Batch 1/May 2/F 0125/Z250/
+2025-09-18 15:54:28,599 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z166/, skipping
+2025-09-18 15:54:28,599 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z167/ -> destination: Batch 1/May 2/F 0125/Z251/
+2025-09-18 15:54:28,645 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z167/, skipping
+2025-09-18 15:54:28,645 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z168/ -> destination: Batch 1/May 2/F 0125/Z252/
+2025-09-18 15:54:28,697 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z168/, skipping
+2025-09-18 15:54:28,697 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z169/ -> destination: Batch 1/May 2/F 0125/Z253/
+2025-09-18 15:54:28,745 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z169/, skipping
+2025-09-18 15:54:28,746 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z170/ -> destination: Batch 1/May 2/F 0125/Z254/
+2025-09-18 15:54:28,793 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z170/, skipping
+2025-09-18 15:54:28,793 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z171/ -> destination: Batch 1/May 2/F 0125/Z255/
+2025-09-18 15:54:28,842 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z171/, skipping
+2025-09-18 15:54:28,842 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z172/ -> destination: Batch 1/May 2/F 0125/Z256/
+2025-09-18 15:54:28,891 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z172/, skipping
+2025-09-18 15:54:28,891 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z173/ -> destination: Batch 1/May 2/F 0125/Z257/
+2025-09-18 15:54:28,939 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z173/, skipping
+2025-09-18 15:54:28,939 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z174/ -> destination: Batch 1/May 2/F 0125/Z258/
+2025-09-18 15:54:28,984 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z174/, skipping
+2025-09-18 15:54:28,984 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z175/ -> destination: Batch 1/May 2/F 0125/Z259/
+2025-09-18 15:54:29,031 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z175/, skipping
+2025-09-18 15:54:29,031 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z176/ -> destination: Batch 1/May 2/F 0125/Z260/
+2025-09-18 15:54:29,081 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z176/, skipping
+2025-09-18 15:54:29,081 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z177/ -> destination: Batch 1/May 2/F 0125/Z261/
+2025-09-18 15:54:29,129 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z177/, skipping
+2025-09-18 15:54:29,129 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z178/ -> destination: Batch 1/May 2/F 0125/Z262/
+2025-09-18 15:54:29,176 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z178/, skipping
+2025-09-18 15:54:29,176 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z179/ -> destination: Batch 1/May 2/F 0125/Z263/
+2025-09-18 15:54:29,223 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z179/, skipping
+2025-09-18 15:54:29,223 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z180/ -> destination: Batch 1/May 2/F 0125/Z264/
+2025-09-18 15:54:29,268 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z180/, skipping
+2025-09-18 15:54:29,268 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z181/ -> destination: Batch 1/May 2/F 0125/Z265/
+2025-09-18 15:54:29,324 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z181/, skipping
+2025-09-18 15:54:29,324 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z182/ -> destination: Batch 1/May 2/F 0125/Z266/
+2025-09-18 15:54:29,372 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z182/, skipping
+2025-09-18 15:54:29,372 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z183/ -> destination: Batch 1/May 2/F 0125/Z267/
+2025-09-18 15:54:29,417 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z183/, skipping
+2025-09-18 15:54:29,417 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z184/ -> destination: Batch 1/May 2/F 0125/Z268/
+2025-09-18 15:54:29,465 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z184/, skipping
+2025-09-18 15:54:29,465 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z185/ -> destination: Batch 1/May 2/F 0125/Z269/
+2025-09-18 15:54:29,511 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z185/, skipping
+2025-09-18 15:54:29,512 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z186/ -> destination: Batch 1/May 2/F 0125/Z270/
+2025-09-18 15:54:29,558 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z186/, skipping
+2025-09-18 15:54:29,558 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z187/ -> destination: Batch 1/May 2/F 0125/Z271/
+2025-09-18 15:54:29,603 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z187/, skipping
+2025-09-18 15:54:29,603 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z188/ -> destination: Batch 1/May 2/F 0125/Z272/
+2025-09-18 15:54:29,654 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z188/, skipping
+2025-09-18 15:54:29,654 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z189/ -> destination: Batch 1/May 2/F 0125/Z273/
+2025-09-18 15:54:29,701 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z189/, skipping
+2025-09-18 15:54:29,701 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z190/ -> destination: Batch 1/May 2/F 0125/Z274/
+2025-09-18 15:54:29,750 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z190/, skipping
+2025-09-18 15:54:29,750 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z191/ -> destination: Batch 1/May 2/F 0125/Z275/
+2025-09-18 15:54:29,795 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z191/, skipping
+2025-09-18 15:54:29,795 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z192/ -> destination: Batch 1/May 2/F 0125/Z276/
+2025-09-18 15:54:29,846 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z192/, skipping
+2025-09-18 15:54:29,846 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z193/ -> destination: Batch 1/May 2/F 0125/Z277/
+2025-09-18 15:54:29,892 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z193/, skipping
+2025-09-18 15:54:29,892 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z194/ -> destination: Batch 1/May 2/F 0125/Z278/
+2025-09-18 15:54:29,938 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z194/, skipping
+2025-09-18 15:54:29,939 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z195/ -> destination: Batch 1/May 2/F 0125/Z279/
+2025-09-18 15:54:29,986 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z195/, skipping
+2025-09-18 15:54:29,986 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z196/ -> destination: Batch 1/May 2/F 0125/Z280/
+2025-09-18 15:54:30,032 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z196/, skipping
+2025-09-18 15:54:30,033 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z197/ -> destination: Batch 1/May 2/F 0125/Z281/
+2025-09-18 15:54:30,080 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z197/, skipping
+2025-09-18 15:54:30,080 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z198/ -> destination: Batch 1/May 2/F 0125/Z282/
+2025-09-18 15:54:30,127 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z198/, skipping
+2025-09-18 15:54:30,127 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z199/ -> destination: Batch 1/May 2/F 0125/Z283/
+2025-09-18 15:54:30,176 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z199/, skipping
+2025-09-18 15:54:30,177 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z200/ -> destination: Batch 1/May 2/F 0125/Z284/
+2025-09-18 15:54:30,374 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z200/, skipping
+2025-09-18 15:54:30,374 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z201/ -> destination: Batch 1/May 2/F 0125/Z285/
+2025-09-18 15:54:30,430 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z201/, skipping
+2025-09-18 15:54:30,430 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z202/ -> destination: Batch 1/May 2/F 0125/Z286/
+2025-09-18 15:54:30,480 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z202/, skipping
+2025-09-18 15:54:30,480 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z203/ -> destination: Batch 1/May 2/F 0125/Z287/
+2025-09-18 15:54:30,529 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z203/, skipping
+2025-09-18 15:54:30,529 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z204/ -> destination: Batch 1/May 2/F 0125/Z288/
+2025-09-18 15:54:30,579 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z204/, skipping
+2025-09-18 15:54:30,579 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z205/ -> destination: Batch 1/May 2/F 0125/Z289/
+2025-09-18 15:54:30,627 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z205/, skipping
+2025-09-18 15:54:30,627 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z206/ -> destination: Batch 1/May 2/F 0125/Z290/
+2025-09-18 15:54:30,679 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z206/, skipping
+2025-09-18 15:54:30,679 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z207/ -> destination: Batch 1/May 2/F 0125/Z291/
+2025-09-18 15:54:30,729 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z207/, skipping
+2025-09-18 15:54:30,729 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z208/ -> destination: Batch 1/May 2/F 0125/Z292/
+2025-09-18 15:54:30,779 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z208/, skipping
+2025-09-18 15:54:30,779 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z209/ -> destination: Batch 1/May 2/F 0125/Z293/
+2025-09-18 15:54:30,827 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z209/, skipping
+2025-09-18 15:54:30,828 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z210/ -> destination: Batch 1/May 2/F 0125/Z294/
+2025-09-18 15:54:30,876 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z210/, skipping
+2025-09-18 15:54:30,876 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z211/ -> destination: Batch 1/May 2/F 0125/Z295/
+2025-09-18 15:54:30,925 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z211/, skipping
+2025-09-18 15:54:30,925 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z212/ -> destination: Batch 1/May 2/F 0125/Z296/
+2025-09-18 15:54:30,973 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z212/, skipping
+2025-09-18 15:54:30,973 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z213/ -> destination: Batch 1/May 2/F 0125/Z297/
+2025-09-18 15:54:31,020 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z213/, skipping
+2025-09-18 15:54:31,020 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z214/ -> destination: Batch 1/May 2/F 0125/Z298/
+2025-09-18 15:54:31,069 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z214/, skipping
+2025-09-18 15:54:31,069 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z215/ -> destination: Batch 1/May 2/F 0125/Z299/
+2025-09-18 15:54:31,123 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z215/, skipping
+2025-09-18 15:54:31,123 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z216/ -> destination: Batch 1/May 2/F 0125/Z300/
+2025-09-18 15:54:31,171 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z216/, skipping
+2025-09-18 15:54:31,172 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z217/ -> destination: Batch 1/May 2/F 0125/Z301/
+2025-09-18 15:54:31,219 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z217/, skipping
+2025-09-18 15:54:31,219 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z218/ -> destination: Batch 1/May 2/F 0125/Z302/
+2025-09-18 15:54:31,265 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z218/, skipping
+2025-09-18 15:54:31,265 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z219/ -> destination: Batch 1/May 2/F 0125/Z303/
+2025-09-18 15:54:31,312 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z219/, skipping
+2025-09-18 15:54:31,313 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z220/ -> destination: Batch 1/May 2/F 0125/Z304/
+2025-09-18 15:54:31,360 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z220/, skipping
+2025-09-18 15:54:31,361 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z221/ -> destination: Batch 1/May 2/F 0125/Z305/
+2025-09-18 15:54:31,409 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z221/, skipping
+2025-09-18 15:54:31,409 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z222/ -> destination: Batch 1/May 2/F 0125/Z306/
+2025-09-18 15:54:31,455 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z222/, skipping
+2025-09-18 15:54:31,455 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z223/ -> destination: Batch 1/May 2/F 0125/Z307/
+2025-09-18 15:54:31,502 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z223/, skipping
+2025-09-18 15:54:31,503 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z224/ -> destination: Batch 1/May 2/F 0125/Z308/
+2025-09-18 15:54:31,554 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z224/, skipping
+2025-09-18 15:54:31,554 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z225/ -> destination: Batch 1/May 2/F 0125/Z309/
+2025-09-18 15:54:31,602 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z225/, skipping
+2025-09-18 15:54:31,602 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z226/ -> destination: Batch 1/May 2/F 0125/Z310/
+2025-09-18 15:54:31,655 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z226/, skipping
+2025-09-18 15:54:31,656 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z227/ -> destination: Batch 1/May 2/F 0125/Z311/
+2025-09-18 15:54:31,703 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z227/, skipping
+2025-09-18 15:54:31,704 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z228/ -> destination: Batch 1/May 2/F 0125/Z312/
+2025-09-18 15:54:31,751 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z228/, skipping
+2025-09-18 15:54:31,751 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z229/ -> destination: Batch 1/May 2/F 0125/Z313/
+2025-09-18 15:54:31,803 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z229/, skipping
+2025-09-18 15:54:31,803 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z230/ -> destination: Batch 1/May 2/F 0125/Z314/
+2025-09-18 15:54:31,848 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z230/, skipping
+2025-09-18 15:54:31,849 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z231/ -> destination: Batch 1/May 2/F 0125/Z315/
+2025-09-18 15:54:31,898 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z231/, skipping
+2025-09-18 15:54:31,899 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z232/ -> destination: Batch 1/May 2/F 0125/Z316/
+2025-09-18 15:54:31,947 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z232/, skipping
+2025-09-18 15:54:31,948 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z233/ -> destination: Batch 1/May 2/F 0125/Z317/
+2025-09-18 15:54:31,995 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z233/, skipping
+2025-09-18 15:54:31,995 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z234/ -> destination: Batch 1/May 2/F 0125/Z318/
+2025-09-18 15:54:32,048 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z234/, skipping
+2025-09-18 15:54:32,048 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z235/ -> destination: Batch 1/May 2/F 0125/Z319/
+2025-09-18 15:54:32,094 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z235/, skipping
+2025-09-18 15:54:32,094 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z236/ -> destination: Batch 1/May 2/F 0125/Z320/
+2025-09-18 15:54:32,270 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z236/, skipping
+2025-09-18 15:54:32,270 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z237/ -> destination: Batch 1/May 2/F 0125/Z321/
+2025-09-18 15:54:32,316 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z237/, skipping
+2025-09-18 15:54:32,316 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z238/ -> destination: Batch 1/May 2/F 0125/Z322/
+2025-09-18 15:54:32,362 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z238/, skipping
+2025-09-18 15:54:32,363 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z239/ -> destination: Batch 1/May 2/F 0125/Z323/
+2025-09-18 15:54:32,409 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z239/, skipping
+2025-09-18 15:54:32,410 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z240/ -> destination: Batch 1/May 2/F 0125/Z324/
+2025-09-18 15:54:32,457 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z240/, skipping
+2025-09-18 15:54:32,457 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z241/ -> destination: Batch 1/May 2/F 0125/Z325/
+2025-09-18 15:54:32,506 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z241/, skipping
+2025-09-18 15:54:32,507 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z242/ -> destination: Batch 1/May 2/F 0125/Z326/
+2025-09-18 15:54:32,554 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z242/, skipping
+2025-09-18 15:54:32,554 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z243/ -> destination: Batch 1/May 2/F 0125/Z327/
+2025-09-18 15:54:32,602 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z243/, skipping
+2025-09-18 15:54:32,602 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z244/ -> destination: Batch 1/May 2/F 0125/Z328/
+2025-09-18 15:54:32,649 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z244/, skipping
+2025-09-18 15:54:32,649 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z245/ -> destination: Batch 1/May 2/F 0125/Z329/
+2025-09-18 15:54:32,697 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z245/, skipping
+2025-09-18 15:54:32,697 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z246/ -> destination: Batch 1/May 2/F 0125/Z330/
+2025-09-18 15:54:32,743 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z246/, skipping
+2025-09-18 15:54:32,744 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z247/ -> destination: Batch 1/May 2/F 0125/Z331/
+2025-09-18 15:54:32,798 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z247/, skipping
+2025-09-18 15:54:32,798 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z248/ -> destination: Batch 1/May 2/F 0125/Z332/
+2025-09-18 15:54:32,847 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z248/, skipping
+2025-09-18 15:54:32,847 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z249/ -> destination: Batch 1/May 2/F 0125/Z333/
+2025-09-18 15:54:32,919 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z249/, skipping
+2025-09-18 15:54:32,919 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z250/ -> destination: Batch 1/May 2/F 0125/Z334/
+2025-09-18 15:54:32,967 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z250/, skipping
+2025-09-18 15:54:32,967 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z251/ -> destination: Batch 1/May 2/F 0125/Z335/
+2025-09-18 15:54:33,015 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z251/, skipping
+2025-09-18 15:54:33,016 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z252/ -> destination: Batch 1/May 2/F 0125/Z336/
+2025-09-18 15:54:33,084 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z252/, skipping
+2025-09-18 15:54:33,084 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z253/ -> destination: Batch 1/May 2/F 0125/Z337/
+2025-09-18 15:54:33,136 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z253/, skipping
+2025-09-18 15:54:33,137 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z254/ -> destination: Batch 1/May 2/F 0125/Z338/
+2025-09-18 15:54:33,200 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z254/, skipping
+2025-09-18 15:54:33,201 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z255/ -> destination: Batch 1/May 2/F 0125/Z339/
+2025-09-18 15:54:33,281 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z255/, skipping
+2025-09-18 15:54:33,304 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z256/ -> destination: Batch 1/May 2/F 0125/Z340/
+2025-09-18 15:54:33,350 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z256/, skipping
+2025-09-18 15:54:33,351 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z257/ -> destination: Batch 1/May 2/F 0125/Z341/
+2025-09-18 15:54:33,399 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z257/, skipping
+2025-09-18 15:54:33,400 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z258/ -> destination: Batch 1/May 2/F 0125/Z342/
+2025-09-18 15:54:33,456 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z258/, skipping
+2025-09-18 15:54:33,456 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z259/ -> destination: Batch 1/May 2/F 0125/Z343/
+2025-09-18 15:54:33,504 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z259/, skipping
+2025-09-18 15:54:33,504 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z260/ -> destination: Batch 1/May 2/F 0125/Z344/
+2025-09-18 15:54:33,554 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z260/, skipping
+2025-09-18 15:54:33,554 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z261/ -> destination: Batch 1/May 2/F 0125/Z345/
+2025-09-18 15:54:33,602 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z261/, skipping
+2025-09-18 15:54:33,603 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z262/ -> destination: Batch 1/May 2/F 0125/Z346/
+2025-09-18 15:54:33,652 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z262/, skipping
+2025-09-18 15:54:33,652 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z263/ -> destination: Batch 1/May 2/F 0125/Z347/
+2025-09-18 15:54:33,699 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z263/, skipping
+2025-09-18 15:54:33,700 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z264/ -> destination: Batch 1/May 2/F 0125/Z348/
+2025-09-18 15:54:33,750 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z264/, skipping
+2025-09-18 15:54:33,750 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z265/ -> destination: Batch 1/May 2/F 0125/Z349/
+2025-09-18 15:54:33,802 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z265/, skipping
+2025-09-18 15:54:33,802 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z266/ -> destination: Batch 1/May 2/F 0125/Z350/
+2025-09-18 15:54:33,849 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z266/, skipping
+2025-09-18 15:54:33,850 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z267/ -> destination: Batch 1/May 2/F 0125/Z351/
+2025-09-18 15:54:33,910 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z267/, skipping
+2025-09-18 15:54:33,911 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z268/ -> destination: Batch 1/May 2/F 0125/Z352/
+2025-09-18 15:54:33,961 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z268/, skipping
+2025-09-18 15:54:33,961 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z269/ -> destination: Batch 1/May 2/F 0125/Z353/
+2025-09-18 15:54:34,008 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z269/, skipping
+2025-09-18 15:54:34,008 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z270/ -> destination: Batch 1/May 2/F 0125/Z354/
+2025-09-18 15:54:34,056 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z270/, skipping
+2025-09-18 15:54:34,057 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z271/ -> destination: Batch 1/May 2/F 0125/Z355/
+2025-09-18 15:54:34,105 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z271/, skipping
+2025-09-18 15:54:34,105 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z272/ -> destination: Batch 1/May 2/F 0125/Z356/
+2025-09-18 15:54:34,153 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z272/, skipping
+2025-09-18 15:54:34,153 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z273/ -> destination: Batch 1/May 2/F 0125/Z357/
+2025-09-18 15:54:34,205 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z273/, skipping
+2025-09-18 15:54:34,205 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z274/ -> destination: Batch 1/May 2/F 0125/Z358/
+2025-09-18 15:54:34,253 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z274/, skipping
+2025-09-18 15:54:34,253 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z275/ -> destination: Batch 1/May 2/F 0125/Z359/
+2025-09-18 15:54:34,325 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z275/, skipping
+2025-09-18 15:54:34,326 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z276/ -> destination: Batch 1/May 2/F 0125/Z360/
+2025-09-18 15:54:34,372 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z276/, skipping
+2025-09-18 15:54:34,372 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z277/ -> destination: Batch 1/May 2/F 0125/Z361/
+2025-09-18 15:54:34,421 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z277/, skipping
+2025-09-18 15:54:34,421 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z278/ -> destination: Batch 1/May 2/F 0125/Z362/
+2025-09-18 15:54:34,468 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z278/, skipping
+2025-09-18 15:54:34,468 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z279/ -> destination: Batch 1/May 2/F 0125/Z363/
+2025-09-18 15:54:34,517 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z279/, skipping
+2025-09-18 15:54:34,517 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z280/ -> destination: Batch 1/May 2/F 0125/Z364/
+2025-09-18 15:54:34,565 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z280/, skipping
+2025-09-18 15:54:34,566 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z281/ -> destination: Batch 1/May 2/F 0125/Z365/
+2025-09-18 15:54:34,616 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z281/, skipping
+2025-09-18 15:54:34,616 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z282/ -> destination: Batch 1/May 2/F 0125/Z366/
+2025-09-18 15:54:34,667 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z282/, skipping
+2025-09-18 15:54:34,667 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z283/ -> destination: Batch 1/May 2/F 0125/Z367/
+2025-09-18 15:54:34,719 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z283/, skipping
+2025-09-18 15:54:34,719 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z284/ -> destination: Batch 1/May 2/F 0125/Z368/
+2025-09-18 15:54:34,767 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z284/, skipping
+2025-09-18 15:54:34,768 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z285/ -> destination: Batch 1/May 2/F 0125/Z369/
+2025-09-18 15:54:34,824 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z285/, skipping
+2025-09-18 15:54:34,824 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z286/ -> destination: Batch 1/May 2/F 0125/Z370/
+2025-09-18 15:54:34,875 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z286/, skipping
+2025-09-18 15:54:34,876 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z287/ -> destination: Batch 1/May 2/F 0125/Z371/
+2025-09-18 15:54:34,924 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z287/, skipping
+2025-09-18 15:54:34,924 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z288/ -> destination: Batch 1/May 2/F 0125/Z372/
+2025-09-18 15:54:34,973 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z288/, skipping
+2025-09-18 15:54:34,973 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z289/ -> destination: Batch 1/May 2/F 0125/Z373/
+2025-09-18 15:54:35,019 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z289/, skipping
+2025-09-18 15:54:35,020 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z290/ -> destination: Batch 1/May 2/F 0125/Z374/
+2025-09-18 15:54:35,073 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z290/, skipping
+2025-09-18 15:54:35,073 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z291/ -> destination: Batch 1/May 2/F 0125/Z375/
+2025-09-18 15:54:35,120 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z291/, skipping
+2025-09-18 15:54:35,120 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z292/ -> destination: Batch 1/May 2/F 0125/Z376/
+2025-09-18 15:54:35,169 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z292/, skipping
+2025-09-18 15:54:35,169 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z293/ -> destination: Batch 1/May 2/F 0125/Z377/
+2025-09-18 15:54:35,219 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z293/, skipping
+2025-09-18 15:54:35,219 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z294/ -> destination: Batch 1/May 2/F 0125/Z378/
+2025-09-18 15:54:35,269 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z294/, skipping
+2025-09-18 15:54:35,269 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z295/ -> destination: Batch 1/May 2/F 0125/Z379/
+2025-09-18 15:54:35,316 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z295/, skipping
+2025-09-18 15:54:35,316 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z296/ -> destination: Batch 1/May 2/F 0125/Z380/
+2025-09-18 15:54:35,364 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z296/, skipping
+2025-09-18 15:54:35,364 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z297/ -> destination: Batch 1/May 2/F 0125/Z381/
+2025-09-18 15:54:35,413 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z297/, skipping
+2025-09-18 15:54:35,413 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z298/ -> destination: Batch 1/May 2/F 0125/Z382/
+2025-09-18 15:54:35,460 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z298/, skipping
+2025-09-18 15:54:35,460 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z299/ -> destination: Batch 1/May 2/F 0125/Z383/
+2025-09-18 15:54:35,508 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z299/, skipping
+2025-09-18 15:54:35,509 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z300/ -> destination: Batch 1/May 2/F 0125/Z384/
+2025-09-18 15:54:35,721 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z300/, skipping
+2025-09-18 15:54:35,722 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z301/ -> destination: Batch 1/May 2/F 0125/Z385/
+2025-09-18 15:54:35,772 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z301/, skipping
+2025-09-18 15:54:35,772 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z302/ -> destination: Batch 1/May 2/F 0125/Z386/
+2025-09-18 15:54:35,819 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z302/, skipping
+2025-09-18 15:54:35,819 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z303/ -> destination: Batch 1/May 2/F 0125/Z387/
+2025-09-18 15:54:35,874 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z303/, skipping
+2025-09-18 15:54:35,876 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z304/ -> destination: Batch 1/May 2/F 0125/Z388/
+2025-09-18 15:54:35,936 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z304/, skipping
+2025-09-18 15:54:35,937 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z305/ -> destination: Batch 1/May 2/F 0125/Z389/
+2025-09-18 15:54:35,987 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z305/, skipping
+2025-09-18 15:54:35,987 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z306/ -> destination: Batch 1/May 2/F 0125/Z390/
+2025-09-18 15:54:36,034 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z306/, skipping
+2025-09-18 15:54:36,034 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z307/ -> destination: Batch 1/May 2/F 0125/Z391/
+2025-09-18 15:54:36,090 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z307/, skipping
+2025-09-18 15:54:36,100 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z308/ -> destination: Batch 1/May 2/F 0125/Z392/
+2025-09-18 15:54:36,153 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z308/, skipping
+2025-09-18 15:54:36,153 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z309/ -> destination: Batch 1/May 2/F 0125/Z393/
+2025-09-18 15:54:36,203 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z309/, skipping
+2025-09-18 15:54:36,204 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z310/ -> destination: Batch 1/May 2/F 0125/Z394/
+2025-09-18 15:54:36,250 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z310/, skipping
+2025-09-18 15:54:36,250 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z311/ -> destination: Batch 1/May 2/F 0125/Z395/
+2025-09-18 15:54:36,298 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z311/, skipping
+2025-09-18 15:54:36,298 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z312/ -> destination: Batch 1/May 2/F 0125/Z396/
+2025-09-18 15:54:36,345 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z312/, skipping
+2025-09-18 15:54:36,346 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z313/ -> destination: Batch 1/May 2/F 0125/Z397/
+2025-09-18 15:54:36,394 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z313/, skipping
+2025-09-18 15:54:36,394 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z314/ -> destination: Batch 1/May 2/F 0125/Z398/
+2025-09-18 15:54:36,440 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z314/, skipping
+2025-09-18 15:54:36,440 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z315/ -> destination: Batch 1/May 2/F 0125/Z399/
+2025-09-18 15:54:36,485 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z315/, skipping
+2025-09-18 15:54:36,485 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z316/ -> destination: Batch 1/May 2/F 0125/Z400/
+2025-09-18 15:54:36,533 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z316/, skipping
+2025-09-18 15:54:36,534 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z317/ -> destination: Batch 1/May 2/F 0125/Z401/
+2025-09-18 15:54:36,584 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z317/, skipping
+2025-09-18 15:54:36,584 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z318/ -> destination: Batch 1/May 2/F 0125/Z402/
+2025-09-18 15:54:36,633 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z318/, skipping
+2025-09-18 15:54:36,633 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z319/ -> destination: Batch 1/May 2/F 0125/Z403/
+2025-09-18 15:54:36,682 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z319/, skipping
+2025-09-18 15:54:36,682 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z320/ -> destination: Batch 1/May 2/F 0125/Z404/
+2025-09-18 15:54:36,731 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z320/, skipping
+2025-09-18 15:54:36,732 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z321/ -> destination: Batch 1/May 2/F 0125/Z405/
+2025-09-18 15:54:36,779 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z321/, skipping
+2025-09-18 15:54:36,780 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z322/ -> destination: Batch 1/May 2/F 0125/Z406/
+2025-09-18 15:54:36,829 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z322/, skipping
+2025-09-18 15:54:36,829 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z323/ -> destination: Batch 1/May 2/F 0125/Z407/
+2025-09-18 15:54:36,878 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z323/, skipping
+2025-09-18 15:54:36,879 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z324/ -> destination: Batch 1/May 2/F 0125/Z408/
+2025-09-18 15:54:36,950 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z324/, skipping
+2025-09-18 15:54:36,950 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z325/ -> destination: Batch 1/May 2/F 0125/Z409/
+2025-09-18 15:54:36,999 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z325/, skipping
+2025-09-18 15:54:36,999 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z326/ -> destination: Batch 1/May 2/F 0125/Z410/
+2025-09-18 15:54:37,046 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z326/, skipping
+2025-09-18 15:54:37,046 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z327/ -> destination: Batch 1/May 2/F 0125/Z411/
+2025-09-18 15:54:37,096 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z327/, skipping
+2025-09-18 15:54:37,096 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z328/ -> destination: Batch 1/May 2/F 0125/Z412/
+2025-09-18 15:54:37,166 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z328/, skipping
+2025-09-18 15:54:37,166 [INFO] Processing source folder: Batch 1/May 2/Partial 8/Z329/ -> destination: Batch 1/May 2/F 0125/Z413/
+2025-09-18 15:54:37,221 [WARNING] No objects found in Batch 1/May 2/Partial 8/Z329/, skipping
+2025-09-18 15:54:37,221 [INFO] Successfully processed folders Z001 to Z329 to destination Z085 to Z413
+2025-09-18 15:54:37,224 [INFO] S3 folder copy and rename operation completed

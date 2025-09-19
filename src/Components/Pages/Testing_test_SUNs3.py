@@ -18,7 +18,7 @@ s3_client = boto3.client('s3')
 # Constants
 BUCKET = 'my-bucket-parquet-test'
 PRIMARY_FOLDER = 'April 24'
-TEST_FOLDERS = [f'Test{i}' for i in range(1, 13)]
+TEST_FOLDERS = [f'Test{i}' for i in range(1, 125)]
 Z_FOLDERS = [f'Z{i}' for i in range(1, 1001)]
 OUTPUT_PREFIX = 'today'
 EXPECTED_FILE_SIZE = 1.4 * 1024 * 1024  # 1.4 MB in bytes

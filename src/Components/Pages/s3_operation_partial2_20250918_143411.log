@@ -1,0 +1,233 @@
+2025-09-18 14:34:11,117 [INFO] Starting S3 folder copy and rename operation for Partial 2
+2025-09-18 14:34:11,156 [INFO] Found credentials in shared credentials file: ~/.aws/credentials
+2025-09-18 14:34:11,838 [INFO] Bucket my-bucket-founder-series-sun exists and is accessible
+2025-09-18 14:34:11,838 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z001/Z001.parquet/ -> destination: Batch 1/May 2/F 0013/Z001/Z001.parquet/
+2025-09-18 14:34:11,895 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z001/Z001.parquet/, skipping
+2025-09-18 14:34:11,895 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z002/Z002.parquet/ -> destination: Batch 1/May 2/F 0013/Z002/Z002.parquet/
+2025-09-18 14:34:11,944 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z002/Z002.parquet/, skipping
+2025-09-18 14:34:11,944 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z003/Z003.parquet/ -> destination: Batch 1/May 2/F 0013/Z003/Z003.parquet/
+2025-09-18 14:34:11,993 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z003/Z003.parquet/, skipping
+2025-09-18 14:34:11,993 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z004/Z004.parquet/ -> destination: Batch 1/May 2/F 0013/Z004/Z004.parquet/
+2025-09-18 14:34:12,042 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z004/Z004.parquet/, skipping
+2025-09-18 14:34:12,042 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z005/Z005.parquet/ -> destination: Batch 1/May 2/F 0013/Z005/Z005.parquet/
+2025-09-18 14:34:12,091 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z005/Z005.parquet/, skipping
+2025-09-18 14:34:12,092 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z006/Z006.parquet/ -> destination: Batch 1/May 2/F 0013/Z006/Z006.parquet/
+2025-09-18 14:34:12,139 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z006/Z006.parquet/, skipping
+2025-09-18 14:34:12,139 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z007/Z007.parquet/ -> destination: Batch 1/May 2/F 0013/Z007/Z007.parquet/
+2025-09-18 14:34:12,188 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z007/Z007.parquet/, skipping
+2025-09-18 14:34:12,188 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z008/Z008.parquet/ -> destination: Batch 1/May 2/F 0013/Z008/Z008.parquet/
+2025-09-18 14:34:12,236 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z008/Z008.parquet/, skipping
+2025-09-18 14:34:12,236 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z009/Z009.parquet/ -> destination: Batch 1/May 2/F 0013/Z009/Z009.parquet/
+2025-09-18 14:34:12,286 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z009/Z009.parquet/, skipping
+2025-09-18 14:34:12,286 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z010/Z010.parquet/ -> destination: Batch 1/May 2/F 0013/Z010/Z010.parquet/
+2025-09-18 14:34:12,335 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z010/Z010.parquet/, skipping
+2025-09-18 14:34:12,335 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z011/Z011.parquet/ -> destination: Batch 1/May 2/F 0013/Z011/Z011.parquet/
+2025-09-18 14:34:12,382 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z011/Z011.parquet/, skipping
+2025-09-18 14:34:12,382 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z012/Z012.parquet/ -> destination: Batch 1/May 2/F 0013/Z012/Z012.parquet/
+2025-09-18 14:34:12,432 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z012/Z012.parquet/, skipping
+2025-09-18 14:34:12,432 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z013/Z013.parquet/ -> destination: Batch 1/May 2/F 0013/Z013/Z013.parquet/
+2025-09-18 14:34:12,479 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z013/Z013.parquet/, skipping
+2025-09-18 14:34:12,479 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z014/Z014.parquet/ -> destination: Batch 1/May 2/F 0013/Z014/Z014.parquet/
+2025-09-18 14:34:12,526 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z014/Z014.parquet/, skipping
+2025-09-18 14:34:12,526 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z015/Z015.parquet/ -> destination: Batch 1/May 2/F 0013/Z015/Z015.parquet/
+2025-09-18 14:34:12,576 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z015/Z015.parquet/, skipping
+2025-09-18 14:34:12,576 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z016/Z016.parquet/ -> destination: Batch 1/May 2/F 0013/Z016/Z016.parquet/
+2025-09-18 14:34:12,625 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z016/Z016.parquet/, skipping
+2025-09-18 14:34:12,625 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z017/Z017.parquet/ -> destination: Batch 1/May 2/F 0013/Z017/Z017.parquet/
+2025-09-18 14:34:12,673 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z017/Z017.parquet/, skipping
+2025-09-18 14:34:12,673 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z018/Z018.parquet/ -> destination: Batch 1/May 2/F 0013/Z018/Z018.parquet/
+2025-09-18 14:34:12,720 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z018/Z018.parquet/, skipping
+2025-09-18 14:34:12,720 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z019/Z019.parquet/ -> destination: Batch 1/May 2/F 0013/Z019/Z019.parquet/
+2025-09-18 14:34:12,769 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z019/Z019.parquet/, skipping
+2025-09-18 14:34:12,769 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z020/Z020.parquet/ -> destination: Batch 1/May 2/F 0013/Z020/Z020.parquet/
+2025-09-18 14:34:12,815 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z020/Z020.parquet/, skipping
+2025-09-18 14:34:12,815 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z021/Z021.parquet/ -> destination: Batch 1/May 2/F 0013/Z021/Z021.parquet/
+2025-09-18 14:34:12,866 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z021/Z021.parquet/, skipping
+2025-09-18 14:34:12,866 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z022/Z022.parquet/ -> destination: Batch 1/May 2/F 0013/Z022/Z022.parquet/
+2025-09-18 14:34:12,913 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z022/Z022.parquet/, skipping
+2025-09-18 14:34:12,914 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z023/Z023.parquet/ -> destination: Batch 1/May 2/F 0013/Z023/Z023.parquet/
+2025-09-18 14:34:12,960 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z023/Z023.parquet/, skipping
+2025-09-18 14:34:12,960 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z024/Z024.parquet/ -> destination: Batch 1/May 2/F 0013/Z024/Z024.parquet/
+2025-09-18 14:34:13,008 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z024/Z024.parquet/, skipping
+2025-09-18 14:34:13,009 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z025/Z025.parquet/ -> destination: Batch 1/May 2/F 0013/Z025/Z025.parquet/
+2025-09-18 14:34:13,057 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z025/Z025.parquet/, skipping
+2025-09-18 14:34:13,057 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z026/Z026.parquet/ -> destination: Batch 1/May 2/F 0013/Z026/Z026.parquet/
+2025-09-18 14:34:13,105 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z026/Z026.parquet/, skipping
+2025-09-18 14:34:13,105 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z027/Z027.parquet/ -> destination: Batch 1/May 2/F 0013/Z027/Z027.parquet/
+2025-09-18 14:34:13,175 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z027/Z027.parquet/, skipping
+2025-09-18 14:34:13,176 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z028/Z028.parquet/ -> destination: Batch 1/May 2/F 0013/Z028/Z028.parquet/
+2025-09-18 14:34:13,223 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z028/Z028.parquet/, skipping
+2025-09-18 14:34:13,223 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z029/Z029.parquet/ -> destination: Batch 1/May 2/F 0013/Z029/Z029.parquet/
+2025-09-18 14:34:13,272 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z029/Z029.parquet/, skipping
+2025-09-18 14:34:13,272 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z030/Z030.parquet/ -> destination: Batch 1/May 2/F 0013/Z030/Z030.parquet/
+2025-09-18 14:34:13,322 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z030/Z030.parquet/, skipping
+2025-09-18 14:34:13,322 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z031/Z031.parquet/ -> destination: Batch 1/May 2/F 0013/Z031/Z031.parquet/
+2025-09-18 14:34:13,371 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z031/Z031.parquet/, skipping
+2025-09-18 14:34:13,371 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z032/Z032.parquet/ -> destination: Batch 1/May 2/F 0013/Z032/Z032.parquet/
+2025-09-18 14:34:13,431 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z032/Z032.parquet/, skipping
+2025-09-18 14:34:13,431 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z033/Z033.parquet/ -> destination: Batch 1/May 2/F 0013/Z033/Z033.parquet/
+2025-09-18 14:34:13,483 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z033/Z033.parquet/, skipping
+2025-09-18 14:34:13,483 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z034/Z034.parquet/ -> destination: Batch 1/May 2/F 0013/Z034/Z034.parquet/
+2025-09-18 14:34:13,532 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z034/Z034.parquet/, skipping
+2025-09-18 14:34:13,532 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z035/Z035.parquet/ -> destination: Batch 1/May 2/F 0013/Z035/Z035.parquet/
+2025-09-18 14:34:13,583 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z035/Z035.parquet/, skipping
+2025-09-18 14:34:13,583 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z036/Z036.parquet/ -> destination: Batch 1/May 2/F 0013/Z036/Z036.parquet/
+2025-09-18 14:34:13,644 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z036/Z036.parquet/, skipping
+2025-09-18 14:34:13,644 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z037/Z037.parquet/ -> destination: Batch 1/May 2/F 0013/Z037/Z037.parquet/
+2025-09-18 14:34:13,727 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z037/Z037.parquet/, skipping
+2025-09-18 14:34:13,727 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z038/Z038.parquet/ -> destination: Batch 1/May 2/F 0013/Z038/Z038.parquet/
+2025-09-18 14:34:13,778 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z038/Z038.parquet/, skipping
+2025-09-18 14:34:13,778 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z039/Z039.parquet/ -> destination: Batch 1/May 2/F 0013/Z039/Z039.parquet/
+2025-09-18 14:34:13,830 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z039/Z039.parquet/, skipping
+2025-09-18 14:34:13,830 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z040/Z040.parquet/ -> destination: Batch 1/May 2/F 0013/Z040/Z040.parquet/
+2025-09-18 14:34:13,877 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z040/Z040.parquet/, skipping
+2025-09-18 14:34:13,877 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z041/Z041.parquet/ -> destination: Batch 1/May 2/F 0013/Z041/Z041.parquet/
+2025-09-18 14:34:13,923 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z041/Z041.parquet/, skipping
+2025-09-18 14:34:13,923 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z042/Z042.parquet/ -> destination: Batch 1/May 2/F 0013/Z042/Z042.parquet/
+2025-09-18 14:34:13,971 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z042/Z042.parquet/, skipping
+2025-09-18 14:34:13,971 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z043/Z043.parquet/ -> destination: Batch 1/May 2/F 0013/Z043/Z043.parquet/
+2025-09-18 14:34:14,053 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z043/Z043.parquet/, skipping
+2025-09-18 14:34:14,053 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z044/Z044.parquet/ -> destination: Batch 1/May 2/F 0013/Z044/Z044.parquet/
+2025-09-18 14:34:14,107 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z044/Z044.parquet/, skipping
+2025-09-18 14:34:14,107 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z045/Z045.parquet/ -> destination: Batch 1/May 2/F 0013/Z045/Z045.parquet/
+2025-09-18 14:34:14,155 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z045/Z045.parquet/, skipping
+2025-09-18 14:34:14,156 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z046/Z046.parquet/ -> destination: Batch 1/May 2/F 0013/Z046/Z046.parquet/
+2025-09-18 14:34:14,204 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z046/Z046.parquet/, skipping
+2025-09-18 14:34:14,204 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z047/Z047.parquet/ -> destination: Batch 1/May 2/F 0013/Z047/Z047.parquet/
+2025-09-18 14:34:14,251 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z047/Z047.parquet/, skipping
+2025-09-18 14:34:14,251 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z048/Z048.parquet/ -> destination: Batch 1/May 2/F 0013/Z048/Z048.parquet/
+2025-09-18 14:34:14,303 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z048/Z048.parquet/, skipping
+2025-09-18 14:34:14,303 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z049/Z049.parquet/ -> destination: Batch 1/May 2/F 0013/Z049/Z049.parquet/
+2025-09-18 14:34:14,353 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z049/Z049.parquet/, skipping
+2025-09-18 14:34:14,353 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z050/Z050.parquet/ -> destination: Batch 1/May 2/F 0013/Z050/Z050.parquet/
+2025-09-18 14:34:14,404 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z050/Z050.parquet/, skipping
+2025-09-18 14:34:14,404 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z051/Z051.parquet/ -> destination: Batch 1/May 2/F 0013/Z051/Z051.parquet/
+2025-09-18 14:34:14,458 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z051/Z051.parquet/, skipping
+2025-09-18 14:34:14,458 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z052/Z052.parquet/ -> destination: Batch 1/May 2/F 0013/Z052/Z052.parquet/
+2025-09-18 14:34:14,503 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z052/Z052.parquet/, skipping
+2025-09-18 14:34:14,503 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z053/Z053.parquet/ -> destination: Batch 1/May 2/F 0013/Z053/Z053.parquet/
+2025-09-18 14:34:14,554 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z053/Z053.parquet/, skipping
+2025-09-18 14:34:14,554 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z054/Z054.parquet/ -> destination: Batch 1/May 2/F 0013/Z054/Z054.parquet/
+2025-09-18 14:34:14,604 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z054/Z054.parquet/, skipping
+2025-09-18 14:34:14,604 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z055/Z055.parquet/ -> destination: Batch 1/May 2/F 0013/Z055/Z055.parquet/
+2025-09-18 14:34:14,652 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z055/Z055.parquet/, skipping
+2025-09-18 14:34:14,652 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z056/Z056.parquet/ -> destination: Batch 1/May 2/F 0013/Z056/Z056.parquet/
+2025-09-18 14:34:14,696 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z056/Z056.parquet/, skipping
+2025-09-18 14:34:14,696 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z057/Z057.parquet/ -> destination: Batch 1/May 2/F 0013/Z057/Z057.parquet/
+2025-09-18 14:34:14,747 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z057/Z057.parquet/, skipping
+2025-09-18 14:34:14,747 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z058/Z058.parquet/ -> destination: Batch 1/May 2/F 0013/Z058/Z058.parquet/
+2025-09-18 14:34:14,792 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z058/Z058.parquet/, skipping
+2025-09-18 14:34:14,792 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z059/Z059.parquet/ -> destination: Batch 1/May 2/F 0013/Z059/Z059.parquet/
+2025-09-18 14:34:14,840 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z059/Z059.parquet/, skipping
+2025-09-18 14:34:14,840 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z060/Z060.parquet/ -> destination: Batch 1/May 2/F 0013/Z060/Z060.parquet/
+2025-09-18 14:34:14,892 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z060/Z060.parquet/, skipping
+2025-09-18 14:34:14,892 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z061/Z061.parquet/ -> destination: Batch 1/May 2/F 0013/Z061/Z061.parquet/
+2025-09-18 14:34:14,946 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z061/Z061.parquet/, skipping
+2025-09-18 14:34:14,946 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z062/Z062.parquet/ -> destination: Batch 1/May 2/F 0013/Z062/Z062.parquet/
+2025-09-18 14:34:14,994 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z062/Z062.parquet/, skipping
+2025-09-18 14:34:14,994 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z063/Z063.parquet/ -> destination: Batch 1/May 2/F 0013/Z063/Z063.parquet/
+2025-09-18 14:34:15,051 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z063/Z063.parquet/, skipping
+2025-09-18 14:34:15,051 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z064/Z064.parquet/ -> destination: Batch 1/May 2/F 0013/Z064/Z064.parquet/
+2025-09-18 14:34:15,096 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z064/Z064.parquet/, skipping
+2025-09-18 14:34:15,097 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z065/Z065.parquet/ -> destination: Batch 1/May 2/F 0013/Z065/Z065.parquet/
+2025-09-18 14:34:15,140 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z065/Z065.parquet/, skipping
+2025-09-18 14:34:15,141 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z066/Z066.parquet/ -> destination: Batch 1/May 2/F 0013/Z066/Z066.parquet/
+2025-09-18 14:34:15,190 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z066/Z066.parquet/, skipping
+2025-09-18 14:34:15,190 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z067/Z067.parquet/ -> destination: Batch 1/May 2/F 0013/Z067/Z067.parquet/
+2025-09-18 14:34:15,239 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z067/Z067.parquet/, skipping
+2025-09-18 14:34:15,240 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z068/Z068.parquet/ -> destination: Batch 1/May 2/F 0013/Z068/Z068.parquet/
+2025-09-18 14:34:15,287 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z068/Z068.parquet/, skipping
+2025-09-18 14:34:15,287 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z069/Z069.parquet/ -> destination: Batch 1/May 2/F 0013/Z069/Z069.parquet/
+2025-09-18 14:34:15,336 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z069/Z069.parquet/, skipping
+2025-09-18 14:34:15,336 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z070/Z070.parquet/ -> destination: Batch 1/May 2/F 0013/Z070/Z070.parquet/
+2025-09-18 14:34:15,385 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z070/Z070.parquet/, skipping
+2025-09-18 14:34:15,385 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z071/Z071.parquet/ -> destination: Batch 1/May 2/F 0013/Z071/Z071.parquet/
+2025-09-18 14:34:15,435 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z071/Z071.parquet/, skipping
+2025-09-18 14:34:15,435 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z072/Z072.parquet/ -> destination: Batch 1/May 2/F 0013/Z072/Z072.parquet/
+2025-09-18 14:34:15,483 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z072/Z072.parquet/, skipping
+2025-09-18 14:34:15,483 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z073/Z073.parquet/ -> destination: Batch 1/May 2/F 0013/Z073/Z073.parquet/
+2025-09-18 14:34:15,529 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z073/Z073.parquet/, skipping
+2025-09-18 14:34:15,529 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z074/Z074.parquet/ -> destination: Batch 1/May 2/F 0013/Z074/Z074.parquet/
+2025-09-18 14:34:15,579 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z074/Z074.parquet/, skipping
+2025-09-18 14:34:15,579 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z075/Z075.parquet/ -> destination: Batch 1/May 2/F 0013/Z075/Z075.parquet/
+2025-09-18 14:34:15,629 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z075/Z075.parquet/, skipping
+2025-09-18 14:34:15,629 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z076/Z076.parquet/ -> destination: Batch 1/May 2/F 0013/Z076/Z076.parquet/
+2025-09-18 14:34:15,677 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z076/Z076.parquet/, skipping
+2025-09-18 14:34:15,678 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z077/Z077.parquet/ -> destination: Batch 1/May 2/F 0013/Z077/Z077.parquet/
+2025-09-18 14:34:15,727 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z077/Z077.parquet/, skipping
+2025-09-18 14:34:15,727 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z078/Z078.parquet/ -> destination: Batch 1/May 2/F 0013/Z078/Z078.parquet/
+2025-09-18 14:34:15,775 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z078/Z078.parquet/, skipping
+2025-09-18 14:34:15,775 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z079/Z079.parquet/ -> destination: Batch 1/May 2/F 0013/Z079/Z079.parquet/
+2025-09-18 14:34:15,828 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z079/Z079.parquet/, skipping
+2025-09-18 14:34:15,832 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z080/Z080.parquet/ -> destination: Batch 1/May 2/F 0013/Z080/Z080.parquet/
+2025-09-18 14:34:15,878 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z080/Z080.parquet/, skipping
+2025-09-18 14:34:15,878 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z081/Z081.parquet/ -> destination: Batch 1/May 2/F 0013/Z081/Z081.parquet/
+2025-09-18 14:34:15,928 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z081/Z081.parquet/, skipping
+2025-09-18 14:34:15,928 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z082/Z082.parquet/ -> destination: Batch 1/May 2/F 0013/Z082/Z082.parquet/
+2025-09-18 14:34:15,976 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z082/Z082.parquet/, skipping
+2025-09-18 14:34:15,976 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z083/Z083.parquet/ -> destination: Batch 1/May 2/F 0013/Z083/Z083.parquet/
+2025-09-18 14:34:16,053 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z083/Z083.parquet/, skipping
+2025-09-18 14:34:16,053 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z084/Z084.parquet/ -> destination: Batch 1/May 2/F 0013/Z084/Z084.parquet/
+2025-09-18 14:34:16,100 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z084/Z084.parquet/, skipping
+2025-09-18 14:34:16,100 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z085/Z085.parquet/ -> destination: Batch 1/May 2/F 0013/Z085/Z085.parquet/
+2025-09-18 14:34:16,146 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z085/Z085.parquet/, skipping
+2025-09-18 14:34:16,147 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z086/Z086.parquet/ -> destination: Batch 1/May 2/F 0013/Z086/Z086.parquet/
+2025-09-18 14:34:16,192 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z086/Z086.parquet/, skipping
+2025-09-18 14:34:16,192 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z087/Z087.parquet/ -> destination: Batch 1/May 2/F 0013/Z087/Z087.parquet/
+2025-09-18 14:34:16,241 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z087/Z087.parquet/, skipping
+2025-09-18 14:34:16,241 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z088/Z088.parquet/ -> destination: Batch 1/May 2/F 0013/Z088/Z088.parquet/
+2025-09-18 14:34:16,287 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z088/Z088.parquet/, skipping
+2025-09-18 14:34:16,287 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z089/Z089.parquet/ -> destination: Batch 1/May 2/F 0013/Z089/Z089.parquet/
+2025-09-18 14:34:16,336 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z089/Z089.parquet/, skipping
+2025-09-18 14:34:16,336 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z090/Z090.parquet/ -> destination: Batch 1/May 2/F 0013/Z090/Z090.parquet/
+2025-09-18 14:34:16,382 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z090/Z090.parquet/, skipping
+2025-09-18 14:34:16,382 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z091/Z091.parquet/ -> destination: Batch 1/May 2/F 0013/Z091/Z091.parquet/
+2025-09-18 14:34:16,432 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z091/Z091.parquet/, skipping
+2025-09-18 14:34:16,432 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z092/Z092.parquet/ -> destination: Batch 1/May 2/F 0013/Z092/Z092.parquet/
+2025-09-18 14:34:16,483 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z092/Z092.parquet/, skipping
+2025-09-18 14:34:16,483 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z093/Z093.parquet/ -> destination: Batch 1/May 2/F 0013/Z093/Z093.parquet/
+2025-09-18 14:34:16,533 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z093/Z093.parquet/, skipping
+2025-09-18 14:34:16,533 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z094/Z094.parquet/ -> destination: Batch 1/May 2/F 0013/Z094/Z094.parquet/
+2025-09-18 14:34:16,581 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z094/Z094.parquet/, skipping
+2025-09-18 14:34:16,581 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z095/Z095.parquet/ -> destination: Batch 1/May 2/F 0013/Z095/Z095.parquet/
+2025-09-18 14:34:16,630 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z095/Z095.parquet/, skipping
+2025-09-18 14:34:16,630 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z096/Z096.parquet/ -> destination: Batch 1/May 2/F 0013/Z096/Z096.parquet/
+2025-09-18 14:34:16,679 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z096/Z096.parquet/, skipping
+2025-09-18 14:34:16,679 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z097/Z097.parquet/ -> destination: Batch 1/May 2/F 0013/Z097/Z097.parquet/
+2025-09-18 14:34:16,728 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z097/Z097.parquet/, skipping
+2025-09-18 14:34:16,729 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z098/Z098.parquet/ -> destination: Batch 1/May 2/F 0013/Z098/Z098.parquet/
+2025-09-18 14:34:16,775 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z098/Z098.parquet/, skipping
+2025-09-18 14:34:16,775 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z099/Z099.parquet/ -> destination: Batch 1/May 2/F 0013/Z099/Z099.parquet/
+2025-09-18 14:34:16,825 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z099/Z099.parquet/, skipping
+2025-09-18 14:34:16,825 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z100/Z100.parquet/ -> destination: Batch 1/May 2/F 0013/Z100/Z100.parquet/
+2025-09-18 14:34:17,014 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z100/Z100.parquet/, skipping
+2025-09-18 14:34:17,014 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z101/Z101.parquet/ -> destination: Batch 1/May 2/F 0013/Z101/Z101.parquet/
+2025-09-18 14:34:17,071 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z101/Z101.parquet/, skipping
+2025-09-18 14:34:17,071 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z102/Z102.parquet/ -> destination: Batch 1/May 2/F 0013/Z102/Z102.parquet/
+2025-09-18 14:34:17,123 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z102/Z102.parquet/, skipping
+2025-09-18 14:34:17,123 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z103/Z103.parquet/ -> destination: Batch 1/May 2/F 0013/Z103/Z103.parquet/
+2025-09-18 14:34:17,195 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z103/Z103.parquet/, skipping
+2025-09-18 14:34:17,195 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z104/Z104.parquet/ -> destination: Batch 1/May 2/F 0013/Z104/Z104.parquet/
+2025-09-18 14:34:17,246 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z104/Z104.parquet/, skipping
+2025-09-18 14:34:17,247 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z105/Z105.parquet/ -> destination: Batch 1/May 2/F 0013/Z105/Z105.parquet/
+2025-09-18 14:34:17,296 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z105/Z105.parquet/, skipping
+2025-09-18 14:34:17,296 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z106/Z106.parquet/ -> destination: Batch 1/May 2/F 0013/Z106/Z106.parquet/
+2025-09-18 14:34:17,344 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z106/Z106.parquet/, skipping
+2025-09-18 14:34:17,344 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z107/Z107.parquet/ -> destination: Batch 1/May 2/F 0013/Z107/Z107.parquet/
+2025-09-18 14:34:17,391 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z107/Z107.parquet/, skipping
+2025-09-18 14:34:17,391 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z108/Z108.parquet/ -> destination: Batch 1/May 2/F 0013/Z108/Z108.parquet/
+2025-09-18 14:34:17,437 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z108/Z108.parquet/, skipping
+2025-09-18 14:34:17,438 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z109/Z109.parquet/ -> destination: Batch 1/May 2/F 0013/Z109/Z109.parquet/
+2025-09-18 14:34:17,485 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z109/Z109.parquet/, skipping
+2025-09-18 14:34:17,486 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z110/Z110.parquet/ -> destination: Batch 1/May 2/F 0013/Z110/Z110.parquet/
+2025-09-18 14:34:17,537 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z110/Z110.parquet/, skipping
+2025-09-18 14:34:17,537 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z111/Z111.parquet/ -> destination: Batch 1/May 2/F 0013/Z111/Z111.parquet/
+2025-09-18 14:34:17,583 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z111/Z111.parquet/, skipping
+2025-09-18 14:34:17,584 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z112/Z112.parquet/ -> destination: Batch 1/May 2/F 0013/Z112/Z112.parquet/
+2025-09-18 14:34:17,629 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z112/Z112.parquet/, skipping
+2025-09-18 14:34:17,629 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z113/Z113.parquet/ -> destination: Batch 1/May 2/F 0013/Z113/Z113.parquet/
+2025-09-18 14:34:17,676 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z113/Z113.parquet/, skipping
+2025-09-18 14:34:17,677 [INFO] Processing source folder: Batch 1/May 2/Partial 2/Z114/Z114.parquet/ -> destination: Batch 1/May 2/F 0013/Z114/Z114.parquet/
+2025-09-18 14:34:17,729 [WARNING] No objects found in Batch 1/May 2/Partial 2/Z114/Z114.parquet/, skipping
+2025-09-18 14:34:17,729 [INFO] Successfully processed folders Z001 to Z114 to destination Z001 to Z114
+2025-09-18 14:34:17,733 [INFO] S3 folder copy and rename operation completed
